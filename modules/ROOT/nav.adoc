@@ -1,0 +1,6 @@
+.xref:index.adoc[Anypoint DataGraph]
+* xref:index.adoc[]
+* xref:schemas.adoc[]
+* xref:schema-validation.adoc[]
+* xref:collaboration.adoc[]
+* xref:merge-types.adoc[]

@@ -1,0 +1,43 @@
+= Enable Collaboration on a Type
+
+Enabling collaboration on a type is crucial to achieve a connected unified schema.
+
+When you enable collaboration on a type, you allow similar types in your API schema or in other API schemas to collaborate with your type and directly add their own fields. The result is an extended list of fields and dataset, resulting in a more enriched query result for this type.
+
+When you enable collaboration on a type, the type becomes a provider of its fields to other types, enabling other contributors to:
+
+* Link to your type +
+See xref:linking.adoc[Link Types] for more information.
+* Merge your type with another type +
+See xref:merge-types[Merge Types] for more information.
+
+You can enable collaboration only on Level-1 types: those directly returned from a query method. See xref:schemas.adoc#level-1-nested-types[Level 1 and Nested Types] for more information.
+
+To successfully understand the requirements for enabling collaboration, you must be familiar with the types in your API schema. See xref:schemas.adoc[] for more information.
+
+== Default Query Method and Primary Key
+
+To enable collaboration on a type, you must configure a default query method and a primary key for that type to access its fields.
+
+The default query method for an object type is the method that returns a single record of that object type for which you want to enable collaboration. You can select a query method as the default only if:
+
+* It has one required input argument.
+* The input argument is a scalar data type (`Int`, `Float`, `String`, `Boolean`, or `ID`).
+
+The primary key is one field of your object type that uniquely identifies a single record of that object type. For a field to be a primary key, it must be visible and it should be non-nullable (represented by a `!` sign at the end).
+
+For example, to enable collaboration on the Order type of the following API schema:
+
+[source]
+--
+ordersById(id: ID!): Order
+--------------------
+--------------------
+Order
+--------------------
+orderId: ID!
+date: String
+status: String
+--
+
+In this example, your default query method is `ordersById`, and its primary key is `orderId`.`ordersById` retrieves the Order type and uses `orderId` to retrieve specific information based on that ID field. Note that the data type of the default query method’s input argument ID must be the same as the data type of the primary key. In this example, both are of data type `ID!`.
