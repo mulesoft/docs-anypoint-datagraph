@@ -1,0 +1,5 @@
+name: datagraph
+title: Anypoint DataGraph
+version: master
+nav:
+- modules/ROOT/nav.adoc
