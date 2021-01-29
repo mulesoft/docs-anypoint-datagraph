@@ -2,7 +2,7 @@
 
 You can link your current type to a different target type to improve the query experience. Linking enables you to join fields from two related types, resulting in a more enriched query result.
 
-You can link your current type to a target type if your current type is not collaboration enabled; however, the target must be collaboration enabled. See xref:xref:collaboration.adoc[] for more information about how collaboration works.
+You can link your current type to a target type if your current type is not collaboration enabled; however, the target must be collaboration enabled. See xref:collaboration.adoc[] for more information about how collaboration works.
 
 For example, consider two API schemas, one with the object type `Order` and the other with the object type `Customer`:
 
