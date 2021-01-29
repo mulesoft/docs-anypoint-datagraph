@@ -1,5 +1,6 @@
 .xref:index.adoc[Anypoint DataGraph]
 * xref:index.adoc[]
+* xref:supported-hosting-options.adoc[]
 * xref:schemas.adoc[]
 * xref:schema-validation.adoc[]
 * xref:collaboration.adoc[]
