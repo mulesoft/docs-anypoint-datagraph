@@ -5,3 +5,5 @@
 * xref:collaboration.adoc[]
 * xref:linking.adoc[]
 * xref:merge-types.adoc[]
+* xref:merge-types.adoc[]
+* xref:resolve-merge-inconsistencies.adoc[]

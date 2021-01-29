@@ -1,0 +1,12 @@
+= Resolve Merge Inconsistencies
+
+Resolve inconsistencies across the fields before merging by either renaming or hiding the highlighted fields.
+
+== Hide Types and Query Methods
+
+You can hide the fields, types or query methods that you don't want to have visible in the unified schema. The fields, types, or query methods that you hide make them unavailable for querying.
+
+== Rename a type
+
+Rename a type, query method, or a field to avoid conflicting with your target type.
+
