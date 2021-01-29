@@ -3,4 +3,5 @@
 * xref:schemas.adoc[]
 * xref:schema-validation.adoc[]
 * xref:collaboration.adoc[]
+* xref:linking.adoc[]
 * xref:merge-types.adoc[]

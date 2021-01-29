@@ -1,0 +1,135 @@
+= Link Related Types
+
+You can link your current type to a different target type to improve the query experience. Linking enables you to join fields from two related types, resulting in a more enriched query result.
+
+You can link your current type to a target type if your current type is not collaboration enabled; however, the target must be collaboration enabled. See xref:xref:collaboration.adoc[] for more information about how collaboration works.
+
+For example, consider two API schemas, one with the object type `Order` and the other with the object type `Customer`:
+
+[%header,%autowidth.spread,cols="a,a"]
+|===
+| Order Schema | Customer Schema
+|
+[source]
+--
+ordersByOrderId (orderId:String!):Order
+--------------------
+--------------------
+Order
+--------------------
+orderId: String!
+Items: Item[]
+customerId: String!
+--
+
+|
+[source]
+--
+customersByCustomerId (customerId:String!): Customer
+--------------------
+--------------------
+Customer
+--------------------
+customerId: String!
+name: String!
+--
+
+|===
+
+Your unified schema currently looks like this:
+
+.Unified Schema
+[source]
+--
+ordersByOrderId (orderId:String!):Order
+customersByCustomerId (customerId:String!): Customer
+--------------------
+--------------------
+Order
+--------------------
+orderId: String!
+Items: Item[]
+customerId: String!
+--------------------
+--------------------
+Customer
+--------------------
+customerId: String!
+name: String!
+--
+
+In this current configuration, to query the order and the customer datasets at the same time, you must query both types separately:
+
+.Query
+[source]
+--
+ordersByOrderId (orderId: “123”) {
+  orderId
+  customerId
+}
+customersByCustomerId (customerId: “CC83”) {
+  customerId
+  name
+}
+--
+
+Additionally, to query the customer data for the order, you must know the customer ID associated with it.
+
+However, note that the `Order` object type has a field that returns `customerId`. You can link your `Order` object type to the `Customer` object type using customerId: String! as a foreign key, pointing to Customer as your target type, causing your selected foreign key to map to the primary key customerId:String! on `Customer` type.
+
+As a result of this link:
+
+* A new field called `Customer` is created in the `Order` object type that now returns the linked `Customer` object type.
+* The new object type generated in your API schema acts as a reference to the type in the `Customer` API schema, ensuring that any changes made to the `Customer` API schema do not affect your `Order` API schema:
++
+.Order Schema
+[source]
+--
+ordersByOrderId (orderId:String!):Order
+--------------------
+--------------------
+Order
+--------------------
+orderId: String!
+Items: Item[]
+customer: Customer
+--------------------
+--------------------
+Customer
+--------------------
+--------------------
+customerId: String!
+--
+
+In the updated unified schema, you can see that the `Order` type is linked to `Customer` type:
+
+[source]
+--
+ordersByOrderId (orderId:String!):Order
+--------------------
+--------------------
+Order
+--------------------
+orderId: String!
+Items: Item[]
+customer: Customer
+--------------------
+--------------------
+Customer
+--------------------
+--------------------
+customerId: String
+name: String
+--
+
+After linking, consumers of your unified schema can query the `Order` dataset along with its related `Customer` dataset without having to know the associated `customerId`:
+
+.Query
+[source]
+--
+ordersByOrderId (orderId: “123”) {
+  orderId
+  customer {
+    name
+}
+--
