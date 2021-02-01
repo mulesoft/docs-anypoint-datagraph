@@ -1,0 +1,13 @@
+= Query Your Unified Graph
+
+To query your unified schema:
+
+. On the top right corner, select *Run a Query*.
+. In the *Request access to run queries* screen, select how you want to authenticate your client to query the graph.
+* Select *User one of my existing applications* if you alredy have a client application authenticated to send requests.
+* Select *Create a new application and use it immediately* to create a new application to query the graph.
+* Select *I already have credentials and want to use them immediately* if you already have a client ID and secret pair to send requests to your graph.
+. Select *Request Access*.
+. In the left side of the screen, start typing the query. +
+You can use the autocomplete function, or the graph documentation in the right side of the screen.
+

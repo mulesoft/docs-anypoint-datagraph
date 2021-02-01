@@ -10,3 +10,4 @@
 * xref:linking.adoc[]
 * xref:merge-types.adoc[]
 * xref:resolve-merge-inconsistencies.adoc[]
+* xref:query-graph.adoc[]
