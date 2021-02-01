@@ -1,0 +1,21 @@
+= Configure Your API Schema to Add It to the Unified Schema
+
+When adding a new API to your unified schema you must make sure that none of the types of your current schema create a conflict with the existing types in your unified schema.
+
+Because each type in the unified schema must be unique, each time you add a new API to your unified schema, you must edit your schema’s types before adding them to your unified schema.
+
+Every time you add a new schema, ensure that you address the following tasks:
+
+* Resolve Any Conflicts +
+If there are types that have a conflict with the unified schema make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
+* Enable Collaboration +
+Enable collaboration for applicable types and provide the required settings. This step is optional but crucial since it paves the road for achieving a connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
+* Manage Visibility +
+You can hide the fields, types, or query methods that you don't want to have visible in the unified schema. See xref:manage-elements-visibility.adoc[] for more information.
+* Review and Edit Names +
+You can review the names of all fields, types, and query methods that you are adding to the unified schema. See xref:edit-elements-names.adoc[] for more information.
+* Merge Similar Object Types +
+Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result. See xref:merge-types.adoc[] for more information.
+* Link Related Object Type +
+Linking enables you to join fields from two related types to have a more enriched query result.
+See xref:linking.adoc[] for more information.

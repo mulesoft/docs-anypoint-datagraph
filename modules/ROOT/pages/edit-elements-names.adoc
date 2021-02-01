@@ -1,0 +1,5 @@
+= Edit Names of Your Schema Elements
+
+You can review names of all fields, types, and query methods that you are adding to the unified schema. Make sure that every name aligns with the unified schema's consumer expectation.
+
+Modifying the name of a field that you configured as a primary key breaks the link or merge associated to that primary key. When renaming fields or query methods, ensure that you are not breaking existing collaborations on that element.
