@@ -12,6 +12,6 @@ Anypoint DataGraph must connect to the destination URL you provide when adding a
 
 * Your API implmentations run on CloudHub.
 * Your API implementations run on standalone instances and are connected to an Anypoint Virtual Private Cloud (Anypoint VPC).
-* Your API implementations run on standalone instances or in Anypoint Runtime Fabric and are public.
+* Your API implementations run on any runtine plane hosting option and are public.
 
 If your API instances run on standalone instances, are not public, and are not connected to Anypoint VPC, you must first pair your standalone runtimes to Anypoint VPC. See https://docs.mulesoft.com/runtime-manager/to-request-vpc-connectivity[Request Anypoint VPC Connectivity to Your Network^] for more information.
