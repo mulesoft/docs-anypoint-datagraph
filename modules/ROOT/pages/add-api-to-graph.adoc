@@ -2,7 +2,7 @@
 
 You can scale your unified schema by adding existing APIs within your organization.
 
-The API you choose to add to your graph must expose data that you want to make available to your consumers. Clients that consume data from the unified schema may require different subsets of data even if it comes from the same APIs. The value of the data you expose to consumers increases the more you connect it to data exposed by other APIs.
+The API you add to your graph must expose data that you want to make available to your consumers. Clients that consume data from the unified schema may require different subsets of data even if it comes from the same APIs. The value of the data you expose to consumers increases the more you connect it to data exposed by other APIs.
 
 The API must also meet the following requirements:
 
@@ -10,7 +10,7 @@ The API must also meet the following requirements:
 * The API must be a REST API (either a RAML or OAS specification).
 * The API must have a running instance with an accessible URL.
 
-You can only add one API at a time.
+You can add only one API at a time.
 
 To add an API to your unified schema:
 
@@ -22,11 +22,11 @@ Anypoint DataGraph generates an API schema from the API version you selected. No
 +
 Next, confirm the API’s URL.
 +
-* If your API is managed by API Manager or you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
+* If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
 * Otherwise, if you prefer to provide your own implementation URL, select *Add a new URL*. You can also click to get the baseURI from API specification. +
 See xref:supported-hosting-options.adoc[] for more information about the supported runtime plane hosting options.
 . In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. This allows the unified schema to make requests to your API when queried. +
-The supported authentication methods are:
+Anypoint DataGraph supports the following authentication methods:
 +
 * ClientID headers.
 * ClientID in query params.
@@ -43,7 +43,7 @@ Except for resolving conflicts, if applicable, the rest of the configurations ar
 --
 +
 * Resolve Any Conflicts +
-If there are types that have a conflict with the unified schema make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
+If there are types that have a conflict with the unified schema, make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
 * Enable Collaboration +
 Enable collaboration for applicable types and provide the required settings. This step is optional but crucial since it paves the road for achieving a connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
 * Manage Visibility +
