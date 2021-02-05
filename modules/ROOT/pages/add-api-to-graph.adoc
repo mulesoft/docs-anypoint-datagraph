@@ -16,8 +16,13 @@ To add an API to your unified schema:
 
 . Navigate to Anypoint DataGraph.
 . Select *Add API*.
++
+image::add-an-api.png[]
 . In the *Select API* tab, browse for the API that you want to add.
-. In the *Configure URL* tab, select the API and asset version of the API you added in the previous step, and select *Confirm Selection*. +
+. In the *Configure URL* tab, select the API and asset version of the API you added in the previous step, and select *Confirm Selection*.
++
+image::select-api-and-asset-version.png[]
++
 Anypoint DataGraph generates an API schema from the API version you selected. Note that some elements in your API specification might not be added to the API schema. See xref:schema-validation.adoc[] for more information.
 +
 Next, confirm the API’s URL.
@@ -25,14 +30,19 @@ Next, confirm the API’s URL.
 * If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
 * Otherwise, if you prefer to provide your own implementation URL, select *Add a new URL*. You can also click to get the baseURI from API specification. +
 See xref:supported-hosting-options.adoc[] for more information about the supported runtime plane hosting options.
-. In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. This allows the unified schema to make requests to your API when queried. +
-Anypoint DataGraph supports the following authentication methods:
+. In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. +
+This allows the unified schema to make requests to your API when queried. +
 +
-* ClientID headers.
-* ClientID in query params.
-* Username and password pair.
-* Custom headers.
-* No Authentication if your API is public.
+image::authentication-methods.png[]
++
+* *No Auth* +
+Use if your API is public.
+* *Basic Auth* +
+Use if you authenticate to your API using a username and password pair.
+* *Client ID enforcement via headers*
+* *Client ID enforcement via query params*
+* *Custom* +
+Use if you authenticate to your API using custom header parameters and values.
 . The *Preview Schema* tab shows you the generated API schema. +
 You can review the types of your API schema
 . In the *Configure API Schema* tab you can configure your API schema elements to add them to the unified graph.
