@@ -2,7 +2,7 @@
 
 You can scale your unified schema by adding existing APIs within your organization.
 
-The API you choose to add to your graph must expose data that you want to make available to your consumers. Clients that consume data from the unified schema may require different subsets of data even if it comes from the same APIs. The value of the data you expose to consumers increases the more you connect it to data exposed by other APIs.
+The API you add to your graph must expose data that you want to make available to your consumers. Clients that consume data from the unified schema may require different subsets of data even if it comes from the same APIs. The value of the data you expose to consumers increases the more you connect it to data exposed by other APIs.
 
 The API must also meet the following requirements:
 
@@ -10,29 +10,39 @@ The API must also meet the following requirements:
 * The API must be a REST API (either a RAML or OAS specification).
 * The API must have a running instance with an accessible URL.
 
-You can only add one API at a time.
+You can add only one API at a time.
 
 To add an API to your unified schema:
 
 . Navigate to Anypoint DataGraph.
 . Select *Add API*.
++
+image::add-an-api.png[]
 . In the *Select API* tab, browse for the API that you want to add.
-. In the *Configure URL* tab, select the API and asset version of the API you added in the previous step, and select *Confirm Selection*. +
+. In the *Configure URL* tab, select the API and asset version of the API you added in the previous step, and select *Confirm Selection*.
++
+image::select-api-and-asset-version.png[]
++
 Anypoint DataGraph generates an API schema from the API version you selected. Note that some elements in your API specification might not be added to the API schema. See xref:schema-validation.adoc[] for more information.
 +
 Next, confirm the API’s URL.
 +
-* If your API is managed by API Manager or you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
+* If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
 * Otherwise, if you prefer to provide your own implementation URL, select *Add a new URL*. You can also click to get the baseURI from API specification. +
 See xref:supported-hosting-options.adoc[] for more information about the supported runtime plane hosting options.
-. In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. This allows the unified schema to make requests to your API when queried. +
-The supported authentication methods are:
+. In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. +
+This allows the unified schema to make requests to your API when queried. +
 +
-* ClientID headers.
-* ClientID in query params.
-* Username and password pair.
-* Custom headers.
-* No Authentication if your API is public.
+image::authentication-methods.png[]
++
+* *No Auth* +
+Use if your API is public.
+* *Basic Auth* +
+Use if you authenticate to your API using a username and password pair.
+* *Client ID enforcement via headers*
+* *Client ID enforcement via query params*
+* *Custom* +
+Use if you authenticate to your API using custom header parameters and values.
 . The *Preview Schema* tab shows you the generated API schema. +
 You can review the types of your API schema
 . In the *Configure API Schema* tab you can configure your API schema elements to add them to the unified graph.
@@ -43,7 +53,7 @@ Except for resolving conflicts, if applicable, the rest of the configurations ar
 --
 +
 * Resolve Any Conflicts +
-If there are types that have a conflict with the unified schema make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
+If there are types that have a conflict with the unified schema, make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
 * Enable Collaboration +
 Enable collaboration for applicable types and provide the required settings. This step is optional but crucial since it paves the road for achieving a connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
 * Manage Visibility +

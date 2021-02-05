@@ -7,7 +7,7 @@ Because each type in the unified schema must be unique, each time you add a new 
 Every time you add a new schema, ensure that you address the following tasks:
 
 * Resolve Any Conflicts +
-If there are types that have a conflict with the unified schema make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
+If there are types that have a conflict with the unified schema, make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
 * Enable Collaboration +
 Enable collaboration for applicable types and provide the required settings. This step is optional but crucial since it paves the road for achieving a connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
 * Manage Visibility +
