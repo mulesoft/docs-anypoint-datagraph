@@ -18,7 +18,7 @@ To add an API to your unified schema:
 . Select *Add API*.
 . In the *Select API* tab, browse for the API that you want to add.
 . In the *Configure URL* tab, select the API and asset version of the API you added in the previous step, and select *Confirm Selection*. +
-Anypoint DataGraph generates an API schema from the API version you selected. Note that some elements in your API specification might not be added into the API schema. See xref:schema-validation.adoc[] for more information.
+Anypoint DataGraph generates an API schema from the API version you selected. Note that some elements in your API specification might not be added to the API schema. See xref:schema-validation.adoc[] for more information.
 +
 Next, confirm the API’s URL.
 +
@@ -28,7 +28,7 @@ See xref:supported-hosting-options.adoc[] for more information about the support
 . In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. This allows the unified schema to make requests to your API when queried. +
 The supported authentication methods are:
 +
-* ClientID headers .
+* ClientID headers.
 * ClientID in query params.
 * Username and password pair.
 * Custom headers.
