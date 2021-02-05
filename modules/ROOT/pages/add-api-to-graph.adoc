@@ -29,11 +29,18 @@ See xref:supported-hosting-options.adoc[] for more information about the support
 The supported authentication methods are:
 +
 * ClientID headers .
-* ClientID in queryparams.
+* ClientID in query params.
 * Username and password pair.
+* Custom headers.
+* No Authentication if your API is public.
 . The *Preview Schema* tab shows you the generated API schema. +
 You can review the types of your API schema
 . In the *Configure API Schema* tab you can configure your API schema elements to add them to the unified graph.
++
+[NOTE]
+--
+Except for resolving conflicts, if applicable, the rest of the configurations are optional but crucial to create an enriched unified schema.
+--
 +
 * Resolve Any Conflicts +
 If there are types that have a conflict with the unified schema make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
