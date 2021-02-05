@@ -9,5 +9,5 @@ To query your unified schema:
 * Select *I already have credentials and want to use them immediately* if you already have a client ID and secret pair to send requests to your graph.
 . Select *Request Access*.
 . In the left side of the screen, start typing the query. +
-You can use the autocomplete function, or the graph documentation in the right side of the screen.
+You can explore the unified schema documentation  using the *Explore Docs* option on the right side of the screen, or you can type your query using the in-line autocomplete feature.
 
