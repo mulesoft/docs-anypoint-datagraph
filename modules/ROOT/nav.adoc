@@ -3,6 +3,7 @@
 * xref:supported-hosting-options.adoc[]
 * xref:schemas.adoc[]
 * xref:schema-validation.adoc[]
+* xref:add-api-to-graph.adoc[]
 * xref:edit-graph.adoc[]
 * xref:resolve-conflicts.adoc[]
 * xref:manage-elements-visibility.adoc[]
