@@ -1,4 +1,4 @@
-= Query Your Unified Graph
+= Query Your Unified Schema
 
 To query your unified schema:
 
@@ -16,7 +16,7 @@ image::request-access-query.png[]
 +
 image::run-query-screen.png[]
 <1> Select *Copy Query* to copy the query your query as a GraphQL query, or as a cURL snippet.
-<1> Select *View History* to see all the queries you sent to the unified graph.
+<1> Select *View History* to see all the queries you sent to the unified schema.
 <1> Select *Manage Credentials* to change the credentials you selected in the previous step.
 <1> Select *Explore Docs* to explore the unified schema documentation.
-. Select *Run* to send a query to the unified graph.
+. Select *Run* to send a query to the unified schema.

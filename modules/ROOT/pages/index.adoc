@@ -4,7 +4,7 @@ Anypoint DataGraph enables you to leverage the existing capabilities of your app
 
 With Anypoint DataGraph you can:
 
-* Dynamically query data from a unified graph
+* Dynamically query data from a unified schema
 * Explore your application network from a single UI
 * Discover, reuse, and serve information from your application network without writing new code
 

@@ -45,7 +45,7 @@ Use if you authenticate to your API using a username and password pair.
 Use if you authenticate to your API using custom header parameters and values.
 . The *Preview Schema* tab shows you the generated API schema. +
 You can review the types of your API schema
-. In the *Configure API Schema* tab you can configure your API schema elements to add them to the unified graph.
+. In the *Configure API Schema* tab you can configure your API schema elements to add them to the unified schema.
 +
 [NOTE]
 --

@@ -4,7 +4,7 @@ Anypoint DataGraph organizes all data that you choose to make available to your 
 
 When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it. Because each API schema is created at the time that its API is added, your unified schema is always up to date. All API schemas are stored individually in your organization. This isolation of each API schema enables you to edit them individually without affecting the integrity of the others.
 
-The API schema that Anypoint DataGraph generates is composed of a list of types that describe the functionality and data available for client applications to query and consume. Whenever you add a new API schema to the unified graph, you can configure the types and fields that the unified schema will include.
+The API schema that Anypoint DataGraph generates is composed of a list of types that describe the functionality and data available for client applications to query and consume. Whenever you add a new API schema to the unified schema, you can configure the types and fields that the unified schema will include.
 
 Before learning about the different configurations that you can apply to a type, read the following topic to understand the different types that you can add to your unified schema.
 
