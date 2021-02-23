@@ -3,3 +3,13 @@
 You can review names of all fields, types, and query methods that you are adding to the unified schema. Make sure that every name aligns with the unified schema's consumer expectation.
 
 Modifying the name of a field that you configured as a primary key breaks the link or merge associated to that primary key. When renaming fields or query methods, ensure that you are not breaking existing collaborations on that element.
+
+== How to Edit Names of Schema Elements
+
+You must rename any fields, types, and query methods _before_ adding your API to the unified schema.
+
+Before editing the name of an element, be sure to xref:manage-elements-visibility.adoc[make it visible].
+
+. Navigate to object type, field, or method, and click *Rename*.
+. In the *Change to:* field, add the new name, and click *Confirm*.
+. If you want to reset to the element to its default, click *Rename* again, and then click *Reset name to default*.

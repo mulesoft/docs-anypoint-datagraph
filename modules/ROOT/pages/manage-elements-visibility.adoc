@@ -14,4 +14,6 @@ You cannot hide a method that you configured to be a default query method, or a 
 
 In the API schema, choose the object, field, or method for which you want to manage visibility, and click the *Hidden/Visible* toggle.
 
+You must hide or unhide elements _before_ adding them to the unified schema. 
+
 image::hide-unhide-elements.png[]
