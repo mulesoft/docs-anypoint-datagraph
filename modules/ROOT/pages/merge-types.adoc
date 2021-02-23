@@ -214,7 +214,7 @@ Merging objects allows you combine the fields of object types to create more val
 You must merge object types _before_ adding your API to the unified schema.
 
 Before merging a type, be sure to xref:manage-elements-visibility.adoc[make it visible].
- 
+
 
 . In the API schema navigation, select the object type you want to merge with a target type.
 . In the *Merge* pane, select the target type to merge with. In the following example, you're merging the current type, called *Order*, with a target object type of the same name:
@@ -233,3 +233,7 @@ image::preview-merge-results.png[]
 +
 image::merged-types.png[]
 . To undo the merge, click *Undo merge*.
+
+The object type displays that it's been merged and indicates the source APIs of the merge, as shown:
+
+image::merged-types-results.png[]
