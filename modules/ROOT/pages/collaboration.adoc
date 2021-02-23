@@ -41,3 +41,13 @@ status: String
 --
 
 In this example, your default query method is `ordersById`, and its primary key is `orderId`.`ordersById` retrieves the Order type and uses `orderId` to retrieve specific information based on that ID field. Note that the data type of the default query method’s input argument ID must be the same as the data type of the primary key. In this example, both are of data type `ID!`.
+
+== How to Enable Collaboration on an Object Type
+
+. In the API schema navigation, select the object type for which you want to enable collaboration.
+. In the *Collaboration permissions* pane, click *Allow collaboration for this type (Extend this type)*.
+. For *Required configuations*, follow the prompts to set a default query method and primary key.
++
+image::enable-collaboration.png[]
+
+After you enable collaboration on a type, you can merge and link it with other types.

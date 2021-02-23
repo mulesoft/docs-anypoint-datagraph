@@ -9,3 +9,9 @@ In Anypoint DataGraph, the elements that you choose to hide are _hidden_, and th
 By default, all nested types are hidden. If you wish to add a nested type to the unified schema, and query it, you must unhide it first.
 
 You cannot hide a method that you configured to be a default query method, or a field that you configured as a primary key.
+
+== How to Manage Visibility of Schema Elements
+
+In the API schema, choose the object, field, or method for which you want to manage visibility, and click the *Hidden/Visible* toggle.
+
+image::hide-unhide-elements.png[]
