@@ -6,8 +6,6 @@ Modifying the name of a field that you configured as a primary key breaks the li
 
 == How to Edit Names of Schema Elements
 
-You must rename any fields, types, and query methods _before_ adding your API to the unified schema.
-
 Before editing the name of an element, be sure to xref:manage-elements-visibility.adoc[make it visible].
 
 . Navigate to object type, field, or method, and click *Rename*.

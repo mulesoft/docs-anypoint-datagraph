@@ -211,8 +211,6 @@ You can merge them so that in the unified schema there is only one `Amount` type
 
 Merging objects allows you combine the fields of object types to create more valuable query results.
 
-You must merge object types _before_ adding your API to the unified schema.
-
 Before merging a type, be sure to xref:manage-elements-visibility.adoc[make it visible].
 
 
