@@ -226,7 +226,7 @@ image::merge-object-type.png[]
 +
 If you make this selection, you'll be taken to the *Enable collaboration* pane, where you'll need to set a default query method and primary key. (See xref:collaboration.adoc[Enable Collaboration on a Type] for more information.)
 * Declare the current type as a reference so it will only return the fields and dataset of the type it's merged with.
-. In the *Merge* pane, and click *Preview merge* results. In the following example, the preview shows the Order target type in the unified schema with new fields added after merging with the current Order object type:
+. In the *Merge* pane, click *Preview merge* results. In the following example, the preview shows the Order target type in the unified schema with new fields added after merging with the current Order object type:
 +
 image::preview-merge-results.png[]
 . To finish, click *Confirm merge*.
