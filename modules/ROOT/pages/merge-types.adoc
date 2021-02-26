@@ -209,7 +209,7 @@ You can merge them so that in the unified schema there is only one `Amount` type
 
 == How to Merge Object Types
 
-Merging objects allows you combine the fields of object types to create more valuable query results.
+Merging objects allows you combine the fields of object types to resolve conflicts between types and create more valuable results from a single query.
 
 Before merging a type, be sure to xref:manage-elements-visibility.adoc[make it visible].
 
@@ -235,3 +235,7 @@ image::merged-types.png[]
 The object type displays that it's been merged and indicates the source APIs of the merge, as shown:
 
 image::merged-types-results.png[]
+
+== How to Split a Local Merges
+
+add content

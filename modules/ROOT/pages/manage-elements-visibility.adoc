@@ -12,8 +12,10 @@ You cannot hide a method that you configured to be a default query method, or a 
 
 == How to Manage Visibility of Schema Elements
 
+Hiding or unhiding elements in your API schema allows you to control the granularity of information that is available in the unified schema.
+
 In the API schema, choose the object, field, or method for which you want to manage visibility, and click the *Hidden/Visible* toggle.
 
-You must hide or unhide elements _before_ adding them to the unified schema. 
+You must hide or unhide elements _before_ adding them to the unified schema.
 
 image::hide-unhide-elements.png[]

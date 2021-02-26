@@ -134,7 +134,7 @@ ordersByOrderId (orderId: “123”) {
 }
 --
 
-== How to Link Object Types
+== How to Link Fields Between Object Types
 
 Before linking fields between types, be sure to xref:manage-elements-visibility.adoc[set the fields to visible].
 
