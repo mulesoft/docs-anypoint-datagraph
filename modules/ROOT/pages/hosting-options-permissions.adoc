@@ -1,4 +1,4 @@
-= Anypoint DataGraph Hosting Options and permissions
+= Anypoint DataGraph Hosting Options and Permissions
 
 Anypoint DataGraph supports the following Anypoint Platform hosting options and permissions settings. 
 
