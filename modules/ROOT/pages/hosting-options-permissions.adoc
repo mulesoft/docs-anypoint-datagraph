@@ -1,6 +1,6 @@
 = Anypoint DataGraph Hosting Options and Permissions
 
-Anypoint DataGraph supports the following Anypoint Platform hosting options and permissions settings. 
+Anypoint DataGraph supports the following Anypoint Platform hosting options and permissions settings.
 
 === Supported Control Plane Hosting Options
 
@@ -21,7 +21,8 @@ If your API instances run on standalone instances, are not public, and are not c
 DataGraph provides access management permissions so you can meet your organization's requirements and at the same time drive collaboration across teams.
 
 Permissions for DataGraph are independent of permissions for other Anypoint platform products.
-One business group can only have one graph per environment. An environment's unique unified schema is a unique API.
+
+One business group can only have one graph per environment.
 
 The following permissions are available per business group per environment:
 
@@ -40,7 +41,7 @@ The following permissions are available per business group per environment:
 
 * View and explore the unified schema
 * Request access to and make data requests from the UI
-|Operate |Permission to view customer facing logs
+|Operate |Permission to view customer-facing logs
 |===
 
 == See Also
