@@ -1,7 +1,7 @@
 .xref:index.adoc[Anypoint DataGraph]
 * xref:index.adoc[]
 * xref:add-api-to-graph.adoc[]
-* xref:supported-hosting-options.adoc[]
+* xref:hosting-options-permissions.adoc[]
 * xref:schemas.adoc[]
 * xref:schema-validation.adoc[]
 * xref:edit-graph.adoc[]
