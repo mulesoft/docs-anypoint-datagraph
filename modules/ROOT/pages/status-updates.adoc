@@ -1,0 +1,28 @@
+= Understanding DataGraph Status
+
+When working with APIs and the unified schema, status updates let you know when the schema is available for querying, when changes to an API have taken effect, and which APIs are getting added, removed, or updated.
+
+== Status: Updating
+
+You can add to and update the unified schema at any time and apply changes. After you apply changes, the unified schema will enter an “updating” state, and the status will indicate *Updating*. This status update is visible to anyone in the business group with permissions for the environment.
+
+image::status_updating.png[]
+
+When the unified schema is updating, you can view the new changes in the schema, make additional changes, and apply new changes. However, these changes aren’t available to query until the update is complete.
+
+When the update is complete, the status will change to *Up to date*.
+
+image::status_uptodate.png[]
+
+== Status: On hold
+
+In the extremely rare case that DataGraph is unreachable, the status will change to *On hold*.
+If you were attempting any changes, DataGraph will automatically apply those changes when it’s available, and the status will change to  *Updating*, with details of which APIs are being added, removed, or updated.
+
+When the status is *On hold*, you can continue to browse the unified schema and source list, but you can’t make any edits. You can also run queries against the previously deployed unified schema.
+
+== Fixing Update Conflicts
+
+As you make changes to existing API schemas or add them to the unified schema, DataGraph automatically updates the unified schema’s metadata. This happens instantaneously, and the updated metadata is stored near real-time.
+
+You may, however, encounter rare cases when there are errors with the metadata—for example, when another contributor applies a conflicting change at the same time. In such cases, you’ll need to ensure you have the latest version of the unified schema and then re-attempt your change.
