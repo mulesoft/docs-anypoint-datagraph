@@ -1,0 +1,32 @@
+= Permissions For Anypoint DataGraph
+
+DataGraph provides access management permissions so you can meet your organization's requirements and at the same time drive collaboration across teams.
+
+Permissions for DataGraph are independent of permissions for other Anypoint platform products.
+
+One business group can only have one graph per environment.
+
+The following permissions are available per business group per environment:
+
+[%header%autowidth.spread]
+|===
+|Permission |Description
+|Admin |Permission to contribute, consume, promote, and operate the unified schema
+|Contribute a| Permission to:
+
+* Add source APIs to the unified schema
+* Edit any source API that has been added to the unified schema
+* Request access to and run queries with proper credentials
+* Promote APIs to and from the environment
+* View query traces in real time while running queries from the UI
+|Consume a|Permission to:
+
+* View and explore the unified schema
+* Request access to and make data requests from the UI
+|Operate |Permission to view customer-facing logs
+|===
+
+== See Also
+
+* xref:access-management::roles.adoc[Access Management Roles]
+* xref:access-management::managing-permissions.adoc[Access Management Managing Permissions]

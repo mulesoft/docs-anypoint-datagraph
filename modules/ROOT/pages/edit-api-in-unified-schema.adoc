@@ -1,6 +1,6 @@
-= Edit APIs in the Unified Schema
+= Edit APIs That Have Been Added to the Unified Schema
 
-As you develop your unified schema, you'll likely need to make changes to the APIs you've added to it. You can edit or remove APIs from the unified schema as necessary.
+As you develop your unified schema, you may need to make changes to the APIs you've added to it. You can edit or remove APIs from the unified schema as necessary.
 
 == Undo Merges Between Object Types
 
