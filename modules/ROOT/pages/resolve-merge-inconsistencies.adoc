@@ -1,12 +1,23 @@
 = Resolve Merge Inconsistencies
 
-Resolve inconsistencies across the fields before merging by either renaming or hiding the highlighted fields.
+Resolve inconsistencies and other issues across object types and fields before merging.
 
-== Hide Types and Query Methods
+== You Can’t Change the Visibility of a Common Field after a Merge If Visibility Is Not the Same in Both Types
 
-You can hide the fields, types or query methods that you don't want to have visible in the unified schema. The fields, types, or query methods that you hide make them unavailable for querying.
+If you merge two object types that contain a common field, and the common field  is hidden on `ObjectType1` but is visible on `ObjectType2`, you can’t change the visibility of the common field after a merge. Instead, you’ll need to split the types, change the field settings and merge them again.
 
-== Rename a type
+== You Can’t Merge Object Types If the Target Type is Not Up To Date
 
-Rename a type, query method, or a field to avoid conflicting with your target type.
+If you try to merge an object type with a target type in the unified schema while another user is updating the unified schema, the merge will fail and DataGraph won’t apply your changes. You’ll need to cancel the merge, update your local version of the unified schema, and redo the merge.
 
+== You Can’t Change the Visibility of the Only Remaining Field for a Type after a Merge
+
+If you merge two object types, each with two unique visible fields—`ObjectType1` contains `FieldA` and `FieldB`; `ObjectType2` contains `FieldC` and `FieldD`—and you hide `FieldA` and then merge the object types, you can’t later change the visibility on `FieldB` without breaking the merge, since `FieldB` is the only remaining visible field from `ObjectType1`. Instead, you’ll need to split the types, change the field settings and merge them again.
+
+== Unhiding an Object Type with a Duplicate Name Will Create a Conflict
+
+If there is a hidden object type in your API schema that has the same name as another object type in the unified schema or the local API schema, unhiding that type will raise a conflict. You’ll have to rename the type or merge it with the type with the same name after unhiding it.
+
+== Hiding a Type That Has Been Merged Will Undo the Merge
+
+If you merge object types in the unified schema, and then hide either of the contributing types, the types will no longer be merged. You will have to make the hidden type visible and merge the types again.

@@ -236,6 +236,6 @@ The object type displays that it's been merged and indicates the source APIs of 
 
 image::merged-types-results.png[]
 
-== How to Split a Local Merges
+== See Also
 
-add content
+* Edit APIs That Have Been Added to the Unified Schema
