@@ -1,4 +1,4 @@
-= Manage Visibility of Your Schema Elements
+= Manage Visibility of Schema Elements
 
 You can hide the fields, types or query methods that you don't want to have visible in the unified schema. The fields, types, or query methods that you hide make them unavailable for querying.
 

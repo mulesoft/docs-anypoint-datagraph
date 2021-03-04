@@ -1,12 +1,12 @@
 = Add an API to the Unified Schema
 
-You can scale your unified schema by adding existing APIs within your organization.
+You can scale your unified schema by adding existing APIs from within your organization.
 
 The API you add to your graph must expose data that you want to make available to your consumers. Clients that consume data from the unified schema may require different subsets of data even if it comes from the same APIs. The value of the data you expose to consumers increases the more you connect it to data exposed by other APIs.
 
-The API must also meet the following requirements:
+To add an API to the unified schema, it must meet the following requirements:
 
-* The API must be published in Exchange in the same organization as your data graph.
+* The API must be published in Exchange in the same organization as your unified schema.
 * The API must be a REST API (either a RAML or OAS specification).
 * The API must have a running instance with an accessible URL.
 
@@ -18,56 +18,68 @@ To add an API to your unified schema:
 . Select *Add API*.
 +
 image::add-an-api.png[]
-. In the *Select API* tab, browse for the API that you want to add.
-. In the *Configure URL* tab, select the API and asset version of the API you added in the previous step, and select *Confirm Selection*.
+. On the *Select API* page, browse for the API that you want to add.
+. Click *Next: Configure URL*.
+. On the *Configure URL* page, select the API and asset version of the API you added in the previous step, and select *Confirm Selection*.
 +
 image::select-api-and-asset-version.png[]
 +
 Anypoint DataGraph generates an API schema from the API version you selected. Note that some elements in your API specification might not be added to the API schema. See xref:schema-validation.adoc[] for more information.
 +
-Next, confirm the API’s URL.
-+
+. Add or edit the API’s URL:
 * If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
-* Otherwise, if you prefer to provide your own implementation URL, select *Add a new URL*. You can also click to get the baseURI from API specification. +
+* If you prefer to provide your own implementation URL, select *Add a new URL*. You can also click to get the baseURI from API specification.
++
 See xref:supported-hosting-options.adoc[] for more information about the supported runtime plane hosting options.
-. In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. +
-This allows the unified schema to make requests to your API when queried. +
+. Click *Next: Provide authentication*.
+. On the *Provide authentication* page, select the type of authentication on the GET endpoints for the API that you are adding.
++
+Authentication allows the unified schema to make requests to your API when queried. +
 +
 image::authentication-methods.png[]
 +
 * *No Auth* +
 Use if your API is public.
 * *Basic Auth* +
-Use if you authenticate to your API using a username and password pair.
+Use if you authenticate to your API using a username and password.
 * *Client ID enforcement via headers*
 * *Client ID enforcement via query params*
 * *Custom* +
 Use if you authenticate to your API using custom header parameters and values.
-. The *Preview Schema* tab shows you the generated API schema. +
-You can review the types of your API schema
-. In the *Configure API Schema* tab you can configure your API schema elements to add them to the unified schema.
+. Click *Next: Preview Schema*.
+. On the *Preview Schema* page review the types in your API schema, and then click *Next: Edit Schema*.
+. On the *Edit Schema* page, resolve any conflicts (if needed) or configure your API schema elements to add them to the unified schema.
 +
 [NOTE]
 --
-Except for resolving conflicts, if applicable, the rest of the configurations are optional but crucial to create an enriched unified schema.
+You must resolve any conflicts between object types before adding the API to the unified schema. See xref:resolve-conflicts.adoc[] for more information.
 --
+Beyond resolving conflicts, use the following configuration options to create an enriched unified schema.
 +
-* Resolve Any Conflicts +
-If there are types that have a conflict with the unified schema, make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
-* Enable Collaboration +
-Enable collaboration for applicable types and provide the required settings. This step is optional but crucial since it paves the road for achieving a connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
-* Manage Visibility +
+* Enable collaboration on an object type +
+Enable collaboration for applicable types and provide the required settings. This step is optional, but when you enable collaboration on types, you'll create a more connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
+* Manage visibility of schema elements +
 You can hide the fields, types, or query methods that you don't want to have visible in the unified schema. See xref:manage-elements-visibility.adoc[] for more information.
-* Review and Edit Names +
+* Review and edit names of schema elements +
 You can review the names of all fields, types, and query methods that you are adding to the unified schema. See xref:edit-elements-names.adoc[] for more information.
-* Merge Similar Object Types +
+* Merge similar object types +
 Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result. See xref:merge-types.adoc[] for more information.
-* Link Related Object Type +
-Linking enables you to join fields from two related types to have a more enriched query result.
+* Link related fields between object types +
+Linking enables you to join related fields from two types for a more enriched query result.
 See xref:linking.adoc[] for more information.
-. After you finish configuring your API schema, select *Add*. +
+. After you finish configuring your API schema, select *Next: Add to unified schema*. +
 When Anypoint DataGraph finishes adding your API schema to your unified schema, the UI displays an *Up to date* message status next to your unified schema.
 
+== Remove an API from the Unified Schema
 
+You can remove APIs from the unified schema as needed.
 
+Removing an API from the unified schema will break any merges, links, and existing queries.
 
+. Click *List of APIs added* and select the API that you want to remove.
+. Click *Remove API*, and then click *Apply Changes*.
+
+== See Also
+
+* xref:edit-api-in-unified-schema.adoc[Edit APIs That Have Been Added to the Unified Schema]
+* xref:status-updates.adoc[DataGraph Status Overview]

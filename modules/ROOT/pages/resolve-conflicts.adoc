@@ -1,13 +1,14 @@
-= Resolve Conflicts
+= Resolve Conflicts Between Object Types
 
 When adding types to your unified schema you must make sure that none of the types that you are adding create a conflict with the existing types in your unified schema.
 
-When you add an API schema that has a type name that already exists within your unified schema, the platform throws an error. You must resolve this error before continuing.
+When you add an API schema that has a type name that already exists within your unified schema, the DataGraph raises an error. You must resolve this error before continuing.
+
 If you don’t care about adding this particular type to the unified schema, you can choose to hide the field.
 
 If you want to add this conflicting type to the unified schema you must either:
 
-* Hide the Type or Query Method +
+* Hide the type or query method +
 See xref:manage-elements-visibility.adoc[] for more information.
 * Rename your type to avoid conflicting names +
 See xref:edit-elements-names.adoc[] for more information.

@@ -4,7 +4,7 @@ DataGraph provides access management permissions so you can meet your organizati
 
 Permissions for DataGraph are independent of permissions for other Anypoint platform products.
 
-One business group can only have one graph per environment.
+One business group can only have one unified schema per environment.
 
 The following permissions are available per business group per environment:
 

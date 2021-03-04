@@ -39,11 +39,11 @@ If you no longer want an object type to provide its fields to other types, you c
 . In the *Collaboration permissions* pane, clear the selection for *Allow collaboration for this type (Extend this type).*
 . When prompted confirm you want to disable collaboration for the object type. Click *Undo merge and disable collaboration*.
 
-== Remove an API From the Unified Schema
+== Remove an API from the Unified Schema
 
 You can remove APIs from the unified schema as needed.
 
-Removing an API from the unified schema may break existing queries.
+Removing an API from the unified schema will break any merges, links, and existing queries.
 
 . Click *List of APIs added* and select the API that you want to remove.
 . Click *Remove API*, and then click *Apply Changes*.

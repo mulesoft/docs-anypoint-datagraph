@@ -1,22 +1,30 @@
 = Query Your Unified Schema
 
-To query your unified schema:
+== Add query tips
 
-. On the top right corner, select *Run a Query*.
+to do: add query tips like alias and prettify and link to GraphQL docs on how to create queries
+
+== To Query Your Unified Schema
+
+To query your unified schema, you'll choose an authentication method and then create your query in the query editor.
+
+. In the top right corner, select *Run a Query*.
 +
 image::run-a-query.png[]
-. In the *Request access to run queries* screen, select how you want to authenticate your client to query the graph.
+. In the *Request access to run queries* dialog box, select how you want to authenticate your client to query the graph.
 +
 image::request-access-query.png[]
-* Select the first option to use an existing authenticated client application to query the graph.
-* Select the second option to create a new application to query the graph.
-* Select the third option to use an existing client ID and secret pair to query the graph.
-. Select *Request Access*.
-. On the left side of the screen, start typing the query using the in-line autocomplete feature.
+<1> *Use one of my existing applications*: Choose an authenticated client application from the list.
+<1> *Create a new application and use it immediately*: Provide an application name and an optional description and application URL.
+<1> *I already have credentials*: Use an existing client ID and secret pair.
+. Click *Request Access*.
+. In the query editor, start typing your query using the in-line autocomplete feature.
 +
 image::run-query-screen.png[]
-* Select the first item (*Copy Query*) to copy your query as a GraphQL query or as a cURL snippet.
-* Select the second item (*View History*) to see all the queries you sent to the unified schema.
-* Select the third item (*Manage Credentials*) to change the credentials you selected in the previous step.
-* Select the fourth item (*Explore Docs*) to open the unified schema documentation.
-. Click *Run* to send a query to the unified schema.
++
+<1> To copy a query to share it outside of Anypoint Platform, click *Copy Query*. You can copy the query as a cURl snippet or as a GraphQL query.
+<1> To change the credentials for running queries, click *Manage credentials*.
+<1> To see all queries you've sent to the unified schema, click *View History*.
+<1> To explore unified schema's documentation, click *Explore Docs*
+
+. Click *Run* to send your query to the unified schema.

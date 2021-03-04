@@ -1,6 +1,6 @@
-= Anypoint DataGraph Hosting Options and Permissions
+= Anypoint DataGraph Hosting Options
 
-Anypoint DataGraph supports the following Anypoint Platform hosting options and permissions settings.
+Anypoint DataGraph supports the following Anypoint Platform hosting options.
 
 === Supported Control Plane Hosting Options
 
