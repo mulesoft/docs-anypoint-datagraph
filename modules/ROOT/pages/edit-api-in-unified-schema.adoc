@@ -1,6 +1,6 @@
-= Edit APIs That Have Been Added to the Unified Schema
+= Edit APIs In Unified Schema
 
-As you develop your unified schema, you may need to make changes to the APIs you've added to it. You can edit or remove APIs from the unified schema as necessary.
+As you develop your unified schema, you can make changes to the APIs you've added to it. You can edit APIs to resolve conflicts and other issues, or remove APIs from the unified schema as they become deprecated. 
 
 == Undo Merges Between Object Types
 
@@ -47,34 +47,3 @@ Removing an API from the unified schema will break any merges, links, and existi
 
 . Click *List of APIs added* and select the API that you want to remove.
 . Click *Remove API*, and then click *Apply Changes*.
-
-
-== Promote an API Across Environments
-
-As you develop APIs, following software development lifecycle best practices, you'll want to promote them through environments and add them to that environment's unified schema.
-
-You can promote APIs to any environment for which you have permissions to contribute.
-
-. Click *List of APIs added* and select the API that you want to promote.
-. Click *Promote API*.
-. From the *Target environment* list, select the target environment for promotion.
-If this is the first time you're promoting the API, complete the following:
-. Click *Next: Configure URL*.
-** If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
-** If you prefer to provide your own implementation URL, select *Add a new URL*. You can also click *Use the URL in API specification*. +
-See xref:supported-hosting-options.adoc[] for more information about the supported runtime plane hosting options.
-. Click *Next: Provide URL*.
-** In the *Provide authentication* tab, select the type of authentication on the GET endpoints for the API that you are adding. +
-This allows the unified schema to make requests to your API when queried. +
-+
-image::authentication-methods.png[]
-+
-*** *No Auth* +
-Use if your API is public.
-*** *Basic Auth* +
-Use if you authenticate to your API using a username and password pair.
-*** *Client ID enforcement via headers*
-*** *Client ID enforcement via query params*
-*** *Custom* +
-Use if you authenticate to your API using custom header parameters and values.
-. Click *Next: Add to unified schema*.
