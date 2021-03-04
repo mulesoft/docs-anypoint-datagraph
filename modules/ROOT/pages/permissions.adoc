@@ -4,14 +4,12 @@ DataGraph provides access management permissions so you can meet your organizati
 
 Permissions for DataGraph are independent of permissions for other Anypoint platform products.
 
-One business group can only have one unified schema per environment.
-
 The following permissions are available per business group per environment:
 
 [%header%autowidth.spread]
 |===
 |Permission |Description
-|Admin |Permission to contribute, consume, promote, and operate the unified schema
+|Admin |Permission to contribute, consume, and operate the unified schema
 |Contribute a| Permission to:
 
 * Add source APIs to the unified schema
@@ -22,11 +20,14 @@ The following permissions are available per business group per environment:
 |Consume a|Permission to:
 
 * View and explore the unified schema
-* Request access to and make data requests from the UI
+* Request access to queries and make data requests from the UI
 |Operate |Permission to view customer-facing logs
 |===
 
-== See Also
+To contribute to the unified schema, you need to have the *Exchange Viewers* permission for the business group from which you want to add APIs. Refer to xref:exchange::to-set-permissions.adoc[Set User Access Permissions] for more information.
 
-* xref:access-management::roles.adoc[Access Management Roles]
-* xref:access-management::managing-permissions.adoc[Access Management Managing Permissions]
+==Additional Resources
+
+For more information on setting DataGraph SLA tiers and managing contracts, refer to xref:api-manager::datagraph-landing-page.adoc[DataGraph Administration] in the API Manager documentation.
+
+For instructions on setting up user permissions and roles for DataGraph, refer to xref:access-management-users.adoc#granting-permissions-and-roles-to-users[Granting Permissions and Roles to Users]
