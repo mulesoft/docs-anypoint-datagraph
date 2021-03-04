@@ -213,7 +213,6 @@ Merging objects allows you combine the fields of object types to resolve conflic
 
 Before merging a type, be sure to xref:manage-elements-visibility.adoc[make it visible].
 
-
 . In the API schema navigation, select the object type you want to merge with a target type.
 . In the *Merge* pane, select the target type to merge with. In the following example, you're merging the current type, called *Order*, with a target object type of the same name:
 +
@@ -238,4 +237,4 @@ image::merged-types-results.png[]
 
 == See Also
 
-* Edit APIs That Have Been Added to the Unified Schema
+* xref:edit-api-in-unified-schema.adoc[Edit APIs That Have Been Added to the Unified Schema]
