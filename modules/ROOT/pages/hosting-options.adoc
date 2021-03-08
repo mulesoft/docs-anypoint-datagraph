@@ -1,4 +1,6 @@
-= Anypoint DataGraph Hosting Options
+= DataGraph Hosting Options and Networking
+
+== Anypoint DataGraph Hosting Options
 
 Anypoint DataGraph supports the following Anypoint Platform hosting options.
 
@@ -16,14 +18,16 @@ Anypoint DataGraph must connect to the destination URL you provide when adding a
 
 If your API instances run on standalone instances, are not public, and are not connected to Anypoint VPC, you must first pair your standalone runtimes to Anypoint VPC. See https://docs.mulesoft.com/runtime-manager/to-request-vpc-connectivity[Request Anypoint VPC Connectivity to Your Network^] for more information.
 
-== Architecture Diagram
+== DataGraph Architecture and Networking
 
-to do
+Anypoint DataGraph is a fully managed service that runs on Anypoint Platform.
 
+image::datagraph_network_architecture.png[]
 
-== Networking
+Consumer requests from the public internet are routed to DataGraph through Shared or Dedicated load balancers, depending on your CloudHub or Anypoint Virtual Private Cloud (Anypoint VPC) configuration. DataGraph sends requests to the underlying APIs that make up the unified schema. Similarly, when you make changes in the DataGraph UI, those changes trigger updates of DataGraph in the Runtime Plane.
 
-to
+If you don’t have Anypoint VPC or if you’re unable to use ports 8081 and 8082 on a Shared Load Balancer, you need to specify new ports for DataGraph to use. Refer to (link to appropriate docs) for instructions. 
+
 
 == See Also
 
