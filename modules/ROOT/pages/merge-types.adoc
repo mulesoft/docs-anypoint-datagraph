@@ -2,13 +2,13 @@
 
 You can merge an object type from your API schema with either another object type in your unified schema or another object type in the same API schema. Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result.
 
-You can only merge object types with other object types.
+You can only merge object types with other object types. You can have an _extension merge_, in which the merged types join data, or you can have a _composition merge_, in which the merged types simplify the unified schema but are joined without primary keys.
 
 In Anypoint DataGraph, the type you configure to merge is your _current type_ and the type you merge with is your _target type_.
 
 == Merge Two Collaboration Enabled Types
 
-You can merge your current type with a target type that has collaboration enabled. If both types provide a primary key, you must ensure that both primary keys represent the same objects and identify the same record of that object. In this type of merge,both object types return the same dataset.
+You can merge your current type with a target type that has collaboration enabled. If both types provide a primary key, you must ensure that both primary keys represent the same objects and identify the same record of that object. In this type of merge, known as an extension merge, both object types return the same dataset.
 
 For example, assume you have a Customer API Schema that returns a `Customer` type with default query method `customersById(id)` and primary key `id`:
 
@@ -179,7 +179,7 @@ In this example, the primary key for both types is `id`, and for both APIs, `id`
 
 == Merge Two Types That Do Not Have Primary Keys Configured
 
-You can also merge two types when neither of them has a primary key defined. This merging strategy does not require you to provide a default query method or a primary key.
+A composition merge occurs when you merge two types and neither has a primary key defined. This merging strategy does not require you to provide a default query method or a primary key.
 
 Because there is no primary key in either type, merging them does not join the datasets returned by the types but rather joins both types as a single one. In this merge, you do not reference the same object: you combine the fields. After merging the current and target types, all fields in the current type become nullable in the unified schema. The result of this merge does not affect the query results for the types, but it allows for a cleaner unified schema in case you have duplicate types that don’t return the same dataset.
 
