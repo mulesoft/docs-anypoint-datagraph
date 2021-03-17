@@ -16,6 +16,7 @@
   ** xref:manage-elements-visibility.adoc[]
   ** xref:edit-elements-names.adoc[]
 * xref:promote-api.adoc[]
+* xref:remove-api.doc[]
 * xref:query-unified-schema.adoc[]
 * xref:troubleshoot-schemas-queries.adoc[troubleshooting index placeholder]
   ** xref:schema-validation.adoc[]

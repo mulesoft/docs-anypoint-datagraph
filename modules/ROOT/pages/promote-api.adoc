@@ -1,33 +1,64 @@
-= Promote an API Schema to Another Environment
+= Promote API Schemas in AnyPoint DataGraph
 
-As you develop your APIs, following software development lifecycle best practices, you can promote them through environments and add them to that environment's unified schema.
+As you develop and configure an API schema, you can promote it to the next environment toward production and add it to that environment's unified schema. Note that you’re promoting the schema configurations only, not the actual underlying source REST APIs.
 
-You can promote APIs to any environment for which you have permissions to contribute.
+Promotion enables you to configure an API schema in one environment without repeating that configuration in subsequent environments. Use promotion to move your schema configurations from development to staging and from staging to production.
+
+The steps you take to promote an API through the production cycle vary depending on your needs. For example, imagine that you add and configure an Orders API in your development environment that you now want to promote to staging. The possible promotion scenarios are as follows:
+
+[%header%autowidth.spread]
+|===
+|Development Orders API Version |Staging Orders API Version |Promotion Action |Promotion Outcome Version
+|v3.1.0 |None |DataGraph promotes the API schema and any of its configuration.
+
+You configure the URL and authentication method.
+ |v3.1.0
+|v3.1.1 |v3.1.0 |DataGraph automatically updates the asset version of the existing API schema.
+
+You configure the URL and authentication method.
+ |v3.1.1
+|v3.1.0 |v3.1.0 |DataGraph updates any customizations to the asset version. |v3.1.0
+|v4.0.0 |v3.1.0 |DataGraph adds both API versions to the target environment, where they coexist.
+
+You configure the URL and authentication method for v4.0.0.
+ |v3.1.0, v4.0.0
+|===
+
+== Promote an API to Another environment
+
+You can promote API schemas to any environment to  which you are permitted  access.
+
+Although your APIs must be published in Exchange, they do not need to be Mule applications or be running on Mule runtime engine or in CloudHub to be added to the unified schema.
+
+=== Prerequisites
+
+You must have xref:permissions.adoc[the correct access permissions].
+The schema you promote must not be in conflict with the unified schema in the target environment.
+
+If conflict exists, you must instead manually add the API and resolve those conflicts as you would when adding an API.
+
+To promote an API:
 
 . Click *List of APIs added* and select the API that you want to promote.
 . Click *Promote API*.
 . From the *Target environment* list, select the target environment for promotion.
-+
-If this is the first time you're promoting the API, complete the following:
 . Click *Next: Configure URL*.
+. Depending on your promotion scenario, optionally choose one of the following configuration options:
++
 * If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
-* If you prefer to provide your own implementation URL, select *Add a new URL*. You can also click *Use the URL in API specification*. +
-See xref:supported-hosting-options.adoc[] for more information about the supported runtime plane hosting options.
-. Click *Next: Provide URL*.
-. On the *Provide authentication* page, select the type of authentication on the GET endpoints for the API that you are adding. +
-This allows the unified schema to make requests to your API when queried. +
+* If you prefer to provide your own implementation URL, select *Add a new URL* or click *Use the URL in API specification*.
+. Click *Next: Provide Authentication*.
+. On the *Provide authentication* page, select the type of authentication on the GET endpoints for the API that you want to add, allowing Anypoint DataGraph to make requests to your API when queried:
 +
-image::authentication-methods.png[]
-+
-* *No Auth* +
-Use if your API is public.
-* *Basic Auth* +
-Use if you authenticate to your API using a username and password pair.
+* *No Auth*: Use if your API is public.
+* *Basic Auth*: Use if you authenticate to your API using a username and password pair.
 * *Client ID enforcement via headers*
 * *Client ID enforcement via query params*
-* *Custom* +
-Use if you authenticate to your API using custom header parameters and values.
+* *Custom*: Use if you authenticate to your API using custom header parameters and values.
 . Click *Next: Add to unified schema*.
 
-== See Also
-* xref:permissions.adoc[Permissions For Anypoint DataGraph]
+== Additional Resources
+
+* xref:permissions.adoc[Permissions for Anypoint DataGraph]
+* xref:resolve-conflicts.adoc[Resolve Conflicts and Merge Inconsistencies]
+* xref:schema-validation.adoc[Potential Errors When Generating an API Schema]

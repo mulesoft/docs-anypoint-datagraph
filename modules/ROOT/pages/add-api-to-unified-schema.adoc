@@ -92,3 +92,8 @@ xref:linking.adoc[Linking] enables you to join related fields from two types to 
 . Click *Next: Add to unified schema*.
 
 Anypoint DataGraph xref:status-updates.adoc[updates the unified schema]. When the unified schema is updating, you can view the new changes in the schema, make additional changes, and apply new changes. However, these changes aren’t available to query until the update is complete, which can take several minutes.
+
+== Additional Resources
+
+* xref:permissions.adoc[Permissions for Anypoint DataGraph]
+* xref:schema-validation.adoc[Potential Errors When Generating an API Schema]

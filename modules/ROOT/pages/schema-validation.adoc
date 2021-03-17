@@ -13,3 +13,8 @@ If a required `param` is of an unsupported type, the endpoint is removed from th
 * `union` types with members other than `objects` and `nils` are removed from the API schema.
 
 Note that if your API specification is composed of only unsupported scenarios, Anypoint DataGraph does not generate an API schema and throws a *Validation failed* error.
+
+== Additional Resources
+
+* xref:resolve-conflicts.adoc[Resolve Conflicts and Merge Inconsistencies]
+* xref:edit-schema.adoc[Edit Your API Schema for Addition to the Unified Schema]
