@@ -1,4 +1,4 @@
-= Promote an API Across Environments
+= Promote an API Schema to Another Environment
 
 As you develop your APIs, following software development lifecycle best practices, you can promote them through environments and add them to that environment's unified schema.
 

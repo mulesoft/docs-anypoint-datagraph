@@ -1,0 +1,19 @@
+= Remove an API from the Unified Schema
+
+You can remove APIs from the unified schema as needed. For example, remove an API to add a new version, or remove an API if the underlying REST API no longer exists.
+
+However, be aware that when you remove an API from the unified schema, you break:
+
+* Any merges and links with the types in the API schema that you remove
+* Any existing queries that query the types and fields of the API schema that you remove
+
+To remove an API:
+
+. Click *List of APIs added* and select the API that you want to remove.
+. Click *Remove API*, and then click *Apply Changes*.
+
+== Additional Resources
+
+* xref:edit-api-in-unified-schema.adoc[Edit APIs That Have Been Added to the Unified Schema]
+* xref:status-updates.adoc[DataGraph Status Overview]
+* xref:edit-schema.adoc[Edit Your API Schema to Add It to the Unified Schema]

@@ -1,0 +1,79 @@
+= Create and Manage Object Type Merges
+
+The following tasks explain how to create and undo merges within the unified schema and within the local schema.
+
+== Merge Object Types
+
+Merging object types enables you to combine the fields of two similar object types and create more valuable results from a single query.
+
+You can merge object types locally within the same API schema, or merge an object type with a type in the unified schema.
+
+=== Prerequisites
+
+Ensure object types you want to merge are  xref:manage-elements-visibility.adoc[set to visible].
+
+To merge object types:
+
+. In the API schema navigation, select the object type you want to merge.
+. In the *Merge* pane, select the target type to merge with.
++
+The following example merges the current type, called *Order*, with a target object type of the same name:
++
+Image::merge-object-type.png[]
++
+The target type does not need to have the same name.
+
+. If the current type allows collaboration but collaboration is not yet enabled, and if the selected target type has a primary key defined, make one of the following selections:
++
+* (Recommended) Join fields from the two types to have a more enriched query result for this type.
++
+If you make this selection, you are taken to the *Enable collaboration* pane, where you set a default query method and primary key. (Refer to  xref:collaboration.adoc[Enable Collaboration on a Type] for more information on object type collaboration.)
+
+* Declare the current type as a reference so that it returns only the fields and dataset of the type it's merged with.
+. In the *Merge* pane, click *Preview merge* results.
++
+In the following example, the preview shows the target Order object type in the unified schema with new fields added after the current Order object type is merged with it:
++
+Image::preview-merge-results.png[]
+
+. To finish, click *Confirm merge*:
+
+After you apply your changes, the resulting object type in the unified schema indicates the source APIs of the merge, as shown:
+
+Image::merged-types-results.png[]
+
+== Undo Merges Between Object Types
+
+You can undo merges between object types as needed. For example, if you want to merge Object Type A with Object Type C, but Type A has already been merged with Type B in the unified or local API schema, you must undo the existing merge between Types A and B before creating a new merge with Type C.
+
+Note the following:
+
+* Undoing a merge will break existing queries of the merged type.
+* If you undo a merge between Object Type A and Type B in the unified schema, you must rename Object Type A (and its query method, if merged). Anypoint DataGraph displays a conflict until Object Type A (and its query method) are renamed or merged again with Type B.
+* Nullable fields return to their original state after you undo a merge. For example, if a field in an object type was non-nullable, but as a result of a merge became nullable, then the field returns to being non-nullable after you undo the merge.
+
+To undo a merge:
+
+. From the unified schema, click *List of APIs added* and select the API that contains the merged object type.
+. In the API schema navigation, select the object type and scroll to the *Merge* pane.
+. Click *Undo merge*.
+. Click *Apply Changes*.
+
+== Split a local merge
+Split local merges to resolve conflicts, manage element visibility, rename fields, or perform other edits on your local API schema.
+
+== Prerequisite
+If you have object types that are merged locally and merged with a type in the unified schema, you’ll first need to undo the merge with the unified schema.
+
+To split a merge:
+
+. Click *List of APIs added* and select the API schema that contains the object type to unmerge.
+. In the API schema navigation, select the object type and scroll to the Merge pane.
+. Click *Split Local Merge* > *Apply Changes*.
+
+After the split, the types return to their original states but retain any customizations, such as field visibility changes or new names.
+
+
+== Additional Resources
+
+* xref:merge-types.adoc[How Object Type Merges Work in Anypoint DataGraph]

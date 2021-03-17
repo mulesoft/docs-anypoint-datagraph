@@ -1,0 +1,94 @@
+= Add an API to the Unified Schema
+
+In addition to adding new APIs to your unified schema, you can increase the value of the data that you expose to your customers by adding other, existing APIs to it.
+
+When you add an API, Anypoint DataGraph generates an API schema from that API version, which you can then edit before adding it to the unified schema. Some elements in your API specification, such as non-GET operations, are not added to the API schema. See xref:schema-validation.adoc[Errors When Generating the API Schema] for more information.
+
+Adding an API to the unified schema comprises three tasks:
+
+. Add the API to Anypoint DataGraph.
+. Preview the generated API schema.
+. Edit the API schema and resolve any conflicts.
+
+You must resolve any conflicts between object types before adding the generated API schema to the unified schema. Refer to xref:resolve-conflicts.adoc[Resolve Conflicts] for more information.
+
+== Prerequisites
+
+To add an existing API to the unified schema, the API must meet the following requirements:
+
+* The API must be published in Exchange in the same organization as your unified schema.
++
+However, it need not be a Mule application or be running on Mule runtime engine or in CloudHub.
+* The API must be a REST API (either a RAML or OAS specification).
+* The API must have a running instance with an accessible URL.
+
+Additionally, you must have xref:permissions.adoc[the correct permissions] to add APIs.
+
+== Add the API to Anypoint DataGraph
+
+The first task to adding an API to the unified schema is adding the API to Anypoint DataGraph by configuring its asset version, URL, and authentication method.
+
+. Navigate to Anypoint DataGraph.
+. Select *Add API*:
++
+Image::add-an-api.png[]
+
+. On the *Select API* page, select the API that you want to add.
+. Click *Next: Configure URL*.
+. On the *Configure URL* page, select the API version and asset version of the API you want to add, and then select *Confirm Selection*:
++
+Image::select-api-and-asset-version.png[]
+
+. Still on the *Configure URL* page, add or edit the API’s URL:
++
+* If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
+* If you prefer to manually provide your own implementation URL, select *Add a new URL*.
+. Click *Next: Provide authentication*.
+. On the *Provide authentication* page, select the type of authentication on the GET endpoints for the API that you are adding:
++
+* *No Auth*: Use if your API is public.
+* *Basic Auth*: Use if you authenticate to your API using a username and password.
+* *Client ID enforcement via headers*
+* *Client ID enforcement via query parameters*
+* *Custom*: Use if you authenticate to your API using custom header parameters and values.
+. Click *Next: Preview Schema*.
+
+== Preview the Generated API Schema
+
+After you add the API to it, Anypoint DataGraph automatically translates the API’s specification to its corresponding API schema, which you next preview before editing the schema and resolving conflicts, if any occur:
+
+. On the *Preview Schema* page, review the types and fields in your API schema.
+. When you’re done previewing the schema, click *Next: Edit Schema*.
+
+== Edit the API Schema and Add It to the Unified Schema
+
+The final task in adding an API is to edit the schema to resolve conflicts, if any exist, and to enrich the schema.
+
+. If Anypoint DataGraph has raised an error and prompted you to resolve a conflict, resolve it on the *Edit Schema* page.
++
+Conflicts raised by Anypoint DataGraph include suggested resolutions in their prompts.
+. If you want to make the unified schema more robust, edit the API schema (either now or after you add it to the unified schema) to perform the following:
++
+* Enable collaboration on an object type.
++
+xref:collaboration.adoc[Enable collaboration] for applicable types and provide the required settings. This is optional, but when you enable collaboration on types, you create a more connected and enriched unified schema.
+
+* Manage visibility of schema elements.
++
+You can xref:manage-elements-visibility.adoc[hide the fields, types, or query methods] that you don't want visible in the unified schema.
+
+* Review and edit names of schema elements.
++
+You can xref:edit-elements-names.adoc[edit the names of all fields, types, and query methods] that you add to the unified schema to make them more relevant for queries.
+
+* Merge similar object types.
++
+xref:merge-types.adoc[Merging types] enables you to combine similar types to extend their fields and datasets for more enriched query results.
+
+* Link related fields between object types.
++
+xref:linking.adoc[Linking] enables you to join related fields from two types to return a wider range of results when you query the linked types.
+
+. Click *Next: Add to unified schema*.
+
+Anypoint DataGraph xref:status-updates.adoc[updates the unified schema]. When the unified schema is updating, you can view the new changes in the schema, make additional changes, and apply new changes. However, these changes aren’t available to query until the update is complete, which can take several minutes.

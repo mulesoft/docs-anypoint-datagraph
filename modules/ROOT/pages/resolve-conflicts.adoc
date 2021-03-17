@@ -1,6 +1,6 @@
 = Resolve Conflicts and Merge Inconsistencies
 
-You must resolve any merge conflicts or merge inconsistencies when adding object types to the unified schema. 
+You must resolve any merge conflicts or merge inconsistencies when adding object types to the unified schema.
 
 == Resolve Conflicts Between Object Types
 
@@ -25,7 +25,7 @@ Resolve inconsistencies and other issues across object types and fields before m
 
 === You Can’t Change the Visibility of a Common Field after a Merge If Visibility Is Not the Same in Both Types
 
-If you merge two object types that contain a common field, and the common field  is hidden on `ObjectType1` but is visible on `ObjectType2`, you can’t change the visibility of the common field after a merge. Instead, you’ll need to split the types, change the field settings and merge them again.
+If you merge two object types that contain a common field, and the common field  is hidden on ObjectType1 but is visible on ObjectType2, you can’t change the visibility of the common field after a merge. Instead, you’ll need to split the types, change the field settings and merge them again.
 
 === You Can’t Merge Object Types If the Target Type is Not Up To Date
 
@@ -33,7 +33,7 @@ If you try to merge an object type with a target type in the unified schema whil
 
 === You Can’t Change the Visibility of the Only Remaining Field for a Type after a Merge
 
-If you merge two object types, each with two unique visible fields—`ObjectType1` contains `FieldA` and `FieldB`; `ObjectType2` contains `FieldC` and `FieldD`—and you hide `FieldA` and then merge the object types, you can’t later change the visibility on `FieldB` without breaking the merge, since `FieldB` is the only remaining visible field from `ObjectType1`. Instead, you’ll need to split the types, change the field settings and merge them again.
+If you merge two object types, each with two unique visible fields—ObjectType1 contains FieldA and FieldB; ObjectType2 contains FieldC and FieldD—and you hide FieldA and then merge the object types, you can’t later change the visibility on FieldB without breaking the merge, since FieldB is the only remaining visible field from ObjectType1. Instead, you’ll need to split the types, change the field settings and merge them again.
 
 === Unhiding an Object Type with a Duplicate Name Will Create a Conflict
 

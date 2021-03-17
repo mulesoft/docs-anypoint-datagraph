@@ -1,8 +1,10 @@
 = Permissions For Anypoint DataGraph
 
-DataGraph provides access management permissions so you can meet your organization's requirements and at the same time drive collaboration across teams.
+Anypoint DataGraph provides access management permissions so you can meet your organization's security requirements and at the same time drive collaboration across teams.
 
-Permissions for DataGraph are independent of permissions for other Anypoint platform products.
+Permissions for Anypoint DataGraph are independent of permissions for other Anypoint Platform products.
+
+To contribute to the unified schema, you need to have the *Exchange Viewers* permission for the business group from which you want to add APIs. Refer to xref:exchange::to-set-permissions.adoc[Set User Access Permissions] for more information.
 
 The following permissions are available per business group per environment:
 
@@ -13,9 +15,9 @@ The following permissions are available per business group per environment:
 |Contribute a| Permission to:
 
 * Add source APIs to the unified schema
-* Edit any source API that has been added to the unified schema
-* Request access to and run queries with proper credentials
-* Promote APIs to and from the environment
+* Edit any source API added to the unified schema
+* Request access to run queries
+* Promote APIs to an environment
 * View query traces in real time while running queries from the UI
 |Consume a|Permission to:
 
@@ -24,9 +26,7 @@ The following permissions are available per business group per environment:
 |Operate |Permission to view customer-facing logs
 |===
 
-To contribute to the unified schema, you need to have the *Exchange Viewers* permission for the business group from which you want to add APIs. Refer to xref:exchange::to-set-permissions.adoc[Set User Access Permissions] for more information.
-
-==Additional Resources
+== Additional Resources
 
 For more information on setting DataGraph SLA tiers and managing contracts, refer to xref:api-manager::datagraph-landing-page.adoc[DataGraph Administration] in the API Manager documentation.
 

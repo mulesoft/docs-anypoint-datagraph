@@ -1,4 +1,4 @@
-= Merge Types
+= How Object Type Merges Work in Anypoint DataGraph
 
 You can merge an object type from your API schema with either another object type in your unified schema or another object type in the same API schema. Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result.
 
@@ -207,34 +207,25 @@ price: float
 
 You can merge them so that in the unified schema there is only one `Amount` type that returns data from the Europe Sales API or the North America Sales API, depending on the query. Although both types are similar, their datasets are not joined.
 
-== How to Merge Object Types
+== Local Merges Between Objects in the Same API Schema
 
-Merging objects allows you combine the fields of object types to resolve conflicts between types and create more valuable results from a single query.
+A local merge occurs when you merge an object type with another object type in the same API schema. You can then merge the resulting type with another local object type or with a type in the unified schema.
 
-Before merging a type, be sure to xref:manage-elements-visibility.adoc[make it visible].
+After a local merge, you can view and edit only the type that is the outcome of the merge. Additionally, you cannot enable or disable collaboration on the type or change its default query method or primary key. You can rename object types and fields, hide object types and fields, and merge and link with another object type.
 
-. In the API schema navigation, select the object type you want to merge with a target type.
-. In the *Merge* pane, select the target type to merge with. In the following example, you're merging the current type, called *Order*, with a target object type of the same name:
-+
-image::merge-object-type.png[]
+=== Field Visibility in Local Merges
 
-. If you haven't already enabled collaboration for the current object type, make one of the following selections:
-* (Recommended) Join fields from the two types to have a more enriched query result for this type.
-+
-If you make this selection, you'll be taken to the *Enable collaboration* pane, where you'll need to set a default query method and primary key. (See xref:collaboration.adoc[Enable Collaboration on a Type] for more information.)
-* Declare the current type as a reference so it will only return the fields and dataset of the type it's merged with.
-. In the *Merge* pane, click *Preview merge* results. In the following example, the preview shows the Order target type in the unified schema with new fields added after merging with the current Order object type:
-+
-image::preview-merge-results.png[]
-. To finish, click *Confirm merge*.
-+
-image::merged-types.png[]
-. To undo the merge, click *Undo merge*.
+If you locally merge two object types that contain common fields but those fields have different visibilities, the fields in the locally merged type behave as follows:
 
-The object type displays that it's been merged and indicates the source APIs of the merge, as shown:
-
-image::merged-types-results.png[]
+[%header%autowidth.spread]
+|===
+|Scenario |TypeA Field |TypeB Field |MergedType (Local)
+|1 |Hidden |Hidden |Hidden
+|2 |Hidden |Visible |Visible
+|3 |Visible |Hidden |Visible
+|4 |Visible |Visible |Visible
+|===
 
 == See Also
 
-* xref:edit-api-in-unified-schema.adoc[Edit APIs That Have Been Added to the Unified Schema]
+* xref:manage-merges.adoc[Create and Manage Object Type Merges]

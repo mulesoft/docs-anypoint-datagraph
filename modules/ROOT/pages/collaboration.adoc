@@ -1,4 +1,4 @@
-= Enable Collaboration on an Object Type
+= Object Type Collaboration in Anypoint DataGraph
 
 Enabling collaboration on a type allows you to achieve a connected and enriched unified schema.
 
@@ -42,7 +42,7 @@ status: String
 
 In this example, your default query method is `ordersById`, and its primary key is `orderId`.`ordersById` retrieves the Order type and uses `orderId` to retrieve specific information based on that ID field. Note that the data type of the default query method’s input argument ID must be the same as the data type of the primary key. In this example, both are of data type `ID!`.
 
-== How to Enable Collaboration on an Object Type
+== Enable Collaboration on an Object Type
 
 . In the API schema navigation, select the object type for which you want to enable collaboration.
 . In the *Collaboration permissions* pane, click *Allow collaboration for this type (Extend this type)*.
@@ -50,4 +50,14 @@ In this example, your default query method is `ordersById`, and its primary key 
 +
 image::enable-collaboration.png[]
 
-After you enable collaboration on a type, you can merge and link it with other types.
+== Disable Collaboration for an Object Type
+
+If you no longer want an object type to provide its fields to other types, you can disable collaboration for that type. However, if you disable collaboration on an object that is merged with another object type in the unified schema, the merge breaks and creates a conflict that you must resolve.
+
+To disable collaboration:
+
+. Click *List of APIs added* and select the API that contains the object type for which you want to disable collaboration.
+. In the API schema navigation, select the object type.
+. In the *Collaboration permissions* pane, clear the selection for *Allow collaboration for this type (Extend this type).*
+. When prompted, confirm that you want to disable collaboration for the object type by clicking  *Undo merge and disable collaboration*.
+. If a conflict occurs, follow the prompts in DataGraph to resolve it.

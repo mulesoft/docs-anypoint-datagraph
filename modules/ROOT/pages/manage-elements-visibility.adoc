@@ -1,4 +1,4 @@
-= Manage Visibility of Schema Elements
+= Schema Element Visibility in AnyPoint DataGraph
 
 You can hide the fields, types or query methods that you don't want to have visible in the unified schema. The fields, types, or query methods that you hide make them unavailable for querying.
 
@@ -10,7 +10,7 @@ By default, all nested types are hidden. If you wish to add a nested type to the
 
 You cannot hide a method that you configured to be a default query method, or a field that you configured as a primary key.
 
-== How to Manage Visibility of Schema Elements
+== Manage Visibility of Schema Elements
 
 Hiding or unhiding elements in your API schema allows you to control the granularity of information that is available in the unified schema.
 

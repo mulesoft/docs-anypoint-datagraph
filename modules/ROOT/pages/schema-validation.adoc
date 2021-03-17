@@ -1,4 +1,4 @@
-= Errors When Generating the API Schema
+= Potential Errors When Generating an API Schema
 
 When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it. However, not all features of an API specification are successfully generated into an API schema.
 
