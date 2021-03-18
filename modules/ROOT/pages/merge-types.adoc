@@ -228,4 +228,4 @@ If you locally merge two object types that contain common fields but those field
 
 == See Also
 
-* xref:manage-merges.adoc[Create and Manage Object Type Merges]
+* xref:manage-merges.adoc[Create and Edit Object Type Merges]

@@ -136,4 +136,4 @@ ordersByOrderId (orderId: “123”) {
 
 == Additional Resources
 
-* xref:manage-links.adoc[Create and Manage Links Between Object Types]
+* xref:manage-links.adoc[Create and Edit Links Between Object Types]
