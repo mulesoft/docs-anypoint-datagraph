@@ -28,3 +28,8 @@ image::run-query-screen.png[]
 <1> To explore unified schema's documentation, click *Explore Docs*
 
 . Click *Run* to send your query to the unified schema.
+
+== Additional Resources
+
+* xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
+* xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs]
