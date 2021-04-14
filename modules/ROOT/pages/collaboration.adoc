@@ -4,11 +4,11 @@ Enabling collaboration on a type allows you to achieve a connected and enriched 
 
 When you enable collaboration on a type, you allow similar types in your API schema or in other API schemas to collaborate with your type and directly add their own fields. The result is an extended list of fields and dataset, resulting in a more enriched query result for this type.
 
-When you enable collaboration on a type, the type becomes a provider of its fields to other types, enabling other contributors to:
+When you enable collaboration on a type, the type provides its fields to other types in the unified schema or in the local API schema, enabling you to:
 
-* Link to your type +
+* Create links between types +
 See xref:linking.adoc[Link Types] for more information.
-* Merge your type with another type +
+* Merge types with other types +
 See xref:merge-types[Merge Types] for more information.
 
 You can enable collaboration only on Level-1 types: those directly returned from a query method. See xref:schemas.adoc#level-1-nested-types[Level 1 and Nested Types] for more information.
