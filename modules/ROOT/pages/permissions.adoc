@@ -22,7 +22,7 @@ The following permissions are available per business group per environment:
 |Consume a|Permission to:
 
 * View and explore the unified schema
-* Request access to queries and make data requests from the UI
+* Request access to run queries and make data requests from the UI
 |Operate |Permission to view customer-facing logs
 |===
 

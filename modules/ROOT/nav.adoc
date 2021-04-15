@@ -21,5 +21,6 @@
 * xref:troubleshoot-schemas-queries.adoc[troubleshooting index placeholder]
   ** xref:schema-validation.adoc[]
   ** xref:resolve-merge-inconsistencies.adoc[]
+  ** xref:resolve-runtime-errors.adoc[]
   ** xref:troubleshoot-query-logs.adoc[]
   ** xref:troubleshoot-query-tracing.adoc[]
