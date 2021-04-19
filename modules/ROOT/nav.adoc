@@ -22,4 +22,4 @@
   ** xref:schema-validation.adoc[]
   ** xref:resolve-runtime-errors.adoc[]
   ** xref:troubleshoot-query-logs.adoc[]
-  ** xref:troubleshoot-query-tracing.adoc[]
+  ** xref:troubleshoot-query-traces.adoc[]
