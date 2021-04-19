@@ -1,1 +1,60 @@
-placeholder
+= Troubleshoot Queries With Response Logs
+
+Anypoint DataGraph provides response logs that contain useful query troubleshooting information.
+
+Response logs contain information about only DataGraph queries. DataGraph stores up to 100 MB  or up to 30 days of log data, whichever limit is reached first.
+
+[NOTE]
+--
+If you have a Titanium subscription, the xref:monitoring::performance-and-impact.adoc#titanium-subscription-limits[Titanium limits for logs apply].
+--
+
+== Log Levels for DataGraph Response Logs
+
+Log levels for Anypoint DataGraph include INFO, DEBUG, WARN, ERROR. Each level contains the following information:
+
+By default, the log level for each environment is set to INFO. You can change this setting at any time. Changes to the log level persist for _all future queries to that DataGraph instance_, regardless of the user.
+
+== View Response Logs for a Query
+
+You must have xref:permissions.adoc[the Operate or Admin permission] to view and search response logs.
+
+If you are a Titanium subscriber, you can also view response logs in xref:monitoring::logs.adoc[Anypoint Monitoring].
+
+To view response logs in Anypoint DataGraph:
+
+. Create and run a query.
+. Click *View response* logs.
++
+Response logs for that query are displayed:
++
+image::query-response-logs.png[]
+
+== Search Response Logs
+
+Search for logs that contain specified values or search for logs by date and priority.
+
+The *Date & Time* filter enables you to search the log by specifying a date range using the following values:
+
+* Last hour
+* Last 24 hours
+* Last week
+* Last month
+
+Priority levels include:
+
+* INFO
+* DEBUG
+* WARN
+* ERROR
+
+To search existing logs:
+
+. Enter a value in the search box, or click Advanced to search for logs for a specified time, day, date range, and message priority.
++
+image::search-logs.png[]
+. Click *Apply*.
+
+== See Also
+* xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
+* xref:query-unified-schema.adoc[Query the Unified Schema]
