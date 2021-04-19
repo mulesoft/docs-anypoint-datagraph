@@ -30,7 +30,7 @@ After publishing the example APIs in Exchange, first add the Catalyst Product AP
 
 . From AnyPoint Platform > Anypoint DataGraph, click *+Add API*:
 +
-image::add-api.png[]
+image::add-api.png[60%]
 
 . Confirm the API and asset version:
 +
@@ -96,7 +96,7 @@ When adding an API, all nested types are hidden from the unified schema. This gi
 
 . Click *Next: Add to unified schema*.
 +
-image::adding-api-status.png[]
+image::adding-api-status.png[80%]
 +
 As DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
 
@@ -203,12 +203,12 @@ After you add the two API schema’s to the unified schema, you’re ready to re
 . Click *Run a query*.
 . Select an access method. For this example, select *Create a new application and use it immediately*.
 +
-image::request-query-access.png[]
+image::request-query-access.png[80%]
 
 . Click *Next*.
 . In the *Create a new application* window, complete the fields:
 +
-image::create-query-application.png[]
+image::create-query-application.png[80%]
 
 . Click *Next*.
 
