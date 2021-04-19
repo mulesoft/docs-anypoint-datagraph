@@ -15,7 +15,7 @@ If you want to use an existing client application or client ID and secret pair, 
 +
 Choose one of the following options:
 +
-image::request-access-query.png[80%]
+image::request-access-query.png[70%]
 +
 ** *Use one of my existing applications*: Choose an existing client application from the list, and click Request Access.
 ** *Create a new application and use it immediately*: Click *Next*, provide an application name and an optional description and application URL, and click *Create and Request Access*.

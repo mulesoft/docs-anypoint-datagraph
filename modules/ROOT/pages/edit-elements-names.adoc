@@ -4,7 +4,6 @@ When you add APIs to the unified schema, can rename fields, types, and query met
 
 If you attempt to rename a type in an API that is merged with a type in the unified schema, you will undo the merge. Likewise, modifying the name of a field that you've configured as a primary key will break the link or merge associated with that primary key. When renaming fields or query methods, ensure that you are not breaking existing collaborations on those elements.
 
-== Prerequisites
 Before editing the name of an element, be sure to xref:manage-elements-visibility.adoc[make it visible].
 
 To edit the name of a schema elements:

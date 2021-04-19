@@ -6,10 +6,8 @@ The following tasks explain how to create and undo links between object types.
 
 Linking enables you to join fields from two related object types to create more useful query results from the unified schema.
 
-=== Prerequisites
-
 * Before linking object types, be sure to xref:manage-elements-visibility.adoc[set the fields to visible].
-* You can link only to object types that have x-ref:collaboration.adoc#how-to-enable-collaboration-on-an-object-type[Enable collaboration] for any object types you want to link to.
+* You can link only to object types that have xref:collaboration.adoc#enable-collaboration-on-an-object-type[Enable collaboration]for any object types you want to link to.
 
 To link object types:
 
@@ -29,7 +27,7 @@ DataGraph creates this field in your current type and links it to the target typ
 +
 The new field returns the type you're linking to, so it's safe to hide the foreign key unless it has outstanding queries.
 +
-Image::link-object-type.png[]
+image::link-object-type.png[]
 
 . Click *Save changes*.
 

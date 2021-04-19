@@ -30,7 +30,7 @@ After publishing the example APIs in Exchange, first add the Catalyst Product AP
 
 . From AnyPoint Platform > Anypoint DataGraph, click *+Add API*:
 +
-image::add-api.png[75%,75%]
+image::add-api.png[50%,50%]
 
 . Confirm the API and asset version:
 +
@@ -96,7 +96,7 @@ When adding an API, all nested types are hidden from the unified schema. This gi
 
 . Click *Next: Add to unified schema*.
 +
-image::adding-api-status.png[80%,80%]
+image::adding-api-status.png[75%,75%]
 +
 As DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
 
@@ -132,7 +132,7 @@ DataGraph generated the name `EnumType0` because this enum type was unnamed when
 . Click *Rename Type*.
 . Rename the type to `Status`, and click *Confirm*.
 +
-image::rename-type-field.png[]
+image::rename-type-field.png[60%,60%]
 
 The new name is reflected in the type list.
 
@@ -203,12 +203,12 @@ After you add the two API schema’s to the unified schema, you’re ready to re
 . Click *Run a query*.
 . Select an access method. For this example, select *Create a new application and use it immediately*.
 +
-image::request-query-access.png[80%,80%]
+image::request-query-access.png[70%,70%]
 
 . Click *Next*.
 . In the *Create a new application* window, complete the fields:
 +
-image::create-query-application.png[80%,80%]
+image::create-query-application.png[70%,70%]
 
 . Click *Next*.
 

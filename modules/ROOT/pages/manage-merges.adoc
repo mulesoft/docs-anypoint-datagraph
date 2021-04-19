@@ -8,8 +8,6 @@ Merging object types enables you to combine the fields of two similar object typ
 
 You can merge object types locally within the same API schema, or merge an object type with a type in the unified schema.
 
-=== Prerequisites
-
 Ensure object types you want to merge are  xref:manage-elements-visibility.adoc[set to visible].
 
 To merge object types:
@@ -19,7 +17,7 @@ To merge object types:
 +
 The following example merges the current type, called *Order*, with a target object type of the same name:
 +
-Image::merge-object-type.png[]
+image::merge-object-type.png[]
 +
 The target type does not need to have the same name.
 
@@ -34,13 +32,13 @@ If you make this selection, you are taken to the *Enable collaboration* pane, wh
 +
 In the following example, the preview shows the target Order object type in the unified schema with new fields added after the current Order object type is merged with it:
 +
-Image::preview-merge-results.png[]
+image::preview-merge-results.png[]
 
 . To finish, click *Confirm merge*:
 
 After you apply your changes, the resulting object type in the unified schema indicates the source APIs of the merge, as shown:
 
-Image::merged-types-results.png[]
+image::merged-types-results.png[]
 
 == Undo Merges Between Object Types
 
@@ -62,7 +60,6 @@ To undo a merge:
 == Split a local merge
 Split local merges to resolve conflicts, manage element visibility, rename fields, or perform other edits on your local API schema.
 
-== Prerequisite
 If you have object types that are merged locally and merged with a type in the unified schema, you’ll first need to undo the merge with the unified schema.
 
 To split a merge:
