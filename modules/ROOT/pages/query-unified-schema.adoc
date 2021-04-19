@@ -15,7 +15,7 @@ If you want to use an existing client application or client ID and secret pair, 
 +
 Choose one of the following options:
 +
-image::request-access-query.png[70%]
+image::request-query-access.png[70%]
 +
 ** *Use one of my existing applications*: Choose an existing client application from the list, and click Request Access.
 ** *Create a new application and use it immediately*: Click *Next*, provide an application name and an optional description and application URL, and click *Create and Request Access*.
@@ -26,7 +26,7 @@ image::request-access-query.png[70%]
 
 . In the query editor, start typing your query using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
 +
-image::query-autocompletion.png[]
+image::query-autocompletion.png[70%]
 
 . (Optional) In the *Query Variables* pane, add any query variables you want to use.
 +
