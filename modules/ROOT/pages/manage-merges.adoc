@@ -38,7 +38,7 @@ image::preview-merge-results.png[]
 
 After you apply your changes, the resulting object type in the unified schema indicates the source APIs of the merge, as shown:
 
-image::merged-types-results.png[]
+image::merged-type-results.png[]
 
 == Undo Merges Between Object Types
 

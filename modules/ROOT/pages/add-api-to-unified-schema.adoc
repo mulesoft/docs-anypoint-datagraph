@@ -31,7 +31,7 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 . Navigate to Anypoint DataGraph.
 . Select *Add API*:
 +
-image::datagraph-add-api.png[]
+image::datagraph-add-api.png[50%,50%]
 
 . On the *Select API* page, select the API that you want to add.
 . Click *Next: Configure URL*.

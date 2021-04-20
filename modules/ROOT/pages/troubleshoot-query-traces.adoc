@@ -26,7 +26,7 @@ Query trace results are provided as soon as you run a query.
 +
 The trace query panel opens and displays results:
 +
-image::query-traces.png[]
+image::datagraph-qsg-query-traces.png[]
 +
 You can collapse and expand the query trace panel as needed.
 
