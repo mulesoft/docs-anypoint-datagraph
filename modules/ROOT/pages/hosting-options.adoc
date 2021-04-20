@@ -1,12 +1,10 @@
-= DataGraph Hosting Options and Networking
+= Anypoint DataGraph Hosting Options and Networking
 
-== Anypoint DataGraph Hosting Options
-
-Anypoint DataGraph supports the following Anypoint Platform hosting options.
+Anypoint DataGraph supports the following Anypoint Platform hosting options and network configurations.
 
 === Supported Control Plane Hosting Options
 
-Anypoint DataGraph beta release is available for US and EU clouds control plane hosting.
+Anypoint DataGraph is available for US and EU clouds control plane hosting.
 
 === Supported Runtime Plane Hosting Options
 
@@ -18,7 +16,7 @@ Anypoint DataGraph must connect to the destination URL you provide when adding a
 
 If your API instances run on standalone instances, are not public, and are not connected to Anypoint VPC, you must first pair your standalone runtimes to Anypoint VPC. See https://docs.mulesoft.com/runtime-manager/to-request-vpc-connectivity[Request Anypoint VPC Connectivity to Your Network^] for more information.
 
-== DataGraph Architecture and Networking
+== Anypoint DataGraph Architecture and Networking
 
 Anypoint DataGraph is a fully managed service that runs on Anypoint Platform.
 
