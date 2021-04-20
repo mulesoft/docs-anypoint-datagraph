@@ -30,35 +30,34 @@ After publishing the example APIs in Exchange, first add the Catalyst Product AP
 
 . From AnyPoint Platform > Anypoint DataGraph, click *+Add API*:
 +
-image::add-api.png[50%,50%]
-
-image::add-an-api.png[]
+image::datagraph-qsg-add-api.png[50%,50%]
 
 . Confirm the API and asset version:
-+
-image::configure-api.png[]
 
-. Edit or add the API URL:
-https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/18dc11ee-4a09-4aae-9c6c-4371a87eafa8/catalyst-product-api/2.0.2/m/
+ and add the API URL:
+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/18dc11ee-4a09-4aae-9c6c-4371a87eafa8/catalyst-product-api/2.0.2/m/:
 +
-
+image::datagraph-qsg-configure-api.png[]
++
 If your API is managed by API Manager, or if you manually added the URL to Exchange, DataGraph retrieves the URL. You can also manually add a new URL if it’s included in the API specification.
+
+. Click *Next: Provide authentication*.
 
 . Provide authentication for the GET endpoints for the API (in this quick-start example, *No Auth*):
 +
-image::api-authentication.png[]
+image::datagraph-qsg-api-authentication.png[]
 +
 DataGraph uses these credentials to make requests to this API.
 
-. After setting the version and authentication details, click Next: Preview Schema:
+. After setting the version and authentication details, click *Next: Preview Schema*:
 +
-image::preview-schema.png[]
+image::datagraph-qsg-preview-schema.png[]
 +
 Here the specification of the API you’re adding is automatically transformed to its corresponding API schema. You can explore and familiarize yourself with the generated schema before proceeding to the next step.
 +
 For example, you can click through the types to understand the schema hierarchy, or search for a particular element—in this case, `price`:
 +
-image::preview-search.png[]
+image::datagraph-qsg-preview-search.png[]
 
 . When you’re done previewing the schema, click Next: Edit Schema.
 
@@ -86,7 +85,7 @@ To enable collaboration on the ProductResponse object type:
 . In the *Collaboration permissions* pane, click *Allow collaboration for this type*.
 . Set a default query method and primary key: `productsByProductId (id:String!=”1”)` and `identifier (String!)`, respectively:
 +
-image::enable-collaboration.png[]
+image::datagraph-qsg-enable-collaboration.png[]
 +
 The default query method for an object type is the method that always returns a single record of that object type for which you want to enable collaboration.
 +
@@ -98,7 +97,7 @@ When adding an API, all nested types are hidden from the unified schema. This gi
 
 . Click *Next: Add to unified schema*.
 +
-image::adding-api-status.png[75%,75%]
+image::datagraph-qsg-add-api-status.png[75%,75%]
 +
 As DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
 
@@ -127,14 +126,14 @@ Before you add an API schema to the unified schema, you can edit the schema to r
 
 For example, the Catalyst Order API contains a nested type named `EnumType0`:
 
-image::rename-type.png[]
+image::datagraph-qsg-rename-type.png[]
 
 DataGraph generated the name `EnumType0` because this enum type was unnamed when added. Because this type provides useful order status information, name it appropriately, to `Status`:
 
 . Click *Rename Type*.
 . Rename the type to `Status`, and click *Confirm*.
 +
-image::rename-type-field.png[60%,60%]
+image::datagraph-qsg-rename-type-field.png[60%,60%]
 
 The new name is reflected in the type list.
 
@@ -147,12 +146,12 @@ For example, as a result of you adding the Catalyst Product API to it, the unifi
 . In the Catalyst Order API schema navigation, select the *OrderItemSummary* object type.
 . Because the OrderItemSummary object type and its fields are hidden, use the *Hidden/Visible* toggle to switch its *Desired state* value to *Visible*:
 +
-image::visible-object-type.png[]
+image::datagraph-qsg-visible-object-type.png[]
 
 . Scroll to the *Link to another type* pane, and in *Select the type you want to link to (Target)*, select *ProductResponse*.
 . For the foreign key field, set `productId (String!)`:
 +
-image::link-configuration.png[]
+image::datagraph-qsg-link-configuration.png[]
 +
 The value returned by the foreign key field and the record of ProductResponse it identifies is exactly the same as the primary key of the target ProductResponse object type.
 
@@ -164,7 +163,7 @@ You have the option to hide the foreign key field from the unified schema since 
 +
 The OrderItemSummary type is now linked to the ProductResponse! type:
 +
-image::link-added.png[]
+image::datagraph-qsg-link-added.png[]
 
 You’re _almost_ ready to finish adding the Catalyst Order API. Before you do that, explore another way to edit an API schema before adding it to the unified schema.
 
@@ -181,16 +180,16 @@ For this example, you perform a local composition merge by merging the OrderSumm
 . In the Catalyst Order API schema navigation, select the *OrderSummary* type.
 . In the *Merge* pane, select the type to merge with (in this case, *OrderResponseLocal*):
 +
-image::merge-selection.png[]
+image::datagraph-qsg-merge-selection.png[]
 
-. Use the diff view to get a side-by-side comparison of the two types in the merge:
+. Use the diff view to get a side-by-side comparison of the two types in the merge, and use the toggle to make visible any hidden fields that you noticed in the diff view.
 +
-image::diff-view-hidden-fields.png[]
+image::datagraph-qsg-diff-view-hidden-fields.png[]
 
-. Use the toggle to make visible any hidden fields that you noticed in the diff view.
+.
 . Click *Preview merge result*:
 +
-image::merge-preview-result.png[]
+image::datagraph-qsg-merge-preview-result.png[]
 +
 The results show that you’re performing a local merge between the OrderSummary and OrderResponse object types. After the merge, the OrderSummary object type is renamed to OrderResponse in the Catalyst Order API schema, and you query the OrderResponse type in the unified schema.
 . Click *Confirm merge*.
@@ -205,12 +204,12 @@ After you add the two API schema’s to the unified schema, you’re ready to re
 . Click *Run a query*.
 . Select an access method. For this example, select *Create a new application and use it immediately*.
 +
-image::request-query-access.png[70%,70%]
+image::data-graph-qsg-request-query-access.png[70%,70%]
 
 . Click *Next*.
 . In the *Create a new application* window, complete the fields:
 +
-image::create-query-application.png[70%,70%]
+image::datagraph-qsg-create-query-application.png[70%,70%]
 
 . Click *Next*.
 
@@ -218,11 +217,11 @@ image::create-query-application.png[70%,70%]
 
 . Before writing your query, take a moment to orient yourself to the unified schema. Click *Explore Schema*.
 +
-image::explore-schema-docs.png[]
+image::datagraph-qsg-explore-schema-docs.png[]
 +
 Here you can explore the documentation of the unified schema, which is also available through autocompletion as you write your query:
 +
-image::query-autocompletion.png[]
+image::datagraph-qsg-query-autocompletion.png[]
 
 . When you’re ready, add the following example query:
 +
@@ -259,7 +258,7 @@ image::query-autocompletion.png[]
 +
 Notice that with this one query, you get results from two different APIs:
 +
-image::two-apis.png[]
+image::datagraph-qsg-two-apis.png[]
 +
 <1> `shippingAddress`, `total`, and `status` information is returned from the Catalyst Order API
 <1> `product` details is returned as part of the `shipmentItems` information from the Catalyst Product API
@@ -268,10 +267,10 @@ This is the fundamental utility of Anypoint DataGraph: the ability to query mult
 
 . To run the query without query tracing, click *Run*:
 +
-image::query-result.png[]
+image::datagraph-qsg-query-result.png[]
 . To run the query with query tracing, click *Trace query* > *Run*.
 +
-image::query-traces.png[]
+image::datagraph-qsg-query-traces.png[]
 +
 Trace results for Anypoint DataGraph provide the following information:
 * Time taken by DataGraph to parse and validate the query
@@ -280,7 +279,7 @@ Trace results for Anypoint DataGraph provide the following information:
 
 . To see logs associated with the query, click *View response logs*.
 +
-image::query-response-logs.png[]
+image::datagraph-qsg-query-response-logs.png[]
 +
 Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR.
 +
@@ -290,4 +289,4 @@ To use this query in an external application, click *Copy endpoint* to copy both
 +
 You can copy the query as a cURL snippet or as a GraphQL query:
 +
-image::copy-query.png[]
+image::datagraph-qsg-copy-query.png[]

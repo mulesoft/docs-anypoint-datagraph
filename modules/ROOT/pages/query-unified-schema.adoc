@@ -15,7 +15,7 @@ If you want to use an existing client application or client ID and secret pair, 
 +
 Choose one of the following options:
 +
-image::request-query-access.png[70%]
+image::datagraph-qsg-request-query-access.png[70%]
 +
 ** *Use one of my existing applications*: Choose an existing client application from the list, and click Request Access.
 ** *Create a new application and use it immediately*: Click *Next*, provide an application name and an optional description and application URL, and click *Create and Request Access*.
@@ -26,18 +26,18 @@ image::request-query-access.png[70%]
 
 . In the query editor, start typing your query using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
 +
-image::query-autocompletion.png[70%]
+image::datagraph-qsg-query-autocompletion.png[70%]
 
 . (Optional) In the *Query Variables* pane, add any query variables you want to use.
 +
-image::query-variable.png[]
+image::datagraph-query-variable.png[]
 
 . Click *Run*.
 +
-image::query-result.png[]
+image::datagraph-qsg-query-result.png[]
 . To see results with query tracing, click *Trace query* > *Run*.
 +
-image::query-traces.png[]
+image::datagraph-qsg-query-traces.png[]
 +
 Query Trace results for Anypoint DataGraph provide the following information:
 +
@@ -47,7 +47,7 @@ Query Trace results for Anypoint DataGraph provide the following information:
 
 . To see response logs associated with the query, click *View response logs*.
 +
-image::query-response-logs.png[]
+image::datagraph-qsg-query-response-logs.png[]
 +
 Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
 . Click *View History* to access this same query—or others—at a later time.
