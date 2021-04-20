@@ -32,6 +32,8 @@ After publishing the example APIs in Exchange, first add the Catalyst Product AP
 +
 image::add-api.png[50%,50%]
 
+image::add-an-api.png[]
+
 . Confirm the API and asset version:
 +
 image::configure-api.png[]
