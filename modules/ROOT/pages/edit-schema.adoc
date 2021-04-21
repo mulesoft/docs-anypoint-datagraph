@@ -1,10 +1,12 @@
-= Edit Your API Schema for Addition to the Unified Schema
+= Edit an API Schema for Addition to the Unified Schema
 
-When adding a new API to your unified schema you must make sure that none of the types of your current schema create a conflict with the existing types in your unified schema.
+When adding a new API to the unified schema, you must make sure that none of the types in your current schema conflict with existing types in the unified schema.
 
-Because each type in the unified schema must be unique, each time you add a new API to your unified schema, you must edit your schema’s types before adding them to your unified schema.
+Because each type in the unified schema must be unique, you must edit your schema’s types before adding it to the unified schema.
 
-Every time you add a new schema, ensure that you address the following tasks:
+You don’t have to perform these edit functions before you add an API schema to the unified schema. You can make changes to an API schema even after you’ve added it to the unified schema. However, if Anypoint DataGraph raises any conflict errors, you must edit your schema to resolve those conflicts _before_ adding it to the unified schema.
+
+To edit an API schema, address the following tasks where applicable:
 
 * Resolve any conflicts between object types
 +
