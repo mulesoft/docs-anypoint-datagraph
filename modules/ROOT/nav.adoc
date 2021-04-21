@@ -15,6 +15,7 @@
   ** xref:manage-links.adoc[]
   ** xref:manage-elements-visibility.adoc[]
   ** xref:edit-elements-names.adoc[]
+* xref:supported-authentication-methods.adoc[]
 * xref:promote-api.adoc[]
 * xref:remove-api.adoc[]
 * xref:query-unified-schema.adoc[]

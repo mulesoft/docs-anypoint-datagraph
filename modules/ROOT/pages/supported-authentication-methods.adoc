@@ -1,0 +1,73 @@
+= Supported Authentication Methods
+
+You can configure the authentication method on the GET endpoints of the APIs that add to the unified graph, allowing Anypoint DataGraph to make requests to your API when queried.
+
+API Manager enables you to configure different client providers for each one of your environments. Depending on the environment where your data graph runs, your client applications might need to authenticate using either the default Anypoint Platform native client provider or any of the supported external client providers.
+
+You can configure the following providers:
+
+* Default Anypoint Platform client provider
+* Supported external OAuth providers: +
+To configure client management on Anypoint Platform for these providers, you must have an IdP account. See https://docs.mulesoft.com/access-management/managing-api-clients[About Client Management^] for more information.
+** OpenAM version: 14
+** PingFederate versions: 6 through 8
+** Dynamic Client Registration-compliant identity providers
++
+Dynamic Client Registration-compliant identity providers must conform to the https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1^].
+
+Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported.
+
+== Authenticate your Client Application Using the Default Client Provider
+
+If you don't configure any specific client provider for an environment, Anypoint Platform uses its default and native client provider.
+
+The default authentication methods supported by Anypoint Datagraph are the following:
+
+*No Auth*::
+Use if your API is public.
+*Basic Auth*::
+Use if you authenticate to your API using the basic authentication header, or a username and password.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource" -u myUser:myPassword
+--
++
+or
++
+[source,CURL,linenums]
+--
+curl GET 'http://localhost/myResource' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "username": "myUser",
+  "password": "myPassword"
+}'
+--
+*Client ID enforcement via headers*::
+Use if you authenticate to your API passing `client_id` and `client_secret` headers.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource" -H "client_id:1234" -H "client_secret:abcd"
+--
+*Client ID enforcement via query parameters*::
+Use if you authenticate to your API passing `client_id` and `client_secret` query params.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource?client_id=1234&client_secret=abcd"
+--
+*Custom*::
+Use if you authenticate to your API using custom header parameters and values.
+
+
+== See Also
+
+* https://docs.mulesoft.com/api-manager/2.x/configure-multiple-credential-providers[Configure Multiple Client Providers for Client Management in API Manager^]
