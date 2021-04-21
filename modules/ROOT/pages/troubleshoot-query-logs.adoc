@@ -16,10 +16,10 @@ Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR. Log leve
 [%header%autowidth.spread]
 |===
 |Log level |Description |Levels included
-|DEBUG |Logs information for the request headers, request query, and query response |All levels
-|INFO |Logs information for the request query, the time it took to return the response, and the underlying API URLs requested per field in the query|INFO, WARN, and ERROR
+|DEBUG |Logs information for request headers, request queries, and query responses |All levels
+|INFO |Logs information for request queries, response times, and the underlying API URLs requested per field in queries |INFO, WARN, and ERROR
 |WARN |Lists warning messages |INFO, WARN
-|ERROR |Lists error messages on invalid queries, timeouts, and authentication failures |ERROR
+|ERROR |Lists error messages on invalid queries, timeouts, authentication failures, and payload errors |ERROR
 |===
 
 By default, the log level for each environment is set to INFO. You can change this setting at any time. Changes to the log level persist for _all future queries to that DataGraph instance_, regardless of the user.
