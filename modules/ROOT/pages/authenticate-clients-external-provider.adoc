@@ -1,4 +1,4 @@
-= Authenticate your Client Application Using a Custom Client Provider.
+= Authenticate your Client Application Using an External Client Provider
 
 API Manager enables you to configure different client providers for each one of your environments. Depending on the environment where your data graph runs, your client applications might need to authenticate using either the default Anypoint Platform native client provider or any of the supported external client providers.
 
