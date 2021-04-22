@@ -15,7 +15,7 @@ To configure client management on Anypoint Platform for these providers, you mus
 +
 Dynamic Client Registration-compliant identity providers must conform to the https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1^].
 
-When your environment uses a custom client provider, the *Request access* pop-up shows the required and optional fields defined in the external client provider implementation.
+When your environment uses an external client provider, the *Request access* pop-up shows the required and optional fields defined in the external client provider implementation.
 
 For example, when querying the `/api-federation/xapi/organizations/{organizationID}/environments/{environmentID}/type/federation/api/clientProvider/` endpoint, returns the configured grant types for that environment:
 
