@@ -1,6 +1,6 @@
-= AnyPoint DataGraph Quick Start Guide
+= Anypoint DataGraph Quick Start Guide
 
-Use this quick start guide to begin using Anypoint Datagraph. With Anypoint DataGraph, you can query multiple APIs in a single request to get the specific information you need.
+Use this quick start guide to begin using Anypoint DataGraph. With Anypoint DataGraph, you can query multiple APIs in a single request to get the specific information you need.
 
 Getting started with DataGraph involves:
 . Downloading and publishing two APIs

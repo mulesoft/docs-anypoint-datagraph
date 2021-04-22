@@ -1,4 +1,4 @@
-= Add an API to the Unified Schema
+= Add an API Schema to the Unified Schema
 
 In addition to adding new APIs to your unified schema, you can increase the value of the data that you expose to your customers by adding other, existing APIs to it.
 
@@ -62,7 +62,7 @@ After you add the API to it, Anypoint DataGraph automatically translates the API
 
 == Edit the API Schema and Add It to the Unified Schema
 
-The final task in adding an API is to edit the schema to resolve conflicts, if any exist, and to enrich the schema.
+The final task in adding an API is to xref:edit-schema.adoc[edit the schema] to resolve conflicts, if any exist, and to enrich the schema.
 
 . If Anypoint DataGraph has raised an error and prompted you to resolve a conflict, resolve it on the *Edit Schema* page.
 +

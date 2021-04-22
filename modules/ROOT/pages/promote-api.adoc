@@ -1,4 +1,4 @@
-= Promote API Schemas in AnyPoint DataGraph
+= Promote API Schemas in Anypoint DataGraph
 
 As you develop and configure an API schema, you can promote it to the next environment toward production and add it to that environment's unified schema. Note that you’re promoting the schema configurations only, not the actual underlying source REST APIs.
 
