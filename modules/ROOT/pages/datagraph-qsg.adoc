@@ -12,6 +12,7 @@ Getting started with DataGraph involves:
 * Familiarity with Anypoint Platform and Exchange, including permissions to use Exchange to publish and view RAML or OAS specifications in your business group
 * An Anypoint Platform account
 * Admin or Contribute DataGraph permissions
+* The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan.
 
 == Download and Publish the Order and Product APIs
 

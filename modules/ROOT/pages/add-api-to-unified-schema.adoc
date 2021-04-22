@@ -22,7 +22,10 @@ However, it need not be a Mule application or be running on Mule runtime engine 
 * The API must be a REST API (either a RAML or OAS specification).
 * The API must have a running instance with an accessible URL.
 
-Additionally, you must have xref:permissions.adoc[the correct permissions] to add APIs.
+Additionally you must:
+
+* Have xref:permissions.adoc[the correct permissions] to add APIs.
+* Ensure that the business group or organization using Anypoint DataGraph has the correct number of vCores allocated, as specified in your plan.
 
 == Add the API to Anypoint DataGraph
 
