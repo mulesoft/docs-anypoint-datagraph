@@ -10,7 +10,7 @@ With Anypoint DataGraph you can:
 
 == How Anypoint DataGraph Works
 
-Every time you add a new API to your application network, Anypoint Platform stores it as a graph of metadata. Anypoint DataGraph enables you to connect those graphs into one _unified API schema_ that runs as a single SaaS endpoint and contains and links all of the fields contained within all of the APIs. As a result, you can query across the underlying APIs without needing to understand all of the relationships among the API various data or where specific capabilities exist.
+Every time you add a new API to your application network, Anypoint Platform stores it as a graph of metadata. Anypoint DataGraph enables you to connect those graphs into one _unified schema_ that runs as a single SaaS GraphQL endpoint and contains and links all of the fields defined within all of your APIs. As a result, you can query across the underlying APIs without needing to understand all of the relationships or specific capabilities that exist within them.
 
 === The Unified Schema
 
@@ -20,7 +20,7 @@ To help you create a more clean and connected unified schema so that your client
 
 . Enable collaboration between object types
 . Link object types to create connections between them
-. Merge object types to combine similar types to extend their fields and datasets for a more enriched query result.
+. Merge object types to combine similar types into a single type to extend their fields and datasets for a more enriched query result.
 
 == Example Use Case
 
