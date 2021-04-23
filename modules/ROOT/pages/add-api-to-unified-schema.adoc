@@ -41,6 +41,7 @@ image::select-api-and-asset-version.png[]
 
 . Still on the *Configure URL* page, add or edit the API’s URL:
 +
+--
 * If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
 * If you prefer to manually provide your own implementation URL, select *Add a new URL*.
 . Click *Next: Provide authentication*.
@@ -48,9 +49,17 @@ image::select-api-and-asset-version.png[]
 +
 * *No Auth*: Use if your API is public.
 * *Basic Auth*: Use if you authenticate to your API using a username and password.
-* *Client ID enforcement via headers*
-* *Client ID enforcement via query parameters*
+* *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
+* *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
+--
++
+[IMPORTANT]
+--
+Any other authentication methods to access your API, such as custom OAuth implementations or short-lived token methods, are not supported.
+--
++
+See xref:supported-authentication-methods.adoc[] for more information.
 . Click *Next: Preview Schema*.
 
 == Preview the Generated API Schema
