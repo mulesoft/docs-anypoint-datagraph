@@ -5,9 +5,9 @@ The following topic provide useful information for troubleshooting schemas and q
 ** xref:schema-validation.adoc[Potential Errors When Generating an API Schema] +
 When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it. However, not all features of an API specification are successfully generated into an API schema.
 ** xref:resolve-runtime-errors.adoc[Resolve Runtime Errors When Running Queries] +
-** xref:resolve-merge-inconsistencies.adoc[Resolve Conflicts and Merge Inconsistencies] +
+** xref:resolve-conflicts.adoc[Resolve Conflicts and Merge Inconsistencies] +
 You must resolve any merge conflicts or merge inconsistencies when adding object types to the unified schema.
 ** xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs] +
 Anypoint DataGraph provides response logs that contain useful troubleshooting information about queries.
 ** xref:troubleshoot-query-tracing.adoc[Troubleshoot Query Performance with Query Tracing] +
-Query tracing in Anypoint DataGraph helps you analyze query performance with fine-grained tracing of every call made to the source APIs of the unified schema for a given query.
+Query tracing in Anypoint DataGraph helps you analyze query performance by tracing every call made to the source APIs of the unified schema for a given query.

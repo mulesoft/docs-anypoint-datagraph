@@ -15,9 +15,9 @@ The following permissions are available per business group per environment:
 |Contribute a| Permission to:
 
 * Add source APIs to the unified schema
-* Edit any source API added to the unified schema
+* Edit any source API schema added to the unified schema
 * Request access to run queries
-* Promote APIs to an environment
+* Promote API schemas to an environment
 * View query traces in real time while running queries from the UI
 |Consume a|Permission to:
 

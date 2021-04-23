@@ -1,4 +1,4 @@
-= Promote API Schemas in AnyPoint DataGraph
+= Promote an API Schema
 
 As you develop and configure an API schema, you can promote it to the next environment toward production and add it to that environment's unified schema. Note that you’re promoting the schema configurations only, not the actual underlying source REST APIs.
 
@@ -38,7 +38,7 @@ If conflict exists, you must instead manually add the API and resolve those conf
 To promote an API:
 
 . Click *List of APIs added* and select the API that you want to promote.
-. Click *Promote API*.
+. Click *Promote API schema*.
 . From the *Target environment* list, select the target environment for promotion.
 . Click *Next: Configure URL*.
 . Depending on your promotion scenario, optionally choose one of the following configuration options:

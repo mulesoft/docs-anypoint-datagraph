@@ -1,10 +1,11 @@
 = Query the Unified Schema
 
-To query the unified schema, you first request access (if applicable) and then write and run a query in the query editor.
+The unified schema resolves into a single GraphQL endpoint. To query the unified schema, you first request access (if applicable) and then write and run a GraphQL query in the query editor.
 
 == Prerequisites
 
-You must have xref:permissions.adoc[the Consume, Contribute, or Admin permission] to use request access and run queries.
+* You must have xref:permissions.adoc[the Consume, Contribute, or Admin permission] to use request access and run queries.
+* API calls are limited to 5MB of uncompressed data per call.
 
 == Request Access to Run A Query
 

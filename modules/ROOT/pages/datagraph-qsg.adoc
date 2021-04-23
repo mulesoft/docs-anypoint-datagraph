@@ -1,6 +1,6 @@
-= AnyPoint DataGraph Quick Start Guide
+= Anypoint DataGraph Quick Start Guide
 
-Use this quick start guide to begin using Anypoint Datagraph. With Anypoint DataGraph, you can query multiple APIs in a single request to get the specific information you need.
+Use this quick start guide to begin using Anypoint DataGraph. With Anypoint DataGraph, you can query multiple APIs in a single request to get the specific information you need.
 
 Getting started with DataGraph involves:
 . Downloading and publishing two APIs
@@ -12,10 +12,11 @@ Getting started with DataGraph involves:
 * Familiarity with Anypoint Platform and Exchange, including permissions to use Exchange to publish and view RAML or OAS specifications in your business group
 * An Anypoint Platform account
 * Admin or Contribute DataGraph permissions
+* The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan.
 
 == Download and Publish the Order and Product APIs
 
-To follow the quick-start example, download the RAML definitions for two example APIs provided by MuleSoft: xref:https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/minor/1.0/console/summary/[the Order Systems API v1.0] and xref:https://www.google.com/url?q=https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/minor/1.0/console/method/%2523297/&sa=D&source=editors&ust=1618851698916000&usg=AOvVaw2HERPlS4bT_rXfaoOFdcm8[the Product API v1.0].
+To follow the quick-start example, download the RAML definitions for two example APIs provided by MuleSoft: https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/minor/1.0/console/summary/[the Order Systems API v1.0^] and https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/minor/1.0/console/method/%2523297/&sa=D&source=editors&ust=1618851698916000&usg=AOvVaw2HERPlS4bT_rXfaoOFdcm8[the Product API v1.0^].
 
 . In Exchange, click *Provided by MuleSoft*.
 . Search for *product api raml definition* and select it from the list of results.
@@ -28,7 +29,7 @@ The quick-start example uses the API names *Catalyst Product API* and *Catalyst 
 == Add the Catalyst Product API to DataGraph
 After publishing the example APIs in Exchange, first add the Catalyst Product API to Anypoint DataGraph.
 
-. From AnyPoint Platform > Anypoint DataGraph, click *+Add API*:
+. From Anypoint Platform > Anypoint DataGraph, click *+Add API*:
 +
 image::datagraph-qsg-add-api.png[The add API button,50%,50%]
 
@@ -104,7 +105,7 @@ As DataGraph updates the unified schema, you can navigate through the schema to 
 
 Follow the same procedure as for adding the Product Order API, with the following exceptions:
 
-* Use the URL https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/18dc11ee-4a09-4aae-9c6c-4371a87eafa8/catalyst-order-api/2.0.3/m/
+* Use the URL `+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/18dc11ee-4a09-4aae-9c6c-4371a87eafa8/catalyst-order-api/2.0.3/m/+`
 * Additionally edit the schema by renaming, linking, and merging the object types that you previously enabled for collaboration.
 
 == Edit the Catalyst Order API Schema for Addition to the Unified Schema

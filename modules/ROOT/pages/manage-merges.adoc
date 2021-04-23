@@ -73,4 +73,5 @@ After the split, the types return to their original states but retain any custom
 
 == Additional Resources
 
+* xref:resolve-conflicts.adoc[Resolve Conflicts and Merge Inconsistencies]
 * xref:merge-types.adoc[How Object Type Merges Work in Anypoint DataGraph]
