@@ -2,15 +2,15 @@
 
 Anypoint DataGraph organizes all data that you choose to make available to your clients in a unified schema. The unified schema is a single, always-current collection of all of the schemas of all of the APIs that you add to it.
 
-When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it. Because each API schema is created at the time that its API is added, your unified schema is always up to date. All API schemas are stored individually in your organization. This isolation of each API schema enables you to edit them individually without affecting the integrity of the others.
+When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it from the API's RAML or OAS specification. Because each API schema is created at the time that its API is added, your unified schema is always up to date. All API schemas are stored individually in your organization. This isolation of each API schema enables you to edit them individually without affecting the integrity of other schemas.
 
-The API schema that Anypoint DataGraph generates is composed of a list of types that describe the functionality and data available for client applications to query and consume. Whenever you add a new API schema to the unified schema, you can configure the types and fields that the unified schema will include.
+The API schema that Anypoint DataGraph generates contains a collection of the GET resources and entities, and the relationships between them, that you’ve defined in your API specification. Whenever you add a new API schema to the unified schema, you can configure the types and fields that the unified schema will include.
 
-Before learning about the different configurations that you can apply to a type, read the following topic to understand the different types that you can add to your unified schema.
+Before learning about the different configurations that you can apply to a type, read the following topic to understand the different types that can be present in your API schema depending on your API specification.
 
 == Object Types and Fields
 
-Object types represent the kind of objects that compose the API schema. Object types are descriptively named and contain fields that indicate the object properties.
+The most common type in a schema, object types represent entities in your API specification that are returned as part of a GET response. Object types are descriptively named and contain fields that indicate the object properties.
 
 For example, in a RAML specification, each type element of the specification becomes a unique object type, and the properties of each type element are the fields of those object types in the API schema:
 
@@ -124,9 +124,9 @@ type Order {
 }
 --
 
-== Query Types
+== Query Types and Methods
 
-The Query type defines the entry point of your API schema by using query methods that represent the GET endpoint defined in an API specification.
+A query type is the entry point to your API schema when you make a request. This type contains the query methods that represent the GET endpoint you’ve defined in your API specification.
 
 For example, in a RAML specification that defines a GET endpoint at `/orders/{id}`, The query method in the schema is `ordersById(id)`:
 
@@ -157,7 +157,7 @@ ordersById(id): Order
 The types in your schema belong to categories that depend on the relation between your type and the query methods:
 
 * Level 1 type +
-These are types that have a query method associated with them and therefore can be accessed directly.
+These types have a query method associated with them and therefore can be accessed directly.
 +
 For example, in the previous API specification, `Order` is a level 1 object type because there is a GET for the `order/{id}` endpoint associated with it.
 +
@@ -171,7 +171,7 @@ ordersById (orderId: “123”) {
 }
 --
 * Nested types +
-These are object types that have no query methods associated with them and therefore you can access them only through the query methods of level 1 types.
+These types have no query methods associated with them and therefore you can access them only through the query methods of level 1 types.
 +
 For example, in the previous API specification, `Product` is an object type with no query methods associated with it. To query the fields of the `Product` type, you must query the method associated with its level 1 type `Order`:
 +

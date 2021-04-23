@@ -1,6 +1,6 @@
 = How Links Between Object Types Work in Anypoint DataGraph
 
-You can link your current object type to a different target object type to improve the query experience. Linking enables you to join fields from two related types, resulting in a more enriched query result.
+You can link your current object type to a different target object type to improve the query experience. Linking enables you to join fields from two related types that describe different objects and create a connection between those types.
 
 You can link your current object type to a target object type if your current type is not collaboration enabled; however, the target must be collaboration enabled. See xref:collaboration.adoc[] for more information about how collaboration works.
 
