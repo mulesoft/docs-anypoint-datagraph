@@ -16,11 +16,11 @@ Every time you add a new API to your application network, Anypoint Platform stor
 
 The unified schema is a single, always current collection of types from different API schemas that you’ve added to Anypoint DataGraph and made available for consumers to query. The query type in the unified schema contains all the query methods from the different API schemas that you've added to DataGraph. Your consumers can access the unified schema to see exactly what data is available to them, all in one place, and request a specific subset of that data in a single query.
 
-To help you create a more clean and connected unified schema so that your clients can have a better query experience Anypoint DataGraph provides three additional functionalities that allow to:
+To help you create a more clean and connected unified schema, Anypoint DataGraph provides three additional functionalities that allow you to:
 
 . Enable collaboration between object types
 . Link object types to create connections between them
-. Merge object types to combine similar types into a single type to extend their fields and datasets for a more enriched query result.
+. Merge object types to combine similar types into a single type to extend their fields and datasets for a more enriched query result
 
 == Example Use Case
 
