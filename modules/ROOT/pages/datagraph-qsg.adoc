@@ -117,9 +117,9 @@ After you add the Catalyst Order API to DataGraph, you:
 * Edit the Schema by Merging Object Types
 
 [NOTE]
-====
+--
 You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by DataGraph before adding an API schema to the unified schema.
-====
+--
 
 === Edit the Schema by Rename Object Types
 
@@ -190,7 +190,7 @@ image::datagraph-qsg-diff-view-hidden-fields.png[Hidden fields in the merge diff
 
 . Click *Preview merge result*:
 +
-image::datagraph-qsg-merge-preview-result.png[Merge preview results]
+image::datagraph-qsg-merge-preview-result.png[Merge preview results,60%,60%]
 +
 The results show that you’re performing a local merge between the OrderSummary and OrderResponse object types. After the merge, the OrderSummary object type is renamed to OrderResponse in the Catalyst Order API schema, and you query the OrderResponse type in the unified schema.
 
