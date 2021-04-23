@@ -23,6 +23,67 @@ image::datagraph-qsg-request-query-access.png[70%]
 ** *I already have credentials...*: Click *Next*, provide an existing client ID and secret pair, and then click *Authenticate & Request Access*.
 . To change your access method from the *Run Query* page, click *Manage Credentials* > *Switch credentials*.
 
+=== Request Access to Environments Using an External Client Provider
+
+API Manager enables you to configure different client providers for each one of your environments. Depending on the environment where your data graph runs, your client applications might need to authenticate using either the default Anypoint Platform native client provider or any of the supported external client providers. See https://docs.mulesoft.com/access-management/managing-api-clients[About Client Management^] for more information.
+
+If you don't configure any specific client provider for an environment, Anypoint Platform uses its default and native client provider.
+
+When your environment uses an external client provider, the *Request access* pop-up shows the required and optional fields defined in the external client provider implementation.
+
+For example, when querying the `/api-federation/xapi/organizations/{organizationID}/environments/{environmentID}/type/federation/api/clientProvider/` endpoint, returns the configured grant types for that environment:
+
+[source,JSON,linenums]
+--
+{
+    "id": "aaaaaaaa-1a1a-1a1a-1a1a-aaaa1111aaa1",
+    "name": "OpenAM",
+    "typeName": "openam",
+    "grantTypes": [
+        {
+            "name": "password",
+            "label": "Resource Owner Grant",
+            "depends": [],
+            "exclude": [],
+            "required": true //<1>
+        },
+        {
+            "name": "implicit",
+            "label": "Implicit Grant",
+            "depends": [],
+            "exclude": [],
+            "required": true //<1>
+        },
+        {
+            "name": "client_credentials",
+            "label": "Client Credentials Grant",
+            "depends": [],
+            "exclude": [
+                "authorization_code" //<2>
+            ],
+            "required": false
+        },
+        {
+            "name": "authorization_code",
+            "label": "Authorization Code Grant",
+            "depends": [],
+            "exclude": [
+                "client_credentials" //<2>
+            ],
+            "required": false
+        }
+    ]
+}
+--
+
+Those grant types properties are reflected in the UI when configuring access for a client:
+
+image::confirm-credentials.png[]
+
+<1> Both *Resource Owner Grant* and *Implicit Grant* are marked as required in the UI.
+<1> Both *Client Credentials Grant* and *Authorization Code Grant* are mutually exclusive in the UI.
+
+
 == Write and Run a Query
 
 . In the query editor, start typing your query using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
@@ -79,3 +140,4 @@ The following table provides shortcuts you can use in the query editor:
 
 * xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
 * xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs]
+* https://docs.mulesoft.com/api-manager/2.x/configure-multiple-credential-providers[Configure Multiple Client Providers for Client Management in API Manager^]
