@@ -1,6 +1,6 @@
 = Overview
 
-Anypoint DataGraph enables you to leverage the existing capabilities of your application network to drive productivity by unifying all the data within your application network in a data graph. As a developer, you can dynamically query the graph and consume the fields that you need to create new connected experiences. You can improve your productivity and reduce operational costs by discovering and reusing the existing data in your application network.
+Anypoint DataGraph enables you to leverage the existing capabilities of your application network to drive productivity by unifying all the data within your application network in a unified schema. As a developer, you can dynamically query the unified schema and consume the fields that you need to create new connected experiences. You can improve your productivity and reduce operational costs by discovering and reusing the existing data in your application network.
 
 With Anypoint DataGraph you can:
 
@@ -8,13 +8,23 @@ With Anypoint DataGraph you can:
 * Explore your application network from a single UI
 * Discover, reuse, and serve information from your application network without writing new code
 
-Note that Anypoint DataGraph is a beta release and is available for US and EU clouds.
-
 == How Anypoint DataGraph Works
 
-Every time you add a new API to your application network, Anypoint Platform stores it as a graph of metadata. Anypoint DataGraph enables you to connect those graphs into one unified data graph that runs as a single SaaS endpoint and contains and links all of the fields contained within all of the APIs. As a result of this linking, you can query across the underlying APIs without understanding all of the relationships among API data or where specific capabilities exist.
+Every time you add a new API to your application network, Anypoint Platform stores it as a graph of metadata. Anypoint DataGraph enables you to connect those graphs into one _unified API schema_ that runs as a single SaaS endpoint and contains and links all of the fields contained within all of the APIs. As a result, you can query across the underlying APIs without needing to understand all of the relationships among the API various data or where specific capabilities exist.
 
-For example, consider an organization using the following APIs:
+=== The Unified Schema
+
+The unified schema is a single, always current collection of types from different API schemas that you’ve added to Anypoint DataGraph and made available for consumers to query. The query type in the unified schema contains all the query methods from the different API schemas that you've added to DataGraph. Your consumers can access the unified schema to see exactly what data is available to them, all in one place, and request a specific subset of that data in a single query.
+
+To help you create a more clean and connected unified schema so that your clients can have a better query experience Anypoint DataGraph provides three additional functionalities that allow to:
+
+. Enable collaboration between object types
+. Link object types to create connections between them
+. Merge object types to combine similar types to extend their fields and datasets for a more enriched query result.
+
+== Example Use Case
+
+Consider an organization using the following APIs:
 
 * An orders API that provides information about specific purchase orders
 * A shipment API that provides shipment information for each purchase order

@@ -44,7 +44,7 @@ In this example, your default query method is `ordersById`, and its primary key 
 
 == Enable Collaboration on an Object Type
 
-. In the API schema navigation, select the object type for which you want to enable collaboration.
+. In the API schema navigation, select the level-1 type for which you want to enable collaboration.
 . In the *Collaboration permissions* pane, click *Allow collaboration for this type (Extend this type)*.
 . For *Required configuations*, follow the prompts to set a default query method and primary key.
 +
