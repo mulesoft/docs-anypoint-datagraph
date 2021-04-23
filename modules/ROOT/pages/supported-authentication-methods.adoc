@@ -50,3 +50,4 @@ Use if you authenticate to your API using custom header parameters and values.
 
 Any other authentication methods to access your added API, such as custom OAuth implementations or short-lived token methods, are not supported.
 
+To later edit the authentication method or credentials, click *List of APIs Added* > {API schema to edit} > *API details* > *Add authentication*.
