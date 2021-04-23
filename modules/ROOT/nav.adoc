@@ -19,7 +19,6 @@
 * xref:promote-api.adoc[]
 * xref:remove-api.adoc[]
 * xref:query-unified-schema.adoc[]
-* xref:authenticate-clients-external-provider.adoc[Authenticate Clients Using External Client Providers]
 * xref:troubleshoot-schemas-queries.adoc[]
   ** xref:schema-validation.adoc[]
   ** xref:resolve-runtime-errors.adoc[]
