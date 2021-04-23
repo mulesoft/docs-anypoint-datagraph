@@ -1,6 +1,6 @@
 = How Object Type Merges Work in Anypoint DataGraph
 
-You can merge an object type from your API schema with either another object type in your unified schema or another object type in the same API schema. Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result.
+You can merge an object type from your API schema with either another object type in your unified schema or another object type in the same API schema. Merging types enables you to combine similar types into a single type and extend their fields and datasets for a more enriched query result.
 
 You can only merge object types with other object types. You can have an _extension merge_, in which the merged types join data, or you can have a _composition merge_, in which the merged types simplify the unified schema but are joined without primary keys.
 
