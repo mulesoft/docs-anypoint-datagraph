@@ -6,7 +6,7 @@ Response logs contain information about only DataGraph queries. DataGraph stores
 
 [NOTE]
 --
-If you have a Titanium subscription, the xref:monitoring::performance-and-impact.adoc#titanium-subscription-limits[Titanium limits for logs apply].
+If you have a Titanium subscription, the https://docs.mulesoft.com/monitoring/performance-and-impact#titanium-subscription-limits[Titanium limits for logs apply^].
 --
 
 == Log Levels for DataGraph Response Logs
@@ -28,7 +28,7 @@ By default, the log level for each environment is set to INFO. You can change th
 
 You must have xref:permissions.adoc[the Operate or Admin permission] to view and search response logs.
 
-If you are a Titanium subscriber, you can also view response logs in xref:monitoring::logs.adoc[Anypoint Monitoring].
+If you are a Titanium subscriber, you can also view response logs in https://docs.mulesoft.com/monitoring/logs[Anypoint Monitoring^].
 
 To view response logs in Anypoint DataGraph:
 

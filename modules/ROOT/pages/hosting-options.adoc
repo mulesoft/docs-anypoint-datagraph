@@ -29,4 +29,4 @@ If you don’t have Anypoint VPC or if you’re unable to use ports 8081 and 808
 
 == See Also
 
-* xref:general::intro-platform-hosting.adoc[Anypoint Platform Hosting Options]
+* https://docs.mulesoft.com/general/intro-platform-hosting[Anypoint Platform Hosting Options^]

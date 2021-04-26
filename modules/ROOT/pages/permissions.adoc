@@ -4,7 +4,7 @@ Anypoint DataGraph provides access management permissions so you can meet your o
 
 Permissions for Anypoint DataGraph are independent of permissions for other Anypoint Platform products.
 
-To contribute to the unified schema, you need to have the *Exchange Viewers* permission for the business group from which you want to add APIs. Refer to xref:exchange::to-set-permissions.adoc[Set User Access Permissions] for more information.
+To contribute to the unified schema, you need to have the *Exchange Viewers* permission for the business group from which you want to add APIs. Refer to https://docs.mulesoft.com/exchange/to-set-permissions[Set User Access Permissions^] for more information.
 
 The following permissions are available per business group per environment:
 
