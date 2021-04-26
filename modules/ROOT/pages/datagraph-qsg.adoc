@@ -18,13 +18,14 @@ Getting started with DataGraph involves:
 
 To follow the quick-start example, download the RAML definitions for two example APIs provided by MuleSoft: https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/minor/2.0/console/summary/[the Order Systems API v2.0^] and https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/minor/2.0/console/summary/[the Product API v2.0^].
 
+. Log into Anypoint platform.
 . In Exchange, click *Provided by MuleSoft*.
 . Search for *product api raml definition* and select it from the list of results.
-. In the *Product API | RAML Definition*, click *Download* > *RAML*.
+. In the *Product API | RAML Definition*, click *Download* > *RAML* for asset version 2.0.2
 . xref:design-center::design-publish.adoc#procedure[Publish the RAML specification to Exchange] using your business group ID and an asset name.
 +
 The quick-start example uses the API names *Catalyst Product API* and *Catalyst Order API*.
-. Repeat these steps for the *Order Systems API | RAML Definition*.
+. Repeat these steps for the *Order Systems API | RAML Definition* for asset version 2.0.3.
 
 == Add the Catalyst Product API to DataGraph
 After publishing the example APIs in Exchange, first add the Catalyst Product API to Anypoint DataGraph.
@@ -106,7 +107,7 @@ As DataGraph updates the unified schema, you can navigate through the schema to 
 
 Follow the same procedure as for adding the Product Order API, with the following exceptions:
 
-* Use the URL `+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/2.0.3/m	+`
+* Use the URL `+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/2.0.3/m/+`
 * Additionally edit the schema by renaming, linking, and merging the object types that you previously enabled for collaboration.
 
 == Edit the Catalyst Order API Schema for Addition to the Unified Schema
