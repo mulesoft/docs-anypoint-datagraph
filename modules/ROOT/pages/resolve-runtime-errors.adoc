@@ -1,3 +1,21 @@
 = Resolve Runtime Errors
 
-placeholder
+When running queries against your unified schema, the UI might display a *Failed to fetch schema* error message:
+
+image::failed-to-fetch-error.png[]
+
+[source,JSON]
+--
+{
+  "message": "Failed to fetch",
+  "stack": "TypeError: Failed to fetch"
+}
+--
+
+This error occurs either when:
+
+* Anypoint Datagraph can't connect to your unified schema because you are hosting it behind a dedicated load balancer. +
+To resolve this, ensure that your VPC is properly configured. See xref:hosting-options.adoc[Hosting Options and Networking] for more information.
+* Your unified schema can't connect to its underlying APIs. +
+To resolve this, ensure that your APIs are up and running.
+
