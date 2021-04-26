@@ -6,7 +6,7 @@ If you attempt to rename a type in an API that is merged with a type in the unif
 
 Before editing the name of an element, be sure to xref:manage-elements-visibility.adoc[make it visible].
 
-To edit the name of a schema elements:
+To edit the name of a schema element:
 
 . Navigate to object type, field, or method, and click *Rename*.
 . In the *Change to:* field, add the new name, and click *Confirm*.
