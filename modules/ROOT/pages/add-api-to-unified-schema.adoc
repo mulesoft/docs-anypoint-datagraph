@@ -32,7 +32,7 @@ Additionally you must:
 The first task to adding an API to the unified schema is adding the API to Anypoint DataGraph by configuring its asset version, URL, and authentication method.
 
 . Navigate to Anypoint DataGraph.
-. Select *Add API*:
+. Click *Add API*:
 +
 image::datagraph-add-api.png[50%,50%]
 

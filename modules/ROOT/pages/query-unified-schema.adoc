@@ -9,7 +9,7 @@ The unified schema resolves into a single GraphQL endpoint. To query the unified
 
 == Request Access to Run A Query
 
-. From the side navigation panel, or the top right corner, select *Run a Query*.
+. Click *Run a Query*.
 . In the *Request access to run queries* dialog, select how you want to get access to run your queries.
 +
 If you want to use an existing client application or client ID and secret pair, you can find them in Exchange. Open Exchange in a new tab, navigate to *My applications* and select an application from the list to find relevant information.
