@@ -115,6 +115,30 @@ Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
 . Click *View History* to access this same query—or others—at a later time.
 . To use this query in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a cURL snippet.
 
+== Use Aliases in DataGraph Queries
+
+You can use aliases to rename individual keys in the JSON response:
+
+[source]
+--
+{
+ordersById(id:"J4RRYV0001") [
+  origination
+  tax : taxAmount //<1>
+  orderDate
+  totalAmount
+  deliveryInfo {
+    shipment {
+      trackingNumber
+      expectedDeliveryDate
+    }
+  }
+]
+}
+--
+
+<1> By using GraphQL aliases, you can rename the `tax` key to `taxAmount` in only your query response.
+
 == Query Editor Shortcuts
 The following table provides shortcuts you can use in the query editor:
 
