@@ -2,17 +2,18 @@
 
 When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it. However, not all features of an API specification are successfully generated into an API schema.
 
-The following list describes scenarios in which parts of an API specification are not translated into the API schema:
+Anypoint DataGraph does not translate the following parts of an API specification into an API schema:
 
-* Non-GET operations in the API specification are removed from the API schema.
-* Requests with a `Media type` value other than `application/json` are removed from the API schema.
-* Responses with a `Media type` value other than `application/json` are removed from the API schema.
-* Response payloads with any of the unsupported types `Schema`, `File`, `Tuple`, `Matrix`, or `Nil`, or arrays of any of these types, are removed from the API schema.
-* `uri params`, `query params`, and `headers` with types other than scalars or scalar arrays are removed from the API schema. +
-If a required `param` is of an unsupported type, the endpoint is removed from the API schema.
-* `union` types with members other than `objects` and `nils` are removed from the API schema.
+* Non-GET operations
+* Requests with a `Media type` value other than `application/json`
+* Responses with a `Media type` value other than `application/json`
+* Response payloads with any of the unsupported types `Schema`, `File`, `Tuple`, `Matrix`, `Nil`, or arrays of any of these types
+* `uri params`, `query params`, and `headers` with types other than scalars or scalar array
+* Endpoints of required `params` of unsupported types
+* `union` types with members other than `objects` and `nils`
+* JSON schema keywords `if`, `then`, and `else`
 
-Note that if your API specification is composed of only unsupported scenarios, Anypoint DataGraph does not generate an API schema and throws a *Validation failed* error.
+If your API specification is composed of only unsupported parts, Anypoint DataGraph does not generate an API schema and throws a *Validation failed* error.
 
 == Additional Resources
 
