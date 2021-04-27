@@ -35,7 +35,7 @@ After publishing the example APIs in Exchange, first add the Catalyst Product AP
 image::datagraph-qsg-add-api.png[The add API button,50%,50%]
 
 . Confirm the API and asset version, and add the API URL:
-`+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/2.0.2/m/+``
+`+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/2.0.2/m/+`
  :
 +
 image::datagraph-qsg-configure-api.png[The API configuration page]
