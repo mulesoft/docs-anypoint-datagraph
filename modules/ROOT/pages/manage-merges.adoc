@@ -28,7 +28,7 @@ The target type does not need to have the same name.
 If you make this selection, you are taken to the *Enable collaboration* pane, where you set a default query method and primary key. (Refer to  xref:collaboration.adoc[Enable Collaboration on a Type] for more information on object type collaboration.)
 
 * Declare the current type as a reference so that it returns only the fields and dataset of the type it's merged with.
-. In the *Merge* pane, click *Preview merge* results.
+. In the *Merge with another type* pane, click *Preview merge* results.
 +
 In the following example, the preview shows the target Order object type in the unified schema with new fields added after the current Order object type is merged with it:
 +

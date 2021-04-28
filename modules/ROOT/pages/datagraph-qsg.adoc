@@ -189,7 +189,7 @@ In DataGraph, there are three merge types:
 For this example, you perform a local composition merge by merging the OrderSummary object type with the OrderResponse object type:
 
 . In the Catalyst Order API schema navigation, select the *OrderSummary* type.
-. In the *Merge* pane, select the type to merge with (in this case, *OrderResponseLocal*):
+. In the *Merge with another type* pane, select the type to merge with (in this case, *OrderResponseLocal*):
 +
 image::datagraph-qsg-merge-selection.png[Merge selection options]
 
