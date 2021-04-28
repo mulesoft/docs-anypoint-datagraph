@@ -8,9 +8,9 @@ image::query-trace-details.png[]
 
 <1> Time taken by DataGraph to parse and validate the query
 <2> Total response time for the entire query
-<3> Duration of requests to each source API in the query
-<4> Errors identified during query execution
-<5> Lack of trace information, denoted by a fading line
+<3> Errors identified during query execution
+<4> Lack of trace information, denoted by a fading line
+<5> Duration of requests to each source API in the query
 
 == Prerequisites
 
