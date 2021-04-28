@@ -15,9 +15,9 @@ To merge object types:
 . In the API schema navigation, select the object type you want to merge.
 . In the *Merge* pane, select the target type to merge with.
 +
-The following example merges the current type, called *Order*, with a target object type of the same name:
+The following example merges the current type, called *OrderSummary*, with a target object type called *OrderResponse:
 +
-image::merge-object-type.png[]
+image::merge-selection.png[]
 +
 The target type does not need to have the same name.
 

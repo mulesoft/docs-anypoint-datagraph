@@ -32,9 +32,9 @@ The quick-start example uses the API names *Catalyst Product API* and *Catalyst 
 After publishing the example APIs in Exchange, first add the Catalyst Product API to Anypoint DataGraph.
 
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the dropdown list in the top left corner, and click *+Add API*.
-. On the *Select API* page, select the API that you want to add.
+. On the *Select API* page, select the Catalyst Product API.
 . Click *Next: Configure URL*.
-. On the *Configure URL* page, select the API version and asset version of the API you want to add, and then select *Confirm Selection*.
+. On the *Configure URL* page, select the API version and asset version, and then select *Confirm Selection*.
 . Select *Add a new URL*.
 . In the *Add URL* field, add the following API URL:
 `+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/2.0.2/m/+`
@@ -84,15 +84,20 @@ When you enable collaboration on a type, the type provides its fields to other t
 To enable collaboration on the ProductResponse object type:
 
 . In the Catalyst Product API schema navigation, click the *ProductResponse* object type.
-. In the *Collaboration permissions* pane, click *Allow collaboration for this type*.
-. Set a default query method and primary key: `productsByProductId (id:String!=”1”)` and `identifier (String!)`, respectively:
+. In the *Collaboration permissions* pane, click *Enable collaboration*.
+. To set the default query method, select `productsByProductId (productId:String!): ProductResponse`:
 +
-image::datagraph-qsg-enable-collaboration.png[Enable collaboration panel]
+image::datagraph-qsg-default-query-method.png[Set the default query method to enable collaboration]
 +
 The default query method for an object type is the method that always returns a single record of that object type for which you want to enable collaboration.
+
+. Click *Next*.
+. To select a primary key, from the dropdown list, select `identifier (String!)`
++
+image::datagraph-qsg-primary-key.png[Set the primary key to enable collaboration]
 +
 The primary key is one field of your object type that uniquely identifies a single record of that object type.
-
+. Click *Confirm*.
 . In the *Edit type name and field settings* pane, make all fields visible.
 +
 When adding an API, all nested types are hidden from the unified schema. This gives you the flexibility to scale the schema according to your needs and make only those types visible that you want to add to the unified schema. Any fields in Level 1 types that return the nested types are also hidden.
@@ -188,7 +193,7 @@ For this example, you perform a local composition merge by merging the OrderSumm
 +
 image::datagraph-qsg-merge-selection.png[Merge selection options]
 
-. Use the diff view to get a side-by-side comparison of the two types in the merge, and use the toggle to make visible any hidden fields that you noticed in the diff view.
+. Use the diff view to get a side-by-side comparison of the two types in the merge, and use the toggle to unhide all the fields.
 +
 image::datagraph-qsg-diff-view-hidden-fields.png[Hidden fields in the merge diff view]
 
@@ -286,7 +291,7 @@ Trace results for Anypoint DataGraph provide the following information:
 
 . To see logs associated with the query, click *View response logs*.
 +
-image::datagraph-qsg-query-response-logs.png[Response logs page]
+image::datagraph-qsg-response-logs.png[Response logs page]
 +
 Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR.
 +

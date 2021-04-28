@@ -45,10 +45,15 @@ In this example, your default query method is `ordersById`, and its primary key 
 == Enable Collaboration on an Object Type
 
 . In the API schema navigation, select the level-1 object type for which you want to enable collaboration.
-. In the *Collaboration permissions* pane, click *Allow collaboration for this type (Extend this type)*.
-. For *Required configuations*, follow the prompts to set a default query method and primary key.
+. In the *Collaboration permissions* pane, click *Enable collaboration*.
+. Set the default query method.
 +
-image::enable-collaboration.png[]
+image::default-query-method.png[]
+
+. Click *Next*.
+. Select a primary key.
++
+image::primary-key.png[]
 
 == Disable Collaboration for an Object Type
 
