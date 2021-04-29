@@ -37,7 +37,7 @@ To view response logs in Anypoint DataGraph:
 +
 Response logs for that query are displayed:
 +
-image::datagraph-qsg-response-logs.png[]
+image::datagraph-qsg-response-logs.png[Query response logs]
 
 == Search Response Logs
 

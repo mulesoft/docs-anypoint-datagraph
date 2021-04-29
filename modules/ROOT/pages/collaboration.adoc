@@ -48,12 +48,12 @@ In this example, your default query method is `ordersById`, and its primary key 
 . In the *Collaboration permissions* pane, click *Enable collaboration*.
 . Set the default query method.
 +
-image::default-query-method.png[]
+image::default-query-method.png[Set the default query method to enable collaboration]
 
 . Click *Next*.
 . Select a primary key.
 +
-image::primary-key.png[]
+image::primary-key.png[Set the primary key to enable collaboration]
 
 == Disable Collaboration for an Object Type
 

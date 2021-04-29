@@ -27,13 +27,13 @@ DataGraph creates this field in your current type and links it to the target typ
 +
 The new field returns the type you're linking to, so it's safe to hide the foreign key unless it has outstanding queries.
 +
-image::link-object-type.png[]
+image::link-object-type.png[Link configurations detailing linked target type results]
 
 . Click *Save changes*.
 
 If you scroll up to the fields pane, an icon shows the fields are now linked:
 
-image::linked-type-icon.png[]
+image::linked-type-icon.png[Linked object indicated by link icon]
 
 == Remove a Link Between Object Types
 
