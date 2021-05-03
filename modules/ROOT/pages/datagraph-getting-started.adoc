@@ -1,0 +1,12 @@
+= Get Started With Anypoint DataGraph
+
+Use the following documentation to learn about key concepts and get started with Anypoint DataGraph.
+
+* xref:datagraph-qsg.adoc[] +
+Use this quick start guide to begin using Anypoint DataGraph.
+* xref:datagraph-terms.adoc[] +
+Learn key terms that are useful for understanding how Anypoint DataGraph works.
+* xref:schemas.adoc[] +
+Understand the different types that can be present in your API schema depending on your API specification.
+* xref:write-queries-tutorial.adoc[] +
+This brief tutorial introduces key concepts for writing GraphQL queries in Anypoint DataGraph.
