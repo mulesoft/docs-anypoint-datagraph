@@ -25,7 +25,7 @@ image::schema-explorer-query-method.png[]
 
 Consider `ordersByOrderId`: This query method returns data about the object type `OrderResponse` and requires an argument for `orderID` in the form of a string:
 
-ordersByOrderId (orderId:String!):OrderResponse
+`ordersByOrderId (orderId:String!):OrderResponse`
 
 In GraphQL, you add the query method to start a query:
 
@@ -101,7 +101,7 @@ So, your final query looks like:
     taxPrice
     total
     trackingNumber
-	  billingAddress {
+    billingAddress {
       state
       city
       postalCode
