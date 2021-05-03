@@ -109,7 +109,7 @@ Query Trace results for Anypoint DataGraph provide the following information:
 
 . To see response logs associated with the query, click *View response logs*.
 +
-image::datagraph-qsg-query-response-logs.png[Query response logs]
+image::datagraph-qsg-response-logs.png[Query response logs]
 +
 Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
 . Click *View History* to access this same query—or others—at a later time.
