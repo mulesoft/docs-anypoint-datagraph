@@ -1,8 +1,8 @@
 = Supported Authentication Methods
 
-Anypoint DataGraph must authenticate to access the GET endpoints of the API that you add to your unified graph, allowing Anypoint DataGraph to make requests to your API when queried.
+You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows DataGraph to make requests to those APIs when you run queries.
 
-You must configure any of the following authentication methods either when adding a new API to your unified schema, or when promoting an API schema to another environment.
+You must configure any of the following authentication methods either when adding a new API schema to the unified schema, or when promoting an API schema to another environment.
 
 *No Auth*::
 Use if your API is public.
