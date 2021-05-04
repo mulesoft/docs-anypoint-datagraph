@@ -17,9 +17,9 @@ For full guidance on GraphQL query writing refer to the GraphQL Query documentat
 
 == Discover and Add a Query Method
 
-In GraphQL, query methods serve as the entry points to retrieve the data you want. Start by using the schema explorer in the DataGraph query editor to discover which xref:schemas.adoc#query-types-and-methods[query methods] are available.
+In GraphQL, query methods serve as the entry points to retrieve the data you want. Start by using the schema explorer in the DataGraph query editor to discover which xref:schemas.adoc#query-types-and-methods[query methods] are available for an API schema.
 
-For example, the Catalyst Order API, used in the xref:datagraph-qsg.adoc[DataGraph quick start guide], has two query methods associated with it: `ordersCustomerByCustomerId` and `ordersByOrderId`.
+For example, the Catalyst Order API schema, used in the xref:datagraph-qsg.adoc[DataGraph quick start guide], has two query methods associated with it: `ordersCustomerByCustomerId` and `ordersByOrderId`.
 
 image::schema-explorer-query-method.png[]
 
@@ -55,7 +55,7 @@ Fields return the data you want for a particular type, and you can choose whatev
 
 image::schema-explorer-fields.png[]
 
-As you write a query, you can add or remove any of these fields. You can query a portion of the available fields with the following query:
+As you write a query, you can add or remove any of these fields. The following query a uses a portion of the available fields:
 
 [source]
 --
@@ -70,9 +70,11 @@ As you write a query, you can add or remove any of these fields. You can query a
 }
 --
 
-`OrderResponse` is a level 1 type, meaning you can access it directly with a query method, as in the previous example. However, many of the fields returned by the `OrderResponse` object type, such as `billingAddress`, are object types themselves that contain additional data that can make your query result more valuable. These additional types are known as _xref:schemas.adoc#level-1-nested-types[nested types]_.
+`OrderResponse` is a level 1 type, meaning you can access it directly with a query method, as in the previous example. 
 
 == Add fields for nested types
+
+Many of the fields returned by the OrderResponse object type, such as billingAddress, are object types themselves that contain additional data that can make your query result more valuable. These additional types are known as nested types.
 
 The `billingAddress` object type returns the `PostalAddress` object type, which itself returns a number of additional fields. In order to query `billingAddress`, you need to specify which fields to return from `PostalAddress`. For example:
 
