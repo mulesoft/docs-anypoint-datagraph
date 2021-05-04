@@ -28,6 +28,6 @@ The following permissions are available per business group per environment:
 
 == Additional Resources
 
-For more information on setting DataGraph SLA tiers and managing contracts, refer to xref:api-manager::datagraph-landing-page.adoc[DataGraph Administration] in the API Manager documentation.
+For more information on setting Anypoint DataGraph SLA tiers and managing contracts, refer to xref:api-manager::datagraph-landing-page.adoc[DataGraph Administration] in the API Manager documentation.
 
-For instructions on setting up user permissions and roles for DataGraph, refer to xref:access-management-users.adoc#granting-permissions-and-roles-to-users[Granting Permissions and Roles to Users]
+For instructions on setting up user permissions and roles for Anypoint DataGraph, refer to xref:access-management-users.adoc#granting-permissions-and-roles-to-users[Granting Permissions and Roles to Users]

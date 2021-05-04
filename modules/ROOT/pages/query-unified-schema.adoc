@@ -103,7 +103,7 @@ image::datagraph-qsg-query-traces.png[Query traces enabled on a query]
 +
 Query Trace results for Anypoint DataGraph provide the following information:
 +
-* Time taken by DataGraph to parse and validate the query
+* Time taken by Anypoint DataGraph to parse and validate the query
 * Total response time for the entire query
 * Duration of requests to each source API in the query
 

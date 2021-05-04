@@ -16,13 +16,13 @@ image::status_uptodate.png[]
 
 == Status: On hold
 
-In the case that DataGraph is unreachable, the status will change to *On hold*.
-If you were attempting any changes, DataGraph will automatically apply those changes when it’s available, and the status will change to  *Updating*, with details of which APIs are being added, removed, or updated.
+In the case that Anypoint DataGraph is unreachable, the status will change to *On hold*.
+If you were attempting any changes, Anypoint DataGraph will automatically apply those changes when it’s available, and the status will change to  *Updating*, with details of which APIs are being added, removed, or updated.
 
 When the status is *On hold*, you can continue to browse the unified schema and source list, but you can’t make any edits. You can also run queries against the previously deployed unified schema.
 
 == Fixing Update Conflicts
 
-As you make changes to existing API schemas or add them to the unified schema, DataGraph automatically updates the unified schema’s metadata. This happens instantaneously, and the updated metadata is stored near real-time.
+As you make changes to existing API schemas or add them to the unified schema, Anypoint DataGraph automatically updates the unified schema’s metadata. This happens instantaneously, and the updated metadata is stored near real-time.
 
 You may, however, encounter rare cases when there are errors with the metadata—for example, when another contributor applies a conflicting change at the same time. In such cases, you must ensure you have the latest version of the unified schema and then re-attempt your change.

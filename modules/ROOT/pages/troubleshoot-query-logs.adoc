@@ -2,14 +2,14 @@
 
 Anypoint DataGraph provides response logs that contain useful query troubleshooting information.
 
-Response logs contain information about only DataGraph queries. DataGraph stores up to 100 MB  or up to 30 days of log data, whichever limit is reached first.
+Response logs contain information about only Anypoint DataGraph queries. Anypoint DataGraph stores up to 100 MB  or up to 30 days of log data, whichever limit is reached first.
 
 [NOTE]
 --
 If you have a Titanium subscription, the https://docs.mulesoft.com/monitoring/performance-and-impact#titanium-subscription-limits[Titanium limits for logs apply^].
 --
 
-== Log Levels for DataGraph Response Logs
+== Log Levels for Anypoint DataGraph Response Logs
 
 Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR. Log levels are incremental, and each level contains the following information:
 
@@ -22,7 +22,7 @@ Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR. Log leve
 |ERROR |Lists error messages on invalid queries, timeouts, authentication failures, and payload errors |ERROR
 |===
 
-By default, the log level for each environment is set to INFO. You can change this setting at any time. Changes to the log level persist for _all future queries to that DataGraph instance_, regardless of the user.
+By default, the log level for each environment is set to INFO. You can change this setting at any time. Changes to the log level persist for _all future queries to that Anypoint DataGraph instance_, regardless of the user.
 
 == View Response Logs for a Query
 

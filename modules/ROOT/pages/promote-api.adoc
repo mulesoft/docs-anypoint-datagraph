@@ -9,16 +9,16 @@ The steps you take to promote an API through the production cycle vary depending
 [%header%autowidth.spread]
 |===
 |Development Orders API Version |Staging Orders API Version |Promotion Action |Promotion Outcome Version
-|v3.1.0 |None |DataGraph promotes the API schema and any of its configuration.
+|v3.1.0 |None |Anypoint DataGraph promotes the API schema and any of its configuration.
 
 You configure the URL and authentication method.
  |v3.1.0
-|v3.1.1 |v3.1.0 |DataGraph automatically updates the asset version of the existing API schema.
+|v3.1.1 |v3.1.0 |Anypoint DataGraph automatically updates the asset version of the existing API schema.
 
 You configure the URL and authentication method.
  |v3.1.1
-|v3.1.0 |v3.1.0 |DataGraph updates any customizations to the asset version. |v3.1.0
-|v4.0.0 |v3.1.0 |DataGraph adds both API versions to the target environment, where they coexist.
+|v3.1.0 |v3.1.0 |Anypoint DataGraph updates any customizations to the asset version. |v3.1.0
+|v4.0.0 |v3.1.0 |Anypoint DataGraph adds both API versions to the target environment, where they coexist.
 
 You configure the URL and authentication method for v4.0.0.
  |v3.1.0, v4.0.0

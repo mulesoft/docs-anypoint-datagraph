@@ -2,7 +2,7 @@
 
 Use this quick start guide to begin using Anypoint DataGraph. With Anypoint DataGraph, you can query multiple APIs in a single request to get the specific information you need.
 
-Getting started with DataGraph involves:
+Getting started with Anypoint DataGraph involves:
 
 . Downloading and publishing two APIs
 . Adding those APIs to Anypoint DataGraph and editing their schemas for addition to the unified schema, including how to use various . API schema editing tools like linking and merging
@@ -12,7 +12,7 @@ Getting started with DataGraph involves:
 
 * Familiarity with Anypoint Platform and Exchange, including permissions to use Exchange to publish and view RAML or OAS specifications in your business group
 * An Anypoint Platform account
-* Admin or Contribute DataGraph permissions
+* Admin or Contribute permissions
 * The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan.
 
 == Download and Publish the Order and Product APIs
@@ -28,7 +28,7 @@ To follow the quick-start example, download the RAML definitions for two example
 The quick-start example uses the API names *Catalyst Product API* and *Catalyst Order API*.
 . Repeat these steps for the *Order Systems API | RAML Definition* for asset version 2.0.3.
 
-== Add the Catalyst Product API to DataGraph
+== Add the Catalyst Product API to Anypoint DataGraph
 After publishing the example APIs in Exchange, first add the Catalyst Product API to Anypoint DataGraph.
 
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the *Unified Data Graph* dropdown list, and click *+Add API*.
@@ -41,18 +41,18 @@ After publishing the example APIs in Exchange, first add the Catalyst Product AP
 +
 image::datagraph-qsg-configure-api.png[Configuring the API and asset version and URL for the Catalyst Product API]
 +
-If your API is managed by API Manager, or if you manually added the URL to Exchange, DataGraph retrieves the URL. You can also manually add a new URL if it’s included in the API specification.
+If your API is managed by API Manager, or if you manually added the URL to Exchange, Anypoint DataGraph retrieves the URL. You can also manually add a new URL if it’s included in the API specification.
 . Click *Save*.
 . Click *Next: Provide authentication*.
 . Provide authentication for the GET endpoints for the API (in this quick-start example, *No Auth*):
 +
 image::datagraph-qsg-api-authentication.png[The API authentication is set to No Auth]
 +
-DataGraph uses these credentials to make requests to this API.
+Anypoint DataGraph uses these credentials to make requests to this API.
 
 . After setting the version and authentication details, click *Next: Preview Schema*:
 +
-image::datagraph-qsg-preview-schema.png[DataGraph preview schema view]
+image::datagraph-qsg-preview-schema.png[Anypoint DataGraph preview schema view]
 +
 Here the specification of the API you’re adding is automatically transformed to its corresponding API schema. You can explore and familiarize yourself with the generated schema before proceeding to the next step.
 +
@@ -64,13 +64,13 @@ image::datagraph-qsg-preview-search.png[DataGraph preview schema search]
 
 == Edit the Catalyst Product API Schema for Addition to the Unified Schema
 
-After you add the Catalyst Product API to DataGraph, you:
+After you add the Catalyst Product API to Anypoint DataGraph, you:
 
 * Edit the Schema by Enabling Object Type Collaboration
 
 [NOTE]
 --
-You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by DataGraph before adding an API schema to the unified schema.
+You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
 --
 
 === Edit the Schema by Enabling Object Type Collaboration
@@ -104,11 +104,11 @@ When adding an API, all nested types are hidden from the unified schema. This gi
 
 . Click *Next: Add to unified schema*.
 +
-image::datagraph-qsg-add-api-status.png[DataGraph status indicator indicates adding API to graph,75%,75%]
+image::datagraph-qsg-add-api-status.png[Anypoint DataGraph status indicator indicates adding API to graph,75%,75%]
 +
-As DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
+As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
 
-== Add the Catalyst Order API to DataGraph
+== Add the Catalyst Order API to Anypoint DataGraph
 
 Follow the same procedure as for adding the Product Order API, with the following exceptions:
 
@@ -117,7 +117,7 @@ Follow the same procedure as for adding the Product Order API, with the followin
 
 == Edit the Catalyst Order API Schema for Addition to the Unified Schema
 
-After you add the Catalyst Order API to DataGraph, you:
+After you add the Catalyst Order API to Anypoint DataGraph, you:
 
 * Edit the Schema by Rename Object Types
 * Edit the Schema by Linking Object Types
@@ -125,7 +125,7 @@ After you add the Catalyst Order API to DataGraph, you:
 
 [NOTE]
 --
-You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by DataGraph before adding an API schema to the unified schema.
+You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
 --
 
 === Edit the Schema by Rename Object Types
@@ -136,7 +136,7 @@ For example, the Catalyst Order API contains a nested type named `EnumType0`:
 
 image::datagraph-qsg-rename-type.png[Enum type 0 in the catalyst order API]
 
-DataGraph generated the name `EnumType0` because this enum type was unnamed when added. Because this type provides useful order status information, name it appropriately, to `Status`.
+Anypoint DataGraph generated the name `EnumType0` because this enum type was unnamed when added. Because this type provides useful order status information, name it appropriately, to `Status`.
 
 . Click *EnumType0*.
 . Switch the *Desired state* to *Visible*.
@@ -180,7 +180,8 @@ You’re _almost_ ready to finish adding the Catalyst Order API. Before you do t
 === Edit the Schema by Merging Object Types
 
 You can merge an object type from your API schema with either another object type in the unified schema or with another object type in the same API schema (known as a _local merge_). Merging types enables you to combine similar types to extend their fields and datasets for better query results.
-In DataGraph, there are three merge types:
+
+In Anypoint DataGraph, there are three merge types:
 
 * An _extension merge_, in which merged types join data
 * A _reference merge_, in which you can retrieve fields only from the target type
@@ -206,7 +207,7 @@ The results show that you’re performing a local merge between the OrderSummary
 . Click *Confirm merge*.
 . Click *Next: Add to unified schema*.
 
-As DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
+As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
 
 == Request Access to Query the Unified Schema
 
@@ -285,7 +286,7 @@ image::datagraph-qsg-query-traces.png[Query trace view open with query results]
 +
 Trace results for Anypoint DataGraph provide the following information:
 
-* Time taken by DataGraph to parse and validate the query
+* Time taken by Anypoint DataGraph to parse and validate the query
 * Total response time for the entire query
 * Duration of requests to each source API in the query
 

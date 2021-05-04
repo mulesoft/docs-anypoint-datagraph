@@ -6,7 +6,7 @@ You must resolve any merge conflicts or merge inconsistencies when adding object
 
 When adding types to your unified schema you must make sure that none of the types that you are adding create a conflict with the existing types in your unified schema.
 
-When you add an API schema that has a type name that already exists within your unified schema, DataGraph raises an error. You must resolve this error before continuing.
+When you add an API schema that has a type name that already exists within your unified schema, Anypoint DataGraph raises an error. You must resolve this error before continuing.
 
 If you don’t care about adding this particular type to the unified schema, you can choose to hide the field.
 

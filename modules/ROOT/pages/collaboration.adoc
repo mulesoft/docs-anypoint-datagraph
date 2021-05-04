@@ -65,4 +65,4 @@ To disable collaboration:
 . In the API schema navigation, select the object type.
 . In the *Collaboration permissions* pane, clear the selection for *Allow collaboration for this type (Extend this type).*
 . When prompted, confirm that you want to disable collaboration for the object type by clicking  *Undo merge and disable collaboration*.
-. If a conflict occurs, follow the prompts in DataGraph to resolve it.
+. If a conflict occurs, follow the prompts in Anypoint DataGraph to resolve it.
