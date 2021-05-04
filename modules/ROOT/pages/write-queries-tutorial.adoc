@@ -70,7 +70,7 @@ As you write a query, you can add or remove any of these fields. The following q
 }
 --
 
-`OrderResponse` is a level 1 type, meaning you can access it directly with a query method, as in the previous example. 
+`OrderResponse` is a level 1 type, meaning you can access it directly with a query method, as in the previous example.
 
 == Add fields for nested types
 
@@ -156,8 +156,6 @@ For example, you can rename the total key to `totalPrice` and the status key to 
   }
 }
 --
-
-For example, you can rename the `total` key to `totalPrice` and the `status` key to `orderStatus` in only your query response.
 
 == Additional Resources
 
