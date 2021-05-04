@@ -2,7 +2,7 @@
 
 This brief tutorial introduces key concepts for writing GraphQL queries in Anypoint DataGraph.
 
-You learn how to:
+Learn how to use the Anypoint DataGraph query editor to:
 
 . Discover and add a query method
 . Add input parameters to a query
@@ -10,16 +10,11 @@ You learn how to:
 . Add nested types
 . Add a query alias
 
-[NOTE]
---
-For full guidance on GraphQL query writing refer to the GraphQL Query documentation.
---
-
 == Discover and Add a Query Method
 
-In GraphQL, query methods serve as the entry points to retrieve the data you want. Start by using the schema explorer in the DataGraph query editor to discover which xref:schemas.adoc#query-types-and-methods[query methods] are available for an API schema.
+In GraphQL, query methods serve as the entry points to retrieve the data you want. Start by using the schema explorer in the Anypoint DataGraph query editor to discover which query methods are available for an API schema.
 
-For example, the Catalyst Order API schema, used in the xref:datagraph-qsg.adoc[DataGraph quick start guide], has two query methods associated with it: `ordersCustomerByCustomerId` and `ordersByOrderId`.
+For example, the Catalyst Order API schema, used in the xref:datagraph-qsg.adoc[DataGraph quick start guide], has two query methods associated with it: `ordersCustomerByCustomerId` and `ordersByOrderId`:
 
 image::schema-explorer-query-method.png[]
 
@@ -37,7 +32,7 @@ In GraphQL, you add the query method to start a query:
 --
 == Add Input Parameters
 
-Notice that the input parameter for the query method, `orderID` is a non-nullable field, as indicated by the `!`. This field requires a string data type that is not a null value.
+Notice that the input parameter for the query method `orderID` is a non-nullable field, as indicated by the exclamation point (`!`). This field requires a string data type that is not a null value.
 
 In this case, you need to add an order ID to the query:
 
@@ -50,12 +45,12 @@ In this case, you need to add an order ID to the query:
 
 == Add Fields
 
-Fields return the data you want for a particular type, and you can choose whatever fields you need when writing a query. For example, as previously mentioned, the
+Fields represent a type’s dataset that is returned in a query response, and you can choose whatever fields you need when writing a query. For example, as previously mentioned, the
 `ordersByOrderID` query method returns the `OrderResponse` object type, which returns the following fields:
 
 image::schema-explorer-fields.png[]
 
-As you write a query, you can add or remove any of these fields. The following query a uses a portion of the available fields:
+As you write a query, you can add or remove any of these fields. The following query a uses some of the available fields:
 
 [source]
 --
@@ -70,13 +65,13 @@ As you write a query, you can add or remove any of these fields. The following q
 }
 --
 
-`OrderResponse` is a level 1 type, meaning you can access it directly with a query method, as in the previous example.
+`OrderResponse` is a Level-1 type, meaning you can access it directly with a query method, as in the previous example.
 
 == Add fields for nested types
 
 Many of the fields returned by the OrderResponse object type, such as billingAddress, are object types themselves that contain additional data that can make your query result more valuable. These additional types are known as nested types.
 
-The `billingAddress` object type returns the `PostalAddress` object type, which itself returns a number of additional fields. In order to query `billingAddress`, you need to specify which fields to return from `PostalAddress`. For example:
+The `billingAddress` object type returns the `PostalAddress` object type, which itself returns several additional fields. To query `billingAddress`, you must specify which fields to return from `PostalAddress`. For example:
 
 [source]
 --
@@ -91,7 +86,7 @@ The `billingAddress` object type returns the `PostalAddress` object type, which 
 }
 --
 
-So, your final query looks like:
+As a result, your final query looks like:
 
 [source]
 --
@@ -112,7 +107,7 @@ So, your final query looks like:
 }
 --
 
-For this query, DataGraph returns:
+For this query, Anypoint DataGraph returns:
 
 [source]
 --
@@ -139,7 +134,7 @@ For this query, DataGraph returns:
 
 You can use aliases to rename individual keys in the query response.
 
-For example, you can rename the total key to `totalPrice` and the status key to `orderStatus` in only your query response.
+For example, you can rename the total field to `totalPrice` and the status field to `orderStatus` in only your query response.
 
 [source]
 --

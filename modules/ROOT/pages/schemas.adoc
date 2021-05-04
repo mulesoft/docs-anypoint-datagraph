@@ -86,7 +86,7 @@ type Product {
 
 == Fields Data Types
 
-Each field represents a type’s dataset that’s returned. By default, there are five scalar types:
+Each field represents a type’s dataset that is returned. By default, there are five scalar types:
 
 * `Int`: +
 A signed 32‐bit integer.
@@ -159,7 +159,7 @@ The types in your schema belong to categories that depend on the relation betwee
 * Level 1 type +
 These types have a query method associated with them and therefore can be accessed directly.
 +
-For example, in the previous API specification, `Order` is a level 1 object type because there is a GET for the `order/{id}` endpoint associated with it.
+For example, in the previous API specification, `Order` is a Level-1 object type because there is a GET for the `order/{id}` endpoint associated with it.
 +
 You can access this object type using the query method directly:
 +
@@ -171,9 +171,9 @@ ordersById (orderId: “123”) {
 }
 --
 * Nested types +
-These types have no query methods associated with them and therefore you can access them only through the query methods of level 1 types.
+These types have no query methods associated with them and therefore you can access them only through the query methods of Level-1 types.
 +
-For example, in the previous API specification, `Product` is an object type with no query methods associated with it. To query the fields of the `Product` type, you must query the method associated with its level 1 type `Order`:
+For example, in the previous API specification, `Product` is an object type with no query methods associated with it. To query the fields of the `Product` type, you must query the method associated with its Level-1 type `Order`:
 +
 [source]
 --
