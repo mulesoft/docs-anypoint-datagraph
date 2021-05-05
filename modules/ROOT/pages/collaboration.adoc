@@ -1,6 +1,6 @@
 = Object Type Collaboration in Anypoint DataGraph
 
-Enabling collaboration on a level-1 object type allows you to achieve a connected and enriched unified schema.
+Enabling collaboration on a Level-1 object type allows you to achieve a connected and enriched unified schema.
 
 When you enable collaboration on a type, you allow similar types in your API schema or in other API schemas to collaborate with your type and directly add their own fields. The result is an extended list of fields and dataset, resulting in a more enriched query result for this type.
 
@@ -11,7 +11,7 @@ See xref:linking.adoc[Link Types] for more information.
 * Merge types with other types +
 See xref:merge-types[Merge Types] for more information.
 
-You can enable collaboration only on level-1 object types: those directly returned from a query method. See xref:schemas.adoc#level-1-nested-types[Level 1 and Nested Types] for more information.
+You can enable collaboration only on Level-1 object types: those directly returned from a query method. See xref:schemas.adoc#level-1-nested-types[Level-1 and Nested Types] for more information.
 
 To successfully understand the requirements for enabling collaboration, you must be familiar with the types in your API schema. See xref:schemas.adoc[] for more information.
 
@@ -42,9 +42,10 @@ status: String
 
 In this example, your default query method is `ordersById`, and its primary key is `orderId`.`ordersById` retrieves the Order type and uses `orderId` to retrieve specific information based on that ID field. Note that the data type of the default query method’s input argument ID must be the same as the data type of the primary key. In this example, both are of data type `ID!`.
 
+[[enable-collaboration-on-an-object-type]]
 == Enable Collaboration on an Object Type
 
-. In the API schema navigation, select the level-1 object type for which you want to enable collaboration.
+. In the API schema navigation, select the Level-1 object type for which you want to enable collaboration.
 . In the *Collaboration permissions* pane, click *Enable collaboration*.
 . Set the default query method.
 +
