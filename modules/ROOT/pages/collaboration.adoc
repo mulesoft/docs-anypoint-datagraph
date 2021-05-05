@@ -1,6 +1,6 @@
 = Object Type Collaboration in Anypoint DataGraph
 
-Enabling collaboration on a level-1 object type allows you to achieve a connected and enriched unified schema.
+enabling collaboration on a level-1 object type allows you to achieve a connected and enriched unified schema.
 
 When you enable collaboration on a type, you allow similar types in your API schema or in other API schemas to collaborate with your type and directly add their own fields. The result is an extended list of fields and dataset, resulting in a more enriched query result for this type.
 
