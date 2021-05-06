@@ -75,7 +75,7 @@ customersByCustomerId (customerId: “CC83”) {
 
 Additionally, to query the customer data for the order, you must know the customer ID associated with it.
 
-However, note that the `Order` object type has a field that returns `customerId`. You can link your `Order` object type to the `Customer` object type using customerId: String! as a foreign key, pointing to Customer as your target type, causing your selected foreign key to map to the primary key customerId:String! on `Customer` type.
+However, note that the `Order` object type has a field that returns `customerId`. You can link your `Order` object type to the `Customer` object type using `customerId: String!`` as a foreign key, pointing to Customer as your target type, causing your selected foreign key to map to the primary key customerId:String! on `Customer` type.
 
 As a result of this link:
 
