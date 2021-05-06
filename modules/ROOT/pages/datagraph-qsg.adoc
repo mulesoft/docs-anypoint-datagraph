@@ -20,7 +20,13 @@ Getting started with Anypoint DataGraph involves:
 To follow the quick-start example, download the RAML definitions for two example APIs provided by MuleSoft: https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/minor/2.0/console/summary/[the Order Systems API v2.0^] and https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/minor/2.0/console/summary/[the Product API v2.0^].
 
 . Log into Anypoint platform.
++
+link:https://anypoint.mulesoft.com/login["Take me to Anypoint Platform^", role="button-primary"]
++
 . In Exchange, click *Provided by MuleSoft*.
++
+link:https://www.mulesoft.com/exchange["Take me to Exchange^", role="button-primary"]
++
 . Search for *product api raml definition* and select it from the list of results.
 . In the *Product API | RAML Definition*, click *Download* > *RAML* for asset version 2.0.2
 . https://docs.mulesoft.com/design-center/design-publish#procedure[Publish the RAML specification to Exchange^] using your business group ID and an asset name.
