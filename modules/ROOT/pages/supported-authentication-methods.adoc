@@ -2,11 +2,14 @@
 
 You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows Anypoint DataGraph to make requests to those APIs when you run queries.
 
-You must configure any of the following authentication methods either when adding a new API schema to the unified schema, or when promoting an API schema to another environment.
+When adding a new API schema to the unified schema, or when promoting an API schema to another environment, you must configure one of the following authentication methods:
 
-*No Auth*::
+* *No Auth*
++
 Use if your API is public.
-*Basic Auth*::
+
+* *Basic Auth*
++
 Use if you authenticate to your API using the basic authentication header, or a username and password.
 +
 For example:
@@ -27,7 +30,8 @@ curl GET 'http://localhost/myResource' \
   "password": "myPassword"
 }'
 --
-*Client ID enforcement via headers*::
+* *Client ID enforcement via headers*
++
 Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 +
 For example:
@@ -36,7 +40,8 @@ For example:
 --
 curl "http://localhost/myResource" -H "client_id:1234" -H "client_secret:abcd"
 --
-*Client ID enforcement via query parameters*::
+* *Client ID enforcement via query parameters*
++
 Use if you authenticate to your API passing `client_id` and `client_secret` query params.
 +
 For example:
@@ -45,9 +50,12 @@ For example:
 --
 curl "http://localhost/myResource?client_id=1234&client_secret=abcd"
 --
-*Custom*::
+* *Custom*
++
 Use if you authenticate to your API using custom header parameters and values.
 
 Any other authentication methods to access your added API, such as custom OAuth implementations or short-lived token methods, are not supported.
 
-To later edit the authentication method or credentials, click *List of APIs Added* > {API schema to edit} > *API details* > *Add authentication*.
+== Changing the authentication method
+
+To later edit or change the authentication method or credentials, click *List of APIs Added* > {API schema to edit} > *API details* > *Add authentication*.
