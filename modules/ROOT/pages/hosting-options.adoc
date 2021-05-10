@@ -22,9 +22,9 @@ Anypoint DataGraph is a fully managed service that runs on Anypoint Platform wit
 
 image::datagraph-network-architecture.png[Diagram shows networking between Anypoint DataGraph and Anypoint Platform]
 
-Consumer requests from the public internet are routed to Anypoint DataGraph through Shared or Dedicated load balancers, depending on your CloudHub or Anypoint Virtual Private Cloud (Anypoint VPC) configuration. DataGraph sends requests to the underlying APIs that make up the unified schema. Similarly, when you make changes in the DataGraph UI, those changes trigger updates of DataGraph in the Runtime Plane.
+Consumer requests from the public internet are routed to Anypoint DataGraph through shared or dedicated load balancers, depending on your CloudHub or Anypoint Virtual Private Cloud (Anypoint VPC) configuration. DataGraph sends requests to the underlying APIs that make up the unified schema. Similarly, when you make changes in the Anypoint DataGraph UI, those changes trigger updates of Anypoint DataGraph in the Runtime Plane.
 
-If you’re unable to use port 8082 on a Shared Load Balancer, you must xref:hosting-options.adoc#set-a-dedicated-load-balancer-url-for-anypoint-datagraph[set a new URL for Anypoint DataGraph to use on a CloudHub dedicated load balancer (DLB)].
+If you’re unable to use port 8082 on a shared load balancer, you must xref:hosting-options.adoc#set-a-dedicated-load-balancer-url-for-anypoint-datagraph[set a new URL for Anypoint DataGraph to use on a CloudHub dedicated load balancer (DLB)].
 
 [[set-a-dedicated-load-balancer-url-for-anypoint-datagraph]]
 == Set a Dedicated Load Balancer URL for Anypoint Datagraph
