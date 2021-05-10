@@ -2,7 +2,7 @@
 
 Anypoint DataGraph organizes all data that you choose to make available to your clients in a unified schema. The unified schema is a single, always-current collection of all of the schemas of all of the APIs that you add to it.
 
-When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it from the API's RAML or OAS specification. Because each API schema is created at the time that its API is added, your unified schema is always up to date. All API schemas are stored individually in your organization. This isolation of each API schema enables you to edit them individually without affecting the integrity of other schemas.
+When you add a new API to your unified schema, Anypoint DataGraph generates an API schema from the API's RAML or OAS specification. Because each API schema is created at the time that its API is added, your unified schema is always up to date. All API schemas are stored individually in your organization. This isolation of each API schema enables you to edit them individually without affecting the integrity of other schemas.
 
 The API schema that Anypoint DataGraph generates contains a collection of the GET resources and entities, and the relationships between them, that you’ve defined in your API specification. Whenever you add a new API schema to the unified schema, you can configure the types and fields that the unified schema will include.
 
@@ -64,7 +64,7 @@ brand: String
 --
 |===
 
-Both `Order` and `Product` are different object types that can be represented as follows:
+Both `Order` and `Product` are different object types, each with differnt fields, that can be represented as follows:
 
 [source]
 --
@@ -84,9 +84,9 @@ type Product {
 }
 --
 
-== Fields Data Types
+=== Field Data Types
 
-Each field represents a type’s dataset that is returned. By default, there are five scalar types:
+Each field represents a type’s dataset that is returned in a query response. By default, there are five scalar types:
 
 * `Int`: +
 A signed 32‐bit integer.
@@ -99,7 +99,7 @@ A UTF‐8 character sequence.
 * `ID`: +
 The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a query method. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable.
 
-== Non-nullable Fields
+=== Non-nullable Fields
 
 Fields with values represented with a `!` sign are non-nullables, meaning that the field cannot respond with a null value. For example, in the `Product` type, ID cannot be null:
 
@@ -126,9 +126,9 @@ type Order {
 
 == Query Types and Methods
 
-A query type is the entry point to your API schema when you make a request. This type contains the query methods that represent the GET endpoint you’ve defined in your API specification.
+A query type is the entry point to your API schema when you make a request. A query type contains the query methods that represent the GET endpoint you’ve defined in your API specification.
 
-For example, in a RAML specification that defines a GET endpoint at `/orders/{id}`, The query method in the schema is `ordersById(id)`:
+For example, in a RAML specification that defines a GET endpoint at `/orders/{id}`, the query method in the schema is `ordersById(id)`:
 
 [%header,%autowidth.spread,cols="a,a"]
 |===
@@ -152,11 +152,11 @@ ordersById(id): Order
 |===
 
 [[level-1-nested-types]]
-== Level 1 and Nested Types
+== Level-1 and Nested Types
 
 The types in your schema belong to categories that depend on the relation between your type and the query methods:
 
-* Level 1 type +
+* Level-1 type +
 These types have a query method associated with them and therefore can be accessed directly.
 +
 For example, in the previous API specification, `Order` is a Level-1 object type because there is a GET for the `order/{id}` endpoint associated with it.
@@ -224,7 +224,7 @@ enum OrderStatus {
 
 == Union Types
 
-Union types describe instances of data using other object types. The Union type consists of one or more concrete object types.
+Union types describe instances of data using other object types. Union types consists of one or more concrete object types.
 
 For example, a RAML specification can define the type `Product` using other types, such as `Notebook` and `Phone`:
 
