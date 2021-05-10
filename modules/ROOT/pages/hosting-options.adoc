@@ -2,11 +2,19 @@
 
 Anypoint DataGraph supports the following Anypoint Platform hosting options and network configurations.
 
-=== Supported Control Plane Hosting Options
+== Anypoint Platform Control Plane Hosting Options
 
 Anypoint DataGraph is available for US and EU clouds control plane hosting.
 
-=== Supported Runtime Plane Hosting Options
+* US Cloud (default)
++
+In US Cloud, the control plane is physically hosted within the United States.
+
+* EU Cloud
++
+In the EU Cloud, the control plane is physically hosted within the European Union.
+
+== Anypoint Platform Runtime Plane Hosting Options
 
 Anypoint DataGraph must connect to the destination URL you provide when adding an API to the unified schema. You don't need to make any extra configurations on your runtime plane if you meet any of the following scenarios:
 
@@ -16,7 +24,7 @@ Anypoint DataGraph must connect to the destination URL you provide when adding a
 
 If your API instances run on standalone instances, are not public, and are not connected to Anypoint VPC, you must first pair your standalone runtimes to Anypoint VPC. See https://docs.mulesoft.com/runtime-manager/to-request-vpc-connectivity[Request Anypoint VPC Connectivity to Your Network^] for more information.
 
-== Architecture and Networking
+== Anypoint DataGraph Architecture and Networking
 
 Anypoint DataGraph is a fully managed service that runs on Anypoint Platform.
 
@@ -24,7 +32,93 @@ image::datagraph-network-architecture.png[Diagram shows networking between Anypo
 
 Consumer requests from the public internet are routed to Anypoint DataGraph through Shared or Dedicated load balancers, depending on your CloudHub or Anypoint Virtual Private Cloud (Anypoint VPC) configuration. DataGraph sends requests to the underlying APIs that make up the unified schema. Similarly, when you make changes in the DataGraph UI, those changes trigger updates of DataGraph in the Runtime Plane.
 
-If you’re unable to use port 8082 on a Shared Load Balancer, you must set a new URL for Anypoint DataGraph to use on a CloudHub dedicated load balancer (DLB). Refer to (*link coming soon*) for instructions.
+If you’re unable to use port 8082 on a Shared Load Balancer, you must xref:hosting-options.adoc#set-a-dedicated-load-balancer-url-for-anypoint-datagraph[set a new URL for Anypoint DataGraph to use on a CloudHub dedicated load balancer (DLB)].
+
+[set-a-dedicated-load-balancer-url-for-anypoint-datagraph]
+== Set A Dedicated Load Balancer URL for Anypoint Datagraph
+
+If you’re unable to use port 8082 on a CloudHub shared load balancer, you must set a URL for Anypoint DataGraph to use on a dedicated load balancer (DLB).
+
+You set the URL using a DLB mapping rule that you add to Anypoint DataGraph’s configuration.
+
+=== Prerequisites
+
+* You must have the xref:permissions.adoc[Admin or Operator permission] for the environment in which you want to specify a DLB URL.
+* You must be able to https://docs.mulesoft.com/runtime-manager/anypoint-platform-cli#authentication[authenticate to^] and run commands from the Anypoint CLI.
+* You must https://docs.mulesoft.com/runtime-manager/cloudhub-dedicated-load-balancer#create-and-configure-a-dedicated-load-balancer[create and configure a DLB^].
+
+To complete this task you:
+
+. Use the Anypoint CLI to gather details about your DLB and Anypoint DataGraph
+. Use Runtime Manager to create a mapping rule for the DLB
+. Use the Anypoint CLI to add the DLB configuration to Anypoint DataGraph
+
+=== Gather Details About the DLB and Anypoint DataGraph
+
+. Connect to the Anypoint CLI using your Anypoint Platform username and password.
+. If you did not previously set the environment, do so with the following command:
++
+`use environment <environment name>`
+. Get the name of the DLB:
++
+`cloudhub load-balancer describe <dlb name>`
+. In the results returned from the CLI, note the domain name for the DLB.
+. Gather the CloudHub domain for the Anypoint DataGraph application:
++
+`datagraph load-balancer-config describe`
++
+The value displays as:
++
+`Domain |  <datagraph-domain>`
+
+=== Create a mapping rule for the DLB
+
+Based on the way https://docs.mulesoft.com/runtime-manager/lb-mapping-rules[DLB mapping rules work^], you must configure the Input Path and Output Path so that the final DLB URL (created in step 2 in the next section) is able to hit the endpoint of the Anypoint DataGraph application, which is  `/graphql`.
+
+. From Anypoint Platform, select *Runtime Manager*.
+. From the left menu, select *Load Balancers*.
+. Click a load balancer name, and then click a certificate name.
+. In the *URL Mapping Rules* section, click *Add New Rule*.
+. Complete the fields with the following values:
+** *Input Path* (`inputUri`): The URI that the client requests: for example, `/{app}/`
+** *Target App* (`appName`): The domain for the Anypoint DataGraph application gathered in step 5 in the previous section
+** *Output Path* (`appURI`): The URI string to pass to Anypoint DataGraph; for example  `/` or `/graphql`
+** *Protocol* (`upstreamProtocol`): https
++
+Anypoint DataGraph supports only https.
+
+=== Add the DLB configuration to Anypoint DataGraph
+
+After you add the mapping rule, you configure the DLB for use with Anypoint Datagraph.
+
+. Check the DLB URL for Anypoint DataGraph:
++
+`datagraph load-balancer-config describe`
++
+By default, the returned value for `dlbUrl` is empty if you haven’t previously configured a DLB for that Anypoint DataGraph environment.
+. To add the new DLB URL, run the following command:
++
+`datagraph load-balancer-config add <url>`
++
+Replace `<url>` with a valid URL that includes the DLB domain (gathered in step 3 of the first section) and the mapping rule Input Path, for example,
++
+`datagraph load-balancer-config add example-lb.anypointdns.net/datagraph/graphql`
+
+. To validate that the value was updated, run the following command:
++
+`datagraph load-balancer-config describe`
++
+The CLI returns details that include the application name for the Anypoint DataGraph load balancer and the full domain name for the DLB.
+
+After you add this change, Anypoint DataGraph re-deploys.
+
+=== Remove the DLB configuration from Anypoint DataGraph
+
+You can remove the DLB configuration using the following command:
+
+`datagraph load-balancer-config remove`
+
+When you remove the configuration, Anypoint DataGraph re-deploys.
 
 
 == See Also
