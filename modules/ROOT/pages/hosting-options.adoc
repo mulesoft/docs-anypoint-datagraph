@@ -18,7 +18,7 @@ If your API instances run on standalone instances, are not public, and are not c
 
 == Anypoint DataGraph Architecture and Networking
 
-Anypoint DataGraph is a fully managed service that runs on Anypoint Platform.
+Anypoint DataGraph is a fully managed service that runs on Anypoint Platform within the default region of your business group.
 
 image::datagraph-network-architecture.png[Diagram shows networking between Anypoint DataGraph and Anypoint Platform]
 
