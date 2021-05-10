@@ -224,7 +224,7 @@ enum OrderStatus {
 
 == Union Types
 
-Union types describe instances of data using other object types. Union types consists of one or more concrete object types.
+Union types describe instances of data using other object types. Union types consists of one or more specific object types.
 
 For example, a RAML specification can define the type `Product` using other types, such as `Notebook` and `Phone`:
 
