@@ -10,8 +10,8 @@ The following terms, some of which come from the GraphQL lexicon, are useful for
 |Object types |The most common type in a schema, object types represent entities in your API specification that are returned as part of a GET response.
 |Enum types |An enum type returns only a specific set of values that you’ve defined in your API specification.
 |Union types |Union types describe instances of data using other object types. A union type consists of one or more specific object types.
-|Query type |A query type is the entrypoint to an API schema when you make a request. This type contains the query methods you’ve defined in your API specification.
-|Query method |Each unique GET endpoint defined in your API specification is represented by a query method, which you use to start a query.
+|Query types |A query type is the entrypoint to an API schema when you make a request. This type contains the query methods you’ve defined in your API specification.
+|Query methods |Each unique GET endpoint defined in your API specification is represented by a query method, which you use to start a query.
 |Fields |Fields are properties you define for an object type in your API specification.
 |Level-1 types |In an API schema, Level-1 types are object types that can be directly returned by a query method.
 |Nested types |In an API schema, you can access nested types only through the query methods of Level-1 types. Nested types are not directly returned by a query method.
