@@ -151,7 +151,7 @@ ordersById(id): Order
 --
 |===
 
-[[level-1-nested-types]]
+[[level-1-and-nested-types]]
 == Level-1 and Nested Types
 
 The types in your schema belong to categories that depend on the relation between your type and the query methods:

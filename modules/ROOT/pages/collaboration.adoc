@@ -11,7 +11,7 @@ See xref:linking.adoc[Link Types] for more information.
 * Merge types with other types +
 See xref:merge-types[Merge Types] for more information.
 
-You can enable collaboration only on Level-1 object types: those directly returned from a query method. See xref:schemas.adoc#level-1-nested-types[Level-1 and Nested Types] for more information.
+You can enable collaboration only on Level-1 object types: those directly returned from a query method. See xref:schemas.adoc#level-1-and-nested-types[Level-1 and Nested Types] for more information.
 
 To successfully understand the requirements for enabling collaboration, you must be familiar with the types in your API schema. See xref:schemas.adoc[] for more information.
 
