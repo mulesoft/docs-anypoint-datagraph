@@ -1,3 +1,54 @@
-= Resolve Runtime Errors
+= Resolve Anypoint DataGraph Runtime Errors
 
-placeholder
+In some cases, you may encounter runtime errors when attempting to use the Anypoint DataGraph query editor. Troubleshoot the errors as follows.
+
+== Failed to Fetch Schema Error
+
+A failed to fetch schema error occurs when you navigate to the Anypoint DataGraph query editor and it displays the following:
+
+....
+{
+  "message": "Failed to fetch",
+  "stack": "TypeError: Failed to fetch"
+}
+....
+
+Anypoint DataGraph generates this error when it cannot load the unified schema, and it occurs for one of two reasons:
+
+. You’re unable to use port 8082 on a shared load balancer. Instead you can create a dedicated load balancer (DLB) and xref:hosting-options.adoc#set-a-dedicated-load-balancer-url-for-anypoint-datagraph[set its URL to configure Anypoint DataGraph to route requests through the DLB].
+. Your internet browser is unable to access Anypoint Virtual Private Cloud (VPC). Make sure you can connect to Anypoint VPC from your internet browser. Refer to xref:hosting-options.adoc#anypoint-datagraph-architecture-and-networking[Anypoint DataGraph Architecture and Networking] for an overview on Anypoint DataGraph networking.
+
+== Exception While Fetching Data Error
+
+An exception while fetching data error occurs when the unified schema can't connect to its underlying APIs. After you run a query, Anypoint DataGraph displays an error similar to the following:
+
+....
+{
+  "errors" : [
+    {
+      "message" : "Exception while fetching data (/customersById) : Error executing request. URL: example.com/apiA/customers/id0 Message: Connection refused (Connection refused)",
+      "locations" : [
+        {
+          "line" : 2,
+          "column" : 5
+        }
+      ],
+      "path" : [
+        "customersById"
+      ],
+      "extensions" : {
+        "classification" : "DataFetchingException"
+      }
+    }
+  ],
+  "data" : {
+    "customersById" : null
+  }
+}
+....
+
+To troubleshoot this error, ensure that:
+
+. The underlying APIs are running.
+. The URL provided for each APIs is correct. Go to *List of APIs added* > Select an API > *API details*, and confirm the URL.
+. You https://docs.mulesoft.com/runtime-manager/to-request-vpc-connectivity[request connection^] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
