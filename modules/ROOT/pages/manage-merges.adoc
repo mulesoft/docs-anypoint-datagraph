@@ -15,9 +15,9 @@ To merge object types:
 . In the API schema navigation, select the object type you want to merge.
 . In the *Merge* pane, select the target type to merge with.
 +
-The following example merges the current type, called *OrderSummary*, with a target object type called *OrderResponse:
+The following example merges the current type, called *OrderSummary*, with a target object type called *OrderResponse*:
 +
-image::merge-selection.png[Selecting the target type for a merge]
+image::merge-selection.png[Selecting the target type order response to merge with the order summary type]
 +
 The target type does not need to have the same name.
 
@@ -30,13 +30,13 @@ If you make this selection, you are taken to the *Enable collaboration* pane, wh
 * Declare the current type as a reference so that it returns only the fields and dataset of the type it's merged with.
 . In the *Merge with another type* pane, click *Preview merge* results.
 +
-In the following example, the preview shows the target Order object type in the unified schema with new fields added after the current Order object type is merged with it:
+In the following example, the preview shows the target OrderResponse object type in the unified schema with new fields added after the OrderSummary object type is merged with it:
 +
-image::preview-merge-results.png[Merge preview results,60%,60%]
+image::merge-preview.png[Merge preview results for order summary and order response merge,60%,60%]
 
 . To finish, click *Confirm merge*:
 
-After you apply your changes, the resulting object type in the unified schema indicates the source APIs of the merge, as shown:
+After you apply your changes, the resulting object type in the unified schema indicates the merge, as shown:
 
 image::merged-type-results.png[Merge preview results indicator,60%,60%]
 

@@ -16,7 +16,7 @@ In GraphQL, query methods serve as the entry points to retrieve the data you wan
 
 For example, the Catalyst Order API schema, used in the xref:datagraph-qsg.adoc[DataGraph quick start guide], has two query methods associated with it: `ordersCustomerByCustomerId` and `ordersByOrderId`:
 
-image::schema-explorer-query-method.png[]
+image::schema-explorer-query-method.png[Two query methods listed in the schema explorer]
 
 Consider `ordersByOrderId`: This query method returns data about the object type `OrderResponse` and requires an argument for `orderID` in the form of a string:
 
@@ -48,7 +48,7 @@ In this case, you need to add an order ID to the query:
 Fields represent a type’s dataset that is returned in a query response, and you can choose whatever fields you need when writing a query. For example, as previously mentioned, the
 `ordersByOrderID` query method returns the `OrderResponse` object type, which returns the following fields:
 
-image::schema-explorer-fields.png[]
+image::schema-explorer-fields.png[Available fields listed in the schema explorer]
 
 As you write a query, you can add or remove any of these fields. The following query a uses some of the available fields:
 

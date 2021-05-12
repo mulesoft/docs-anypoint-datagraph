@@ -18,4 +18,4 @@ In the API schema, choose the object, field, or method for which you want to man
 
 You must hide or unhide elements _before_ adding them to the unified schema.
 
-image::visible-object-type.png[Setting the desired state to Visible]
+image::visible-object-type.png[Setting order item summary visibility desired state to Visible]

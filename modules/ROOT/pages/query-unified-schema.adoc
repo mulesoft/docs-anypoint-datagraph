@@ -16,8 +16,6 @@ If you want to use an existing client application or client ID and secret pair, 
 +
 Choose one of the following options:
 +
-image::datagraph-qsg-request-query-access.png[Requesting access to run a query,70%]
-+
 ** *Use one of my existing applications*: Choose an existing client application from the list, and click Request Access.
 ** *Create a new application and use it immediately*: Click *Next*, provide an application name and an optional description and application URL, and click *Create and Request Access*.
 ** *I already have credentials...*: Click *Next*, provide an existing client ID and secret pair, and then click *Authenticate & Request Access*.
@@ -88,18 +86,18 @@ image::confirm-credentials.png[Requesting access using an external client provid
 
 . In the query editor, start typing your query using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
 +
-image::datagraph-qsg-query-autocompletion.png[Query editor autocompletion,50%]
+image::datagraph-qsg-query-autocompletion.png[Using inline autocompletion to write a query,70%]
 
 . (Optional) In the *Query Variables* pane, add any query variables you want to use.
 +
-image::datagraph-query-variable.png[Inserting a query variable,60%]
+image::datagraph-query-variable.png[Inserting a query variable in the query editor,70%]
 
 . Click *Run*.
 +
-image::datagraph-qsg-query-result.png[DataGraph displays the query results]
+image::datagraph-qsg-query-result.png[Query editor displays query results]
 . To see results with query tracing, click *Trace query* > *Run*.
 +
-image::datagraph-qsg-query-traces.png[Query traces enabled on a query]
+image::datagraph-qsg-query-traces.png[Query trace view open with query results]
 +
 Query Trace results for Anypoint DataGraph provide the following information:
 +
@@ -109,7 +107,7 @@ Query Trace results for Anypoint DataGraph provide the following information:
 
 . To see response logs associated with the query, click *View response logs*.
 +
-image::datagraph-qsg-response-logs.png[Query response logs]
+image::datagraph-qsg-response-logs.png[Query response logs page]
 +
 Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
 . Click *View History* to access this same query—or others—at a later time.
