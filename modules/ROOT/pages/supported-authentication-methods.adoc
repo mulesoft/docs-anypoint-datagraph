@@ -59,3 +59,8 @@ Any other authentication methods to access your added API, such as custom OAuth 
 == Changing the authentication method
 
 To later edit or change the authentication method or credentials, click *List of APIs Added* > {API schema to edit} > *API details* > *Add authentication*.
+
+== Additional Resources
+
+* xref:add-api-to-unified-schema.adoc[]
+* xref:promote-api.adoc[]

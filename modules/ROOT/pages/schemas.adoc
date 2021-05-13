@@ -282,3 +282,8 @@ numberOfSIMCards: int
 --
 
 |===
+
+== Additional Resources
+
+* xref:write-queries-tutorial.adoc[]
+* xref:datagraph-qsg.adoc[]

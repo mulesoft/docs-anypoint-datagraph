@@ -115,6 +115,6 @@ You can remove the DLB configuration using the following command:
 When you remove the configuration, Anypoint DataGraph redeploys.
 
 
-== See Also
+== Additional Resources 
 
 * https://docs.mulesoft.com/general/intro-platform-hosting[Anypoint Platform Hosting Options^]

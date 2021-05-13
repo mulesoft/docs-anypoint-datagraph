@@ -137,6 +137,5 @@ The following table provides shortcuts you can use in the query editor:
 == Additional Resources
 
 * xref:write-queries-tutorial.adoc[]
-* xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
-* xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs]
+* xref:troubleshoot-schemas-queries.adoc[]
 * https://docs.mulesoft.com/api-manager/2.x/configure-multiple-credential-providers[Configure Multiple Client Providers for Client Management in API Manager^]

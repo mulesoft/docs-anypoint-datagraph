@@ -65,6 +65,7 @@ To search existing logs:
 image::search-logs.png[Search fields for query response logs ]
 . Click *Apply*.
 
-== See Also
+== Additional Resources
+
 * xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
 * xref:query-unified-schema.adoc[Query the Unified Schema]

@@ -30,7 +30,7 @@ image::datagraph-qsg-query-traces.png[Query traces enabled on a query]
 +
 You can collapse and expand the query trace panel as needed.
 
-== See Also
+== Additional Resources
 
 * xref:troubleshoot-query-logs.adoc[Troubleshoot Queries with Response Logs]
 * xref:query-unified-schema.adoc[Query the Unified Schema]

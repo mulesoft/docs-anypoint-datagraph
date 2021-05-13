@@ -309,3 +309,9 @@ To use this query in an external application, click *Copy endpoint* to copy both
 You can copy the query as a cURL snippet or as a GraphQL query:
 +
 image::datagraph-qsg-copy-query.png[Copying a query endpoint]
+
+== Additional Resources
+
+* xref:datagraph-terms.adoc[]
+* xref:schemas.adoc[]
+* xref:write-queries-tutorial.adoc[]
