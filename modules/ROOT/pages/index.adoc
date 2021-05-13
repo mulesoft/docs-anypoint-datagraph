@@ -12,6 +12,14 @@ With Anypoint DataGraph you can:
 
 Every time you add a new API to your application network, Anypoint Platform stores it as a graph of metadata. Anypoint DataGraph enables you to connect those graphs into one _unified schema_ that runs as a single SaaS GraphQL endpoint and contains and links all of the fields defined within all of your APIs. As a result, you can query across the underlying APIs without needing to understand all of the relationships or specific capabilities that exist within them.
 
+Anypoint DataGraph supports:
+
+* REST APIs with RAML and OAS specifications
+* GET methods
+
+Anypoint DataGraph currently does not support POST, PUT, PATCH, or DELETE methods.
+
+
 === The Unified Schema
 
 The unified schema is a single, always-current collection of types from different API schemas that you’ve added to Anypoint DataGraph and made available for consumers to query. The query type in the unified schema contains all the query methods from the different API schemas that you've added to DataGraph. Your consumers can access the unified schema to see exactly what data is available to them, all in one place, and request a specific subset of that data in a single query.
