@@ -4,8 +4,8 @@ The following topic provide useful information for troubleshooting schemas and q
 
 ** xref:schema-validation.adoc[Potential Errors When Generating an API Schema] +
 When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it. However, not all features of an API specification are successfully generated into an API schema.
-** xref:resolve-runtime-errors.adoc[Resolve Runtime Errors When Running Queries] +
-If you encounter runtime errors when attempting to use the Anypoint DataGraph query editor, you may need to take additional steps to resolve them. 
+** xref:resolve-runtime-errors.adoc[Troubleshoot Runtime Errors When Running Queries] +
+If you encounter runtime errors when attempting to use the Anypoint DataGraph query editor, you must take additional steps to resolve them.
 ** xref:resolve-conflicts.adoc[Resolve Conflicts and Merge Inconsistencies] +
 You must resolve any merge conflicts or merge inconsistencies when adding object types to the unified schema.
 ** xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs] +
