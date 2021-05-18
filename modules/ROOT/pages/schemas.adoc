@@ -12,7 +12,7 @@ Before learning about the different configurations that you can apply to a type,
 
 The most common type in a schema, object types represent entities in your API specification that are returned as part of a GET response. Object types are descriptively named and contain fields that indicate the object properties.
 
-For example, in a RAML specification, each type element of the specification becomes a unique object type, and the properties of each type element are the fields of those object types in the API schema:
+For example, in a RAML specification, each type element of the specification becomes either an object, enum, or union type. And the properties of each type element are the fields of those object types in the API schema:
 
 [%header,%autowidth.spread,cols="a,a"]
 |===
