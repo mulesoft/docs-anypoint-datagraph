@@ -34,9 +34,9 @@ To help you create a more clean and connected unified schema, Anypoint DataGraph
 
 Consider an organization using the following APIs:
 
-* An orders API that provides information about specific purchase orders
+* An order API that provides information about specific purchase orders
 * A shipment API that provides shipment information for each purchase order
-* A products API that provides product information and specifications
+* A product API that provides product information and specifications
 
 The organization wants to create a mobile application to provide specific order status details for its customers.
 
@@ -44,7 +44,7 @@ To deliver this mobile application, API developers must build a new API that ide
 
 Now consider that this organization also wants to provide a web application to a warehouse stocking agent for all existing orders of each product. The team would need to go through a similar development to deliver it.
 
-By using Anypoint DataGraph, the organization does not need to create a new API for every new business requirement. The enterprise architect can discover the existing order, shipment, and product APIs and add them to the consolidated graph provided by Anypoint DataGraph. Developers can then request access to the graph and query the data that they need, reusing existing data.
+By using Anypoint DataGraph, the organization does not need to create a new API for every new business requirement. The enterprise architect can discover the existing order, shipment, and product APIs and add each API schema to Anypoint DataGraph. Developers can then request access to the unified schema and query the data that they need, reusing existing data.
 
 == Resources for Getting Started
 * xref:datagraph-qsg.adoc[]
