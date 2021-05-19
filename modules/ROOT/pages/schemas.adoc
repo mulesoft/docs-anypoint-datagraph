@@ -1,0 +1,289 @@
+= Understand the Elements in an API Schema
+
+Anypoint DataGraph organizes all data that you choose to make available to your clients in a unified schema. The unified schema is a single, always-current collection of all of the schemas of all of the APIs that you add to it.
+
+When you add a new API to your unified schema, Anypoint DataGraph generates an API schema from the API's RAML or OAS specification. Because each API schema is created at the time that its API is added, your unified schema is always up to date. All API schemas are stored individually in your organization. This isolation of each API schema enables you to edit them individually without affecting the integrity of other schemas.
+
+The API schema that Anypoint DataGraph generates contains a collection of the GET resources and entities, and the relationships between them, that you’ve defined in your API specification. Whenever you add a new API schema to the unified schema, you can configure the types and fields that the unified schema will include.
+
+Before learning about the different configurations that you can apply to a type, read the following topic to understand the different types that can be present in your API schema depending on your API specification.
+
+== Object Types and Fields
+
+The most common type in a schema, object types represent entities in your API specification that are returned as part of a GET response. Object types are descriptively named and contain fields that indicate the object properties.
+
+For example, in a RAML specification, each type element of the specification becomes either an object, enum, or union type. And the properties of each type element are the fields of those object types in the API schema:
+
+[%header,%autowidth.spread,cols="a,a"]
+|===
+| RAML API Specification | API Schema
+|
+[source]
+--
+#%RAML 1.0
+title: Order API
+
+types:
+  Order:
+    type: object
+    properties:
+      orderId:
+      date:
+      status:
+
+
+  Product:
+    type: object
+    properties:
+      productId:
+      name:
+      brand:
+
+/orders/{id}:
+  get:
+    displayName: Get Order by ID
+--
+|
+[source]
+--
+ordersById(id): Order
+--------------------
+--------------------
+Order
+--------------------
+orderId: ID!
+date: String
+status: String
+--------------------
+--------------------
+Product
+--------------------
+productId: ID!
+name: String
+brand: String
+--
+|===
+
+Both `Order` and `Product` are different object types, each with differnt fields, that can be represented as follows:
+
+[source]
+--
+type Order {
+  orderId: ID!
+  date: String!
+  status: String!
+}
+--
+
+[source]
+--
+type Product {
+  productId: ID!
+  name:String!
+  brand: String!
+}
+--
+
+=== Field Data Types
+
+Each field represents a type’s dataset that is returned in a query response. By default, there are five scalar types:
+
+* `Int`: +
+A signed 32‐bit integer.
+* `Float`: +
+A signed double-precision floating-point value.
+* `String`: +
+A UTF‐8 character sequence.
+* `Boolean`: +
+`true` or `false`.
+* `ID`: +
+The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a query method. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable.
+
+=== Non-nullable Fields
+
+Fields with values represented with a `!` sign are non-nullables, meaning that the field cannot respond with a null value. For example, in the `Product` type, ID cannot be null:
+
+[source]
+--
+type Product {
+  productId: ID!
+  name:String
+  brand: String
+}
+--
+
+And in the `Order` type, none of the values can be null:
+
+[source]
+--
+type Order {
+  orderId: ID!
+  name: String!
+  price: String!
+  brand: Int!
+}
+--
+
+== Query Types and Methods
+
+A query type is the entry point to your API schema when you make a request. A query type contains the query methods that represent the GET endpoint you’ve defined in your API specification.
+
+For example, in a RAML specification that defines a GET endpoint at `/orders/{id}`, the query method in the schema is `ordersById(id)`:
+
+[%header,%autowidth.spread,cols="a,a"]
+|===
+| RAML API Specification | API Schema
+|
+[source]
+--
+#%RAML 1.0
+title: Order API
+
+/orders/{id}:
+  get:
+    displayName: Get Order by ID
+--
+
+|
+[source]
+--
+ordersById(id): Order
+--
+|===
+
+[[level-1-and-nested-types]]
+== Level-1 and Nested Types
+
+The types in your schema belong to categories that depend on the relation between your type and the query methods:
+
+* Level-1 type +
+These types have a query method associated with them and therefore can be accessed directly.
++
+For example, in the previous API specification, `Order` is a Level-1 object type because there is a GET for the `order/{id}` endpoint associated with it.
++
+You can access this object type using the query method directly:
++
+[source]
+--
+ordersById (orderId: “123”) {
+  orderId
+  date
+}
+--
+* Nested types +
+These types have no query methods associated with them and therefore you can access them only through the query methods of Level-1 types.
++
+For example, in the previous API specification, `Product` is an object type with no query methods associated with it. To query the fields of the `Product` type, you must query the method associated with its Level-1 type `Order`:
++
+[source]
+--
+ordersById(id: "123") {
+     orderId
+     product {
+         name
+         price
+     }
+}
+--
+
+Following this structure, query methods can be considered a level 0 type.
+
+== Enum Types
+
+Enum types are types that can only return a specific set of values. Enum types can be declared in the API specification to ensure that a field always returns a finite set of values.
+
+For example, assume a RAML specification that defines an `OrderStatus` type that must return one of the object types `Processing`, `Completed`, or `Canceled`:
+
+[%header,%autowidth.spread,cols="a,a"]
+|===
+| RAML API Specification | API Schema
+|
+[source]
+--
+#%RAML 1.0
+title: Order API
+
+types:
+  OrderStatus:
+    type: string
+    description: Current status of the order
+    enum: [Processing, Completed, Canceled]
+--
+
+|
+[source]
+--
+enum OrderStatus {
+  Processing
+  Completed
+  Canceled
+}
+--
+
+|===
+
+== Union Types
+
+Union types describe instances of data using other object types. Union types consists of one or more specific object types.
+
+For example, a RAML specification can define the type `Product` using other types, such as `Notebook` and `Phone`:
+
+[%header,%autowidth.spread,cols="a,a"]
+|===
+| RAML API Specification | API Schema
+|
+[source]
+--
+#%RAML 1.0
+title: Order API
+
+types:
+
+  Product:
+    type: Phone \| Notebook
+
+  Notebook:
+    type: object
+    properties:
+      manufacturer:
+        type: string
+      numberOfUSBPorts:
+        type: number
+      kind: string
+
+  Phone:
+    type: object
+    properties:
+      manufacturer:
+        type: string
+      numberOfSIMCards:
+        type: number
+      kind: string
+--
+|
+[source]
+--
+Product
+--------------------
+Notebook
+Phone
+--------------------
+--------------------
+Notebook
+--------------------
+manufacturer: String
+numberOfUSBPorts: int
+--------------------
+--------------------
+Phone
+--------------------
+manufacturer: String
+numberOfSIMCards: int
+--
+
+|===
+
+== Additional Resources
+
+* xref:write-queries-tutorial.adoc[]
+* xref:datagraph-qsg.adoc[]

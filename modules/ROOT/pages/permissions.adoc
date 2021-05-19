@@ -1,0 +1,33 @@
+= Permissions For Anypoint DataGraph
+
+Anypoint DataGraph provides access management permissions so you can meet your organization's security requirements and at the same time drive collaboration across teams.
+
+Permissions for Anypoint DataGraph are independent of permissions for other Anypoint Platform products.
+
+To contribute to the unified schema, you need to have the *Exchange Viewers* permission for the business group from which you want to add APIs. Refer to https://docs.mulesoft.com/exchange/to-set-permissions[Set User Access Permissions^] for more information.
+
+The following permissions are available per business group per environment:
+
+[%header%autowidth.spread]
+|===
+|Permission |Description
+|Admin |Permission to contribute, consume, and operate the unified schema
+|Contribute a| Permission to:
+
+* Add source APIs to the unified schema
+* Edit any source API schema added to the unified schema
+* Request access to run queries
+* Promote API schemas to an environment
+* View query traces in real time while running queries from the UI
+|Consume a|Permission to:
+
+* View and explore the unified schema
+* Request access to run queries and make data requests from the UI
+|Operate |Permission to view customer-facing logs
+|===
+
+== Additional Resources
+
+* For more information on setting Anypoint DataGraph SLA tiers and managing contracts, refer to xref:api-manager::datagraph-landing-page.adoc[DataGraph Administration] in the API Manager documentation.
+
+* For instructions on setting up user permissions and roles for Anypoint DataGraph, refer to xref:access-management-users.adoc#granting-permissions-and-roles-to-users[Granting Permissions and Roles to Users]

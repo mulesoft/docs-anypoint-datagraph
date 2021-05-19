@@ -1,0 +1,28 @@
+= How Status Updates Work in Anypoint DataGraph
+
+When working with APIs and the unified schema, status updates let you know when the unified schema is available for querying, when changes to the unified schema have taken effect, and which API schemas are getting added, removed, or updated.
+
+== Status: Updating
+
+You can add to and update the unified schema at any time and apply changes. After you apply changes, the unified schema will enter an “updating” state, and the status will indicate *Updating*. This status update is visible to anyone in the business group with permissions for the environment.
+
+image::status_updating.png[Status indicator shows adding API schema to unified schema,75%,75%]
+
+When the unified schema is updating, you can view the new changes in the schema, make additional changes, and apply new changes. However, these changes aren’t available to query until the update is complete.
+
+When the update is complete, the status will change to *Up to date*.
+
+image::status_uptodate.png[Status indicator shows unified schema is up to date,75%,75%]
+
+== Status: On hold
+
+In the case that Anypoint DataGraph is unreachable, the status will change to *On hold*.
+If you were attempting any changes, Anypoint DataGraph will automatically apply those changes when it’s available, and the status will change to  *Updating*, with details of which APIs are being added, removed, or updated.
+
+When the status is *On hold*, you can continue to browse the unified schema and source list, but you can’t make any edits. You can also run queries against the previously deployed unified schema.
+
+== Fixing Update Conflicts
+
+As you make changes to existing API schemas or add them to the unified schema, Anypoint DataGraph automatically updates the unified schema’s metadata. This happens instantaneously, and the updated metadata is stored near real-time.
+
+You may, however, encounter rare cases when there are errors with the metadata—for example, when another contributor applies a conflicting change at the same time. In such cases, you must ensure you have the latest version of the unified schema and then re-attempt your change.

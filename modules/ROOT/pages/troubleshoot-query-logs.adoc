@@ -1,0 +1,71 @@
+= Troubleshoot Queries With Response Logs
+
+Anypoint DataGraph provides response logs that contain useful query troubleshooting information.
+
+Response logs contain information about only Anypoint DataGraph queries. Anypoint DataGraph stores up to 100 MB  or up to 30 days of log data, whichever limit is reached first.
+
+[NOTE]
+--
+If you have a Titanium subscription, the https://docs.mulesoft.com/monitoring/performance-and-impact#titanium-subscription-limits[Titanium limits for logs apply^].
+--
+
+== Log Levels for Anypoint DataGraph Response Logs
+
+Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR. Log levels are incremental, and each level contains the following information:
+
+[%header%autowidth.spread]
+|===
+|Log level |Description |Levels included
+|DEBUG |Logs information for request headers, request queries, and query responses |All levels
+|INFO |Logs information for request queries, response times, and the underlying API URLs requested per field in queries |INFO, WARN, and ERROR
+|WARN |Lists warning messages |INFO, WARN
+|ERROR |Lists error messages on invalid queries, timeouts, authentication failures, and payload errors |ERROR
+|===
+
+By default, the log level for each environment is set to INFO. You can change this setting at any time. Changes to the log level persist for _all future queries to that Anypoint DataGraph instance_, regardless of the user.
+
+== View Response Logs for a Query
+
+You must have xref:permissions.adoc[the Operate or Admin permission] to view and search response logs.
+
+If you are a Titanium subscriber, you can also view response logs in https://docs.mulesoft.com/monitoring/logs[Anypoint Monitoring^].
+
+To view response logs in Anypoint DataGraph:
+
+. Create and run a query.
+. Click *View response* logs.
++
+Response logs for that query are displayed:
++
+image::datagraph-qsg-response-logs.png[Query response logs page]
+
+== Search Response Logs
+
+Search for logs that contain specified values or search for logs by date and priority.
+
+The *Date & Time* filter enables you to search logs by specifying a date range using the following values:
+
+* Last hour
+* Last 24 hours
+* Last week
+* Last month
+
+You can also filter searches by priority level:
+
+* All priorities
+* INFO
+* DEBUG
+* WARN
+* ERROR
+
+To search existing logs:
+
+. Enter a value in the search box, or click Advanced to search for logs for a specified time, day, date range, and message priority.
++
+image::search-logs.png[Search fields for query response logs ]
+. Click *Apply*.
+
+== Additional Resources
+
+* xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
+* xref:query-unified-schema.adoc[Query the Unified Schema]

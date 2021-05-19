@@ -1,0 +1,66 @@
+= Supported Authentication Methods
+
+You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows Anypoint DataGraph to make requests to those APIs when you run queries.
+
+When adding a new API schema to the unified schema, or when promoting an API schema to another environment, you must configure one of the following authentication methods:
+
+* *No Auth*
++
+Use if your API is public.
+
+* *Basic Auth*
++
+Use if you authenticate to your API using the basic authentication header, or a username and password.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource" -u myUser:myPassword
+--
++
+or
++
+[source,CURL,linenums]
+--
+curl GET 'http://localhost/myResource' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "username": "myUser",
+  "password": "myPassword"
+}'
+--
+* *Client ID enforcement via headers*
++
+Use if you authenticate to your API passing `client_id` and `client_secret` headers.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource" -H "client_id:1234" -H "client_secret:abcd"
+--
+* *Client ID enforcement via query parameters*
++
+Use if you authenticate to your API passing `client_id` and `client_secret` query params.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource?client_id=1234&client_secret=abcd"
+--
+* *Custom*
++
+Use if you authenticate to your API using custom header parameters and values.
+
+Any other authentication methods to access your added API, such as custom OAuth implementations or short-lived token methods, are not supported.
+
+== Changing the authentication method
+
+To later edit or change the authentication method or credentials, click *List of APIs Added* > {API schema to edit} > *API details* > *Add authentication*.
+
+== Additional Resources
+
+* xref:add-api-to-unified-schema.adoc[]
+* xref:promote-api.adoc[]

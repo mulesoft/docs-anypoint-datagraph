@@ -1,0 +1,36 @@
+= Troubleshoot Query Performance with Query Tracing
+
+Query tracing in Anypoint DataGraph helps you analyze query performance by tracing every call made to the source APIs of the unified schema for a given query.
+
+Trace results provide the following information:
+
+image::query-trace-details.png[Detailed view of a query trace]
+
+<1> Time taken by Anypoint DataGraph to parse and validate the query
+<2> Total response time for the entire query
+<3> Errors identified during query execution
+<4> Lack of trace information, denoted by a fading line
+<5> Duration of requests to each source API in the query
+
+== Prerequisites
+
+You must have xref:permissions.adoc[the Contribute or Admin permission] to use query tracing.
+
+== Run a Query Trace
+
+Query trace results are provided as soon as you run a query.
+
+. Click *Run a Query*.
+. Write your query.
+. Click *Trace query* > *Run*.
++
+The trace query panel opens and displays results:
++
+image::datagraph-qsg-query-traces.png[Query traces enabled on a query]
++
+You can collapse and expand the query trace panel as needed.
+
+== Additional Resources
+
+* xref:troubleshoot-query-logs.adoc[Troubleshoot Queries with Response Logs]
+* xref:query-unified-schema.adoc[Query the Unified Schema]

@@ -1,0 +1,27 @@
+= Edit an API Schema 
+
+When adding a new API to the unified schema, you must edit the schema to make sure that none of the types in your current schema conflict with existing types in the unified schema. Each type in the unified schema must be unique.
+
+You don’t have to perform edit functions before you add an API schema to the unified schema. You can make changes to an API schema even after you’ve added it to the unified schema. However, if Anypoint DataGraph raises any conflict errors, you must edit your schema to resolve those conflicts _before_ adding it to the unified schema.
+
+To edit an API schema, address the following tasks where applicable:
+
+* Resolve any conflicts between object types
++
+If there are types that have a conflict with the unified schema, make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
+* Enable collaboration on an object type
++
+Enable collaboration for applicable types and provide the required settings. This step is optional, but when you enable collaboration on types, you'll create a more connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
+* Manage visibility of schema elements
++
+You can hide the fields, types, or query methods that you don't want to have visible in the unified schema. See xref:manage-elements-visibility.adoc[] for more information.
+* Review and edit names of schema elements
++
+You can review or change the names of all fields, types, and query methods that you are adding to the unified schema. See xref:edit-elements-names.adoc[] for more information.
+* Merge similar object types
++
+Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result. See xref:merge-types.adoc[] for more information.
+* Link related fields between object types
++
+Linking enables you to join related fields from two types for a more enriched query result.
+See xref:linking.adoc[] for more information.

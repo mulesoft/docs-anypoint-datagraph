@@ -1,0 +1,69 @@
+= Object Type Collaboration in Anypoint DataGraph
+
+Enabling collaboration on a Level-1 object type allows you to achieve a connected and enriched unified schema.
+
+When you enable collaboration on a type, you allow similar types in your API schema or in other API schemas to collaborate with your type and directly add their own fields. The result is an extended list of fields and dataset, resulting in a more enriched query result for this type.
+
+When you enable collaboration on a type, the type provides its fields to other types in the unified schema or in the local API schema, enabling you to:
+
+* Create links between types +
+See xref:linking.adoc[Link Types] for more information.
+* Merge types with other types +
+See xref:merge-types[Merge Types] for more information.
+
+You can enable collaboration only on Level-1 object types: those directly returned from a query method. See xref:schemas.adoc#level-1-and-nested-types[Level-1 and Nested Types] for more information.
+
+To successfully understand the requirements for enabling collaboration, you must be familiar with the types in your API schema. See xref:schemas.adoc[] for more information.
+
+== Default Query Method and Primary Key
+
+To enable collaboration on a type, you must configure a default query method and a primary key for that type to access its fields.
+
+The default query method for an object type is the method that returns a single record of that object type for which you want to enable collaboration. You can select a query method as the default only if:
+
+* It has one required input argument.
+* The input argument is a scalar data type (`Int`, `Float`, `String`, `Boolean`, or `ID`).
+
+The primary key is one field of your object type that uniquely identifies a single record of that object type. For a field to be a primary key, it must be visible and it should be non-nullable (represented by a `!` sign at the end).
+
+For example, to enable collaboration on the Order type of the following API schema:
+
+[source]
+--
+ordersById(id: ID!): Order
+--------------------
+--------------------
+Order
+--------------------
+orderId: ID!
+date: String
+status: String
+--
+
+In this example, your default query method is `ordersById`, and its primary key is `orderId`.`ordersById` retrieves the Order type and uses `orderId` to retrieve specific information based on that ID field. Note that the data type of the default query method’s input argument ID must be the same as the data type of the primary key. In this example, both are of data type `ID!`.
+
+[[enable-collaboration-on-an-object-type]]
+== Enable Collaboration on an Object Type
+
+. In the API schema navigation, select the Level-1 object type for which you want to enable collaboration.
+. In the *Collaboration permissions* pane, click *Enable collaboration*.
+. Set the default query method.
++
+image::default-query-method.png[Default query method set to products by product id]
+
+. Click *Next*.
+. Select a primary key.
++
+image::primary-key.png[Primary key set to identifier string]
+
+== Disable Collaboration for an Object Type
+
+If you no longer want an object type to provide its fields to other types, you can disable collaboration for that type. However, if you disable collaboration on an object that is merged with another object type in the unified schema, the merge breaks and creates a conflict that you must resolve.
+
+To disable collaboration:
+
+. Click *List of APIs added* and select the API that contains the object type for which you want to disable collaboration.
+. In the API schema navigation, select the object type.
+. In the *Collaboration permissions* pane, clear the selection for *Allow collaboration for this type (Extend this type).*
+. When prompted, confirm that you want to disable collaboration for the object type by clicking  *Undo merge and disable collaboration*.
+. If a conflict occurs, follow the prompts in Anypoint DataGraph to resolve it.
