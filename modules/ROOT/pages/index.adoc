@@ -25,7 +25,7 @@ Anypoint DataGraph restricts downstream REST API calls to:
 
 * A maximum of 150 concurrent or ongoing calls
 * A 5 second timeout per call
-* A maximum of 5 MB of compressed data per call
+* A maximum of 5 MB of response data per call
 
 Anypoint DataGraph limits the query service to:
 
