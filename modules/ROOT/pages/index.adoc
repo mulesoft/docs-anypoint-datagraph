@@ -30,8 +30,18 @@ Anypoint DataGraph restricts downstream REST API calls to:
 Anypoint DataGraph limits the query service to:
 
 * A 30 second timeout per query
-* A maximum depth of 100 fields per query
 * A maximum of 100 selected fields per query
+* A maximum depth of 100 fields per query, for example:
++
+....
+ordersByOrderId{         #depth 0
+  shippingAddress {      #depth 1
+    state                #depth 2
+    city                 #depth 3
+    postalCode           #depth 4
+  }
+}    
+....
 
 
 === The Unified Schema
