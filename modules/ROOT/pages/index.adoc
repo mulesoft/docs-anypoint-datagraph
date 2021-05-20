@@ -19,6 +19,20 @@ Anypoint DataGraph supports:
 
 Anypoint DataGraph currently does not support POST, PUT, PATCH, or DELETE methods.
 
+=== Restrictions and Limitations
+
+Anypoint DataGraph restricts downstream REST API calls to:
+
+* A maximum of 150 concurrent or ongoing calls
+* A 5 second timeout per call
+* A maximum of 5 MB of compressed data per call
+
+Anypoint DataGraph limits the query service to:
+
+* A 30 second timeout per query
+* A maximum depth of 100 fields per query
+* A maximum of 100 selected fields per query
+
 
 === The Unified Schema
 
