@@ -87,6 +87,17 @@ Now consider that this organization also wants to provide a web application to a
 
 By using Anypoint DataGraph, the organization does not need to create a new API for every new business requirement. The enterprise architect can discover the existing order, shipment, and product APIs and add each API schema to Anypoint DataGraph. Developers can then request access to the unified schema and query the data that they need, reusing existing data.
 
+== Anypoint Platform Requirements and Licensing
+
+To use Anypoint DataGraph, you must meet the following requirements:
+
+* You must have an Anypoint Platform account.
+* You must have an Anypoint DataGraph license for your Anypoint Platform organization.
+* Your business group or organization using Anypoint DataGraph must be allocated the correct number of vCores, as specified in your plan.
+
+Refer to xref:hosting-options.adoc#anypoint-platform-runtime-plane-hosting-options[runtime plane hosting options for Anypoint DataGraph] for details on API hosting requirements.
+
+
 == Resources for Getting Started
 * xref:datagraph-qsg.adoc[]
 * xref:datagraph-terms.adoc[]
