@@ -89,15 +89,15 @@ By using Anypoint DataGraph, the organization does not need to create a new API 
 
 == Anypoint Platform Requirements and Licensing
 
-To use Anypoint DataGraph, ensure you meet the following requirements.
+To use Anypoint DataGraph, ensure you meet the following requirements:
 
 * You must have a license for each of the following:
 ** Anypoint Platform
 ** API Manager and Analytics
 ** Anypoint DataGraph
-* Your business group or organization using Anypoint DataGraph must be allocated the correct number of vCores, as specified in your plan.
+* Your plan must allocate the correct number of vCores for your business group or organization using Anypoint DataGraph.
 
-Refer to xref:hosting-options.adoc#anypoint-platform-runtime-plane-hosting-options[runtime plane hosting options for Anypoint DataGraph] for details on API hosting requirements.
+Refer to xref:hosting-options.adoc#anypoint-platform-runtime-plane-hosting-options[Anypoint Platform Runtime Plane Hosting Options] for details on API hosting requirements.
 
 
 == Resources for Getting Started
