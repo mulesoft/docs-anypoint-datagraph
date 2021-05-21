@@ -5,7 +5,7 @@ The unified schema resolves into a single GraphQL endpoint. To query the unified
 == Prerequisites
 
 * You must have xref:permissions.adoc[the Consume, Contribute, or Admin permission] to use request access and run queries.
-* Downstream REST API calls are limited to 5 MB of uncompressed data per call.
+* Review the xref:index.adoc#restrictions-and-limitations[restrictions and limitations] for REST API calls and queries.
 
 == Request Access to Run A Query
 
