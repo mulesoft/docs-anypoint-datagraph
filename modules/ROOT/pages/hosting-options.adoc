@@ -37,6 +37,7 @@ You set the URL using a DLB mapping rule that you add to the Anypoint DataGraph 
 
 * You must have the xref:permissions.adoc[Admin or Operator permission] for the environment in which you want to specify a DLB URL.
 * You must be able to https://docs.mulesoft.com/runtime-manager/anypoint-platform-cli#authentication[authenticate to^] and run commands from the Anypoint CLI.
+* You must be familiar with https://docs.mulesoft.com/runtime-manager/lb-mapping-rules[creating DLB mapping rules^]
 * You must https://docs.mulesoft.com/runtime-manager/cloudhub-dedicated-load-balancer#create-and-configure-a-dedicated-load-balancer[create and configure a DLB^].
 
 To complete this task, you:
@@ -54,18 +55,23 @@ To complete this task, you:
 . Get the name of the DLB:
 +
 `cloudhub load-balancer describe <dlb name>`
-. In the results returned from the CLI, note the domain name for the DLB.
-. Discover the CloudHub domain for the Anypoint DataGraph application:
++
+The value will be similar to:
++
+`Name | examplelb`
++
+. Get the CloudHub domain for the Anypoint DataGraph application:
 +
 `datagraph load-balancer-config describe`
 +
-The value displays as:
+The value will be similar to:
 +
-`Domain |  <datagraph-domain>`
+`Domain |  lb.anypointdns.net`
+. Note the values for steps 3 and 4.
 
 === Create a Mapping Rule for the DLB
 
-Based on the way https://docs.mulesoft.com/runtime-manager/lb-mapping-rules[DLB mapping rules work^], you must configure the Input Path and Output Path so that the final DLB URL (created in Step 2 of adding the DLB configuration to Anypoint DataGraph) is able to access the endpoint of the Anypoint DataGraph application, which is  `/graphql`.
+Based on the way DLB mapping rules work, you must configure the Input Path and Output Path so that the final DLB URL (created in Step 2 of adding the DLB configuration to Anypoint DataGraph) is able to access the endpoint of the Anypoint DataGraph application, which is  `/graphql`.
 
 . From Anypoint Platform, select *Runtime Manager*.
 . From the navigation menu, select *Load Balancers*.
@@ -92,10 +98,10 @@ By default, no value is returned for `dlbUrl` if you haven’t previously config
 +
 `datagraph load-balancer-config add <url>`
 +
-Replace `<url>` with a valid URL that includes the DLB domain (gathered in Step 3 of the gathering details task) and the mapping rule Input Path, for example,
+Replace `<url>` with a valid URL that includes the DLB name and domain (gathered in Steps 3 and 4 of the gathering details task) and the mapping rule Input Path, for example,
 +
 ....
-datagraph load-balancer-config add example-lb.anypointdns.net/datagraph/graphql
+datagraph load-balancer-config add examplelb.lb.anypointdns.net/datagraph/graphql
 ....
 
 . Validate that the value was updated:
@@ -104,7 +110,7 @@ datagraph load-balancer-config add example-lb.anypointdns.net/datagraph/graphql
 +
 The CLI returns details that include the application name for the Anypoint DataGraph load balancer and the full domain name for the DLB.
 
-After you add this change, Anypoint DataGraph re-deploys.
+After you add this change, Anypoint DataGraph re-deploys, and you must wait for the status indicator to indicate that Anypoint DataGraph is up to date.
 
 === Remove the DLB configuration from Anypoint DataGraph
 
@@ -115,6 +121,6 @@ You can remove the DLB configuration using the following command:
 When you remove the configuration, Anypoint DataGraph redeploys.
 
 
-== Additional Resources 
+== Additional Resources
 
 * https://docs.mulesoft.com/general/intro-platform-hosting[Anypoint Platform Hosting Options^]
