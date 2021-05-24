@@ -19,6 +19,32 @@ Anypoint DataGraph supports:
 
 Anypoint DataGraph currently does not support POST, PUT, PATCH, or DELETE methods.
 
+=== The Unified Schema
+
+The unified schema is a single, always-current collection of types from different API schemas that you’ve added to Anypoint DataGraph and made available for consumers to query. The query type in the unified schema contains all the query methods from the different API schemas that you've added to DataGraph. Your consumers can access the unified schema to see exactly what data is available to them, all in one place, and request a specific subset of that data in a single query.
+
+To help you create a more clean and connected unified schema, Anypoint DataGraph provides three additional functionalities that allow you to:
+
+. Enable collaboration between object types
+. Link object types to create connections between them
+. Merge object types to combine similar types into a single type to extend their fields and datasets for a more enriched query result
+
+=== Example Use Case
+
+Consider an organization using the following APIs:
+
+* An order API that provides information about specific purchase orders
+* A shipment API that provides shipment information for each purchase order
+* A product API that provides product information and specifications
+
+The organization wants to create a mobile application to provide specific order status details for its customers.
+
+To deliver this mobile application, API developers must build a new API that identifies all orders for a customer, finds the products in those orders, identifies each shipment record, and finds delivery dates and tracking numbers. The enterprise architect must first grant the developers access to each necessary API, and then manage and secure this API after the developers build and deliver it.
+
+Now consider that this organization also wants to provide a web application to a warehouse stocking agent for all existing orders of each product. The team would need to go through a similar development to deliver it.
+
+By using Anypoint DataGraph, the organization does not need to create a new API for every new business requirement. The enterprise architect can discover the existing order, shipment, and product APIs and add each API schema to Anypoint DataGraph. Developers can then request access to the unified schema and query the data that they need, reusing existing data.
+
 === Restrictions and Limitations
 
 Anypoint DataGraph restricts downstream REST API calls to:
@@ -61,31 +87,6 @@ ordersByOrderId {               #depth 0
      }
 ....
 
-=== The Unified Schema
-
-The unified schema is a single, always-current collection of types from different API schemas that you’ve added to Anypoint DataGraph and made available for consumers to query. The query type in the unified schema contains all the query methods from the different API schemas that you've added to DataGraph. Your consumers can access the unified schema to see exactly what data is available to them, all in one place, and request a specific subset of that data in a single query.
-
-To help you create a more clean and connected unified schema, Anypoint DataGraph provides three additional functionalities that allow you to:
-
-. Enable collaboration between object types
-. Link object types to create connections between them
-. Merge object types to combine similar types into a single type to extend their fields and datasets for a more enriched query result
-
-== Example Use Case
-
-Consider an organization using the following APIs:
-
-* An order API that provides information about specific purchase orders
-* A shipment API that provides shipment information for each purchase order
-* A product API that provides product information and specifications
-
-The organization wants to create a mobile application to provide specific order status details for its customers.
-
-To deliver this mobile application, API developers must build a new API that identifies all orders for a customer, finds the products in those orders, identifies each shipment record, and finds delivery dates and tracking numbers. The enterprise architect must first grant the developers access to each necessary API, and then manage and secure this API after the developers build and deliver it.
-
-Now consider that this organization also wants to provide a web application to a warehouse stocking agent for all existing orders of each product. The team would need to go through a similar development to deliver it.
-
-By using Anypoint DataGraph, the organization does not need to create a new API for every new business requirement. The enterprise architect can discover the existing order, shipment, and product APIs and add each API schema to Anypoint DataGraph. Developers can then request access to the unified schema and query the data that they need, reusing existing data.
 
 == Anypoint Platform Requirements and Licensing
 
