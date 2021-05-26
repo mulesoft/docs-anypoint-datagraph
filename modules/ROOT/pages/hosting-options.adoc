@@ -36,7 +36,7 @@ You set the URL using a DLB mapping rule that you add to the Anypoint DataGraph 
 === Prerequisites
 
 * You must have the xref:permissions.adoc[Admin or Operator permission] for the environment in which you want to specify a DLB URL.
-* You must be able to https://docs.mulesoft.com/runtime-manager/anypoint-platform-cli#authentication[authenticate to^] and run commands from the Anypoint CLI.
+* You must be able to xref:runtime-manager::anypoint-platform-cli#authentication[authenticate to] and run commands from the Anypoint CLI.
 * You must be familiar with xref:runtime-manager::lb-mapping-rules[creating DLB mapping rules].
 * You must https://docs.mulesoft.com/runtime-manager/cloudhub-dedicated-load-balancer#create-and-configure-a-dedicated-load-balancer[create and configure a DLB^].
 
