@@ -71,7 +71,7 @@ The expected value resembles:
 
 === Create a Mapping Rule for the DLB
 
-Based on the way DLB mapping rules work, you must configure the Input Path and Output Path so that the final DLB URL (created in Step 2 of adding the DLB configuration to Anypoint DataGraph) is able to access the endpoint of the Anypoint DataGraph application, which is  `/graphql`.
+Based on the way DLB mapping rules work, you must configure the *Input Path* and *Output Path* so that the final DLB URL (created in Step 2 of adding the DLB configuration to Anypoint DataGraph) is able to access the endpoint of the Anypoint DataGraph application, which is  `/graphql`.
 
 . From Anypoint Platform, select *Runtime Manager*.
 . From the navigation menu, select *Load Balancers*.
