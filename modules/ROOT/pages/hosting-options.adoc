@@ -64,7 +64,7 @@ The value will be similar to:
 +
 `datagraph load-balancer-config describe`
 +
-The value will be similar to:
+The expected value resembles:
 +
 `Domain |  lb.anypointdns.net`
 . Note the values for steps 3 and 4.
