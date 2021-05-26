@@ -56,7 +56,7 @@ To complete this task, you:
 +
 `cloudhub load-balancer describe <dlb name>`
 +
-The value will be similar to:
+The expected output resembles:
 +
 `Name | examplelb`
 +
