@@ -98,7 +98,7 @@ By default, no value is returned for `dlbUrl` if you haven’t previously config
 +
 `datagraph load-balancer-config add <url>`
 +
-Replace `<url>` with a valid URL that includes the DLB name and domain (gathered in Steps 3 and 4 of the gathering details task) and the mapping rule Input Path, for example,
+Replace `<url>` with a valid URL that includes the DLB name and domain (gathered in Steps 3 and 4 of the gathering details task) and the mapping rule *Input Path*, for example,
 +
 ....
 datagraph load-balancer-config add examplelb.lb.anypointdns.net/datagraph/graphql
