@@ -86,6 +86,8 @@ ordersByOrderId {               #depth 0
      }
 ....
 
+* Anypoint DataGraph supports up to 16,000 fields per unified schema.
+
 == Anypoint Platform Requirements and Licensing
 
 To use Anypoint DataGraph, ensure you meet the following requirements:
