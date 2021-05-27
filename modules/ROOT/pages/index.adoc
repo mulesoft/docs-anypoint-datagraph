@@ -96,10 +96,15 @@ To use Anypoint DataGraph, ensure you meet the following requirements:
 ** Anypoint Platform
 ** API Manager and Analytics
 ** Anypoint DataGraph
++
+[NOTE]
+--
+The API calls associated with your Aypoint DataGraph license refer to calls made by Anypoint DataGraph to downstream REST APIs.
+--
+
 * Your plan must allocate the correct number of vCores for your business group or organization using Anypoint DataGraph.
 
 Refer to xref:hosting-options.adoc#anypoint-platform-runtime-plane-hosting-options[Anypoint Platform Runtime Plane Hosting Options] for details on API hosting requirements.
-
 
 == Resources for Getting Started
 * xref:datagraph-qsg.adoc[]
