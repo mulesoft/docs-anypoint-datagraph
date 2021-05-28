@@ -30,7 +30,7 @@ You can promote API schemas to any environment to which you are permitted access
 
 Although your APIs must be published in Exchange, they do not need to be Mule applications or be running on Mule runtime engine or in CloudHub to be added to the unified schema.
 
-The schema you promote must not be in conflict with the unified schema in the target environment. If conflict exists, you must instead manually add the API and resolve those conflicts as you would when adding an API.
+The schema you promote must not be in conflict with the unified schema in the target environment. If conflicts exist, you must instead manually add the API and resolve those conflicts as you would when adding an API.
 
 You must have xref:permissions.adoc[the Contribute or Admin permission].
 

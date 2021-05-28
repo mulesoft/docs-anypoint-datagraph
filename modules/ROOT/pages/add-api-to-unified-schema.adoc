@@ -34,7 +34,7 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 [IMPORTANT]
 --
 * Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:supported-authentication-methods.adoc[] for more information.
-* After you add an API to Anypoint DataGraph you can't change its URL. To change an API's URL, remove the API and re-add it. You can, however, edit an API's authentication method at any time.
+* After you add an API to Anypoint DataGraph, you can't change its URL. To change an API's URL, remove the API and re-add it. You can, however, edit an API's authentication method at any time.
 --
 
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the *Unified Data Graph* dropdown list, and click *+Add API*.
