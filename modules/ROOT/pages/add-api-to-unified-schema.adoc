@@ -31,13 +31,18 @@ Additionally you must:
 
 The first task to adding an API to the unified schema is adding the API to Anypoint DataGraph by configuring its asset version, URL, and authentication method.
 
+[IMPORTANT]
+--
+* Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:supported-authentication-methods.adoc[] for more information.
+* After you add an API to Anypoint DataGraph, you can't change its URL. To change an API's URL, remove the API and re-add it. You can, however, edit an API's authentication method at any time.
+--
+
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the *Unified Data Graph* dropdown list, and click *+Add API*.
 . On the *Select API* page, select the API that you want to add.
 . Click *Next: Configure URL*.
 . On the *Configure URL* page, select the API version and asset version of the API you want to add, and then select *Confirm Selection*.
 . Still on the *Configure URL* page, add or edit the API’s URL:
 +
---
 * If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
 * If you prefer to manually provide your own implementation URL, select *Add a new URL*.
 . Click *Next: Provide authentication*.
@@ -48,14 +53,6 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 * *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 * *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
---
-+
-[IMPORTANT]
---
-Any other authentication methods to access your API, such as custom OAuth implementations or short-lived token methods, are not supported.
---
-+
-See xref:supported-authentication-methods.adoc[] for more information.
 . Click *Next: Preview Schema*.
 
 == Preview the Generated API Schema
