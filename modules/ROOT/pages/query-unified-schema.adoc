@@ -23,7 +23,7 @@ Choose one of the following options:
 
 === Request Access to Environments Using an External Client Provider
 
-API Manager enables you to configure different client providers for each one of your environments. Depending on the environment where your data graph runs, your client applications might need to authenticate using either the default Anypoint Platform native client provider or any of the supported external client providers. See xref:access-management::managing-api-clients.adoc[About Client Management] for more information.
+API Manager enables you to configure different client providers for each one of your environments. Depending on the environment where your data graph runs, your client applications might need to authenticate using either the default Anypoint Platform native client provider or any of the supported external client providers. See https://docs.mulesoft.com/access-management/managing-api-clients[About Client Management^] for more information.
 
 If you don't configure any specific client provider for an environment, Anypoint Platform uses its default and native client provider.
 
@@ -138,4 +138,4 @@ The following table provides shortcuts you can use in the query editor:
 
 * xref:write-queries-tutorial.adoc[]
 * xref:troubleshoot-schemas-queries.adoc[]
-* xref:api-manager::configure-multiple-credential-providers.adoc[Configure Multiple Client Providers for Client Management in API Manager]
+* https://docs.mulesoft.com/api-manager/2.x/configure-multiple-credential-providers[Configure Multiple Client Providers for Client Management in API Manager^]

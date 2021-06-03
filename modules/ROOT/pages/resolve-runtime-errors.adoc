@@ -58,4 +58,4 @@ To troubleshoot this error, ensure that:
 
 . The underlying APIs are running.
 . The URL provided for each APIs is correct. Go to List of APIs added > Select an API > API details, and confirm the URL.
-. You xref:runtime-manager::to-request-vpc-connectivity.adoc[request connection] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
+. You xref:runtime-manager.adoc#to-request-vpc-connectivity[request connection] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
