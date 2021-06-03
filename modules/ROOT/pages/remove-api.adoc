@@ -14,6 +14,5 @@ To remove an API:
 
 == Additional Resources
 
-* xref:edit-api-in-unified-schema.adoc[Edit APIs That Have Been Added to the Unified Schema]
 * xref:status-updates.adoc[DataGraph Status Overview]
 * xref:edit-schema.adoc[Edit Your API Schema to Add It to the Unified Schema]

@@ -29,7 +29,7 @@ link:https://www.mulesoft.com/exchange["Take me to Exchange^", role="button-prim
 +
 . Search for *product api raml definition* and select it from the list of results.
 . In the *Product API | RAML Definition*, click *Download* > *RAML* for asset version 2.0.2
-. https://docs.mulesoft.com/design-center/design-publish#procedure[Publish the RAML specification to Exchange^] using your business group ID and an asset name.
+. xref:design-center::design-publish.adoc#procedure[Publish the RAML specification to Exchange] using your business group ID and an asset name.
 +
 The quick-start example uses the API names *Catalyst Product API* and *Catalyst Order API*.
 . Repeat these steps for the *Order Systems API | RAML Definition* for asset version 2.0.3.
