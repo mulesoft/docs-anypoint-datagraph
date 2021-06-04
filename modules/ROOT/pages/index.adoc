@@ -86,6 +86,19 @@ ordersByOrderId {               #depth 0
 
 * Anypoint DataGraph supports up to 16,000 fields per unified schema.
 
+== Anypoint DataGraph Administration in API Manager
+
+You manage Anypoint DataGraph in API Manager. Typical management tasks include:
+
+* Using the xref:api-manager::datagraph-settings.adoc[DataGraph Administration settings] to view and edit the GraphQL endpoint of a unified schema, configure policies, and configure client providers.
+
+* Managing xref:api-manager::datagraph-managing-contracts.adoc[contracts] to ensure that only authorized client applications can consume the unified schema.
+
+* Managing xref:api-manager::datagraph-adding-sla-tiers.adoc[SLA tiers] for each Anypoint DataGraph instance.
+
+* Using the xref:api-manager::datagraph-viewing-application-contracts.adoc[API Manager Client Applications] page to view and manage client application contracts.
+
+
 == Anypoint Platform Requirements and Licensing
 
 To use Anypoint DataGraph, ensure you meet the following requirements:
