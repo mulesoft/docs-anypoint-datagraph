@@ -23,7 +23,10 @@ The following permissions are available per business group per environment:
 
 * View and explore the unified schema
 * Request access to run queries and make data requests from the UI
-|Operate |Permission to view customer-facing logs
+|Operate a|Permission to:
+
+* View customer-facing logs
+* Set a dedicated load balancer URL for Anypoint Datagraph
 |===
 
 == Additional Resources
