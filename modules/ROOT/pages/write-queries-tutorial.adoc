@@ -45,8 +45,7 @@ In this case, you need to add an order ID to the query:
 
 == Add Fields
 
-Fields represent a type’s dataset that is returned in a query response, and you can choose whatever fields you need when writing a query. For example, as previously mentioned, the
-`ordersByOrderID` query method returns the `OrderResponse` object type, which returns the following fields:
+Fields represent a type’s dataset that is returned in a query response, and you can choose whatever fields you need when writing a query. For example, as previously mentioned, the `ordersByOrderID` query method returns the `OrderResponse` object type, which returns the following fields:
 
 image::schema-explorer-fields.png[Available fields listed in the schema explorer]
 
@@ -67,9 +66,9 @@ As you write a query, you can add or remove any of these fields. The following q
 
 `OrderResponse` is a Level-1 type, meaning you can access it directly with a query method, as in the previous example.
 
-== Add fields for nested types
+== Add Fields for Nested Types
 
-Many of the fields returned by the OrderResponse object type, such as billingAddress, are object types themselves that contain additional data that can make your query result more valuable. These additional types are known as nested types.
+Many of the fields returned by the OrderResponse object type, such as `billingAddress`, are object types themselves that contain additional data that can make your query result more valuable. These additional types are known as nested types.
 
 The `billingAddress` object type returns the `PostalAddress` object type, which itself returns several additional fields. To query `billingAddress`, you must specify which fields to return from `PostalAddress`. For example:
 
@@ -147,7 +146,6 @@ For example, you can rename the total field to `totalPrice` and the status field
     }
     totalPrice : total
     orderStatus : status
-    }
   }
 }
 --
