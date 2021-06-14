@@ -21,7 +21,7 @@ Solution: Create a dedicated load balancer (DLB) and xref:hosting-options.adoc#s
 
 . You've set a DLB using an invalid certficate. 
 +
-Solution: Ensure your DLB has a valid, CA-signed certficate, or the browser won't connect to Anypoint DataGraph. 
+Solution: Ensure that your DLB has a valid, CA-signed certificate, or the browser won't connect to Anypoint DataGraph. 
 
 . Your internet browser is unable to access Anypoint Virtual Private Cloud (VPC).
 +
