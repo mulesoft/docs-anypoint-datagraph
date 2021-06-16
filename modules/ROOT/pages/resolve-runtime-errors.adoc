@@ -13,11 +13,15 @@ A failed to fetch schema error occurs when you navigate to the Anypoint DataGrap
 }
 ....
 
-Anypoint DataGraph generates this error when it cannot load the unified schema, and it occurs for one of two reasons:
+Anypoint DataGraph generates this error when it cannot load the unified schema, and it occurs for one of three reasons:
 
 . You’re unable to use Port 8082 on a shared load balancer.
 +
 Solution: Create a dedicated load balancer (DLB) and xref:hosting-options.adoc#set-a-dedicated-load-balancer-url-for-anypoint-datagraph[set its URL to configure Anypoint DataGraph to route requests through the DLB].
+
+. You've set a DLB using an invalid certficate. 
++
+Solution: Ensure that your DLB has a valid, CA-signed certificate, or the browser won't connect to Anypoint DataGraph. 
 
 . Your internet browser is unable to access Anypoint Virtual Private Cloud (VPC).
 +
