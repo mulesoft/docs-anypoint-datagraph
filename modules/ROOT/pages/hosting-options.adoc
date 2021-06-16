@@ -76,6 +76,8 @@ Based on the way DLB mapping rules work, you must configure the *Input Path* and
 . From Anypoint Platform, select *Runtime Manager*.
 . From the navigation menu, select *Load Balancers*.
 . Click a load balancer name, and then click a certificate name.
++
+Ensure your load balancer has a valid, CA-signed certficate, or the browser won't connect to Anypoint DataGraph. 
 . In the *URL Mapping Rules* section, click *Add New Rule*.
 . Complete the fields with the following values:
 ** *Input Path* (`inputUri`): The URI that the client requests: for example, `/{app}/`
@@ -85,7 +87,7 @@ Based on the way DLB mapping rules work, you must configure the *Input Path* and
 +
 Anypoint DataGraph supports only HTTPS.
 
-=== Add the DLB configuration to Anypoint DataGraph
+=== Add the DLB Configuration to Anypoint DataGraph
 
 After you add the mapping rule, you configure the DLB for use with Anypoint Datagraph.
 
@@ -112,7 +114,7 @@ The CLI returns details that include the application name for the Anypoint DataG
 
 After you add this change, Anypoint DataGraph re-deploys, and you must wait for the status indicator to indicate that Anypoint DataGraph is up to date.
 
-=== Remove the DLB configuration from Anypoint DataGraph
+=== Remove the DLB Configuration from Anypoint DataGraph
 
 You can remove the DLB configuration using the following command:
 
