@@ -20,6 +20,7 @@
   ** xref:manage-elements-visibility.adoc[Schema Element Visibility]
   ** xref:edit-elements-names.adoc[]
 * xref:promote-api.adoc[]
+* xref:retrieve-unified-schema.adoc[]
 * xref:remove-api.adoc[]
 * xref:query-unified-schema.adoc[]
 * xref:troubleshoot-schemas-queries.adoc[]
