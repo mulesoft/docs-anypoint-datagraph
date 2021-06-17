@@ -8,10 +8,10 @@ To retrieve a copy of the unified schema, you'll need the following:
 * The `client_id` and `client_secret` you use to query the unified schema, which you can obtain from the xref:api-manager::datagraph-viewing-application-contracts.adoc[Client Applications page]
 
  
-In the API client of your choice, run a GET cURL request with the following information:
+In the API client of your choice, run a GET request with the following information:
 
 * The graph endpoint of the unified schema appended with `/schema`
-* Your `client_id` and `client_secret` 
+* Your `client_id` and `client_secret` headers
 
 For example:
 
