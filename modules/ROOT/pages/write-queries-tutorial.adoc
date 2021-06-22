@@ -61,6 +61,7 @@ As you write a query, you can add or remove any of these fields. The following q
     taxPrice
     total
     trackingNumber
+  }
 }
 --
 
