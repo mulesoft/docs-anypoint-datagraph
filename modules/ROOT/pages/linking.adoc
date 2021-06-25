@@ -131,6 +131,7 @@ ordersByOrderId (orderId: “123”) {
   orderId
   customer {
     name
+  }
 }
 --
 
