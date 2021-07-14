@@ -25,7 +25,7 @@ However, it need not be a Mule application or be running on Mule runtime engine 
 Additionally you must:
 
 * Have xref:permissions.adoc[the correct permissions] to add APIs.
-* Ensure that the business group or organization using Anypoint DataGraph has the correct number of vCores allocated, as specified in your plan.
+* Ensure that the business group or organization using Anypoint DataGraph has the correct number of vCores allocated, as specified in your plan. If you haven't allocated the correct number of vCores to the environment in which you're attempting to add an API, the UI raises an error message.
 
 == Add the API to Anypoint DataGraph
 

@@ -112,7 +112,7 @@ To use Anypoint DataGraph, ensure you meet the following requirements:
 The API calls associated with your Aypoint DataGraph license refer to calls made by Anypoint DataGraph to downstream REST APIs.
 --
 
-* Your plan must allocate the correct number of vCores for your business group or organization using Anypoint DataGraph.
+* Your plan must allocate the correct number of vCores for your business group or organization using Anypoint DataGraph. If you haven't allocated the correct number of vCores to the environment in which you're attempting to add an API, the UI raises an error message. The UI enables you to reapply the same changes after allocating the correct number of vCores.
 
 Refer to xref:hosting-options.adoc#anypoint-platform-runtime-plane-hosting-options[Anypoint Platform Runtime Plane Hosting Options] for details on API hosting requirements.
 
