@@ -10,10 +10,12 @@ Getting started with Anypoint DataGraph involves:
 
 == Prerequisites
 
+Before getting started, ensure you have:
+
 * Familiarity with Anypoint Platform and Exchange, including permissions to use Exchange to publish and view RAML or OAS specifications in your business group
 * An Anypoint Platform account
 * Admin or Contribute permissions
-* The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan.
+* The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan. If you haven't allocated the correct number of vCores to the environment in which you're attempting to add an API, Anypoint DataGraph raises an error message.
 
 == Download and Publish the Order and Product APIs
 
