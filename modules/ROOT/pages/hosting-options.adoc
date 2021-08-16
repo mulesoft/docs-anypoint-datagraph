@@ -105,6 +105,24 @@ Replace `<url>` with a valid URL that includes the DLB name and domain (gathered
 ....
 datagraph load-balancer-config add examplelb.lb.anypointdns.net/datagraph/graphql
 ....
++
+For example, consider the following mapping rules for `examplelb.lb.anypointdns.net` depending on the value of *Input Path*:
++
+[%header%autowidth.spread]
+|===
+|Index |Input URI (Input Path) |App name |App URI (Output Path)
+|0 |`/graphql` |`examplelb.lb.anypointdns.net` |`/graphql`
+|1 |`/datagraph/` |`examplelb.lb.anypointdns.net` |`/graphql`
+|2 |`/datagraph/` |`examplelb.lb.anypointdns.net` |`/`
+|3 |`/{app}/` |`{app}` | `/`
+|===
++
+The appropriate DLB URL is:
++
+* Index 0: `examplelb.lb.anypointdns.net/graphql`
+* Index 1: `examplelb.lb.anypointdns.net/graphql`
+* Index 2: `examplelb.lb.anypointdns.net/datagraph/graphql`
+* Index 3: `examplelb.lb.anypointdns.net/datagraph/graphql`
 
 . Validate that the value was updated:
 +
