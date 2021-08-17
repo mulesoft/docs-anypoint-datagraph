@@ -1,0 +1,33 @@
+== View Usage Metrics for Anypoint Datagraph
+
+Anypoint DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business group. Use these metrics to track the total number of downstream API calls made for each of the environments in which you’ve deployed a unified schema. 
+
+Refer to the xref:index.adoc#restrictions-and-limitations[DataGraph Overview] for a full list of restrictions and limitations. 
+
+Usage metrics are separated by Production and Sandbox environments per business group. More specifically, the metrics in any given environment show:
+
+* API requests received for that environment
+* API requests received for other environments of that type
+* API requests received for all environments of that type
+
+== View API Request Usage Metrics
+
+API request usage metrics are available in the Overview section of Anypoint DataGraph. 
+
+To view usage metrics, you need the xref:permissions.adoc[Admin permission]. 
+
+. Click Overview.
+. Click Details and confirm you’re in the correct environment. 
+. Click Usage Metrics.
++
+image::datagraph-usage-metrics.png[DataGraph usage metrics are shown in the Overview section]
+
+. To see metrics for a specific time period, set the calendar parameters. The metrics query runs automatically and updates the data.
+. To refresh the metrics for the current time period, click the refresh icon. 
+
+
+== Additional Resources
+
+* xref:add-api-to-unified-schema.adoc[Add an API Schema to the Unified Schema]
+* xref:query-unified-schema.adoc[Query the Unified Schema] 
+* xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
