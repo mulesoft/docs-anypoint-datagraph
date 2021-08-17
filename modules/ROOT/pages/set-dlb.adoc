@@ -121,3 +121,8 @@ You can remove the DLB configuration using the following command:
 `datagraph load-balancer-config remove`
 
 When you remove the configuration, Anypoint DataGraph redeploys.
+
+== Additional Resources
+
+* xref:hosting-options.adoc[Anypoint DataGraph Hosting Options and Networking]
+* xref:add-api-to-unified-schema.adoc[Add an API Schema to the Unified Schema]
