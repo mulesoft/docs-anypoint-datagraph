@@ -28,3 +28,4 @@
   ** xref:resolve-runtime-errors.adoc[Resolve Runtime Errors]
   ** xref:troubleshoot-query-logs.adoc[Response Logs]
   ** xref:troubleshoot-query-traces.adoc[Query Tracing]
+* xref:usage-metrics.adoc[View Usage Metrics for Datagraph]

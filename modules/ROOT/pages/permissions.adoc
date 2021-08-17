@@ -19,6 +19,7 @@ The following permissions are available per business group per environment:
 * Request access to run queries
 * Promote API schemas to an environment
 * View query traces in real time while running queries from the UI
+* View usage metrics
 |Consume a|Permission to:
 
 * View and explore the unified schema
