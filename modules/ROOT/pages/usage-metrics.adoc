@@ -10,7 +10,7 @@ Usage metrics are separated by Production and Sandbox environments per business 
 * API requests received for other environments of that type
 * API requests received for all environments of that type
 
-== View API Request Usage Metrics
+== View API Request Metrics
 
 API request usage metrics are available in the Overview section of Anypoint DataGraph. 
 
