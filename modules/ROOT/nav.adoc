@@ -6,6 +6,7 @@
   ** xref:schemas.adoc[]
   ** xref:write-queries-tutorial.adoc[Write GraphQL Queries]
 * xref:hosting-options.adoc[Hosting Options and Networking]
+* xref:set-dlb.adoc[Set a DLB URL for DataGraph]
 * xref:permissions.adoc[Permissions]
 * xref:add-api-to-unified-schema.adoc[]
 * xref:supported-authentication-methods.adoc[]
