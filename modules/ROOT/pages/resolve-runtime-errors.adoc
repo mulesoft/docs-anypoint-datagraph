@@ -17,7 +17,7 @@ Anypoint DataGraph generates this error when it cannot load the unified schema, 
 
 . You’re unable to use Port 8082 on a shared load balancer.
 +
-Solution: Create a dedicated load balancer (DLB) and xref:hosting-options.adoc#set-a-dedicated-load-balancer-url-for-anypoint-datagraph[set its URL to configure Anypoint DataGraph to route requests through the DLB].
+Solution: Create a dedicated load balancer (DLB) and xref:set-dlb.adoc[set its URL to configure Anypoint DataGraph to route requests through the DLB].
 
 . You've set a DLB using an invalid certficate. 
 +
