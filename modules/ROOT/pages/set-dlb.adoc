@@ -2,7 +2,7 @@
 
 If you’re unable to use Port 8082 on a CloudHub shared load balancer, you must set a URL for Anypoint DataGraph to use on a dedicated load balancer (DLB).
 
-You set the URL using a DLB mapping rule that you add to the Anypoint DataGraph configuration.
+To set the URL, add a DLB mapping rule to the Anypoint DataGraph configuration.
 
 === Example Mapping Rules for a DLB URL
 
