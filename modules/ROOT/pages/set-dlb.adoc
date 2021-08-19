@@ -22,7 +22,7 @@ For example, consider the following mapping rules for `examplelb.lb.anypointdns.
 For each index, the appropriate DLB URL is:
 
 * Index 0: `examplelb.lb.anypointdns.net/graphql`
-* Index 1: `examplelb.lb.anypointdns.net/graphql`
+* Index 1: `examplelb.lb.anypointdns.net/datagraph/`
 * Index 2: `examplelb.lb.anypointdns.net/datagraph/graphql`
 * Index 3: `examplelb.lb.anypointdns.net/datagraph-xz082edx-1585-901xe374-d0x0/graphql`
 
