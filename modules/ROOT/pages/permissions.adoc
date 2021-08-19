@@ -11,7 +11,10 @@ The following permissions are available per business group per environment:
 [%header%autowidth.spread]
 |===
 |Permission |Description
-|Admin |Permission to contribute, consume, and operate the unified schema
+|Admin a|Permission to:
+
+* Contribute, consume, and operate the unified schema
+* View usage metrics
 |Contribute a| Permission to:
 
 * Add source APIs to the unified schema
