@@ -1,12 +1,22 @@
 = Retrieve a Copy of the Unified Schema
 
-You can get a copy of the unified schema by using a third-party API client. 
+You can download a copy of the unified schema from the query editor or by using a third-party API client. 
+
+The schema is downloaded as a `.graphl` file. 
+
+== Download the Unified Schema from the Query Editor
+
+To download the schema from the query editor, you need the xref:permissions.adoc[consumer, contributor, or admin permission].
+
+. Click *Run a Query*.
+. Click *Download Schema*.
+
+== Retrieve the Unified Schema Using an API Client
 
 To retrieve a copy of the unified schema, you need the following:
 
 * The graph endpoint of your unified schema, which you can obtain from the homepage of Anypoint DataGraph.
 * The `client_id` and `client_secret` values you use to query the unified schema, which you can obtain from the xref:api-manager::datagraph-viewing-application-contracts.adoc[Client Applications page] in API Manager.
-
  
 In the API client of your choice, run a GET request with the following information:
 
