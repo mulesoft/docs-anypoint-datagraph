@@ -14,13 +14,13 @@ You must resolve any conflicts between object types before adding the generated 
 
 == Prerequisites
 
-To add an API to the unified schema, the API must meet the following requirements:
+To add an API to the unified schema, ensure you have:
 
-* The API must be published in Exchange in the same organization as your unified schema.
-+
-However, it need not be a Mule application or be running on Mule runtime engine or in CloudHub.
-* The API must be a REST API (either a RAML or OAS specification).
-* The API must have a running instance with an accessible URL.
+* Created a REST API using either a RAML or OAS specification.
+* Published the API in Exchange in the same organization as your unified schema.
+* Initiated an instance of the API with an accessible URL.
+
+The API does not need to be a Mule application or be running on Mule runtime engine or in CloudHub.
 
 Additionally you must:
 
