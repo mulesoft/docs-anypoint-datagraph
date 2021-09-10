@@ -32,8 +32,8 @@ If you are a Titanium subscriber, you can also view response logs in xref:monito
 
 To view response logs in Anypoint DataGraph:
 
-. Create and run a query.
-. Click *View response* logs.
+. Write and run a query.
+. From the actions menu (*...*), select *View Response Logs*.
 +
 Response logs for that query are displayed:
 +

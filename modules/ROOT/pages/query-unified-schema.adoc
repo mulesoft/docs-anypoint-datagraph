@@ -19,7 +19,7 @@ Choose one of the following options:
 ** *Use one of my existing applications*: Choose an existing client application from the list, and click Request Access.
 ** *Create a new application and use it immediately*: Click *Next*, provide an application name and an optional description and application URL, and click *Create and Request Access*.
 ** *I already have credentials...*: Click *Next*, provide an existing client ID and secret pair, and then click *Authenticate & Request Access*.
-. To change your access method from the *Run Query* page, click *Manage Credentials* > *Switch credentials*.
+. To change your access method from the query editor, From the actions menu (*...*), select *Switch Current Credentials*.
 
 === Request Access to Environments Using an External Client Provider
 
@@ -110,8 +110,8 @@ Query Trace results for Anypoint DataGraph provide the following information:
 image::datagraph-qsg-response-logs.png[Query response logs page]
 +
 Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
-. Click *View History* to access this same query—or others—at a later time.
-. To use this query in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a cURL snippet.
+. Click *History* to access this same query—or others—at a later time.
+. To use this query in an external application, from the actions menu (*...*), click *Copy & Share Endpoint* to copy both the query and the automatically generated endpoint. You can copy the query as a cURL snippet or as a GraphQL query.
 
 == Query Editor Shortcuts
 The following table provides shortcuts you can use in the query editor:

@@ -20,9 +20,9 @@ You must have xref:permissions.adoc[the Contribute or Admin permission] to use q
 
 Query trace results are provided as soon as you run a query.
 
-. Click *Run a Query*.
+. From the actions menu (*...*), select *Trace Query*. 
 . Write your query.
-. Click *Trace query* > *Run*.
+. Click *Run a Query*.
 +
 The trace query panel opens and displays results:
 +
