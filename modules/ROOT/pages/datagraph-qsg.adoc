@@ -78,7 +78,7 @@ After you add the Catalyst Product API to Anypoint DataGraph, you:
 
 [NOTE]
 --
-You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
+You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema. You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
 --
 
 === Edit the Schema by Enabling Object Type Collaboration
@@ -133,7 +133,7 @@ After you add the Catalyst Order API to Anypoint DataGraph, you:
 
 [NOTE]
 --
-You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
+You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema. You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
 --
 
 === Edit the Schema by Rename Object Types

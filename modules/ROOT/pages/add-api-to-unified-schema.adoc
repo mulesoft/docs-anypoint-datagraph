@@ -34,7 +34,6 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 [IMPORTANT]
 --
 * Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:supported-authentication-methods.adoc[] for more information.
-* After you add an API to Anypoint DataGraph, you can't change its URL. To change an API's URL, remove the API and re-add it. You can, however, edit an API's authentication method at any time.
 --
 
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the *Unified Data Graph* dropdown list, and click *+Add API*.
@@ -50,6 +49,7 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 +
 * *No Auth*: Use if your API is public.
 * *Basic Auth*: Use if you authenticate to your API using a username and password.
+* *Pass-through*: Use if you authenticate to your API by passing authorization headers.
 * *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 * *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
@@ -95,6 +95,7 @@ xref:linking.adoc[Linking] enables you to join related fields from two types to 
 
 Anypoint DataGraph xref:status-updates.adoc[updates the unified schema]. When the unified schema is updating, you can view the new changes in the schema, make additional changes, and apply new changes. However, these changes aren’t available to query until the update is complete, which can take several minutes.
 
+[[edit-the-url-for-an-api-added-to-the-unified-schema]]
 == Edit the URL for an API Added to the Unified Schema
 
 If you need to edit the URL of an API that you've added to the unified schema, you can do so on the *API details* page.
@@ -103,6 +104,16 @@ If you need to edit the URL of an API that you've added to the unified schema, y
 . Click *API details*.
 . Next to the *API url* field, click *Edit URL*.
 . Type in the new URL.
+. Click *Save*.
+
+[[change-the-authentication-method-for-an-api-aded-to-the-unified-schema]]
+== Change the Authentication Method for an API Added to the Unified Schema
+
+If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page.
+
+. Click *List of APIs added* and select the appropriate API.
+. Click *API details*.
+. In the *Authentication* panel, select an authentication policy and complete any necessary fields.
 . Click *Save*.
 
 == Additional Resources
