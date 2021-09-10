@@ -34,8 +34,9 @@ Use the query editor to write, run, and troubleshoot queries.
 
 .. From the *Header Name* drop-down list, select a header name.
 .. In the *Header Value* field, add a header value.
-.. Click *+Add Header* to specify additional header name and value pairs for other APIs. 
-.. Click *Save*. 
+.. To specify additional header name and value pairs for other APIs, click *+Add Header* x 
+.. Click *Save*.
+.. To edit the HTTP headers, click *Edit HTTP Headers*.
 
 . In the query editor, start typing your query using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
 +
