@@ -35,10 +35,10 @@ curl GET 'http://localhost/myResource' \
 +
 Use if you authenticate to your API by passing authorization headers.
 +
-You must supply a:
+You must supply:
 
-** *Query Header Name*: The name of the HTTP header sent with the initial query to the unified schema. 
-** *API Header Name*: The header name passed through to the underlying API. This is useful if you want to rename the query header before passing it through to the underlying API. 
+** A *Query Header Name*: The name of the HTTP header sent with the initial query to the unified schema. 
+** An  *API Header Name*: The header name passed through to the underlying API. This is useful if you want to rename the query header before passing it through to the underlying API. 
 
 * *Client ID enforcement via headers*
 +
