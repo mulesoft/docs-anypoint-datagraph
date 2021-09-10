@@ -25,7 +25,7 @@ Merging types enables you to combine similar types to extend their fields and da
 +
 Linking enables you to join related fields from two types for a more enriched query result.
 Refer to xref:linking.adoc[] for more information.
-* Edit an API URl
+* Edit an API URL
 +
 If you need to edit the URL of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#edit-the-url-for-an-api-added-to-the-unified-schema[Edit the URL for an API Added to the Unified Schema].
 * Change the Authentication Method for an API
