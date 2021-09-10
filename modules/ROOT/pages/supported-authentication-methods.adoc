@@ -31,7 +31,7 @@ curl GET 'http://localhost/myResource' \
 }'
 --
 
-* *Pass-through*
+* *Pass-through authentication*
 +
 Use if you authenticate to your API by passing authorization headers.
 +
