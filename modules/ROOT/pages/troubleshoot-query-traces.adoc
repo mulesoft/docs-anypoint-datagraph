@@ -22,7 +22,7 @@ Query trace results are provided as soon as you run a query.
 
 . From the actions menu (*...*), select *Trace Query*. 
 . Write your query.
-. Click *Run a Query*.
+. Click *Run*.
 +
 The trace query panel opens and displays results:
 +

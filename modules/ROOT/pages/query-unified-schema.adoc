@@ -95,7 +95,7 @@ image::datagraph-query-variable.png[Inserting a query variable in the query edit
 . Click *Run*.
 +
 image::datagraph-qsg-query-result.png[Query editor displays query results]
-. To see results with query tracing, click *Trace query* > *Run*.
+. To see results with query tracing, from the actions menu (*...*), select *Trace query* > *Run*.
 +
 image::datagraph-qsg-query-traces.png[Query trace view open with query results]
 +
@@ -105,7 +105,7 @@ Query Trace results for Anypoint DataGraph provide the following information:
 * Total response time for the entire query
 * Duration of requests to each source API in the query
 
-. To see response logs associated with the query, click *View response logs*.
+. To see response logs associated with the query, from the actions menu (*...*), select *View response logs*.
 +
 image::datagraph-qsg-response-logs.png[Query response logs page]
 +
