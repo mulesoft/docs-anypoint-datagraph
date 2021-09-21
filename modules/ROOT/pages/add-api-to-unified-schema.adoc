@@ -109,11 +109,12 @@ If you need to edit the URL of an API that you've added to the unified schema, y
 [[change-the-authentication-method-for-an-api-aded-to-the-unified-schema]]
 == Change the Authentication Method for an API Added to the Unified Schema
 
-If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page.
+If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page. You must remove the current authentication method and add a new one.
 
 . Click *List of APIs added* and select the appropriate API.
 . Click *API details*.
-. In the *Authentication* panel, select an authentication policy and complete any necessary fields.
+. In the *Authentication* panel, *Click remove and add a new one*. 
+. Select an authentication policy and complete any necessary fields.
 . Click *Save*.
 
 == Additional Resources
