@@ -5,7 +5,8 @@ Use this quick start guide to begin using Anypoint DataGraph. With Anypoint Data
 Completing this quick start guide involves:
 
 . Downloading and publishing two APIs
-. Adding those APIs to Anypoint DataGraph and editing their schemas for addition to the unified schema, including how to use various API schema editing tools like linking and merging
+. Adding those APIs to Anypoint DataGraph
+. Editing their schemas, using various API schema editing tools like linking and merging, for addition to the unified schema
 . Querying the unified schema
 
 == Before You Begin
