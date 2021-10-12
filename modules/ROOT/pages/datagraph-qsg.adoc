@@ -99,7 +99,7 @@ The default query method for an object type is the method that always returns a 
 +
 image::datagraph-qsg-primary-key.png[Primary key set to identifier string]
 +
-The primary key is one field of your object type that uniquely identifies a single record of that object type.
+The primary key is one field of your object type that uniquely identifies a single record of that object type. Some object types use two primary keys—these are called _composite keys_.
 . Click *Confirm*.
 . In the *Edit type name and field settings* pane, make all fields visible.
 +
