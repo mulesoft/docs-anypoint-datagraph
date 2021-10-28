@@ -19,7 +19,7 @@ Choose one of the following options:
 ** *Use one of my existing applications*: Choose an existing client application from the list, and click Request Access.
 ** *Create a new application and use it immediately*: Click *Next*, provide an application name and an optional description and application URL, and click *Create and Request Access*.
 ** *I already have credentials...*: Click *Next*, provide an existing client ID and secret pair, and then click *Authenticate & Request Access*.
-. To change your access method from the query editor, From the actions menu (*...*), select *Switch Current Credentials*.
+. To change your access method from the query editor, from the actions menu (*...*), select *Switch Current Credentials*.
 
 === Request Access to Environments Using an External Client Provider
 
