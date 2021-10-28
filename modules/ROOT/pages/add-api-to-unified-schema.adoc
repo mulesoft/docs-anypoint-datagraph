@@ -114,7 +114,7 @@ If you need to edit the authentication method of an API that you've added to the
 . Click *List of APIs added* and select the appropriate API.
 . Click *API details*.
 . In the *Authentication* panel, *Click remove and add a new one*. 
-. Select an authentication policy and complete any necessary fields.
+. Select an authentication policy and complete any required fields.
 . Click *Save*.
 
 == Additional Resources
