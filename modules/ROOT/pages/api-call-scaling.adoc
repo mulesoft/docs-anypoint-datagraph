@@ -14,7 +14,7 @@ image::api-call-scaling.png[]
 
 Each option includes *Annual API Calls*, which are the total number of API requests you can make to the unified schema on a yearly basis. When you select an annual option, you also select:
 
-* *Concurrent Calls*: The number of active API requests the unified schema can process in parallel. 
+* *Concurrent Calls*: The number of active API requests the unified schema can process in parallel
 * *# of Workers*: The number of dedicated Mule instances that can actively process requests to the unified schema. 
 
 The *Insufficient Capacity* label indicates that your business group hasn’t allocated enough capacity to select that option. Your business group administrator can increase capacity either by reducing usage in other environments or by purchasing additional capacity for your business group. 
