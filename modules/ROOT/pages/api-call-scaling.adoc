@@ -8,7 +8,7 @@ By default, DataGraph supports a maximum of 1 million annual API calls and 150 c
 
 However, your plan must allocate the correct number of vCores for your business group or organization before scaling. You can’t scale API calls in an environment beyond the free capacity remaining in the number of vCores allocated for that environment. Production and Sandbox environments each have their own scaling options per unified schema.
 
-The *API Call Scaling* page displays available scaling options.
+The *API Call Scaling* page displays available scaling options:
 
 image::api-call-scaling.png[]
 
