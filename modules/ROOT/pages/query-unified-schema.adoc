@@ -42,7 +42,7 @@ Use the query editor to write, run, and troubleshoot queries.
 +
 image::datagraph-qsg-query-autocompletion.png[Using inline autocompletion to write a query,70%]
 
-. (Optional) In the *Query Variables* pane, add any query variables you want to use.
+. Optionally, in the *Query Variables* pane, add any query variables you want to use.
 +
 image::datagraph-query-variable.png[Inserting a query variable in the query editor,70%]
 
