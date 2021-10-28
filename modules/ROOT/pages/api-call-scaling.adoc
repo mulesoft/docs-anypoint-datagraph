@@ -21,7 +21,7 @@ The *Insufficient Capacity* label indicates that your business group hasn’t al
 
 == Available Scaling Options
 
-The following table provides details about the available scaling options. 
+The following table provides details about the available scaling options:
 
 [%header%autowidth.spread]
 |===
