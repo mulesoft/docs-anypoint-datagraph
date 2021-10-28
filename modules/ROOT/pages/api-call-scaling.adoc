@@ -25,7 +25,7 @@ The following table provides details about the available scaling options:
 
 [%header%autowidth.spread]
 |===
-|Annual API Calls |Concurrent Calls |# of Workers |vCore/environment
+|Annual API Calls |Concurrent Calls |# of Workers |vCore/Environment
 |1M |150 |1 |0.2 
 |1M |150 |2 |0.4 
 |2M |300 |2 |0.6 
