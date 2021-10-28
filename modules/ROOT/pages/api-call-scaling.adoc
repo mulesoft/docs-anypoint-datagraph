@@ -10,7 +10,7 @@ However, your plan must allocate the correct number of vCores for your business 
 
 The *API Call Scaling* page displays available scaling options.
 
-[screenshot]
+image::api-call-scaling.png[]
 
 Each option includes *Annual API Calls*, which are the total number of API requests you can make to the unified schema on a yearly basis. When you select an annual option, you also select:
 
