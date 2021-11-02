@@ -2,13 +2,14 @@
 
 Use this quick start guide to begin using Anypoint DataGraph. With Anypoint DataGraph, you can query multiple APIs in a single request to get the specific information you need.
 
-Getting started with Anypoint DataGraph involves:
+Completing this quick start guide involves:
 
 . Downloading and publishing two APIs
-. Adding those APIs to Anypoint DataGraph and editing their schemas for addition to the unified schema, including how to use various . API schema editing tools like linking and merging
+. Adding those APIs to Anypoint DataGraph
+. Editing their schemas, using various API schema editing tools like linking and merging, for addition to the unified schema
 . Querying the unified schema
 
-== Prerequisites
+== Before You Begin
 
 Before getting started, ensure you have:
 
@@ -70,18 +71,12 @@ image::datagraph-qsg-preview-search.png[Searching the element price in API schem
 
 . When you’re done previewing the schema, click *Next: Edit Schema*.
 
-== Edit the Catalyst Product API Schema for Addition to the Unified Schema
-
-After you add the Catalyst Product API to Anypoint DataGraph, you:
-
-* Edit the Schema by Enabling Object Type Collaboration
+== Enable Object Type Collaboration in the Catalyst Product API Schema
 
 [NOTE]
 --
 You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
 --
-
-=== Edit the Schema by Enabling Object Type Collaboration
 
 When adding APIs to the unified schema, you can configure object types, query methods, and fields to produce more useful query results. More specifically, you can hide or unhide, rename, and link and merge these entities.
 
@@ -123,20 +118,7 @@ Follow the same procedure as for adding the Product Order API, with the followin
 * Use the URL `+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/2.0.3/m/+`
 * Additionally edit the schema by renaming, linking, and merging the object types that you previously enabled for collaboration.
 
-== Edit the Catalyst Order API Schema for Addition to the Unified Schema
-
-After you add the Catalyst Order API to Anypoint DataGraph, you:
-
-* Edit the Schema by Rename Object Types
-* Edit the Schema by Linking Object Types
-* Edit the Schema by Merging Object Types
-
-[NOTE]
---
-You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
---
-
-=== Edit the Schema by Rename Object Types
+== Rename Object Types in the Catalyst Order API Schema
 
 Before you add an API schema to the unified schema, you can edit the schema to rename fields, types, and query methods to make them more intuitive to those consuming the unified schema.
 
@@ -155,7 +137,7 @@ image::datagraph-qsg-rename-type-field.png[Renaming enum type 0 to status in the
 
 The new name is reflected in the type list.
 
-=== Edit the Schema by Linking Object Types
+== Link Object Types in the Catalyst Order API Schema
 
 You can also edit the unified schema to link your newly added API object types to existing,  related types to join fields, resulting in a more enriched query result.
 
@@ -185,7 +167,7 @@ image::datagraph-qsg-link-added.png[Order item summary product type field shows 
 
 You’re _almost_ ready to finish adding the Catalyst Order API. Before you do that, explore another way to edit an API schema before adding it to the unified schema.
 
-=== Edit the Schema by Merging Object Types
+== Merge Object Types in the Catalyst Order API Schema
 
 You can merge an object type from your API schema with either another object type in the unified schema or with another object type in the same API schema (known as a _local merge_). Merging types enables you to combine similar types to extend their fields and datasets for better query results.
 
@@ -310,7 +292,7 @@ If you have a Titanium subscription, you can view these same logs in Anypoint Mo
 +
 Use the copy-to-clipboard icons to copy the query as a cURL snippet or as a GraphQL query. You can also copy any authentication values, request headers, or variables used in the query.
 
-== Additional Resources
+== See Also
 
 * xref:datagraph-terms.adoc[]
 * xref:schemas.adoc[]
