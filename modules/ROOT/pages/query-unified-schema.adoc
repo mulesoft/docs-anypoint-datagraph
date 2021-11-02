@@ -111,7 +111,9 @@ image::datagraph-qsg-response-logs.png[Query response logs page]
 +
 Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
 . Click *View History* to access this same query—or others—at a later time.
-. To use this query in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a cURL snippet.
+. To copy the query and the automatically generated endpoint, from the actions menu (*...*​), click *Copy & Share Endpoint*. 
++
+Use the copy-to-clipboard icons to copy the query as a cURL snippet or as a GraphQL query. You can also copy any authentication values, request headers, or variables used in the query.
 
 == Query Editor Shortcuts
 The following table provides shortcuts you can use in the query editor:
