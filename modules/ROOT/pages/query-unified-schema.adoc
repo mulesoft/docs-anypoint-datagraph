@@ -23,7 +23,7 @@ Choose one of the following options:
 ** *Use one of my existing applications*: Choose an existing client application from the list, and click Request Access.
 ** *Create a new application and use it immediately*: Click *Next*, provide an application name and an optional description and application URL, and click *Create and Request Access*.
 ** *I already have credentials...*: Click *Next*, provide an existing client ID and secret pair, and then click *Authenticate & Request Access*.
-. To change your access method from the *Run Query* page, click *Manage Credentials* > *Switch credentials*.
+. To change your access method from the query editor, from the actions menu (*...*), select *Switch Current Credentials*.
 
 
 == Write and Run a Query
@@ -161,7 +161,7 @@ image::datagraph-query-variable.png[Inserting a query variable in the query edit
 . Click *Run*.
 +
 image::datagraph-qsg-query-result.png[Query editor displays query results]
-. To see results with query tracing, click *Trace query* > *Run*.
+. To see results with query tracing, from the actions menu (*...*), select *Trace query* > *Run*.
 +
 image::datagraph-qsg-query-traces.png[Query trace view open with query results]
 +
@@ -171,11 +171,12 @@ Query Trace results for Anypoint DataGraph provide the following information:
 * Total response time for the entire query
 * Duration of requests to each source API in the query
 
-. To see response logs associated with the query, click *View response logs*.
+. To see response logs associated with the query, from the actions menu (*...*), select *View response logs*.
 +
 image::datagraph-qsg-response-logs.png[Query response logs page]
 +
 Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
+
 . Click *View History* to access this same query—or others—at a later time.
 . To copy the query and the automatically generated endpoint, from the actions menu (*...*​), click *Copy & Share Endpoint*. 
 +

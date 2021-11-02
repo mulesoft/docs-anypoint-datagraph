@@ -270,7 +270,7 @@ This is the fundamental utility of Anypoint DataGraph: the ability to query mult
 . To run the query without query tracing, click *Run*:
 +
 image::datagraph-qsg-query-result.png[Query editor displays query results]
-. To run the query with query tracing, click *Trace query* > *Run*.
+. To run the query with query tracing, from the actions menu (*...*), select *Trace Query*, and then click *Run*.
 +
 image::datagraph-qsg-query-traces.png[Query trace view open with query results]
 +
@@ -280,13 +280,14 @@ Trace results for Anypoint DataGraph provide the following information:
 * Total response time for the entire query
 * Duration of requests to each source API in the query
 
-. To see logs associated with the query, click *View response logs*.
+. To see logs associated with the query, from the actions menu (*...*), click *View Response Logs*.
 +
 image::datagraph-qsg-response-logs.png[Query response logs page]
 +
 Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR.
 +
 If you have a Titanium subscription, you can view these same logs in Anypoint Monitoring, or use advanced search to find logs for a specific date, time, and priority.
+
 . Click *View History* to access this same query (or others) later.
 . To copy the query and the automatically generated endpoint, from the actions menu (*...*​), click *Copy & Share Endpoint*. 
 +
