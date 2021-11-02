@@ -48,7 +48,7 @@ Before using Anypoint DataGraph, review the following restrictions and limitatio
 ** Up to 16,000 fields per unified schema
 
 * Anypoint DataGraph restricts downstream REST API calls to:
-** A maximum of 150 concurrent or ongoing calls per unified schema
+** A default of 150 concurrent or ongoing calls per unified schema. You can increase or decrease API calls based on your workloads and consumption needs. Refer to xref:api-call-scaling.adoc[API Call Scaling in Anypoint DataGraph] for instructions. 
 ** A 5 second timeout per call
 ** A maximum of 5 MB of response data per call
 

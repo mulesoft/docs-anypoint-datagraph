@@ -121,6 +121,7 @@ To edit the authentication method:
 
 == Additional Resources
 
+* xref:api-call-scaling.adoc[API Call Scaling in Anypoint DataGraph]
 * xref:permissions.adoc[Permissions for Anypoint DataGraph]
 * xref:schema-validation.adoc[Potential Errors When Generating an API Schema]
 * xref:edit-schema.adoc[]
