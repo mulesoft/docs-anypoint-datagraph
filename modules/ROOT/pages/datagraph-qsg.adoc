@@ -288,11 +288,9 @@ Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR.
 +
 If you have a Titanium subscription, you can view these same logs in Anypoint Monitoring, or use advanced search to find logs for a specific date, time, and priority.
 . Click *View History* to access this same query (or others) later.
-To use this query in an external application, click *Copy endpoint* to copy both the query and the automatically generated endpoint.
+. To copy the query and the automatically generated endpoint, from the actions menu (*...*​), click *Copy & Share Endpoint*. 
 +
-You can copy the query as a cURL snippet or as a GraphQL query:
-+
-image::datagraph-qsg-copy-query.png[Copying a query endpoint]
+Use the copy-to-clipboard icons to copy the query as a cURL snippet or as a GraphQL query. You can also copy any authentication values, request headers, or variables used in the query.
 
 == See Also
 
