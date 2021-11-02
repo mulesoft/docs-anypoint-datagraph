@@ -30,9 +30,19 @@ curl GET 'http://localhost/myResource' \
   "password": "myPassword"
 }'
 --
+
+* *Pass-through authentication*
++
+Use if you authenticate to your API by passing authorization headers.
++
+You must supply:
+
+** A *Query Header Name*: The name of the HTTP header sent with the initial query to the unified schema. 
+** An  *API Header Name*: The header name passed through to the underlying API. This is useful if you want to rename the query header before passing it through to the underlying API. 
+
 * *Client ID enforcement via headers*
 +
-Use if you authenticate to your API passing `client_id` and `client_secret` headers.
+Use if you authenticate to your API by passing `client_id` and `client_secret` headers.
 +
 For example:
 +
@@ -42,7 +52,7 @@ curl "http://localhost/myResource" -H "client_id:1234" -H "client_secret:abcd"
 --
 * *Client ID enforcement via query parameters*
 +
-Use if you authenticate to your API passing `client_id` and `client_secret` query params.
+Use if you authenticate to your API by passing `client_id` and `client_secret` query params.
 +
 For example:
 +
@@ -56,11 +66,8 @@ Use if you authenticate to your API using custom header parameters and values.
 
 Any other authentication methods to access your added API, such as custom OAuth implementations or short-lived token methods, are not supported.
 
-== Changing the authentication method
-
-To later edit or change the authentication method or credentials, click *List of APIs Added* > {API schema to edit} > *API details* > *Add authentication*.
-
 == Additional Resources
 
 * xref:add-api-to-unified-schema.adoc[]
 * xref:promote-api.adoc[]
+* xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]

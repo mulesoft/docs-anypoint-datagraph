@@ -9,6 +9,10 @@ The unified schema resolves into a single GraphQL endpoint. To query the unified
 
 == Request Access to Run A Query
 
+Before you can run a query, you must request access. 
+
+If you're using an external client provider, refer to xref:request-access-to-environments-using-an-external-client-provider[Request Access to Environments Using an External Client Provider]
+
 . Click *Run a Query*.
 . In the *Request access to run queries* dialog, select how you want to get access to run your queries.
 +
@@ -21,7 +25,70 @@ Choose one of the following options:
 ** *I already have credentials...*: Click *Next*, provide an existing client ID and secret pair, and then click *Authenticate & Request Access*.
 . To change your access method from the *Run Query* page, click *Manage Credentials* > *Switch credentials*.
 
-=== Request Access to Environments Using an External Client Provider
+
+== Write and Run a Query
+
+Use the query editor to write, run, and troubleshoot queries. 
+
+. If any of the APIs in the unified schema require pass-through authentication, click *Add HTTP Headers*, and:
+
+.. Select a header name.
+.. Enter a header value.
+.. To specify additional header name and value pairs for other APIs, click *+Add Header* x 
+.. Click *Save*.
+.. To edit the HTTP headers, click *Edit HTTP Headers*.
+
+. In the query editor, start typing your query using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
++
+image::datagraph-qsg-query-autocompletion.png[Using inline autocompletion to write a query,70%]
+
+. Optionally, in the *Query Variables* pane, add any query variables you want to use.
++
+image::datagraph-query-variable.png[Inserting a query variable in the query editor,70%]
+
+. Click *Run*.
++
+image::datagraph-qsg-query-result.png[Query editor displays query results]
+. To see results with query tracing, click *Trace query* > *Run*.
++
+image::datagraph-qsg-query-traces.png[Query trace view open with query results]
++
+Query Trace results for Anypoint DataGraph provide the following information:
++
+* Time taken by Anypoint DataGraph to parse and validate the query
+* Total response time for the entire query
+* Duration of requests to each source API in the query
+
+. To see response logs associated with the query, click *View response logs*.
++
+image::datagraph-qsg-response-logs.png[Query response logs page]
++
+Log levels for Anypoint DataGraph include, DEBUG, INFO, WARN, and ERROR.
+. Click *View History* to access this same query—or others—at a later time.
+. To use this query in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a cURL snippet.
+
+== Query Editor Shortcuts
+The following table provides shortcuts you can use in the query editor:
+
+[%header%autowidth.spread]
+|===
+|Function |Shortcut
+|Prettify query |Shift+Ctrl+p
+|Run query |Ctrl+Enter
+|Autocomplete |Ctrl+space
+|Comment-out line |Cmd+/
+|Jump to end or start of current scope |Cmd+m
+|Highlight current word |Cmd+d
+|Regex search |Cmd+f
+|Search and replace |Cmd+h
+|Bring next line up to current line |Cmd+j
+|Delete rest of line past cursor |Cmd+kk
+|Highlight current line |Cmd+l
+|Outdent current line |Cmd+[
+|Indent current line |Cmd+]
+|===
+
+== Request Access to Environments Using an External Client Provider
 
 API Manager enables you to configure different client providers for each one of your environments. Depending on the environment where your data graph runs, your client applications might need to authenticate using either the default Anypoint Platform native client provider or any of the supported external client providers. See xref:access-management::managing-api-clients.adoc[About Client Management] for more information.
 
@@ -80,7 +147,6 @@ image::confirm-credentials.png[Requesting access using an external client provid
 
 <1> Both *Resource Owner Grant* and *Implicit Grant* are marked as required in the UI.
 <1> Both *Client Credentials Grant* and *Authorization Code Grant* are mutually exclusive in the UI.
-
 
 == Write and Run a Query
 
