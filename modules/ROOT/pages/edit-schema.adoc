@@ -11,17 +11,27 @@ To edit an API schema, address the following tasks where applicable:
 If there are types that have a conflict with the unified schema, make sure to resolve them all. See xref:resolve-conflicts.adoc[] for more information.
 * Enable collaboration on an object type
 +
-Enable collaboration for applicable types and provide the required settings. This step is optional, but when you enable collaboration on types, you'll create a more connected and enriched unified schema. See xref:collaboration.adoc[] for more information.
+Enable collaboration for applicable types and provide the required settings. This step is optional, but when you enable collaboration on types, you'll create a more connected and enriched unified schema. Refer to xref:collaboration.adoc[] for more information.
 * Manage visibility of schema elements
 +
-You can hide the fields, types, or query methods that you don't want to have visible in the unified schema. See xref:manage-elements-visibility.adoc[] for more information.
+You can hide the fields, types, or query methods that you don't want to have visible in the unified schema. Refer to xref:manage-elements-visibility.adoc[] for more information.
 * Review and edit names of schema elements
 +
-You can review or change the names of all fields, types, and query methods that you are adding to the unified schema. See xref:edit-elements-names.adoc[] for more information.
+You can review or change the names of all fields, types, and query methods that you are adding to the unified schema. Refer to xref:edit-elements-names.adoc[] for more information.
 * Merge similar object types
 +
-Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result. See xref:merge-types.adoc[] for more information.
+Merging types enables you to combine similar types to extend their fields and datasets for a more enriched query result. Refer to xref:merge-types.adoc[] for more information.
 * Link related fields between object types
 +
 Linking enables you to join related fields from two types for a more enriched query result.
-See xref:linking.adoc[] for more information.
+Refer to xref:linking.adoc[] for more information.
+* Edit an API URL
++
+If you need to edit the URL of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#edit-the-url-for-an-api-added-to-the-unified-schema[Edit the URL for an API Added to the Unified Schema].
+* Change the Authentication Method for an API
++
+If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]
+
+
+
+
