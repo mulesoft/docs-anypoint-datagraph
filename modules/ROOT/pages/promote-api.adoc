@@ -24,7 +24,7 @@ You configure the URL and authentication method for v4.0.0.
  |v3.1.0, v4.0.0
 |===
 
-== Promote an API to Another environment
+== Promote an API to Another Environment
 
 You can promote API schemas to any environment to which you are permitted access.
 
@@ -52,20 +52,12 @@ To promote an API:
 . Click *Next: Provide Authentication*.
 . On the *Provide authentication* page, select the type of authentication on the GET endpoints for the API that you want to add, allowing Anypoint DataGraph to make requests to your API when queried:
 +
---
 * *No Auth*: Use if your API is public.
 * *Basic Auth*: Use if you authenticate to your API using a username and password.
+* *Pass-through*: Use if you authenticate to your API by passing authorization headers.
 * *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 * *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
---
-+
-[IMPORTANT]
---
-Any other authentication methods to access your API, such as custom OAuth implementations or short-lived token methods, are not supported.
---
-+
-See xref:supported-authentication-methods.adoc[] for more information.
 . Click *Next: Add to unified schema*.
 
 == Additional Resources

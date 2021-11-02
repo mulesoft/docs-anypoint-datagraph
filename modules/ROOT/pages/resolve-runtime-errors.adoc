@@ -33,27 +33,34 @@ After you run a query, Anypoint DataGraph displays an error similar to the follo
 
 ....
 {
-  "errors" : [
-    {
-      "message" : "Exception while fetching data (/customersById) : Error executing request. URL: example.com/apiA/customers/id0 Message: Connection refused (Connection refused)",
-      "locations" : [
+  {
+    "errors": [
         {
-          "line" : 2,
-          "column" : 5
-        }
-      ],
-      "path" : [
-        "customersById"
-      ],
-      "extensions" : {
-        "classification" : "DataFetchingException"
-      }
-    }
-  ],
-  "data" : {
-    "customersById" : null
-  }
-}
+            "message": "Exception while fetching data (/ordersById) : Error 429 executing request.",
+            "locations": [
+                {
+                    "line": 2,
+                    "column": 3
+                }
+            ],
+            "path": [
+                "ordersById"
+            ],
+            "extensions": {
+                "httpResponse": {
+                    "statusCode": 429,
+                    "xHeaders": {
+                      "x-ratelimit-limit": 10
+                      "x-ratelimit-remaining": 0 
+                      "x-ratelimit-reset": 41827 
+                      "x-xss-protection": "1; mode=block"
+                  },
+                  "contentType": "application/json",
+                  "body": {
+                    "error": "Quota has been exceeded" 
+                  }
+                },
+               "classification": "DataFetchingException"
 ....
 
 An exception while fetching data error occurs when the unified schema can't connect to its underlying APIs.
@@ -61,5 +68,6 @@ An exception while fetching data error occurs when the unified schema can't conn
 To troubleshoot this error, ensure that:
 
 . The underlying APIs are running.
-. The URL provided for each APIs is correct. Go to List of APIs added > Select an API > API details, and confirm the URL.
+. The URL provided for each APIs is correct. Go to *List of APIs added* > Select an API > *API details*, and confirm the URL.
 . You xref:runtime-manager::to-request-vpc-connectivity.adoc[request connection] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
+. You check the `extensions` section of the error message for any details that may be useful in troubleshooting the error. 
