@@ -150,7 +150,7 @@ image::confirm-credentials.png[Requesting access using an external client provid
 
 == Write and Run a Query
 
-. In the query editor, start typing your query using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
+. In the query editor, start typing your query using the in-line autocomplete function or type Option/Alt+Shift+Space to open the autocomplete menu.
 +
 image::datagraph-qsg-query-autocompletion.png[Using inline autocompletion to write a query,70%]
 
@@ -190,7 +190,7 @@ The following table provides shortcuts you can use in the query editor:
 |Function |Shortcut
 |Prettify query |Shift+Ctrl+p
 |Run query |Ctrl+Enter
-|Autocomplete |Ctrl+space
+|Autocomplete |Ctrl+Space
 |Comment-out line |Cmd+/
 |Jump to end or start of current scope |Cmd+m
 |Highlight current word |Cmd+d
