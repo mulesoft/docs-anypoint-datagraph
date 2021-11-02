@@ -33,7 +33,7 @@ Use the query editor to write, run, and troubleshoot queries.
 . If any of the APIs in the unified schema require pass-through authentication, click *Add HTTP Headers*, and:
 
 .. Select a header name.
-.. In the *Header Value* field, add a header value.
+.. Enter a header value.
 .. To specify additional header name and value pairs for other APIs, click *+Add Header* x 
 .. Click *Save*.
 .. To edit the HTTP headers, click *Edit HTTP Headers*.
