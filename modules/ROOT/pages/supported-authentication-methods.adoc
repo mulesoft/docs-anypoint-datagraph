@@ -85,7 +85,7 @@ If an API requires mTLS, you must configure mTLS when adding it to the unified s
 
 // [add screenshot]
 
-Anypoint Platform stores keystore and truststore in xref:anypoint-security::index-secrets-manager.adoc[Secrets Manager].
+Anypoint Platform stores keystore and truststore in xref:anypoint-security::index-secrets-manager.adoc[Secrets Manager] in PEM files.
 
 [NOTE]
 --
