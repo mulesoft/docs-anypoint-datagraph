@@ -1,6 +1,10 @@
 = Supported Authentication Methods
 
-You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows Anypoint DataGraph to make requests to those APIs when you run queries.
+You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows DataGraph to make requests to those APIs when you run queries.
+
+You can also set up mutual authentication (mTLS) between your APIs and DataGraph.
+
+== Authentication Choices
 
 When adding a new API schema to the unified schema, or when promoting an API schema to another environment, you must configure one of the following authentication methods:
 
@@ -65,6 +69,30 @@ curl "http://localhost/myResource?client_id=1234&client_secret=abcd"
 Use if you authenticate to your API using custom header parameters and values.
 
 Any other authentication methods to access your added API, such as custom OAuth implementations or short-lived token methods, are not supported.
+
+== Configuring Mutual Authentication in DataGraph
+
+Mutual authentication (mTLs) ensures that Datagraph and the underlying APIs in your unified schema can create secure, verified connections.
+
+If an API requires mTLS, you must configure mTLS when adding it to the unified schema, or when promoting it to another environment. To do so, you must provide the following:
+
+* A keystore that contains:
+** A public certificate signed by your organization's “root” certificate authority (CA).
+** The private key used to generate the certificate signing request (CSR).
+** The password for the encrypted private key.
+
+* Optionally, you can also provide a truststore that contains:
+** The root CA.
+
+// [add screenshot]
+
+Anypoint Platform stores keystore and truststore in xref:anypoint-security::index-secrets-manager.adoc[Secrets Manager].
+
+[NOTE]
+--
+If you enable mTLS for an API with a self-signed certificate, DataGraph won't be able to establish a TLS connection with that API.
+--
+
 
 == Additional Resources
 
