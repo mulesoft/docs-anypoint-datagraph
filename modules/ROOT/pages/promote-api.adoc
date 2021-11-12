@@ -36,7 +36,7 @@ You must have xref:permissions.adoc[the Contribute or Admin permission].
 
 [IMPORTANT]
 --
-Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:supported-authentication-methods.adoc[] for more information.
+Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:security.adoc#supported-authentication-methods[] for more information.
 --
 
 To promote an API:

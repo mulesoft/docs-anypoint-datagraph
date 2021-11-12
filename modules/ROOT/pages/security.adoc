@@ -1,10 +1,12 @@
-= Supported Authentication Methods
+:page-aliases: supported-authentication-methods.adoc
+
+= Anypoint DataGraph Security
 
 You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows DataGraph to make requests to those APIs when you run queries.
 
-You can also set up mutual authentication (mTLS) between your APIs and DataGraph.
+Optionally, you can also set up mutual authentication (mTLS) between your APIs and DataGraph.
 
-== Authentication Choices
+== Supported Authentication Methods
 
 When adding a new API schema to the unified schema, or when promoting an API schema to another environment, you must configure one of the following authentication methods:
 
@@ -80,8 +82,7 @@ If an API requires mTLS, you must configure mTLS when adding it to the unified s
 ** A public certificate signed by your organization's root certificate authority (CA).
 ** The private key used to generate the certificate signing request (CSR).
 ** The password for the encrypted private key.
-
-* Optionally, you can also provide a truststore that contains the root CA.
+* Optionally, a truststore that contains the root CA.
 
 // [add screenshot]
 
