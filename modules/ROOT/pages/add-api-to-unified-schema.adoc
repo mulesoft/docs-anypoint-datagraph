@@ -85,11 +85,11 @@ You can xref:edit-elements-names.adoc[edit the names of all fields, types, and q
 
 * Merge similar object types.
 +
-xref:merge-types.adoc[Merging types] enables you to combine similar types to extend their fields and datasets for more enriched query results.
+xref:manage-merges.adoc[Merging types] enables you to combine similar types to extend their fields and datasets for more enriched query results.
 
 * Link related fields between object types.
 +
-xref:linking.adoc[Linking] enables you to join related fields from two types to return a wider range of results when you query the linked types.
+xref:manage-links.adoc[Linking] enables you to join related fields from two types to return a wider range of results when you query the linked types.
 
 . Click *Next: Add to unified schema*.
 
