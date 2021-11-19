@@ -4,13 +4,17 @@ When working with APIs and the unified schema, status updates let you know when 
 
 == Status: Updating
 
-You can add to and update the unified schema at any time and apply changes. After you apply changes, the unified schema will enter an “updating” state, and the status will indicate *Updating*. This status update is visible to anyone in the business group with permissions for the environment.
+You can add to and update the unified schema at any time and apply changes. After you apply changes, the unified schema enters an “updating” state, and the status indicates the progress and queued updates. This status update is visible to anyone in the business group with permissions for the environment.
 
-image::status_updating.png[Status indicator shows adding API schema to unified schema,75%,75%]
+image::datagraph-status-update-in-progress.png[Status indicator shows adding API schema to unified schema,75%,75%]
 
 When the unified schema is updating, you can view the new changes in the schema, make additional changes, and apply new changes. However, these changes aren’t available to query until the update is complete.
 
-When the update is complete, the status will change to *Up to date*.
+As queued updates finish, the status changes to finished.
+
+image::datagraph-status-update-finished.png[Status indicator shows an update is finished,75%,75%]
+
+When all updates complete, the status will change to *Up to date*.
 
 image::status_uptodate.png[Status indicator shows unified schema is up to date,75%,75%]
 
