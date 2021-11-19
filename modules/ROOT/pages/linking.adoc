@@ -136,7 +136,7 @@ ordersByOrderId (orderId: “123”) {
 
 == Creating a Link Between Object Types Using Composite Keys
 
-If the default query method for a type uses two primary keys, those are _composite keys_.
+The default query method for a type can also use _composite keys_.
 
 Consider a target type `Customer`, which uses composite keys for its default query method: `customerId` and `customerStatus`.
 

@@ -177,7 +177,7 @@ In this example, the primary key for both types is `id`, and for both APIs, `id`
 
 == Merge Types That Use Composite Keys
 
-The types you merge may have query methods that use _composite keys_, which means the type uses two primary keys.
+The types you merge can also have query methods that use _composite keys_.
 
 For example, assume the same `Order` API schema that returns a `Product` type:
 
