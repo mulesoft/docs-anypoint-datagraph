@@ -142,7 +142,7 @@ Consider a target type `Customer`, which uses composite keys for its default que
 
 [source]
 --
-customerDetail (id: string!, status): Customer
+customerDetail (id: string!, status: string!): Customer
 --------------------
 --------------------
 Customer

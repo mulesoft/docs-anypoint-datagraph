@@ -208,7 +208,7 @@ SalesOrder(id: string!, sku: string!) : SalesOrder
 Product
 ------------
 id: string!
-sku: string
+sku: string!
 name: string
 brand: string
 description: string
@@ -234,7 +234,7 @@ product: Product
 Product
 -----------
 id: string!
-sku: string
+sku: string!
 name: string
 brand: string
 description: string
