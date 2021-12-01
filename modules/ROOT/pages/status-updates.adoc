@@ -14,7 +14,7 @@ As queued updates finish, the status changes to *finished*.
 
 image::datagraph-status-update-finished.png[Status indicator shows an update is finished,65%,65%]
 
-When all updates complete, the status will change to *Up to date*.
+When all updates are complete, the status changes to *Up to date*.
 
 image::status_uptodate.png[Status indicator shows unified schema is up to date,65%,65%]
 
