@@ -74,9 +74,9 @@ Any other authentication methods to access your added API, such as custom OAuth 
 
 == Configuring Mutual Authentication in DataGraph
 
-Mutual authentication (mTLs) ensures that Datagraph and the underlying APIs in your unified schema can create secure, verified connections.
+Mutual authentication (mTLS) ensures that Datagraph and the underlying APIs in your unified schema can create secure, verified connections.
 
-If an API requires mTLS, you must configure mTLS when adding it to the unified schema, or when promoting it to another environment. To do so, you must provide the following:
+If an API requires mTLS, configure mTLS when adding the API to the unified schema or when promoting the API to another environment. To do so, provide the following:
 
 * A keystore that contains:
 ** A public certificate signed by your organization's root certificate authority (CA).
@@ -86,7 +86,7 @@ If an API requires mTLS, you must configure mTLS when adding it to the unified s
 
 // [add screenshot]
 
-Anypoint Platform stores keystore and truststore in xref:anypoint-security::index-secrets-manager.adoc[Secrets Manager] in PEM files.
+Anypoint Platform stores the keystore and the truststore in PEM files in the xref:anypoint-security::index-secrets-manager.adoc[secrets manager].
 
 [NOTE]
 --
