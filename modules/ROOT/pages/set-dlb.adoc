@@ -29,7 +29,7 @@ For each index, the appropriate DLB URL is:
 === Prerequisites
 
 * You must have the xref:permissions.adoc[Admin or Operator permission] for the environment in which you want to specify a DLB URL.
-* You must be able to xref:runtime-manager::anypoint-platform-cli#authentication[authenticate to] and run commands from the Anypoint CLI.
+* You must be able to xref:anypoint-cli::index.adoc#authentication[authenticate to] and run commands from the Anypoint CLI.
 * You must be familiar with xref:runtime-manager::lb-mapping-rules[creating DLB mapping rules].
 * You must xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc#create-and-configure-a-dedicated-load-balancer[create and configure a DLB].
 
@@ -126,3 +126,4 @@ When you remove the configuration, Anypoint DataGraph redeploys.
 
 * xref:hosting-options.adoc[Anypoint DataGraph Hosting Options and Networking]
 * xref:add-api-to-unified-schema.adoc[Add an API Schema to the Unified Schema]
+* xref:anypoint-cli::datagraph.adoc[DataGraph CLI]
