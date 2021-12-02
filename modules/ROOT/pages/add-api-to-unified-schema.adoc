@@ -53,11 +53,11 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 * *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 * *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
-. Still on the *Configure Security* page, optionally configure mutual authentication (mTLS) between the API and DataGraph 
+. Still on the *Configure Security* page, optionally configure mutual authentication (mTLS) between the API and DataGraph. 
 .. Select *Configure Keystore* and provide the following:
-* A public certificate signed by your organization's “root” certificate authority (CA).
-* The private key used to generate the certificate signing request (CSR).
-* The password for the encrypted private key.
+* A public certificate signed by your organization's “root” certificate authority (CA)
+* The private key used to generate the certificate signing request (CSR)
+* The password for the encrypted private key
 .. Optionally, select *Configure Truststore* and provide a link to the root CA.
 . Click *Next: Preview Schema*.
 
@@ -133,9 +133,9 @@ If you need to configure mTLS for an API that you've added to the unified schema
 . Click *List of APIs added* and select the API that has the URL you want to edit.
 . Click *API details*.
 . .. Select *Configure Keystore* and provide the following:
-* A public certificate signed by your organization's “root” certificate authority (CA).
-* The private key used to generate the certificate signing request (CSR).
-* The password for the encrypted private key.
+* A public certificate signed by your organization's “root” certificate authority (CA)
+* The private key used to generate the certificate signing request (CSR)
+* The password for the encrypted private key
 .. Optionally, select *Configure Truststore* and provide a link to the root CA.
 . Click *Save*.
 
