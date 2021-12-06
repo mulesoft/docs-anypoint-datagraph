@@ -1,8 +1,6 @@
 = Overview
 
-Anypoint DataGraph enables you to leverage the existing capabilities of your application network to drive productivity by unifying all the data within your application network in a unified schema. As a developer, you can dynamically query the unified schema and consume the fields that you need to create new connected experiences. You can improve your productivity and reduce operational costs by discovering and reusing the existing data in your application network.
-
-With Anypoint DataGraph you can:
+Anypoint DataGraph enables you to unify all the data within your application network in a unified schema. With Anypoint DataGraph you can:
 
 * Dynamically query data from a unified schema
 * Explore your application network from a single UI
