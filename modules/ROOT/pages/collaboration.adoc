@@ -48,7 +48,7 @@ In the following example, using composite keys, the default query method is `pro
 
 [source]
 --
-productDetail (id: string!, sku: string!): Product
+productDetail (id: String!, sku: String!): Product
 --------------------
 --------------------
 Product

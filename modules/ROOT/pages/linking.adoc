@@ -184,7 +184,7 @@ customerStatus: Customer
 Customer
 --------------------
 --------------------
-customerDetail: string!, string!
+customerDetail: String!, String!
 customerId: String!
 customerStatus: String!
 --
