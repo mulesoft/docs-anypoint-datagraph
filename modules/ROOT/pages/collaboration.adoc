@@ -17,7 +17,7 @@ To successfully understand the requirements for enabling collaboration, you must
 
 == Default Query Method and Primary Keys
 
-To enable collaboration on a type, you must configure a default query method and either one or two primary keys for that type to access its fields. 
+To enable collaboration on a type, you must configure a default query method and one or two primary keys for that type to access its fields. 
 
 The default query method for an object type is the method that returns a single record of that object type for which you want to enable collaboration. You can select a query method as the default only if:
 

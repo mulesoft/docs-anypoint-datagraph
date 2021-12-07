@@ -25,7 +25,7 @@ The target type does not need to have the same name.
 +
 * (Recommended) Join fields from the two types to have a more enriched query result for this type.
 +
-If you make this selection, you are taken to the *Enable collaboration* pane, where you set a default query method and a primary key, or two primary keys if the query method uses composite keys. (Refer to  xref:collaboration.adoc[Enable Collaboration on a Type] for more information on object type collaboration.)
+If you make this selection, you are taken to the *Enable collaboration* pane, where you set a default query method and a primary key, or two primary keys if the query method uses composite keys. (Refer to  xref:collaboration.adoc[Enable Collaboration on a Type] for more information about object type collaboration.)
 
 * Declare the current type as a reference so that it returns only the fields and dataset of the type it's merged with.
 . In the *Merge with another type* pane, click *Preview merge* results.
