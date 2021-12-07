@@ -30,7 +30,7 @@ If you make this selection, you are taken to the *Enable collaboration* pane, wh
 * Declare the current type as a reference so that it returns only the fields and dataset of the type it's merged with.
 . In the *Merge with another type* pane, click *Preview merge* results.
 +
-In the following example, the preview shows the target *OrderResponse* object type in the unified schema with new fields added after the *OrderSummary* object type is merged with it:
+In the following example, the preview shows the target *OrderResponse* object type in the unified schema, including the new fields added after the *OrderSummary* object type is merged with *OrderResponse*:
 +
 image::merge-preview.png[Merge preview results for order summary and order response merge,60%,60%]
 

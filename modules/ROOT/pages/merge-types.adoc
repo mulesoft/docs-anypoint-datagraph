@@ -53,7 +53,7 @@ state:
 country:
 --
 
-Assume that both Customer and User types point to the same object type and return the same information for that same object. To have the same primary key value, both types must identify the same customer object. Moreover, any common fields between the types must also return the same values. For example, for `id = 1` in `Customer` type, and `id = 1` in `User` type, the values of the email fields must be exactly the same.
+Assume that both Customer and User types point to the same object type and return the same information for that same object. To have the same primary key value, both types must identify the same customer object. Moreover, any common fields between the types must also return the same values. For example, for `id = 1` in `Customer` type and `id = 1` in `User` type, the values of the email fields must be exactly the same.
 
 You might choose to merge the two types so that their combined data about the same customer can be queried in a single request.
 
@@ -68,11 +68,11 @@ Additionally, because both types also have a default query method that retrieves
 
 The result is a single, merged, enriched type in the unified schema.
 
-=== How Types are Ordered When Merged
+=== How Types Are Ordered When Merged
 
 Whichever type is added first to the unified schema has the advantage of defining the name for the merged type and the corresponding default query method. 
 
-In this example, because the Customer API was added first, the resulting type in the unified schema is called `Customer`, containing all the fields from both Customer and UserAccount types, and the resulting query method is called `customersById`, returning the merged `Customer` type:
+In this example, because the Customer API type was added first, the resulting type in the unified schema is called `Customer`, containing all the fields from both Customer and UserAccount types. The resulting query method is called `customersById`, returning the merged `Customer` type:
 
 [source]
 --
@@ -200,7 +200,7 @@ sku: string
 ------------
 --
 
-And a `SalesOrder` API that also returns a `Product` type but uses composite keys, `id` and `sku`. 
+Consider also a `SalesOrder` API that also returns a `Product` type but uses composite keys `id` and `sku`:
 
 [source]
 --
