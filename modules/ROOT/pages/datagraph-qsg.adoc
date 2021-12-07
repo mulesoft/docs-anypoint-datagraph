@@ -75,7 +75,7 @@ image::datagraph-qsg-preview-search.png[Searching the element price in API schem
 
 [NOTE]
 --
-You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema.  You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
+You don’t have to perform edit functions (enable collaboration, rename, hide/unhide, and link and merge object types) before you add an API schema to the unified schema. You can make changes to an API schema even after you’ve added it to the unified schema. However, you must resolve any conflicts raised by Anypoint DataGraph before adding an API schema to the unified schema.
 --
 
 When adding APIs to the unified schema, you can configure object types, query methods, and fields to produce more useful query results. More specifically, you can hide or unhide, rename, and link and merge these entities.
@@ -270,7 +270,7 @@ This is the fundamental utility of Anypoint DataGraph: the ability to query mult
 . To run the query without query tracing, click *Run*:
 +
 image::datagraph-qsg-query-result.png[Query editor displays query results]
-. To run the query with query tracing, click *Trace query* > *Run*.
+. To run the query with query tracing, from the actions menu (*...*), select *Trace Query*, and then click *Run*.
 +
 image::datagraph-qsg-query-traces.png[Query trace view open with query results]
 +
@@ -280,19 +280,18 @@ Trace results for Anypoint DataGraph provide the following information:
 * Total response time for the entire query
 * Duration of requests to each source API in the query
 
-. To see logs associated with the query, click *View response logs*.
+. To see logs associated with the query, from the actions menu (*...*), click *View Response Logs*.
 +
 image::datagraph-qsg-response-logs.png[Query response logs page]
 +
 Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR.
 +
 If you have a Titanium subscription, you can view these same logs in Anypoint Monitoring, or use advanced search to find logs for a specific date, time, and priority.
+
 . Click *View History* to access this same query (or others) later.
-To use this query in an external application, click *Copy endpoint* to copy both the query and the automatically generated endpoint.
+. To copy the query and the automatically generated endpoint, from the actions menu (*...*​), click *Copy & Share Endpoint*. 
 +
-You can copy the query as a cURL snippet or as a GraphQL query:
-+
-image::datagraph-qsg-copy-query.png[Copying a query endpoint]
+Use the copy-to-clipboard icons to copy the query as a cURL snippet or as a GraphQL query. You can also copy any authentication values, request headers, or variables used in the query.
 
 == See Also
 

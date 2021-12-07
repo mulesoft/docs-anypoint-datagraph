@@ -1,0 +1,57 @@
+=  API Call Scaling in Anypoint DataGraph
+
+Anypoint DataGraph provides you the option to configure the number of API calls permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
+ 
+== How API Call Scaling Works in DataGraph
+
+By default, DataGraph supports a maximum of 1 million annual API calls and 150 concurrent or ongoing calls per unified schema per environment. You can update the maximum number of annual and concurrent calls after you add the first API to the unified schema. 
+
+However, your plan must allocate the correct number of vCores for your business group or organization before scaling. You can’t scale API calls in an environment beyond the free capacity remaining in the number of vCores allocated for that environment. Production and Sandbox environments each have their own scaling options per unified schema.
+
+The *API Call Scaling* page displays available scaling options:
+
+image::api-call-scaling.png[]
+
+Each option includes *Annual API Calls*, which are the total number of API requests you can make to the unified schema on a yearly basis. When you select an annual option, you also select:
+
+* *Concurrent Calls*: The number of active API requests the unified schema can process in parallel
+* *# of Workers*: The number of dedicated Mule instances that can actively process requests to the unified schema
+
+The *Insufficient Capacity* label indicates that your business group hasn’t allocated enough capacity to select that option. Your business group administrator can increase capacity either by reducing usage in other environments or by purchasing additional capacity for your business group. 
+
+== Available Scaling Options
+
+The following table provides details about the available scaling options:
+
+[%header%autowidth.spread]
+|===
+|Annual API Calls |Concurrent Calls |# of Workers
+|1M |150 |1
+|2M |300 |2
+|3M |450 |3
+|4M |600 |4
+|5M |750 |5
+|6M |900 |6
+|7M |1050 |7
+|8M |1200 |8
+|===
+
+
+== Configure API Call Scaling
+
+Use API call scaling to increase or decrease the number of API calls that can be made to the unified schema for the current environment. 
+
+You can’t make any adjustments until you add at least one API to the unified schema. 
+
+You must have the DataGraph xref:permissions.adoc[admin or operator permission]. 
+
+. From Anypoint Platform > Anypoint DataGraph, click *Settings*.
+. In the *API Call Scaling* tab, choose an available option. 
+. Click *Save Changes*.
+
+== Related Resources
+
+* xref:add-api-to-unified-schema.adoc[Add an API to the Unified Schema]
+* xref:usage-metrics.adoc[View Usage Metrics for DataGraph]
+* xref:index.adoc#restrictions-and-limitations[DataGraph Restrictions and Limitations]
+ 
