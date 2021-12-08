@@ -134,7 +134,7 @@ ordersByOrderId (orderId: “123”) {
 }
 --
 
-== Creating a Link Between Object Types That Uses Composite Keys
+== Creating a Link Between Object Types That Use Composite Keys
 
 The default query method for a type can also use _composite keys_.
 
