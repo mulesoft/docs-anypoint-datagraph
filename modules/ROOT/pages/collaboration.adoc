@@ -65,12 +65,15 @@ productSku: String
 . In the *Collaboration permissions* pane, click *Enable collaboration*.
 . Set the default query method.
 +
-image::default-query-method.png[Default query method set to products by product id]
-
-. Click *Next*.
-. Depending on your query method, select one or two primary keys.
+The following image shows a query method that uses two mandatory arguments.
 +
-image::primary-key.png[Primary key set to identifier string]
+image::composite-keys-default-query-method.png[A default query method that uses composite keys]
+. Click *Next*.
+. Depending on your query method, select one or two primary keys. 
++
+The following image shows composite keys since the query method uses two mandatory arguments.
++
+image::composite-keys.png[Two primary keys are selected]
 
 == Disable Collaboration for an Object Type
 
