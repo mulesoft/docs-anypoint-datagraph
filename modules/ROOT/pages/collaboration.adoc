@@ -15,22 +15,22 @@ You can enable collaboration only on Level-1 object types: those directly return
 
 To successfully understand the requirements for enabling collaboration, you must be familiar with the types in your API schema. See xref:schemas.adoc[] for more information.
 
-== Default Query Method and Primary Key
+== Default Query Method and Primary Keys
 
-To enable collaboration on a type, you must configure a default query method and a primary key for that type to access its fields.
+To enable collaboration on a type, you must configure a default query method and one or two primary keys for that type to access its fields. 
 
 The default query method for an object type is the method that returns a single record of that object type for which you want to enable collaboration. You can select a query method as the default only if:
 
-* It has one required input argument.
+* It has one or two required input arguments.
 * The input argument is a scalar data type (`Int`, `Float`, `String`, `Boolean`, or `ID`).
 
-The primary key is one field of your object type that uniquely identifies a single record of that object type. For a field to be a primary key, it must be visible and it should be non-nullable (represented by a `!` sign at the end).
+The primary key is one field of your object type that uniquely identifies a single record of that object type. For a field to be a primary key, it must be visible and it should be non-nullable (represented by a `!` sign at the end). If the query method uses two primary keys, those are _composite keys_.
 
 For example, to enable collaboration on the Order type of the following API schema:
 
 [source]
 --
-ordersById(id: ID!): Order
+ordersById (id: ID!): Order
 --------------------
 --------------------
 Order
@@ -40,7 +40,23 @@ date: String
 status: String
 --
 
-In this example, your default query method is `ordersById`, and its primary key is `orderId`.`ordersById` retrieves the Order type and uses `orderId` to retrieve specific information based on that ID field. Note that the data type of the default query method’s input argument ID must be the same as the data type of the primary key. In this example, both are of data type `ID!`.
+In this example, the default query method is `ordersById`, and its primary key is `orderId`. `ordersById` retrieves the `Order` type and uses `orderId` to retrieve specific information based on the `ID` field. Note that the data type of the default query method’s input argument `ID` must be the same as the data type of the primary key. In this example, both are of data type `ID!`.
+
+=== Default Query Method with Composite Keys
+
+In the following example using composite keys, the default query method is `productDetail` and its composite keys are `productId` and `productSku`. Both retrieve the `Product` type and use `productId` and `productSku` to retrieve specific information based on the `string` fields. Note that the data type of the default query method’s input arguments must be the same as the data type of each primary key. In this example, both are of data type `string!`.
+
+[source]
+--
+productDetail (id: String!, sku: String!): Product
+--------------------
+--------------------
+Product
+--------------------
+productDetail: string!, string! 
+productId: String
+productSku: String
+--
 
 [[enable-collaboration-on-an-object-type]]
 == Enable Collaboration on an Object Type
@@ -49,12 +65,15 @@ In this example, your default query method is `ordersById`, and its primary key 
 . In the *Collaboration permissions* pane, click *Enable collaboration*.
 . Set the default query method.
 +
-image::default-query-method.png[Default query method set to products by product id]
-
-. Click *Next*.
-. Select a primary key.
+The following image shows a query method that uses two mandatory arguments.
 +
-image::primary-key.png[Primary key set to identifier string]
+image::composite-keys-default-query-method.png[A default query method that uses composite keys]
+. Click *Next*.
+. Depending on your query method, select one or two primary keys. 
++
+The following image shows composite keys since the query method uses two mandatory arguments.
++
+image::composite-keys.png[Two primary keys are selected]
 
 == Disable Collaboration for an Object Type
 

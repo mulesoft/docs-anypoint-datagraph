@@ -12,7 +12,6 @@ You can merge your current type with a target type that has collaboration enable
 
 For example, assume you have a Customer API Schema that returns a `Customer` type with default query method `customersById(id)` and primary key `id`:
 
-.API Customer Schema
 [source]
 --
 customersById(id): Customer
@@ -29,7 +28,6 @@ telephone:
 
 You also have an API schema called `UserAccount` with a type `User`:
 
-.API UserAccount Schema
 [source]
 --
 usersById(id): User
@@ -55,7 +53,7 @@ state:
 country:
 --
 
-Assume that both Customer and User types point to the same object type and return the same information for that same object. To have the same primary key value, both types must identify the same customer object. Moreover, any common fields between the types must also return the same values. For example, for `id = 1` in `Customer`type, and `id = 1` in `User type, the values of the email fields must be exactly the same.
+Assume that both Customer and User types point to the same object type and return the same information for that same object. To have the same primary key value, both types must identify the same customer object. Moreover, any common fields between the types must also return the same values. For example, for `id = 1` in `Customer` type and `id = 1` in `User` type, the values of the email fields must be exactly the same.
 
 You might choose to merge the two types so that their combined data about the same customer can be queried in a single request.
 
@@ -70,9 +68,12 @@ Additionally, because both types also have a default query method that retrieves
 
 The result is a single, merged, enriched type in the unified schema.
 
-Whichever type is added first to the unified schema has the advantage of defining the name for the merged type and the corresponding default query method. In this example, because the Customer API was added first, the resulting type in the unified schema is called `Customer`, containing all the fields from both Customer and UserAccount types, and the resulting query method is called `customersById`, returning the merged `Customer` type:
+=== How Types Are Ordered When Merged
 
-.Unified Schema
+Whichever type is added first to the unified schema has the advantage of defining the name for the merged type and the corresponding default query method. 
+
+In this example, because the Customer API type was added first, the resulting type in the unified schema is called `Customer`, containing all the fields from both Customer and UserAccount types. The resulting query method is called `customersById`, returning the merged `Customer` type:
+
 [source]
 --
 customersById(id): Customer
@@ -103,13 +104,12 @@ country:
 
 == Merge Two Types When Only One Is Collaboration Enabled
 
-You can also merge two types when only one of the types has collaboration enabled. In this case, the merging causes your current type (the type you are configuring to merge) to act as a reference to the target type (the type you are merging with). Note that for the merge to happen, the target type must have collaboration enabled, and both types must define a primary key.
+You can also merge two types when only one of the types has collaboration enabled. In this case, the merge causes your current type (the type you are configuring to merge) to act as a _reference_ to the target type (the type you are merging with). Note that for the merge to happen, the target type must have collaboration enabled, and both types must define one primary key or use xref:merging-types-that-use-composite-keys[composite keys].
 
-After the merge is complete, the reference is declared and you can retrieve the fields only from your target type. If your current type has any other fields besides its primary key, those fields become hidden and cannot be queried.
+After the merge is complete, the reference is declared and you can retrieve the fields only from your target type. If your current type has any other fields besides its primary keys, those fields become hidden and cannot be queried.
 
-For example, assume an `Order API Schema` that returns a `Product` type:
+For example, assume an `Order` API schema that returns a `Product` type:
 
-.Order API Schema
 [source]
 --
 ordersById(id: string!) : Order
@@ -130,7 +130,6 @@ name: string
 
 And a `Product API Schema` that also returns a `Product` type:
 
-.Product API Schema
 [source]
 --
 productsById(id: string!) : Product
@@ -149,7 +148,6 @@ You can merge the Product type in the Order API schema to the Product type in th
 
 After merging, the unified schema looks like this:
 
-.Unified schema
 [source]
 --
 ordersById(id: string!) : Order
@@ -173,9 +171,78 @@ quantityRemaining: int!
 -----------
 --
 
-Note that now the Order type returns more data about the related product without you having to write a separate query.
+Note that now the `Order` type returns more data about the related product without you having to write a separate query.
 
 In this example, the primary key for both types is `id`, and for both APIs, `id` returns the same product object record.
+
+== Merge Types That Use Composite Keys
+
+The types you merge can also have query methods that use _composite keys_.
+
+For example, assume the same `Order` API schema that returns a `Product` type:
+
+[source]
+--
+ordersById(id: string!) : Order
+Order
+----------
+id: string!
+amount: float!
+date: string!
+product: Product
+-----------
+-----------
+Product
+-----------
+id: string!
+name: string
+sku: string
+------------
+--
+
+Consider also a `SalesOrder` API that also returns a `Product` type but uses composite keys `id` and `sku`:
+
+[source]
+--
+SalesOrder(id: string!, sku: string!) : SalesOrder
+Product
+------------
+id: string!
+sku: string!
+name: string
+brand: string
+description: string
+unitPrice: float!
+quantityRemaining: int!
+-----------
+--
+
+After merging, the unified schema looks like this:
+
+[source]
+--
+ordersById(id: string!, sku: string!) : Order
+SalesOrderByID(id: string!, sku: string!) : SalesOrder
+Order
+----------
+id: string!
+amount: float!
+date: string!
+product: Product
+-----------
+-----------
+Product
+-----------
+id: string!
+sku: string!
+name: string
+brand: string
+description: string
+unitPrice: float!
+quantityRemaining: int!
+-----------
+--
+
 
 == Merge Two Types That Do Not Have Primary Keys Configured
 
