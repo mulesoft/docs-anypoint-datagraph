@@ -134,7 +134,7 @@ To edit the authentication method:
 
 If you need to configure mTLS for an API that you've added to the unified schema, you can do so on the *API details* page by adding a keystore. 
 
-You can also add a truststore to allow your API to reach your unified schema.
+You can also add a truststore to allow your API to be reached by your unified schema.
 
 [NOTE]
 If the API already has a keystore or truststore, you can remove either and add new ones on the *API details* page. To do so, click *Remove and add a new one*.
