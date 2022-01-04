@@ -70,7 +70,7 @@ Select *Configure Keystore* and provide the following:
 * A public certificate signed by your organization's “root” certificate authority (CA)
 * The private key used to generate the certificate signing request (CSR)
 * The password for the encrypted private key
-. Optionally, add a truststore to allow your API to be reached your unified schema.
+. Optionally, add a truststore to allow your API to be reached by your unified schema.
 +
 Select *Configure Truststore* and provide the certificate bundle that contains your root CA. 
 . Click *Next: Add to unified schema*.
