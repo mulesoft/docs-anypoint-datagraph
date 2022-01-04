@@ -83,7 +83,7 @@ If an API requires mTLS, configure mTLS when adding the API to the unified schem
 ** The private key used to generate the certificate signing request (CSR)
 ** The password for the encrypted private key
 
-Optionally, to allow your API to be reached your unified schema, you can add a truststore and provide the certificate bundle that contains your root CA.
+Optionally, to allow your API to be reached by your unified schema, you can add a truststore and provide the certificate bundle that contains your root CA.
 
 Anypoint Platform stores the keystore and the truststore in PEM files in the xref:anypoint-security::index-secrets-manager.adoc[Secrets Manager].
 
