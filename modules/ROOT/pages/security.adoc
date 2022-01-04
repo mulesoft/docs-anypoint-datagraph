@@ -85,9 +85,7 @@ If an API requires mTLS, configure mTLS when adding the API to the unified schem
 
 Optionally, to allow your API to be reached your unified schema, you can add a truststore and provide the certificate bundle that contains your root CA.
 
-// [add screenshot]
-
-Anypoint Platform stores the keystore and the truststore in PEM files in the xref:anypoint-security::index-secrets-manager.adoc[secrets manager].
+Anypoint Platform stores the keystore and the truststore in PEM files in the xref:anypoint-security::index-secrets-manager.adoc[Secrets Manager].
 
 [NOTE]
 --
