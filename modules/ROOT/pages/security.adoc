@@ -1,6 +1,5 @@
-:page-aliases: supported-authentication-methods.adoc
-
 = Anypoint DataGraph Security
+:page-aliases: supported-authentication-methods.adoc
 
 You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows DataGraph to make requests to those APIs when you run queries.
 
