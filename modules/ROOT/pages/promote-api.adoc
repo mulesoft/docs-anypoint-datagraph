@@ -36,7 +36,7 @@ You must have xref:permissions.adoc[the Contribute or Admin permission].
 
 [IMPORTANT]
 --
-Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:security.adoc#supported-authentication-methods[] for more information.
+Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as short-lived token methods, are not supported. See xref:security.adoc#supported-authentication-methods[] for more information.
 --
 
 To promote an API:
@@ -57,6 +57,7 @@ To promote an API:
 * *Pass-through*: Use if you authenticate to your API by passing authorization headers.
 * *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 * *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
+* *OAuth 2.0 Client Credentials*: Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values.
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
 . Optionally, add a keystore to configure mutual authentication (mTLS) between the API and DataGraph. 
 +

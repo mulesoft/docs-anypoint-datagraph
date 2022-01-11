@@ -33,7 +33,7 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 
 [IMPORTANT]
 --
-* Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:security.adoc#supported-authentication-methods[Supported Authentication Methods] for more information.
+* Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as short-lived token methods, are not supported. See xref:security.adoc#supported-authentication-methods[Supported Authentication Methods] for more information.
 --
 
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the *Unified Data Graph* dropdown list, and click *+Add API*.
@@ -52,6 +52,7 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 * *Pass-through*: Use if you authenticate to your API by passing authorization headers.
 * *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 * *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
+* *OAuth 2.0 Client Credentials*: Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
 . Still on the *Configure Security* page, optionally add a keystore to configure mutual authentication (mTLS) between the API and DataGraph. 
 +

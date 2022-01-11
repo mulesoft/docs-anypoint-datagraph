@@ -66,11 +66,26 @@ For example:
 --
 curl "http://localhost/myResource?client_id=1234&client_secret=abcd"
 --
+
+* *OAuth 2.0 Client Credentials*
++
+Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
++
+For example:
++
+[source,CURL,linenums]
+--
+curl --request POST \
+  --url 'https://YOUR_DOMAIN/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data 'grant_type=authorization_code&client_id=YOUR_CLIENT_ID&code_verifier=CODE_VERIFIER&code=AUTHORIZATION_CODE&redirect_uri=https://YOUR_APP/callback'
+--
+
 * *Custom*
 +
 Use if you authenticate to your API using custom header parameters and values.
 
-Any other authentication methods to access your added API, such as custom OAuth implementations or short-lived token methods, are not supported.
+Any other authentication methods to access your added API, such short-lived token methods, are not supported.
 
 == Configuring Mutual Authentication in DataGraph
 
