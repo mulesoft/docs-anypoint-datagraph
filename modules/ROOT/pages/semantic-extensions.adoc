@@ -1,0 +1,479 @@
+= API Semantic Extensions for Anypoint DataGraph
+
+The following guide defines extensions for REST API specs that are required by DataGraph. DataGraph uses these annotations to customize API schemas before adding them to the unified schema.
+
+There are two groups of extensions: Entity extensions and DataGraph extensions. Each of this group must be represented as different extension instances and stored as different Exchange assets.
+
+//WHAT DO THEY DO WITH THIS???
+
+== Entity Extensions
+
+These extensions define behaviors specific for object types. 
+
+=== Entity
+
+This extension is used to mark that an object type has a primary key, and thus it can be used as reference or extension.
+
+This extensions applies to:
+
+* ObjectType
+
+==== Structure
+
+[%header%autowidth.spread]
+|===
+|Field |Type |Description
+|`entity` |Map |Marks an object type as entity.
+|`entity.key` |String |Array, must not be empty. Each item must reference a field that is a key of the entity.
+|===
+
+==== Customization
+
+Each annotation should result in a `PrimaryKeyCustomizations` set for each field referenced as key. 
+
+==== OAS Example
+
+----
+components:
+  schemas:
+    Customer:
+  	x-entity:
+    	  key: [id]
+  	properties:
+    	  name:
+          type: string
+    	  email:
+          type: string
+    	  id:
+          type: string
+    	  ...
+----
+
+==== RAML Example
+
+----
+types:
+  Customer:
+    (entity):
+      key: [id]
+    properties:
+    	name:
+        type: string
+    	email:
+        type: string
+    	id:
+        type: string
+    	...
+----
+
+=== Entity Reference
+
+This extension is used to generate a DataGraph _link_ from the properties of a type to another type. The link can be to a type that is not defined in the same API spec.
+
+This extension applies to:
+
+* ObjectType
+
+==== Structure
+
+[%header%autowidth.spread]
+|===
+|Field |Type |Description
+|`entity-reference` |Array of objects |A list of all the references.
+|`entity-reference.[n].name` |String |Name of the type being referenced. May or may not be part of the API.
+|`entity-reference.[n].fieldName` |String |Name of the new field that will be created for this type.
+|`entity-reference.[n].keyMapping` |Map |The keys of the map represent fields of this type, and the values represents the keys of the referenced type.
+|===
+
+==== Customization
+
+Each annotation should result in a `ReferenceCustomization`.  
+
+==== OAS Example
+
+----
+components:
+  Schemas:
+    Order:
+    	x-entity-reference:
+        - name: Customer
+          fieldName: customer
+          keyMapping:
+            customerId: id
+        - name: Store
+          fieldName: store
+          keyMapping:
+            storeId: id
+      properties:
+    	  orderItems:
+          ...
+    	  customerId:
+          type: string
+    	  storeId:
+          type: string
+    Customer:
+  	x-entity:
+    	  key: [id]
+  	properties:
+    	  name:
+          type: string
+    	  email:
+          type: string
+    	  id:
+          type: string
+    Store:
+  	x-entity:
+    	  key: [id]
+  	properties:
+    	  name:
+          type: string
+    	  id:
+          type: string
+    	  ...
+----
+
+==== RAML Example
+
+----
+types:
+  Order:
+    (entity-reference):
+      - name: Customer
+        fieldName: customer
+        keyMapping:
+          customerId: id
+      - name: Store
+        fieldName: store
+        keyMapping:
+          storeId: id
+    properties:
+    	orderItems:
+        ...
+    	customerId:
+        type: string
+    	storeId:
+        type: string
+  Customer:
+    (entity):
+      key: [id]
+    properties:
+    	name:
+        type: string
+    	email:
+        type: string
+    	id:
+        type: string
+    	...
+  Store:
+    (entity):
+      key: [id]
+    properties:
+    	name:
+        type: string
+    	id:
+        type: string
+----
+
+=== Entity Provider
+
+This extension is used to mark that an endpoint returns instances of an entity by id. In DataGraph this is the _default query method_.
+
+This extension applies to:
+
+* GET operations
+
+==== Structure
+
+The target is not specified because it is implicit in the operation.
+
+[%header%autowidth.spread]
+|===
+|Field |Type |Description
+|`entity-provider` |Map |Marks that this endpoint returns entity instances.
+|`entity-reference.keyMapping` |Map |The keys of the map represent parameters of this operation, and the values represents the keys of the target type.
+|===
+
+==== Customization
+
+Each annotation should result in a `DefaultQueryMethodCustomization` and a set of ????	.
+
+==== OAS Example
+
+----
+Schemas:
+    Customer:
+  	x-entity:
+    	  key: [id]
+  	properties:
+    	  name:
+          type: string
+    	  email:
+          type: string
+    	  1:
+          type: string
+    	  ...
+paths:
+  "/customers/{customerId}":
+    get:
+  	x-entityProvider:
+    	  keyMapping:
+          customerId: id
+  	parameters:
+    	  - in: query
+          name: summaryView
+          default: true
+          schema:
+          type: boolean
+  	...
+  	responses:
+    	'200':
+         content:
+            application/json:
+          	  schema:
+            	$ref: "#/components/schemas/Customer"
+----
+
+==== RAML Example
+
+----
+types:
+  Customer:
+    (entity):
+      key: [id]
+    properties:
+    	name:
+        type: string
+    	email:
+        type: string
+    	id:
+        type: string
+    	…
+
+/customer/{customerId}:
+  uriParameters:
+    customerId: string
+  get:
+    (entityProvider):
+      keyMapping:
+        customerId: id
+    responses:
+      200:
+        application/json:
+          body: Customer
+----
+
+== DataGraph Extensions
+
+These extensions define behaviors specific for DataGraph. 
+
+The main annotation `datagraph` cannot have the same name for different domains. Because of this, the annotations for operations, type, and object properties use postfixes:
+
+* Operations: -method
+* Type: -type
+* Object properties: -field
+
+=== Hide
+
+Use this extension to mark an element as hidden. Hidden elements aren't shown in the unified schema, and DataGraph doesn't return them in any queries. 
+
+This extension applies to:
+
+* Operations
+* Any type
+* Object properties
+
+=== Structure
+
+The target is not specified because it is implicit in the operation.
+
+[%header%autowidth.spread]
+|===
+|Field |Type |Description
+a|
+
+* `datagraph-type`  
+* `datagraph-field`
+* `datagraph-method` |Map |A container for DataGraph specific annotations.
+a|
+
+* `datagraph-type.hide`
+* `datagraph-field.hide`
+* `datagraph-method.hide` |Boolean |If `true` the element is hidden in the unified schema. If `false` the element is not hidden, which provides the same result as not setting the annotation.
+|===
+
+=== Customization
+
+Each annotation should result in a `HideCustomization`.
+
+=== OAS Example
+
+----
+components:
+  Schemas:
+    Customer:
+  	x-datagraph-type:
+    	  hide: true
+  	properties:
+    	  name:
+          type: string
+    	  email:
+          type: string
+  	    x-datagraph-field:
+    	      hide: true
+    	  id:
+          type: string
+    	  ...
+paths:
+  "/customers/{customerId}":
+    get:
+  	x-datagraph-method:
+    	  hide: true
+  	parameters:
+    	  - in: query
+          name: summaryView
+          default: true
+          schema:
+          type: boolean
+  	...
+  	responses:
+    	'200':
+         content:
+            application/json:
+          	  schema:
+            	$ref: "#/components/schemas/Customer"
+----
+
+=== RAML Example
+
+----
+types:
+  Customer:
+    (datagraph-type):
+      hide: true
+    properties:
+    	name:
+        type: string
+    	email:
+        type: string
+        (datagraph-field):
+          hide: true
+    	id:
+        type: string
+    	…
+
+/customer/{customerId}:
+  uriParameters:
+    customerId: string
+  get:
+    (datagraph-method):
+      hide: true
+    responses:
+      200:
+        application/json:
+          body: Customer
+----
+
+=== Name
+
+Use this extension to set the desired name of an element in DataGraph, such as defining specific names for elements in the unified schema. You can also use this extension to federate types from different APIs without changing the underlying APIs.
+
+This extension applies to:
+
+* Operations
+* Any type
+* Object properties
+
+==== Structure
+
+The target is not specified because it is implicit in the operation.
+
+[%header%autowidth.spread]
+|===
+|Field |Type |Description
+a|
+
+* `datagraph-type` 
+* `datagraph-field`
+* `datagraph-method` |Map |A container for DataGraph’s specific annotations.
+a|
+
+* `datagraph-type.name`
+* `datagraph-field.name`
+* `datagraph-method.name` |String |The desired name for the element in DataGraph. If possible, use a pattern for valid names.
+|===
+
+==== Customization
+
+Each annotation should result in a `RenameCustomization`.
+
+==== OAS Example
+
+----
+components:
+  Schemas:
+    Customer:
+  	x-datagraph-type:
+    	  name: SalesCustomer
+  	properties:
+    	  name:
+          type: string
+    	  e-mail:
+          type: string
+  	    x-datagraph-field:
+    	      name: email
+    	  id:
+          type: string
+    	  ...
+paths:
+  "/customers/{customerId}":
+    get:
+  	x-datagraph-method:
+    	  name: getCustomer
+  	parameters:
+    	  - in: query
+          name: summaryView
+          default: true
+          schema:
+          type: boolean
+  	...
+  	responses:
+    	'200':
+         content:
+            application/json:
+          	  schema:
+            	$ref: "#/components/schemas/Customer"
+----
+
+==== RAML Example
+
+----
+types:
+  Customer:
+    x-datagraph-type:
+      name: SalesCustomer
+    properties:
+    	name:
+        type: string
+    	e-mail:
+        type: string
+          x-datagraph-field:
+            name: email
+    	id:
+        type: string
+    	…
+
+/customer/{customerId}:
+  uriParameters:
+    customerId: string
+  get:
+    x-datagraph-method:
+      name: getCustomer
+    responses:
+      200:
+        application/json:
+          body: Customer
+----
+
+== See Also 
+
+* AMF docs?
