@@ -126,4 +126,4 @@ When you remove the configuration, Anypoint DataGraph redeploys.
 
 * xref:hosting-options.adoc[Anypoint DataGraph Hosting Options and Networking]
 * xref:add-api-to-unified-schema.adoc[Add an API Schema to the Unified Schema]
-* xref:anypoint-cli::datagraph.adoc[DataGraph CLI]
+* xref:datagraph-cli.adoc[DataGraph CLI]
