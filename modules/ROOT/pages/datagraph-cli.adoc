@@ -15,9 +15,9 @@ include::anypoint-cli::partial$datagraph-source.adoc[tag=commands,leveloffset=+1
 [[datagraph-load-balancers]]
 == DataGraph Load Balancers
 
-include::anypoint-cli::partial$datagraph.adoc[tag=summary,leveloffset=+1]
+include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary,leveloffset=+1]
 
-include::anypoint-cli::partial$datagraph.adoc[tag=commands,leveloffset=+1]
+include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=commands,leveloffset=+1]
 
 
 == See Also
