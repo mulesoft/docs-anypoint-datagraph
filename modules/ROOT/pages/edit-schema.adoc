@@ -31,6 +31,10 @@ If you need to edit the URL of an API that you've added to the unified schema, y
 * Change the Authentication Method for an API
 +
 If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]
+* Update an API version
++
+xref:add-api-to-unified-schema.adoc#upate-an-api-version[Update an API Version]
+
 
 
 

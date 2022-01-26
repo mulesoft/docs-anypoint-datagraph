@@ -60,6 +60,26 @@ To promote an API:
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
 . Click *Next: Add to unified schema*.
 
+== Promote an Updated API 
+
+After you've update an API schema to DataGraph, you can later update the version of the API source. 
+
+When you choose a new version of an API to promote, DataGraph lists any Changes you've made to the current version that it can't automatically apply to the new version in the target environment.
+
+For any changes DataGraph can't automatically apply, you'll have the option to manually apply these changes before you complete the promotion. 
+
+Before you promote an updated API schema, you must first xref:add-api-to-unified-schema.adoc#upate-an-api-version[update the API version].
+
+. Click *List of APIs added* and select the appropriate API.
+. Click *API details*.
+. Click *Promote API schema*.
+. If DataGraph finds changes it cannot apply, review the list of *Changes Not Applied* and manually apply them: 
+.. Select a change and click *Next*.
+.. Edit the API schema as necessary and click **Apply Changes**. 
++
+After you apply the change, repeat step 5 for any additional changes.
+. Click *Next* to complete the remainder of the promotion steps.  
+
 == Additional Resources
 
 * xref:permissions.adoc[Permissions for Anypoint DataGraph]
