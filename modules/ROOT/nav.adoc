@@ -9,7 +9,7 @@
 * xref:set-dlb.adoc[Set a DLB URL for DataGraph]
 * xref:permissions.adoc[Permissions]
 * xref:add-api-to-unified-schema.adoc[]
-* xref:supported-authentication-methods.adoc[]
+* xref:security.adoc[DataGraph Security]
 * xref:status-updates.adoc[Status Updates]
 * xref:edit-schema.adoc[]
   ** xref:collaboration.adoc[Object Type Collaboration]
