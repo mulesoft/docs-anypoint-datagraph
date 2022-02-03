@@ -62,7 +62,7 @@ To promote an API:
 
 == Promote an Updated API 
 
-After you've update an API schema to DataGraph, you can later update the version of the API source. 
+After you've updated an API version, you can promote the updated version to another environment. 
 
 When you choose a new version of an API to promote, DataGraph lists any edits you've made to the current version that it can't automatically apply to the new version in the target environment.
 
