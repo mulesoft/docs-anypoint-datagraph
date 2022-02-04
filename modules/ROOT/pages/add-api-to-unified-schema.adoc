@@ -119,7 +119,7 @@ To edit the authentication method:
 . Select an authentication policy and complete any required fields.
 . Click *Save*.
 
-[[upate-an-api-version]]
+[[update-an-api-version]]
 == Update an API Version
 
 After you've added an API schema to DataGraph, you can later update the version of the API source. 
