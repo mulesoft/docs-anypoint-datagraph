@@ -33,7 +33,7 @@ If you need to edit the URL of an API that you've added to the unified schema, y
 If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]
 * Configure mutual authentication (mTLS) for an API
 +
-If you need to configure mTLS for an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:xref:add-api-to-unified-schema.adoc#configure-mtls-for-an-api-added-to-the-unified-schema[Configure mTLS for an API Added to the Unified Schema].
+If you need to configure mTLS for an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#configure-mtls-for-an-api-added-to-the-unified-schema[Configure mTLS for an API Added to the Unified Schema].
 
 
 
