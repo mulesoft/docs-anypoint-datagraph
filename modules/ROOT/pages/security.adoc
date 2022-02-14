@@ -1,0 +1,114 @@
+= Anypoint DataGraph Security
+:page-aliases: supported-authentication-methods.adoc
+
+You must set up authentication so Anypoint DataGraph can access the GET endpoints of the APIs that you add to the unified schema. Authentication allows DataGraph to make requests to those APIs when you run queries.
+
+Optionally, you can also set up mutual authentication (mTLS) between your APIs and DataGraph.
+
+== Supported Authentication Methods
+
+When adding a new API schema to the unified schema, or when promoting an API schema to another environment, you must configure one of the following authentication methods:
+
+* *No Auth*
++
+Use if your API is public.
+
+* *Basic Auth*
++
+Use if you authenticate to your API using the basic authentication header, or a username and password.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource" -u myUser:myPassword
+--
++
+or
++
+[source,CURL,linenums]
+--
+curl GET 'http://localhost/myResource' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "username": "myUser",
+  "password": "myPassword"
+}'
+--
+
+* *Pass-through authentication*
++
+Use if you authenticate to your API by passing authorization headers.
++
+You must supply:
+
+** A *Query Header Name*: The name of the HTTP header sent with the initial query to the unified schema. 
+** An  *API Header Name*: The header name passed through to the underlying API. This is useful if you want to rename the query header before passing it through to the underlying API. 
+
+* *Client ID enforcement via headers*
++
+Use if you authenticate to your API by passing `client_id` and `client_secret` headers.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource" -H "client_id:1234" -H "client_secret:abcd"
+--
+* *Client ID enforcement via query parameters*
++
+Use if you authenticate to your API by passing `client_id` and `client_secret` query params.
++
+For example:
++
+[source,CURL,linenums]
+--
+curl "http://localhost/myResource?client_id=1234&client_secret=abcd"
+--
+
+* *OAuth 2.0 Client Credentials*
++
+Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
++
+For example:
++
+[source,CURL,linenums]
+--
+curl --request POST \
+  --url 'https://YOUR_DOMAIN/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data 'grant_type=authorization_code&client_id=YOUR_CLIENT_ID&code_verifier=CODE_VERIFIER&code=AUTHORIZATION_CODE&redirect_uri=https://YOUR_APP/callback'
+--
+
+* *Custom*
++
+Use if you authenticate to your API using custom header parameters and values.
+
+Any other authentication methods to access your added API, such short-lived token methods, are not supported.
+
+== Configuring Mutual Authentication in DataGraph
+
+Mutual authentication (mTLS) ensures that Datagraph and the underlying APIs in your unified schema can create secure, verified connections.
+
+If an API requires mTLS, configure mTLS when adding the API to the unified schema or when promoting the API to another environment. To do so, provide the following:
+
+* A keystore that contains:
+** A public certificate signed by your organization's root certificate authority (CA)
+** The private key used to generate the certificate signing request (CSR)
+** The password for the encrypted private key
+
+Optionally, to allow your API to be reached by your unified schema, you can add a truststore and provide the certificate bundle that contains your root CA.
+
+Anypoint Platform stores the keystore and the truststore in PEM files in the xref:anypoint-security::index-secrets-manager.adoc[Secrets Manager].
+
+[NOTE]
+--
+If you enable mTLS for an API with a self-signed certificate, DataGraph won't be able to establish a TLS connection with that API.
+--
+
+
+== Additional Resources
+
+* xref:add-api-to-unified-schema.adoc[]
+* xref:promote-api.adoc[]
+* xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]
