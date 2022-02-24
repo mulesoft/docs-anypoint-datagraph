@@ -26,14 +26,14 @@ The following table provides details about the available scaling options:
 [%header%autowidth.spread]
 |===
 |Annual API Calls |Concurrent Calls |# of Workers
-|1M |150 |1
-|2M |300 |2
-|3M |450 |3
-|4M |600 |4
-|5M |750 |5
-|6M |900 |6
-|7M |1050 |7
-|8M |1200 |8
+|100M |150 |1
+|200M |300 |2
+|300M |450 |3
+|400M |600 |4
+|500M |750 |5
+|600M |900 |6
+|700M |1050 |7
+|800M |1200 |8
 |===
 
 
