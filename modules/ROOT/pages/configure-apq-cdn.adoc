@@ -130,8 +130,7 @@ To request a persisted query from a CDN ensure you have:
 * Permissions to content or authenticate your CDN
 * The endpoint to the CDN you’re requesting the query from?
 
-IMPORTANT: You must configure your CDN to pass the following query parameters: extensions, variables, operationName, and query.
-
+IMPORTANT: You must configure your CDN to pass the following query parameters: `extensions`, `variables`, `operationName`, and `query`.
 
 To request a persisted query from a CDN, create a GET request that contains the following:
 
