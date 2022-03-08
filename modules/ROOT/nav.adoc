@@ -31,3 +31,4 @@
   ** xref:troubleshoot-query-traces.adoc[Query Tracing]
 * xref:usage-metrics.adoc[View Usage Metrics for Datagraph]
 * xref:api-call-scaling.adoc[API Call Scaling for DataGraph]
+* xref:configure-apq-cdn.adoc[Use Persisted Queries and CDNs]

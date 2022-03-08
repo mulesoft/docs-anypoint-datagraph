@@ -1,0 +1,151 @@
+= Using Automatic Persisted Queries and Content Delivery Networks with Anypoint DataGraph
+
+To improve performance and decrease potential bottlenecks in your network traffic, DataGraph supports automatic persisted queries. You can also use persisted queries in conjunction with content delivery networks (CDNs) to deliver cached results much faster than requiring a roundtrip to the DataGraph server.
+
+== How Automatic Persisted Queries Work in DataGraph
+
+To create a persisted query, you send a POST request that contains:
+* The GraphQL query and any query variables
+* The `persistedQuery` extensions parameter that includes a unique ID, ideally created with a hashing algorithm, such as SHA-256. Using a hash limits the chance of collisions and allows multiple clients to access the query using the same ID. 
+
+After you’ve created the persisted query, you can subsequently send a GET request to DataGraph by passing the hash ID as a persistedQuery extensions parameter.
+
+== Register an Automatic Persisted Query to DataGraph
+
+To post a persisted query ensure you have:
+
+* The DataGraph Consume permission
+* An authenticated connection to DataGraph using a valid client ID and secret
+* Created a ID for the persisted query
+
+To register a persisted query, create a POST request that contains the following:
+
+* The endpoint for the DataGraph instance
+* An extension that contains the `persistedQuery` parameter
+* An ID within the `persistedQuery` parameter
+* A GraphQL query and any variables 
+
+The following example shows how to register a persisted query using cURL:
+
+----
+curl --location --request POST 'https://<datagraph-endpoint>/graphql' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "extensions": {
+        "persistedQuery": {
+            "version": 1,
+            "sha256Hash": "bcd3868f0cb4f723cdb5bdbc433d6ab73156f0b9d0e9d5bd17e200cdab6fba4"
+        }
+    },
+    "query": "{\n    customers(customersCount: 30) {\n        customerId\n        name\n    }\n}",
+    "variables": {}
+}
+----
+
+== Request a Persisted Query from DataGraph
+
+To request a persisted query from DataGraph, ensure you have:
+
+* The DataGraph Consume permission
+* An authenticated connection to DataGraph using a valid client ID and secret
+* 
+
+To request a persisted query, create a GET request that contains the following:
+* The endpoint for the DataGraph instance
+* An extension that contains the `persistedQuery` parameter
+* An ID within the `persistedQuery` parameter
+
+The following example shows how to request a persisted query using cURL:
+
+----
+curl --location --request GET 'https://<datagraph-endpoint>/graphql?extensions=%7B%0A%20%20%22persistedQuery%22%3A%20%7B%0A%20%20%20%20%22version%22%3A%201%2C%0A%20%20%20%20%22sha256Hash%22%3A%20%22acf31818e50ac3e818ca4bdbc433d6ab73176f0b9d5f9d5ad17e200cdab6fba4%22%0A%20%20%7D%0A%7D'
+----
+
+== Troubleshoot Query Not Found Errors
+
+If you send an ID in a request and a query is not found, DataGraph returns an error that the query is not persisted.
+
+----
+{
+   "errors": [
+       {
+           "message": "PersistedQueryNotFound",
+           "locations": [],
+           "extensions": {
+               "persistedQueryId": "bcd3868f0cb4f723cdb5bdbc433d6ab73156f0b9d0e9d5bd17e200cdab6fba4",
+               "classification": "PersistedQueryNotFound"
+           }
+       }
+   ]
+}
+----
+
+At this point, you can send a new POST request with a query and ID to register the query and can then subsequently request the query. 
+
+== Using Automatic Persisted Queries with a CDN
+
+Content Delivery Networks (CDNs) enable you to cache full responses to GET operations to speed performance of your APIs. 
+
+Since the cache functionality of many CDNs only support GET requests, you can sync persisted queries in DataGraph to your CDN for fast retrieval. 
+
+NOTE: The ability to configure and work with a CDN is required. 
+
+=== How CDNs Work with Automatic Persisted Queries in DataGraph
+
+To sync persisted queries from DataGraph with a CDN: 
+
+. You register a persisted query to DataGraph. 
+. You make a GET request to the CDN by passing the ID of the persisted query. 
+. The CDN routes the request to DataGraph.
+. DataGraph returns the response with a header that includes cache-control directives that you’ve added to the API. 
+. The response is stored in the CDN and sent back to you. 
+. You can issue subsequent GET requests to the CDN and retrieve the response.  
+
+=== Supported Cache-Control Directives
+
+Cache-control directives define how a CDN caches responses. DataGraph supports the following cache control directives:
+
+* `private`: Indicates that the response can be stored only in a private cache, for example, in local caches in browsers.
+* `public`: Indicates that the response can be stored in a shared cache.
+* `max-age`: Indicates that the response remains fresh until n seconds after the response is generated.
+* `no-cache`: Indicates that the response can be stored in caches, but it must be validated with the origin server before each reuse.
+* `no-store`: Indicates that neither private nor public caches should store the response.
+
+The following example cache-control header indicates that a response can be stored in a shared cache for 10 minutes:
+
+`“Cache-Control:public, max-age=600”` 
+
+=== Dynamic Cache-Control in DataGraph
+
+DataGraph automatically selects the most restrictive value of cache-control headers from the APIs that are used to resolve the fields in a persisted query. 
+
+For example, consider a query that contains fields from two APIs, each of which has a different max-age: API-1 has a `max-age` of 300 seconds, and API-2 has a `max-age` of 500 seconds. The `max-age` header value for the query response automatically selects the `max-age` of the two APIs, 300 seconds.
+
+=== Request a Persisted Query from a CDN
+
+To request a persisted query from a CDN ensure you have:
+
+* The DataGraph Consume permission
+* An authenticated passthrough connection to DataGraph using a valid client ID and secret. You can configure your CDN to add these credentials when passing a request to DataGraph, or you can add the credentials headers on the allowlist of the route to DataGraph.
+* Permissions to content or authenticate your CDN
+* The endpoint to the CDN you’re requesting the query from?
+
+IMPORTANT: You must configure your CDN to pass the following query parameters: extensions, variables, operationName, and query.
+
+
+To request a persisted query from a CDN, create a GET request that contains the following:
+
+* The endpoint to the CDN 
+* An extension that contains the persistedQuery parameter
+* A hash ID within the persistedQuery parameter
+
+The following example shows how to request a persisted query from a CDN using cURL:
+
+----
+curl --location --request GET 'https://<cdn-endpoint>/graphql?extensions=%7B%0A%20%20%22persistedQuery%22%3A%20%7B%0A%20%20%20%20%22version%22%3A%201%2C%0A%20%20%20%20%22sha256Hash%22%3A%20%22acf31818e50ac3e818ca4bdbc433d6ab73176f0b9d5f9d5ad17e200cdab6fba4%22%0A%20%20%7D%0A%7D'
+----
+
+== See Also 
+
+* xref:security.adoc#supported-authentication-methods[Supported Authentication Methods]
+* xref:permissions.adoc[]
