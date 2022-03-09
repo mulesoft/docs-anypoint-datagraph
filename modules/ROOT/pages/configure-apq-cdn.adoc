@@ -126,7 +126,7 @@ To request a persisted query from a CDN, ensure that you have:
 
 * The DataGraph Consume permission.
 * An authenticated passthrough connection to DataGraph using a valid client ID and secret. You can configure your CDN to add these credentials when passing a request to DataGraph, or you can add the credentials headers on the allowlist of the route to DataGraph.
-* Permissions to content or authenticate your CDN.
+* Permissions to request content from or authenticate to your CDN.
 * The endpoint to the CDN you’re requesting the query from?
 
 IMPORTANT: You must configure your CDN to pass the following query parameters: `extensions`, `variables`, `operationName`, and `query`.
