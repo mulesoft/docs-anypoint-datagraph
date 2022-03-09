@@ -274,6 +274,30 @@ price: float
 
 You can merge them so that in the unified schema there is only one `Amount` type that returns data from the Europe Sales API or the North America Sales API, depending on the query. Although both types are similar, their datasets are not joined.
 
+== Merge Input Types 
+
+Input types are POST request objects you use to modify information in your unified schema when you run mutations.
+
+You can merge two input types only when all fields between the types match with the same names and types. Both types must have the same number of fields and cannot contain subsets of fields.
+
+For example, assume you have an `OrderInput` API and a `PurchaseInput` API that contain the following identical fields:
+
+----
+OrderInput
+----------
+orderId: String!
+customerEmail: String!
+customerId: String!
+OrderDate: String!
+product: Product
+Status: OrderStatus
+totalAmount: float
+----
+ 
+You can merge the `OrderInput` API into the `PurchaseInput` API in the unified schema to consolidate these types.
+
+You do not need to, nor can you, enable collaboration to merge input types.
+
 == Local Merges Between Objects in the Same API Schema
 
 A local merge occurs when you merge an object type with another object type in the same API schema. You can then merge the resulting type with another local object type or with a type in the unified schema.
