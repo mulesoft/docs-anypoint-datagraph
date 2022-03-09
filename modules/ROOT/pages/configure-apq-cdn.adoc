@@ -137,7 +137,7 @@ To request a persisted query from a CDN, create a GET request that contains the 
 * An extension that contains the `persistedQuery` parameter
 * A hash ID within the persistedQuery parameter
 
-The following example shows how to request a persisted query from a CDN using cURL:
+The following example shows how to request a persisted query from a CDN using curl:
 
 ----
 curl --location --request GET 'https://<cdn-endpoint>/graphql?extensions=%7B%0A%20%20%22persistedQuery%22%3A%20%7B%0A%20%20%20%20%22version%22%3A%201%2C%0A%20%20%20%20%22sha256Hash%22%3A%20%22acf31818e50ac3e818ca4bdbc433d6ab73176f0b9d5f9d5ad17e200cdab6fba4%22%0A%20%20%7D%0A%7D'
