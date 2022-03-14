@@ -1,4 +1,4 @@
-= Permissions For Anypoint DataGraph
+= Using Permissions for Anypoint DataGraph
 
 Anypoint DataGraph provides access management permissions so you can meet your organization's security requirements and at the same time drive collaboration across teams.
 

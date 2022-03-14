@@ -1,4 +1,4 @@
-= Resolve Conflicts and Merge Inconsistencies
+= Resolving Conflicts and Merge Inconsistencies
 
 You must resolve any merge conflicts or merge inconsistencies when adding object types to the unified schema.
 

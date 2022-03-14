@@ -1,4 +1,4 @@
-= Troubleshoot Queries With Response Logs
+= Troubleshooting Queries With Response Logs
 
 Anypoint DataGraph provides response logs that contain useful query troubleshooting information.
 

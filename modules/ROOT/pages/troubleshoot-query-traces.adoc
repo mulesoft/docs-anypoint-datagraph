@@ -1,4 +1,4 @@
-= Troubleshoot Query Performance with Query Tracing
+= Troubleshooting Query Performance with Query Tracing
 
 Query tracing in Anypoint DataGraph helps you analyze query performance by tracing every call made to the source APIs of the unified schema for a given query.
 
