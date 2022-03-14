@@ -199,7 +199,7 @@ The results show that you’re performing a local merge between the OrderSummary
 
 As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
 
-== Request Access to Query the Unified Schema
+== Request Access to Run Queries and Mutations
 
 After you add the two API schema’s to the unified schema, you’re ready to request permission for access to run a query.
 
