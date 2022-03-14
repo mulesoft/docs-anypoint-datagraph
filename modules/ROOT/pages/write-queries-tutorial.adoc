@@ -1,4 +1,4 @@
-= Write GraphQL Queries in Anypoint DataGraph
+= Writing GraphQL Queries in Anypoint DataGraph
 
 This brief tutorial introduces key concepts for writing GraphQL queries in Anypoint DataGraph.
 

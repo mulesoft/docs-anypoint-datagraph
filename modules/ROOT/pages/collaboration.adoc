@@ -1,4 +1,4 @@
-= Object Type Collaboration in Anypoint DataGraph
+= Enabling Object Type Collaboration in Anypoint DataGraph
 
 Enabling collaboration on a Level-1 object type allows you to achieve a connected and enriched unified schema.
 
