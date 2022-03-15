@@ -166,7 +166,7 @@ If you want to get the same fields for two or more query operations using differ
     orderStatus : status
   }
 
-  Order 2: ordersByOrderId(orderId: "87c0ba4a-de28-12o7-pd11-eew12094b0w4) {
+  Order2: ordersByOrderId(orderId: "87c0ba4a-de28-12o7-pd11-eew12094b0w4) {
     billingAddress {
       state
       city
@@ -232,7 +232,7 @@ As previously stated, this mutation creates a new customer, so DataGraph returns
 }
 ----
 
-Note that the `CustomerInput` input type does not have an `id` field, so the mutation example didn’t include that field. However, the `Customer` type includes an `id` field, and DataGraph generates its value based on the values provided in the input.
+Note that the `CustomerInput` input type does not have an `id` field, so the mutation doesn't include that field in the input to the mutation. However, the `Customer` type includes an `id` field, the value of which is generated based on the values provided in the input.
 
 == Additional Resources
 
