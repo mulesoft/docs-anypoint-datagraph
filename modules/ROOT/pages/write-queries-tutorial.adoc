@@ -188,15 +188,17 @@ To simplify the schema, inputs to mutations are handled by _input types_, which 
 
 For example, the schema shown in the following example has six mutation operations associated with it: 
 
-//add image
+image::schema-explorer-mutation-method.png[Six mutation operations listed in the schema explorer]
 
 Consider `createCustomer`: This mutation takes the `CustomerInput` object as an input and creates a new object of type, `Customer`. 
 
 So in this case, the input type `CustomerInput` has the following fields:
 
-//add image
+image::schema-explorer-mutation-fields.png[Fields for CustomerInput listed in the schema explorer]
 
 Notice that the address field has data from the `AddressInput` input type:
+
+image::schema-explorer-mutation-fields2.png[Fields for AddressInput listed in the schema explorer]
 
 As you execute the mutation operation, you provide a value for each field in the input type:
  
