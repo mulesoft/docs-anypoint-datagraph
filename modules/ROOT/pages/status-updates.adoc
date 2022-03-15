@@ -1,4 +1,4 @@
-= How Status Updates Work in Anypoint DataGraph
+= Viewing Status Updates in Anypoint DataGraph
 
 When working with APIs and the unified schema, status updates let you know when the unified schema is available for querying, when changes to the unified schema have taken effect, and which API schemas are getting added, removed, or updated.
 
