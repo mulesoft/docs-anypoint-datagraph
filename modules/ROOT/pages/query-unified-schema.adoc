@@ -2,12 +2,12 @@
 
 The unified schema resolves into a single GraphQL endpoint. To run queries or mutations against the unified schema, you first request access (if applicable) and then write and run a GraphQL query in the query editor.
 
-== Prerequisites
+== Before You Begin
 
-* You must have xref:permissions.adoc[the Consume, Contribute, or Admin permission] to use request access and run queries and mutations.
+* You must have xref:permissions.adoc[the Consume, Contribute, or Admin permission]. 
 * Review the xref:index.adoc#restrictions-and-limitations[restrictions and limitations] for REST API calls and queries.
 
-== Request Access to Run A Query
+== Request Access to Run a Query
 
 Before you can run a query or mutation, you must request access. 
 
@@ -53,7 +53,7 @@ image::datagraph-qsg-query-result.png[Query editor displays query results]
 +
 image::datagraph-qsg-query-traces.png[Query trace view open with query results]
 +
-Query Trace results for DataGraph provide the following information:
+Query trace results for DataGraph provide the following information:
 +
 * Time taken by DataGraph to parse and validate the query
 * Total response time for the entire query
@@ -63,34 +63,34 @@ Query Trace results for DataGraph provide the following information:
 +
 image::datagraph-qsg-response-logs.png[Query response logs page]
 +
-Log levels for  DataGraph include, DEBUG, INFO, WARN, and ERROR.
-. Click *View History* to access this same query—or others—at a later time.
-. To use this query in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a cURL snippet.
+Log levels for DataGraph include DEBUG, INFO, WARN, and ERROR.
+. Click *View History* to access this same query (or others) later.
+. To use this query in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a curl snippet.
 
 == Run a Mutation
 
 Use the query editor to write, run, and troubleshoot mutations.
 
-. If any of the APIs in the unified schema require pass-through authentication, click *Add HTTP Headers*, and:
+. If any of the APIs in the unified schema require pass-through authentication, click *Add HTTP Headers* and:
 
 .. Select a header name.
 .. Enter a header value.
-.. To specify additional header name and value pairs for other APIs, click *+Add Header* x 
+.. To specify additional header name and value pairs for other APIs, click *+Add Header*.
 .. Click *Save*.
 .. To edit the HTTP headers, click *Edit HTTP Headers*.
 
-. In the query editor, start typing your mutation using the in-line autocomplete function or type *Option/Alt + Shift + Space* to open the autocomplete menu.
+. In the query editor, start typing your mutation using the in-line autocomplete function, or type *Option/Alt + Shift + Space* to open the autocomplete menu.
 +
 image::datagraph-mutation-autocomplete.png[Using inline autocompletion to write a mutation,70%]
 
 . Optionally, in the **Query Variables** pane, add any variables you want to use.
-. Click **Run**. 
+. Click *Run*. 
 +
 image::datagraph-mutation-result.png[Query editor displays mutation results]
-. To see results with query tracing, from the actions menu (*...*), select *Trace Query*, and then click *Run*.
+. To see results with query tracing, from the actions menu (*...*), select *Trace Query* and then click *Run*.
 . To see response logs associated with the query, from the actions menu (*...*), select *View Response Logs*.
-. Click *View History* to access this same mutation—or others—at a later time.
-. To use this mutation in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a cURL snippet.
+. Click *View History* to access this same mutation (or other) later.
+. To use this mutation in your application, click *Copy endpoint* to copy the query and the automatically generated GraphQL endpoint. You can also copy the query as a curl snippet.
 
 == Query Editor Shortcuts
 The following table provides shortcuts you can use in the query editor:
