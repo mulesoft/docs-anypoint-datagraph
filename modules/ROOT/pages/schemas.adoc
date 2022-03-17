@@ -311,7 +311,7 @@ createOrder(input:OrderInput): Order
 
 |===
 
-Input types represent the attributes of objects created by mutation operations. They are POST, PUT, and DELETE request objects you use to modify information in your unified schema when you run mutations.
+Input types represent the attributes of objects created by mutation operations. Input types are POST, PUT, and DELETE request objects you use to modify information in your unified schema when you run mutations.
 
 For example, you can post to the `OrderInput` input type using the `/createOrder/{OrderInput}:` mutation:
 
