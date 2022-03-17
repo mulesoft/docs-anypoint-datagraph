@@ -182,7 +182,7 @@ This helps to avoid errors if the same fields get different values.
 
 == Write a Mutation
 
-Mutations are operations you use to add, update and delete data objects. In GraphQL, mutation operations represent the POST, PUT, and DELETE HTTP methods you’ve defined in your REST API specification.
+_Mutations_ are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PUT, and DELETE HTTP methods you’ve defined in your REST API specification.
 
 To simplify the schema, inputs to mutations are handled by _input types_, which represent the attributes of objects created by mutation operations. Input types are POST, PUT, and DELETE request objects you use to modify information in your unified schema when you run mutations.
 
@@ -190,7 +190,7 @@ For example, the schema shown in the following example has six mutation operatio
 
 image::schema-explorer-mutation-method.png[Six mutation operations listed in the schema explorer]
 
-Consider `createCustomer`: This mutation takes the `CustomerInput` object as an input and creates a new object of type, `Customer`. 
+Consider `createCustomer`: This mutation takes the `CustomerInput` object as an input and creates a new object of type `Customer`. 
 
 So in this case, the input type `CustomerInput` has the following fields:
 
@@ -220,7 +220,7 @@ mutation {
 }
 ----
  
-As previously stated, this mutation creates a new customer, so DataGraph returns the following:
+Because this mutation creates a new customer, DataGraph returns the following:
 
 ----
 {
