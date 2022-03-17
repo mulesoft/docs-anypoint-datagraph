@@ -69,7 +69,7 @@ Log levels for DataGraph include DEBUG, INFO, WARN, and ERROR.
 
 == Run a Mutation
 
-Use the query editor to write, run, and troubleshoot mutations.
+Use the query editor to write and then run mutations. If needed, you can also troubleshoot mutations in the query editor
 
 . If any of the APIs in the unified schema require pass-through authentication, click *Add HTTP Headers* and:
 
