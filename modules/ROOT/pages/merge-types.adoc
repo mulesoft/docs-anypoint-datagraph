@@ -276,7 +276,7 @@ You can merge them so that in the unified schema there is only one `Amount` type
 
 == Merge Input Types 
 
-Input types are POST request objects you use to modify information in your unified schema when you run mutations.
+Input types are POST, PUT, and DELETE objects you use to modify information in your unified schema when you run mutations.
 
 You can merge two input types only when all their fields match. Both types must have the same number of fields and cannot contain subsets of fields.
 
