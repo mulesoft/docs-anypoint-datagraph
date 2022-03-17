@@ -285,7 +285,7 @@ numberOfSIMCards: int
 
 == Mutations and Input Types
 
-_Mutations_ are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PUT, DELETE, and HTTP methods you’ve defined in your REST API specification. 
+_Mutations_ are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PUT, DELETE, and HTTP methods that you’ve defined in your REST API specification. 
 
 For example, this RAML specification defines a POST endpoint at `/createOrder/\{OrderInput}`, and the mutation method in the schema is `createOrder(input:OrderInput)`:
 
