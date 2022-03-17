@@ -278,7 +278,7 @@ You can merge them so that in the unified schema there is only one `Amount` type
 
 Input types are POST request objects you use to modify information in your unified schema when you run mutations.
 
-You can merge two input types only when all fields between the types match with the same names and types. Both types must have the same number of fields and cannot contain subsets of fields.
+You can merge two input types only when all their fields match. Both types must have the same number of fields and cannot contain subsets of fields.
 
 For example, assume you have an `OrderInput` API and a `PurchaseInput` API that contain the following identical fields:
 
