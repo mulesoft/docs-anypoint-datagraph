@@ -201,12 +201,12 @@ As Anypoint DataGraph updates the unified schema, you can navigate through the s
 
 == Request Access to Run Queries and Mutations
 
-After you add the two API schemas to the unified schema, you’re ready to request permission to run a query.
+After you add the two API schema’s to the unified schema, you’re ready to request permission for access to run an operation.
 
-. Click *Run a query*.
+. Click *Run Operation*.
 . Select an access method. For this example, select *Create a new application and use it immediately*.
 +
-image::datagraph-qsg-request-query-access.png[Create a new application is selected in requesting access to run a query window,70%,70%]
+image::datagraph-qsg-request-query-access.png[Create a new application is selected in requesting access to run an operation window,70%,70%]
 
 . Click *Next*.
 . In the *Create a new application* window, complete the fields:
