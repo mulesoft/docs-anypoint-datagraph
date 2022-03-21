@@ -1,4 +1,4 @@
-= Query the Unified Schema
+= Querying the Unified Schema
 
 The unified schema resolves into a single GraphQL endpoint. To query the unified schema, you first request access (if applicable) and then write and run a GraphQL query in the query editor.
 

@@ -1,4 +1,4 @@
-= Retrieve a Copy of the Unified Schema
+= Retrieving Copies of the Unified Schema
 
 You can download a copy of the unified schema from the query editor or by using a third-party API client. 
 

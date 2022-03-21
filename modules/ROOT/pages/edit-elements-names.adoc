@@ -1,4 +1,4 @@
-= Edit Names of Schema Elements
+= Editing Names of Schema Elements
 
 When you add APIs to the unified schema, can rename fields, types, and query methods so they're more useful to those consuming the unified schema, or so you can resolve conflicts between elements.
 
