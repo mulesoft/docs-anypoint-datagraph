@@ -1,4 +1,4 @@
-= Understand the Elements in an API Schema
+= Understanding the Elements in an API Schema
 
 Anypoint DataGraph organizes all data that you choose to make available to your clients in a unified schema. The unified schema is a single, always-current collection of all of the schemas of all of the APIs that you add to it.
 

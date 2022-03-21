@@ -1,4 +1,4 @@
-= Add an API Schema to the Unified Schema
+= Adding API Schemas to the Unified Schema
 
 When you add an API, Anypoint DataGraph generates an API schema from that API’s specification, which you can then edit before adding it to the unified schema.
 
@@ -12,7 +12,7 @@ Adding an API to the unified schema comprises three tasks:
 
 You must resolve any conflicts between object types before adding the generated API schema to the unified schema. Refer to xref:resolve-conflicts.adoc[Resolve Conflicts] for more information.
 
-== Prerequisites
+== Before You Begin
 
 To add an API to the unified schema, ensure you have:
 

@@ -1,4 +1,4 @@
-= Troubleshoot Anypoint DataGraph Runtime Errors
+= Troubleshooting Runtime Errors
 
 If you encounter runtime errors when attempting to use the Anypoint DataGraph query editor, troubleshoot them as follows.
 

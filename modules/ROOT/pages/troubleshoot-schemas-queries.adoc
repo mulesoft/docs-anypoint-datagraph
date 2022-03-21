@@ -1,4 +1,4 @@
-= Troubleshoot Schemas and Queries
+= Troubleshooting Schemas and Queries
 
 The following topic provide useful information for troubleshooting schemas and queries:
 
