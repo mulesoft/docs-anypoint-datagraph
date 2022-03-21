@@ -156,4 +156,4 @@ For example, you can rename the total field to `totalPrice` and the status field
 * https://graphql.org/learn/queries/[GraphQL Query Documentation^]
 * xref:datagraph-terms.adoc[Anypoint DataGraph Terminology]
 * xref:schemas.adoc[Understand the Elements in an API Schema]
-* xref:query-unified-schema.adoc[Query the Unified Schema]
+* xref:query-unified-schema.adoc[Run Queries and Mutations]
