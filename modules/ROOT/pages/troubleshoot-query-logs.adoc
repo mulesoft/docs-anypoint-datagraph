@@ -24,7 +24,7 @@ Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR. Log leve
 
 By default, the log level for each environment is set to INFO. You can change this setting at any time. Changes to the log level persist for _all future queries to that Anypoint DataGraph instance_, regardless of the user.
 
-== View Response Logs for a Query
+== View Response Logs for an Operation
 
 You must have xref:permissions.adoc[the Operate or Admin permission] to view and search response logs.
 
@@ -32,7 +32,7 @@ If you are a Titanium subscriber, you can also view response logs in xref:monito
 
 To view response logs in Anypoint DataGraph:
 
-. Write and run a query.
+. Write and run an operation.
 . From the actions menu (*...*), select *View Response Logs*.
 +
 Response logs for that query are displayed:

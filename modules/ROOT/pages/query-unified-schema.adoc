@@ -13,7 +13,7 @@ Before you can run a query, you must request access.
 
 If you're using an external client provider, refer to xref:request-access-to-environments-using-an-external-client-provider[Request Access to Environments Using an External Client Provider]
 
-. Click *Run a Query*.
+. Click *Run Operation*.
 . In the *Request access to run queries* dialog, select how you want to get access to run your queries.
 +
 If you want to use an existing client application or client ID and secret pair, you can find them in Exchange. Open Exchange in a new tab, navigate to *My applications* and select an application from the list to find relevant information.
@@ -74,7 +74,7 @@ The following table provides shortcuts you can use in the query editor:
 |===
 |Function |Shortcut
 |Prettify query |Shift+Ctrl+p
-|Run query |Ctrl+Enter
+|Run operation |Ctrl+Enter
 |Autocomplete |Ctrl+space
 |Comment-out line |Cmd+/
 |Jump to end or start of current scope |Cmd+m

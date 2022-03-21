@@ -18,7 +18,7 @@ You must have xref:permissions.adoc[the Contribute or Admin permission] to use q
 
 == Run a Query Trace
 
-Query trace results are provided as soon as you run a query.
+Query trace results are provided as soon as you run an operation.
 
 . From the actions menu (*...*), select *Trace Query*. 
 . Write your query.
