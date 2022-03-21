@@ -68,4 +68,4 @@ image::search-logs.png[Search fields for query response logs ]
 == Additional Resources
 
 * xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
-* xref:query-unified-schema.adoc[Query the Unified Schema]
+* xref:query-unified-schema.adoc[Run Queries and Mutations]
