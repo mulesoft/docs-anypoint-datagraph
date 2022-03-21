@@ -31,3 +31,4 @@
   ** xref:troubleshoot-query-traces.adoc[Troubleshooting with Query Tracing]
 * xref:usage-metrics.adoc[Viewing Usage Metrics]
 * xref:api-call-scaling.adoc[Scaling API Calls]
+* xref:configure-apq-cdn.adoc[Using Persisted Queries and CDNs]
