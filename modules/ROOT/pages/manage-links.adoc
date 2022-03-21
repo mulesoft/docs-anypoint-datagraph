@@ -1,4 +1,4 @@
-= Create and Edit Links Between Object Types
+= Creating and Editing Links Between Object Types
 
 The following tasks explain how to create and undo links between object types.
 

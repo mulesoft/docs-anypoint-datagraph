@@ -1,4 +1,4 @@
-= Create and Edit Object Type Merges
+= Creating and Editing Object Type Merges
 
 The following tasks explain how to create and undo merges within the unified schema and within the local schema.
 
