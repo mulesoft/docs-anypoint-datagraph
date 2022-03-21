@@ -4,7 +4,7 @@
   ** xref:datagraph-qsg.adoc[]
   ** xref:datagraph-terms.adoc[]
   ** xref:schemas.adoc[]
-  ** xref:write-queries-tutorial.adoc[Writing GraphQL Queries]
+  ** xref:write-queries-tutorial.adoc[Writing GraphQL Queries and Mutations]
 * xref:hosting-options.adoc[Hosting Options and Networking]
 * xref:set-dlb.adoc[Setting DLB URLs for DataGraph]
 * xref:permissions.adoc[Using Permissions]
