@@ -5,6 +5,7 @@ To improve performance and decrease potential bottlenecks in your network traffi
 == How Automatic Persisted Queries Work in DataGraph
 
 To create a persisted query, you send a POST request that contains:
+
 * The GraphQL query and any query variables.
 * The `persistedQuery` extensions parameter that includes a unique ID, ideally created with a hashing algorithm, such as SHA-256. Using a hash limits the chance of collisions and allows multiple clients to access the query using the same ID. 
 
@@ -50,6 +51,7 @@ To request a persisted query from DataGraph, ensure that you have:
 * An authenticated connection to DataGraph using a valid client ID and secret
 
 To request a persisted query, create a GET request that contains the following:
+
 * The endpoint for the DataGraph instance
 * An extension that contains the `persistedQuery` parameter
 * An ID within the `persistedQuery` parameter
