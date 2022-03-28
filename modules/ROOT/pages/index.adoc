@@ -66,7 +66,7 @@ ordersByOrderId{
 }
 ....
 
-** A maximum depth of 100 fields per query. For example, the following query has a depth of 6:
+** A maximum depth of 100 per query. For example, the following query has a depth of 6:
 +
 ....
 ordersByOrderId {               #depth 0
