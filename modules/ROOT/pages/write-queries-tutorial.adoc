@@ -1,16 +1,17 @@
-= Write GraphQL Queries in Anypoint DataGraph
+= Writing GraphQL Queries and Mutations in DataGraph
 
 This brief tutorial introduces key concepts for writing GraphQL queries in Anypoint DataGraph.
 
 Learn how to use the Anypoint DataGraph query editor to:
 
-. Discover and add a query method
+. Discover and add a query operation
 . Add input parameters to a query
 . Discover which fields are available to query
 . Add nested types
 . Add a query alias
+. Write a mutation and understand query types
 
-== Discover and Add a Query Method
+== Discover and Add a Query Operation
 
 In GraphQL, query methods serve as the entry points to retrieve the data you want. Start by using the schema explorer in the Anypoint DataGraph query editor to discover which query methods are available for an API schema.
 
@@ -130,7 +131,7 @@ For this query, Anypoint DataGraph returns:
 }
 --
 
-== Add a Query Aliases
+== Add a Query Alias
 
 You can use aliases to rename individual keys in the query response.
 
@@ -151,9 +152,91 @@ For example, you can rename the total field to `totalPrice` and the status field
 }
 --
 
+If you want to get the same fields for two or more query operations using different input parameters, you can provide an alias to the query operations. 
+
+----
+{
+  Order1: ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b3") {
+    billingAddress {
+      state
+      city
+      postalCode
+    }
+    totalPrice : total
+    orderStatus : status
+  }
+
+  Order2: ordersByOrderId(orderId: "87c0ba4a-de28-12o7-pd11-eew12094b0w4) {
+    billingAddress {
+      state
+      city
+      postalCode
+    }
+    totalPrice : total
+    orderStatus : status
+  }
+}
+----
+
+This helps to avoid errors if the same fields get different values.
+
+== Write a Mutation
+
+_Mutations_ are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PUT, and DELETE HTTP methods you’ve defined in your REST API specification.
+
+To simplify the schema, inputs to mutations are handled by _input types_, which represent the attributes of objects created by mutation operations. Input types are POST, PUT, and DELETE request objects you use to modify information in your unified schema when you run mutations.
+
+For example, the schema shown in the following example has six mutation operations associated with it: 
+
+image::schema-explorer-mutation-method.png[Six mutation operations listed in the schema explorer]
+
+Consider `createCustomer`: This mutation takes the `CustomerInput` object as an input and creates a new object of type `Customer`. 
+
+So in this case, the input type `CustomerInput` has the following fields:
+
+image::schema-explorer-mutation-fields.png[Fields for CustomerInput listed in the schema explorer]
+
+Notice that the address field has data from the `AddressInput` input type:
+
+image::schema-explorer-mutation-fields2.png[Fields for AddressInput listed in the schema explorer]
+
+As you execute the mutation operation, you provide a value for each field in the input type:
+ 
+----
+mutation {
+  createCustomer(input: {
+    firstName: "Lydia",
+    lastName: "Millet",
+    address: {
+      city: "Tucson",
+      state: "Arizona",
+      street: "Speedway",
+      postalCode: "1234"
+    }
+  }) 
+  {
+    id
+  }
+}
+----
+ 
+Because this mutation creates a new customer, DataGraph returns the following:
+
+----
+{
+  "data": {
+    "createCustomer": {
+      "id": 42
+    }
+  }
+}
+----
+
+Note that the `CustomerInput` input type does not have an `id` field, so the mutation doesn't include that field in the input to the mutation. However, the `Customer` type includes an `id` field, the value of which is generated based on the values provided in the input.
+
 == Additional Resources
 
 * https://graphql.org/learn/queries/[GraphQL Query Documentation^]
 * xref:datagraph-terms.adoc[Anypoint DataGraph Terminology]
-* xref:schemas.adoc[Understand the Elements in an API Schema]
-* xref:query-unified-schema.adoc[Query the Unified Schema]
+* xref:schemas.adoc[Understanding the Elements in an API Schema]
+* xref:query-unified-schema.adoc[Running Queries and Mutations]

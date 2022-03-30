@@ -1,4 +1,4 @@
-= Remove an API from the Unified Schema
+= Removing APIs from the Unified Schema
 
 You can remove APIs from the unified schema as needed. For example, remove an API to add a new version, or remove an API if the underlying REST API no longer exists.
 

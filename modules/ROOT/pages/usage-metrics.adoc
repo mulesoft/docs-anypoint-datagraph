@@ -1,4 +1,4 @@
-= View Usage Metrics for Anypoint Datagraph
+= Viewing Usage Metrics for Anypoint Datagraph
 
 Anypoint DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number of downstream API calls made for each of the environments in which you’ve deployed a unified schema. 
 
@@ -29,5 +29,5 @@ image::datagraph-usage-metrics.png[DataGraph usage metrics are shown in the Over
 == Additional Resources
 
 * xref:add-api-to-unified-schema.adoc[Add an API Schema to the Unified Schema]
-* xref:query-unified-schema.adoc[Query the Unified Schema] 
+* xref:query-unified-schema.adoc[Run Queries and Mutations] 
 * xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]

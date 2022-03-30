@@ -25,4 +25,4 @@ Collaboration is possible only on Level-1 object types.
 == Additional Resources
 
 * xref:schemas.adoc[Understand the Elements in an API Schema]
-* xref:query-unified-schema.adoc[Query the Unified Schema]
+* xref:query-unified-schema.adoc[Run Queries and Mutations]
