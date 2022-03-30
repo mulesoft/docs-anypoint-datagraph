@@ -43,7 +43,7 @@ Before using Anypoint DataGraph, review the following restrictions and limitatio
 
 * Anypoint DataGraph supports:
 ** REST APIs with RAML and OAS specifications
-** GET, POST, PUT, and DELETE methods
+** GET, PATCH, POST, PUT, and DELETE methods
 ** Up to 250 APIs per unified schema
 ** Up to 16,000 fields per unified schema
 
