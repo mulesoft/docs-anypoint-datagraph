@@ -182,7 +182,7 @@ This helps to avoid errors if the same fields get different values.
 
 == Write a Mutation
 
-_Mutations_ are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PUT, and DELETE HTTP methods you’ve defined in your REST API specification.
+_Mutations_ are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PUT, PATCH, and DELETE HTTP methods you’ve defined in your REST API specification.
 
 To simplify the schema, inputs to mutations are handled by _input types_, which represent the attributes of objects created by mutation operations. Input types are POST, PUT, and DELETE request objects you use to modify information in your unified schema when you run mutations.
 

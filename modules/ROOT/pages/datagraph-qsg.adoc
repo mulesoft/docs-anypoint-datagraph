@@ -225,7 +225,7 @@ image::datagraph-qsg-query-autocompletion.png[Using inline autocompletion to wri
 
 == Write A Mutation
 
-Mutations are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PUT, DELETE, and HTTP methods that you’ve defined in your REST API specification.
+Mutations are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PATCH, PUT, DELETE, and HTTP methods that you’ve defined in your REST API specification.
 
 . Add the following example mutation:
 +
