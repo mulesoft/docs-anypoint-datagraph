@@ -1,4 +1,4 @@
-= Add an API Schema to the Unified Schema
+= Adding API Schemas to the Unified Schema
 
 When you add an API, Anypoint DataGraph generates an API schema from that API’s specification, which you can then edit before adding it to the unified schema.
 
@@ -12,7 +12,7 @@ Adding an API to the unified schema comprises three tasks:
 
 You must resolve any conflicts between object types before adding the generated API schema to the unified schema. Refer to xref:resolve-conflicts.adoc[Resolve Conflicts] for more information.
 
-== Prerequisites
+== Before You Begin
 
 To add an API to the unified schema, ensure you have:
 
@@ -33,7 +33,7 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 
 [IMPORTANT]
 --
-* Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as custom OAuth implementations or short-lived token methods, are not supported. See xref:supported-authentication-methods.adoc[] for more information.
+* Supported authentication methods to access your API from Anypoint DataGraph are listed in the following procedure. Any other authentication methods, such as short-lived token methods, are not supported. See xref:security.adoc#supported-authentication-methods[Supported Authentication Methods] for more information.
 --
 
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the *Unified Data Graph* dropdown list, and click *+Add API*.
@@ -45,14 +45,25 @@ The first task to adding an API to the unified schema is adding the API to Anypo
 * If your API is managed by API Manager or if you have added the API’s instances in Exchange, select *Get an existing URL from Anypoint Platform*.
 * If you prefer to manually provide your own implementation URL, select *Add a new URL*.
 . Click *Next: Provide authentication*.
-. On the *Provide authentication* page, select the type of authentication on the GET endpoints for the API that you are adding:
+. On the *Configure Security* page, select the type of authentication on the GET endpoints for the API that you are adding:
 +
 * *No Auth*: Use if your API is public.
 * *Basic Auth*: Use if you authenticate to your API using a username and password.
 * *Pass-through*: Use if you authenticate to your API by passing authorization headers.
 * *Client ID enforcement via headers*: Use if you authenticate to your API passing `client_id` and `client_secret` headers.
 * *Client ID enforcement via query parameters*: Use if you authenticate to your API passing `client_id` and `client_secret` query params.
+* *OAuth 2.0 Client Credentials*: Use if you authenticate to your API by passing OAuth 2.0 `client_id`, `client_secret`, and authorization server values. 
 * *Custom*: Use if you authenticate to your API using custom header parameters and values.
+. Still on the *Configure Security* page, optionally add a keystore to configure mutual authentication (mTLS) between the API and DataGraph. 
++
+Select *Configure Keystore* and provide the following:
++
+* A public certificate signed by your organization's “root” certificate authority (CA)
+* The private key used to generate the certificate signing request (CSR)
+* The password for the encrypted private key
+. Optionally, add a truststore to allow your API to be reached by your unified schema.
++
+Select *Configure Truststore* and provide the certificate bundle that contains your root CA. 
 . Click *Next: Preview Schema*.
 
 == Preview the Generated API Schema
@@ -144,5 +155,6 @@ After you apply the changes, repeat Step 5 for any additional changes.
 * xref:edit-schema.adoc[]
 * xref:api-call-scaling.adoc[API Call Scaling in Anypoint DataGraph]
 * xref:permissions.adoc[Permissions for Anypoint DataGraph]
+* xref:security.adoc[]
 * xref:schema-validation.adoc[Potential Errors When Generating an API Schema]
 
