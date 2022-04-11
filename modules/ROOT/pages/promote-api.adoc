@@ -68,7 +68,7 @@ When you choose a new version of an API to promote, DataGraph lists any edits yo
 
 For any edits DataGraph can't automatically apply, you'll have the option to manually apply these edits before you complete the promotion. 
 
-Before you promote an updated API schema, you must first xref:add-api-to-unified-schema.adoc#upate-an-api-version[update the API version].
+Before you promote an updated API schema, you must first xref:add-api-to-unified-schema.adoc#upate-an-api-version[update the API version]:
 
 . Click *List of APIs added* and select the appropriate API.
 . Click *API details*.
@@ -79,7 +79,7 @@ Before you promote an updated API schema, you must first xref:add-api-to-unified
 .. Select a change and click *Next*.
 .. Edit the API schema as necessary and click **Apply Changes and Promote**. 
 +
-After you apply the change, repeat step 5 for any additional changes.
+After you apply the change, repeat Step 5 for any additional changes.
 . Click *Next* to complete the remainder of the promotion steps.  
 
 == Additional Resources

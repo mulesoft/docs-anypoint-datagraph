@@ -122,7 +122,7 @@ To edit the authentication method:
 [[update-an-api-version]]
 == Update an API Version
 
-After you've added an API schema to DataGraph, you can later update the version of the API source. 
+After you've added an API schema to DataGraph, you can update the version of the API source any time you like. 
 
 When you choose a new version of an API, DataGraph lists any edits you've made to the current version that it can't automatically apply to the new version.
 
@@ -136,7 +136,7 @@ For any edits DataGraph can't automatically apply, you'll have the option to man
 .. Select a customization and click *Next*.
 .. Edit the API schema as necessary and click **Apply Changes**. 
 +
-After you apply the changes, repeat step 5 for any additional changes.
+After you apply the changes, repeat Step 5 for any additional changes.
 . Click *Next* to edit the new version's schema.  
 
 == Additional Resources
