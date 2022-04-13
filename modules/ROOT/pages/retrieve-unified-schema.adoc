@@ -33,7 +33,10 @@ curl https://<GRAPH_ENDPOINT>/schema \
 
 == Download Source APIs
 
-When you download source APIs, DataGraph downloads all API sources you've added to that environment.  
+When you download source APIs, DataGraph downloads all API sources you've added to that environment. 
+
+To download Source APIs, you need the xref:permissions.adoc[contributor or admin permission].
+ 
 
 . Navigate to the *List of APIs added* page.
 . In the right-hand corner of the API list, click *...* > *Download Source APIs*.
