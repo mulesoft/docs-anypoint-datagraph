@@ -149,10 +149,31 @@ If the API already has a keystore or truststore, you can remove either and add n
 . Optionally, select *Configure Truststore* and provide a link to the certificate bundle that contains your root CA.
 . Click *Save*.
 
+[[update-an-api-version]]
+== Update an API Version
+
+After you've added an API schema to DataGraph, you can update the version of the API source any time you like. 
+
+When you choose a new version of an API, DataGraph lists any edits you've made to the current version that it can't automatically apply to the new version.
+
+For any edits DataGraph can't automatically apply, you'll have the option to manually apply these edits before you complete the update. 
+
+. Click *List of APIs added* and select the appropriate API.
+. Click *API details*.
+. From the *Updated Version* list, select the new API version.
+. Click *Next*. 
+. If DataGraph finds changes it cannot apply, review the list of *Existing Edits Not Applied in Updated Schema* and manually apply them: 
+.. Select a customization and click *Next*.
+.. Edit the API schema as necessary and click **Apply Changes**. 
++
+After you apply the changes, repeat Step 5 for any additional changes.
+. Click *Next* to edit the new version's schema.  
+
 == Additional Resources
 
+* xref:edit-schema.adoc[]
 * xref:api-call-scaling.adoc[API Call Scaling in Anypoint DataGraph]
 * xref:permissions.adoc[Permissions for Anypoint DataGraph]
 * xref:security.adoc[]
 * xref:schema-validation.adoc[Potential Errors When Generating an API Schema]
-* xref:edit-schema.adoc[]
+
