@@ -76,6 +76,28 @@ Select *Configure Keystore* and provide the following:
 Select *Configure Truststore* and provide the certificate bundle that contains your root CA. 
 . Click *Next: Add to unified schema*.
 
+== Promote an Updated API 
+
+After you've updated an API version, you can promote the updated version to another environment. 
+
+When you choose a new version of an API to promote, DataGraph lists any edits you've made to the current version that it can't automatically apply to the new version in the target environment.
+
+For any edits DataGraph can't automatically apply, you'll have the option to manually apply these edits before you complete the promotion. 
+
+Before you promote an updated API schema, you must first xref:add-api-to-unified-schema.adoc#upate-an-api-version[update the API version]:
+
+. Click *List of APIs added* and select the appropriate API.
+. Click *API details*.
+. Click *Promote API schema*.
+. From the *Target environment* list, select the target environment for promotion.
+. Click *Next*.
+. If DataGraph finds changes it cannot apply, review the list of *Changes Not Applied* and manually apply them: 
+.. Select a change and click *Next*.
+.. Edit the API schema as necessary and click **Apply Changes and Promote**. 
++
+After you apply the change, repeat Step 5 for any additional changes.
+. Click *Next* to complete the remainder of the promotion steps.  
+
 == Additional Resources
 
 * xref:permissions.adoc[Permissions for Anypoint DataGraph]
