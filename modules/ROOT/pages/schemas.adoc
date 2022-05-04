@@ -1,8 +1,8 @@
-= Understand the Elements in an API Schema
+= Understanding the Elements in an API Schema
 
 Anypoint DataGraph organizes all data that you choose to make available to your clients in a unified schema. The unified schema is a single, always-current collection of all of the schemas of all of the APIs that you add to it.
 
-When you add a new API to your unified schema, Anypoint DataGraph generates an API schema from the API's RAML or OAS specification. Because each API schema is created at the time that its API is added, your unified schema is always up to date. All API schemas are stored individually in your organization. This isolation of each API schema enables you to edit them individually without affecting the integrity of other schemas.
+When you add a new API to your unified schema, Anypoint DataGraph generates an API schema from the API's RAML or OAS specification. Because each API schema is created when its API is added, your unified schema is always up to date. And because all API schemas are stored individually in your organization, you can edit them individually without affecting the integrity of other schemas.
 
 The API schema that Anypoint DataGraph generates contains a collection of the GET resources and entities, and the relationships between them, that you’ve defined in your API specification. Whenever you add a new API schema to the unified schema, you can configure the types and fields that the unified schema will include.
 
@@ -282,6 +282,51 @@ numberOfSIMCards: int
 --
 
 |===
+
+== Mutations and Input Types
+
+_Mutations_ are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PATCH, PUT, DELETE, and HTTP methods that you’ve defined in your REST API specification. 
+
+For example, this RAML specification defines a POST endpoint at `/createOrder/\{OrderInput}`, and the mutation method in the schema is `createOrder(input:OrderInput)`:
+
+[%header,%autowidth.spread,cols="a,a"]
+|===
+| RAML API Specification | API Schema
+|
+[source]
+--
+#%RAML 1.0
+title: Order API
+
+/createOrder/{OrderInput}:
+  post:
+    displayName: Create Order by OrderInput
+--
+
+|
+[source]
+--
+createOrder(input:OrderInput): Order
+--
+
+|===
+
+Input types represent the attributes of objects created by mutation operations. Input types are POST, PUT, and DELETE request objects you use to modify information in your unified schema when you run mutations.
+
+For example, you can post to the `OrderInput` input type using the `/createOrder/{OrderInput}:` mutation:
+
+---- 
+createOrder (input: “123”) {
+  orderId
+  customerEmail
+  cutomerID
+  orderDate
+  product
+  status
+  totalAmount
+}
+----
+
 
 == Additional Resources
 

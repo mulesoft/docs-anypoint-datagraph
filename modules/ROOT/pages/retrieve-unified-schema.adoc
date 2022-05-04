@@ -1,8 +1,8 @@
-= Retrieve a Copy of the Unified Schema
+= Retrieving the Unified Schema and Source APIs
 
-You can download a copy of the unified schema from the query editor or by using a third-party API client. 
+You can download a copy of the unified schema from the query editor or by using a third-party API client. You can download source APIs from the *List of APIs added* page in DataGraph.  
 
-The schema is downloaded as a `.graphl` file. 
+The schema is downloaded as a `.graphl` file. Source APIs are downloaded as JSON files. 
 
 == Download the Unified Schema from the Query Editor
 
@@ -30,3 +30,13 @@ curl https://<GRAPH_ENDPOINT>/schema \
 -H 'client_id: <YOUR_CLIENT_ID>' \
 -H 'client_secret: <YOUR_CLIENT_SECRET>'
 ----
+
+== Download Source APIs
+
+When you download source APIs, DataGraph downloads all API sources you've added to that environment. 
+
+To download Source APIs, you need the xref:permissions.adoc[contributor or admin permission].
+ 
+
+. Navigate to the *List of APIs added* page.
+. In the right-hand corner of the API list, click *...* > *Download Source APIs*.

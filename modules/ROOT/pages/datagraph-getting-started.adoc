@@ -1,4 +1,4 @@
-= Get Started With Anypoint DataGraph
+= Getting Started With Anypoint DataGraph
 
 Use the following documentation to learn about key concepts and get started with Anypoint DataGraph.
 

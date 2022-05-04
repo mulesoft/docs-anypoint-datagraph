@@ -1,4 +1,4 @@
-= Edit an API Schema 
+= Editing API Schemas
 
 When adding a new API to the unified schema, you must edit the schema to make sure that none of the types in your current schema conflict with existing types in the unified schema. Each type in the unified schema must be unique.
 
@@ -30,7 +30,15 @@ Refer to xref:linking.adoc[] for more information.
 If you need to edit the URL of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#edit-the-url-for-an-api-added-to-the-unified-schema[Edit the URL for an API Added to the Unified Schema].
 * Change the Authentication Method for an API
 +
-If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]
+If you need to edit the authentication method of an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema].
+* Configure mutual authentication (mTLS) for an API
++
+If you need to configure mTLS for an API that you've added to the unified schema, you can do so on the *API details* page. Refer to xref:add-api-to-unified-schema.adoc#configure-mtls-for-an-api-added-to-the-unified-schema[Configure mTLS for an API Added to the Unified Schema].
+* Update an API version
++
+After you've added an API schema to DataGraph, you can update the version of the API source any time you like. 
+Refer to xref:add-api-to-unified-schema.adoc#upate-an-api-version[Update an API Version].
+
 
 
 

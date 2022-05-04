@@ -7,7 +7,8 @@ Completing this quick start guide involves:
 . Downloading and publishing two APIs
 . Adding those APIs to Anypoint DataGraph
 . Editing their schemas, using various API schema editing tools like linking and merging, for addition to the unified schema
-. Querying the unified schema
+. Creating a mutation to post data to the unified schema
+. Querying the unified schema to retrieve specific data you posted 
 
 == Before You Begin
 
@@ -52,7 +53,7 @@ image::datagraph-qsg-configure-api.png[Adding the API and asset version and URL 
 +
 If your API is managed by API Manager, or if you manually added the URL to Exchange, Anypoint DataGraph retrieves the URL. You can also manually add a new URL if it’s included in the API specification.
 . Click *Save*.
-. Click *Next: Provide authentication*.
+. Click *Next: Configure Security*.
 . Provide authentication for the GET endpoints for the API (in this quick-start example, *No Auth*):
 +
 image::datagraph-qsg-api-authentication.png[The API authentication is set to No Auth]
@@ -126,12 +127,12 @@ For example, the Catalyst Order API contains a nested type named `EnumType0`:
 
 image::datagraph-qsg-rename-type.png[Enum type 0 selected in the Catalyst Order API]
 
-Anypoint DataGraph generated the name `EnumType0` because this enum type was unnamed when added. Because this type provides useful order status information, name it appropriately, to `Status`.
+Anypoint DataGraph generated the name `EnumType0` because this enum type was unnamed when added. Because this type provides useful order status information, name it appropriately, to `OrderStatus`.
 
 . Click *EnumType0*.
 . Switch the *Desired state* to *Visible*.
 . In the *Type settings* pane, click *Rename Type*.
-. Rename the type to `Status`, and click *Confirm*.
+. Rename the type to `OrderStatus`, and click *Confirm*.
 +
 image::datagraph-qsg-rename-type-field.png[Renaming enum type 0 to status in the rename type window,60%,60%]
 
@@ -144,7 +145,7 @@ You can also edit the unified schema to link your newly added API object types t
 For example, as a result of you adding the Catalyst Product API to it, the unified schema now has product description information that came from the *ProductResponse* object type. The Catalyst Order API schema also has product information as part of the *OrderItemSummary* object type. You can link these object types to return results from both in one query.
 
 . In the Catalyst Order API schema navigation, select the *OrderItemSummary* object type.
-. Because the OrderItemSummary object type and its fields are hidden, use the *Hidden/Visible* toggle to switch its *Desired state* value to *Visible*:
+. If the OrderItemSummary object type and its fields are hidden, use the *Hidden/Visible* toggle to switch its *Desired state* value to *Visible*:
 +
 image::datagraph-qsg-visible-object-type.png[Setting order item summary visibility desired state to Visible]
 
@@ -184,10 +185,7 @@ For this example, you perform a local composition merge by merging the OrderSumm
 +
 image::datagraph-qsg-merge-selection.png[Selecting the target type order response to merge with the order summary type]
 
-. Use the diff view to get a side-by-side comparison of the two types in the merge, and use the toggle to unhide all the fields.
-+
-image::datagraph-qsg-diff-view-hidden-fields.png[The merge diff view shows hidden fields]
-
+. Use the diff view to get a side-by-side comparison of the two types in the merge, and if needed, use the toggle to unhide all the fields.
 . Click *Preview merge result*:
 +
 image::datagraph-qsg-merge-preview-result.png[Merge preview results for order summary and order response merge,60%,60%]
@@ -197,16 +195,16 @@ The results show that you’re performing a local merge between the OrderSummary
 . Click *Confirm merge*.
 . Click *Next: Add to unified schema*.
 
-As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
+As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view changes as you make them. When the unified schema status changes to “Up to date”, request access to run queries and mutations.
 
-== Request Access to Query the Unified Schema
+== Request Access to Run Queries and Mutations
 
-After you add the two API schema’s to the unified schema, you’re ready to request permission for access to run a query.
+After you add the two API schema’s to the unified schema, you’re ready to request permission for access to run an operation.
 
-. Click *Run a query*.
+. Click *Run Operation*.
 . Select an access method. For this example, select *Create a new application and use it immediately*.
 +
-image::datagraph-qsg-request-query-access.png[Create a new application is selected in requesting access to run a query window,70%,70%]
+image::datagraph-qsg-request-query-access.png[Create a new application is selected in requesting access to run an operation window,70%,70%]
 
 . Click *Next*.
 . In the *Create a new application* window, complete the fields:
@@ -215,9 +213,9 @@ image::datagraph-qsg-create-query-application.png[Creating a query application i
 
 . Click *Next*.
 
-== Write a Query
+== Explore the Unified Schema 
 
-. Before writing your query, take a moment to orient yourself to the unified schema. Click *Explore Schema*.
+. Before writing your mutation and query, take a moment to orient yourself to the unified schema. Click *Explore Schema*.
 +
 image::datagraph-qsg-explore-schema-docs.png[The schema explorer is open in the query editor]
 +
@@ -225,13 +223,79 @@ Here you can explore the documentation of the unified schema, which is also avai
 +
 image::datagraph-qsg-query-autocompletion.png[Using inline autocompletion to write a query]
 
+== Write A Mutation
+
+Mutations are operations you use to add, update, and delete data objects. In GraphQL, mutation operations represent the POST, PATCH, PUT, DELETE, and HTTP methods that you’ve defined in your REST API specification.
+
+. Add the following example mutation:
++
+[source]
+--
+mutation {
+  createOrdersCustomerByCustomerId(
+    customerId: "1964401a-a8b3-40c1-b86e-d8b9f75b5842", 
+    input: {
+      customerId: "1964401a-a8b3-40c1-b86e-d8b9f75b5842",
+      subtotal: "100.21",
+	  taxPrice: "15.22",
+	  shippingPrice: "10.00",
+	  total: "125.43",
+      orderItems: {
+        shipmentItems: [{
+          orderItemId: "fc3d4900-c5ac-4649-8bc8-cbbef4fe8fde"
+          productId: "e1c515f9-102d-4830-b353-18fe48065732"
+          productName: "Uniforms Modern Fit Short Sleeve Polo Shirt"
+          location: {
+            locationId: "1c9a20dc-c585-42fd-ac1a-1216085b76d2"
+            deliveryMethod: SHIPMENT
+            locationType: PARTNER
+          }
+          price: "50"
+          quantity: 1
+        }]
+        pickupItems: [{
+          orderItemId: "88668866-2c6d-4fa6-9e17-4b2c42e0f051",
+          productId: "eb8c8ca7-3c42-4489-a820-3aa138430b75",
+          productName: "Smart Slim Micro Stripe Shirt",
+          location: {
+            locationId: "1c9a20dc-c585-42fd-ac1a-1216085b76d2",
+            deliveryMethod: PICKUP,
+            locationType: STORE
+          },
+          price: "50",
+          quantity: 1
+        }],
+      },
+      shippingAddress: {
+        address: "Street 123",
+        city: "San Francisco",
+        postalCode: "94210",
+        state: "CA",
+        country: "US"
+      },
+    }) {
+    identifier
+    message
+  }
+}
+--
+. Click *Run*. 
+
+DataGraph returns a result that indicates you've created a new order:
+
+image::datagraph-qsg-mutation-result.png[A new order is created when you run the example mutation]
+
+== Write a Query
+
+Now you can write a query to retrieve specific information about the order you created. In this case, you can get details about the `shipmentItems`:
+
 . When you’re ready, add the following example query:
 +
 
 [source]
 --
 {
-  ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b3") {
+  ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b34") {
     shippingAddress {
       state
       city
