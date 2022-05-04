@@ -32,4 +32,4 @@
 * xref:usage-metrics.adoc[Viewing Usage Metrics]
 * xref:api-call-scaling.adoc[Scaling API Calls]
 * xref:configure-apq-cdn.adoc[Using Persisted Queries and CDNs]
-* xref:datagraph-cli.adoc[Using the DataGraph CLI]
+* xref:datagraph-cli.adoc[Using the DataGraph CLI and API Extensions]
