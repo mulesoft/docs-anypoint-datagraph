@@ -31,4 +31,6 @@
   ** xref:troubleshoot-query-traces.adoc[Query Tracing]
 * xref:usage-metrics.adoc[View Usage Metrics for Datagraph]
 * xref:api-call-scaling.adoc[API Call Scaling for DataGraph]
-* xref:semantic-extensions.adoc[API Semantic Extensions for Anypoint DataGraph]
+* xref:overview-cli-extensions.adoc[Using the DataGraph CLI and API Extensions]
+** xref:api-extensions.adoc[API Extensions for DataGraph]
+** xref:datagraph-cli.adoc[DataGraph CLI Reference]

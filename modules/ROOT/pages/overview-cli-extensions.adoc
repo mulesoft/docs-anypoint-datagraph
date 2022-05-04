@@ -1,0 +1,23 @@
+= Using Anypoint Platform DataGraph CLI and API Extensions
+
+You can use the Anypoint Platform DataGraph CLI to add and edit API sources in DataGraph. To do so you must first add the approproate DataGraph API extensions to the API source. 
+
+== Adding Extensions to Your Project
+
+The Datagraph API extensions are available as a public asset in Exchange[link???]. You must add the extensions to your API-specification project as a dependency, and then publish the project to Exchange. After you publish your API-specification project, you can add the API to DataGraph using the DataGraph CLI.
+
+Use API Designer to add the add the extensions to your project. Follow the steps in xref:design-center::design-add-api-dependency.adoc#add-dependencies-to-an-api-specification-project[Add Dependencies to an API-Specification Project], choosing *Fragments* as the dependency type. 
+
+API Designer adds the required dependencies to `exchange.json` and validates the syntax of any annotations you added before publishing your project to Exchange.
+
+== Using the DataGraph CLI vs. the DataGraph UI
+
+If you add an API source using the CLI, you cannot edit it or update its version directly in the UI. You must make these changes using the CLI. 
+
+//q: is the same in the other direction?  If you add an API using the UI can you update it later with the CLI?
+
+
+== See Also
+
+* xref:api-extensions.adoc[Anypoint DataGraph API Extension Reference]
+* xref:datagraph-cli.adoc[Anypoint CLI DataGraph Command Reference] 

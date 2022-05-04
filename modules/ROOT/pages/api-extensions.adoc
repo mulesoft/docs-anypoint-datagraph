@@ -1,8 +1,6 @@
-= API Semantic Extensions for Anypoint DataGraph
+= Anypoint DataGraph API Extension Reference
 
-The following guide defines extensions for REST API specs that are required by DataGraph. 
-
-If you're building or editing REST APIs that you want to include in the DataGraph unified schema, add these semantic extensions where appropriate. 
+The following guide defines API extensions DataGraph. 
 
 There are two groups of extensions: Entity extensions and DataGraph extensions. You must represent each group as different extension instances and store them in Exchange as different assets.
 
@@ -458,4 +456,7 @@ types:
           body: Customer
 ----
 
+== See Also 
 
+* * xref:overview-cli-extensions.adoc[Using Anypoint Platform DataGraph CLI and API Extensions]
+* xref:datagraph-cli.adoc[Anypoint CLI DataGraph Command Reference] 
