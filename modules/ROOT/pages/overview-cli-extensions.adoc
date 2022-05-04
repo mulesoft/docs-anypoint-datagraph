@@ -20,4 +20,4 @@ If you add an API source using the CLI, you cannot edit it or update its version
 == See Also
 
 * xref:api-extensions.adoc[Anypoint DataGraph API Extension Reference]
-* xref:datagraph-cli.adoc[Anypoint CLI DataGraph Command Reference] 
+* xref:datagraph-cli.adoc[Anypoint DataGraph CLI Reference] 
