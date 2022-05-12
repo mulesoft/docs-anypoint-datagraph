@@ -2,13 +2,8 @@
 
 The following guide defines API extensions DataGraph. 
 
-There are two groups of extensions: Entity extensions and DataGraph extensions. You must represent each group as different extension instances and store them in Exchange as different assets.
 
-== Entity Extensions
-
-These extensions define behaviors specific for object types. 
-
-=== Entity
+=== Object Type Extensions 
 
 This extension is used to mark that an object type has a primary key, and thus it can be used as reference or extension.
 
@@ -24,10 +19,6 @@ This extensions applies to:
 |`entity` |Map |Marks an object type as entity.
 |`entity.key` |String |Array, must not be empty. Each item must reference a field that is a key of the entity.
 |===
-
-==== Customization
-
-Each annotation should result in a `PrimaryKeyCustomizations` set for each field referenced as key. 
 
 ==== OAS Example
 
@@ -82,10 +73,6 @@ This extension applies to:
 |`entity-reference.[n].fieldName` |String |Name of the new field that will be created for this type.
 |`entity-reference.[n].keyMapping` |Map |The keys of the map represent fields of this type, and the values represents the keys of the referenced type.
 |===
-
-==== Customization
-
-Each annotation should result in a `ReferenceCustomization`.  
 
 ==== OAS Example
 
@@ -191,10 +178,6 @@ The target is not specified because it is implicit in the operation.
 |`entity-reference.keyMapping` |Map |The keys of the map represent parameters of this operation, and the values represents the keys of the target type.
 |===
 
-==== Customization
-
-Each annotation should result in a `DefaultQueryMethodCustomization` and a set of ????	.
-
 ==== OAS Example
 
 ----
@@ -260,9 +243,7 @@ types:
           body: Customer
 ----
 
-== DataGraph Extensions
-
-These extensions define behaviors specific for DataGraph. 
+== DataGraph-specific Extensions 
 
 The main annotation `datagraph` cannot have the same name for different domains. Because of this, the annotations for operations, type, and object properties use postfixes:
 
@@ -290,10 +271,6 @@ The target is not specified because it is implicit in the operation.
 | `datagraph` |Map |A container for DataGraph-specific annotations.
 | `datagraph.hide` |Boolean |If `true` the element is hidden in the unified schema. If `false` the element is not hidden, which provides the same result as not setting the annotation.
 |===
-
-=== Customization
-
-Each annotation should result in a `HideCustomization`.
 
 === OAS Example
 
@@ -383,10 +360,6 @@ The target is not specified because it is implicit in the operation.
 | `datagraph` |Map |A container for DataGraph-specific annotations.
 | `datagraph.name` |String |The desired name for the element in DataGraph. If possible, use a pattern for valid names.
 |===
-
-==== Customization
-
-Each annotation should result in a `RenameCustomization`.
 
 ==== OAS Example
 
