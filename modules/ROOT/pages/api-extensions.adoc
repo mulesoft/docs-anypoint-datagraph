@@ -43,7 +43,7 @@ components:
 ----
 types:
   Customer:
-    (entity):
+    (dg.entity):
       key: [id]
     properties:
     	name:
@@ -122,7 +122,7 @@ components:
 ----
 types:
   Order:
-    (entity-reference):
+    (dg.entity-reference):
       - name: Customer
         fieldName: customer
         keyMapping:
@@ -139,7 +139,7 @@ types:
     	storeId:
         type: string
   Customer:
-    (entity):
+    (dg.entity):
       key: [id]
     properties:
     	name:
@@ -150,7 +150,7 @@ types:
         type: string
     	...
   Store:
-    (entity):
+    (dg.entity):
       key: [id]
     properties:
     	name:
@@ -219,7 +219,7 @@ paths:
 ----
 types:
   Customer:
-    (entity):
+    (dg.entity):
       key: [id]
     properties:
     	name:
@@ -234,7 +234,7 @@ types:
   uriParameters:
     customerId: string
   get:
-    (entityProvider):
+    (dg.entityProvider):
       keyMapping:
         customerId: id
     responses:
@@ -315,14 +315,14 @@ paths:
 ----
 types:
   Customer:
-    (datagraph):
+    (dg.datagraph):
       hide: true
     properties:
     	name:
         type: string
     	email:
         type: string
-        (datagraph):
+        (dg.datagraph):
           hide: true
     	id:
         type: string
@@ -332,7 +332,7 @@ types:
   uriParameters:
     customerId: string
   get:
-    (datagraph):
+    (dg.datagraph):
       hide: true
     responses:
       200:
@@ -404,14 +404,14 @@ paths:
 ----
 types:
   Customer:
-    (datagraph):
+    (dg.datagraph):
       name: SalesCustomer
     properties:
     	name:
         type: string
     	e-mail:
         type: string
-          (datagraph):
+          (dg.datagraph):
             name: email
     	id:
         type: string
@@ -421,7 +421,7 @@ types:
   uriParameters:
     customerId: string
   get:
-    (datagraph):
+    (dg.datagraph):
       name: getCustomer
     responses:
       200:
