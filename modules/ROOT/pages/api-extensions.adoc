@@ -3,15 +3,13 @@
 The following guide defines API extensions DataGraph. 
 
 
-=== Object Type Extensions 
+== Object Type Extensions 
 
 This extension is used to mark that an object type has a primary key, and thus it can be used as reference or extension.
 
-This extensions applies to:
+This extension applies to `ObjectType`.
 
-* ObjectType
-
-==== Structure
+=== Structure
 
 [%header%autowidth.spread]
 |===
@@ -20,7 +18,7 @@ This extensions applies to:
 |`entity.key` |String |Array, must not be empty. Each item must reference a field that is a key of the entity.
 |===
 
-==== OAS Example
+=== OAS Example
 
 ----
 components:
@@ -38,7 +36,7 @@ components:
     	  ...
 ----
 
-==== RAML Example
+=== RAML Example
 
 ----
 types:
@@ -55,15 +53,13 @@ types:
     	...
 ----
 
-=== Entity Reference
+== Entity Reference
 
 This extension is used to generate a DataGraph _link_ from the properties of a type to another type. The link can be to a type that is not defined in the same API spec.
 
-This extension applies to:
+This extension applies to `ObjectType`.
 
-* ObjectType
-
-==== Structure
+=== Structure
 
 [%header%autowidth.spread]
 |===
@@ -74,7 +70,7 @@ This extension applies to:
 |`entity-reference.[n].keyMapping` |Map |The keys of the map represent fields of this type, and the values represents the keys of the referenced type.
 |===
 
-==== OAS Example
+=== OAS Example
 
 ----
 components:
@@ -117,7 +113,7 @@ components:
     	  ...
 ----
 
-==== RAML Example
+=== RAML Example
 
 ----
 types:
@@ -159,15 +155,13 @@ types:
         type: string
 ----
 
-=== Entity Provider
+== Entity Provider
 
 This extension is used to mark that an endpoint returns instances of an entity by id. In DataGraph this is the _default query method_.
 
-This extension applies to:
+This extension applies to GET operations.
 
-* GET operations
-
-==== Structure
+=== Structure
 
 The target is not specified because it is implicit in the operation.
 
@@ -178,7 +172,7 @@ The target is not specified because it is implicit in the operation.
 |`entity-reference.keyMapping` |Map |The keys of the map represent parameters of this operation, and the values represents the keys of the target type.
 |===
 
-==== OAS Example
+=== OAS Example
 
 ----
 Schemas:
@@ -214,7 +208,7 @@ paths:
             	$ref: "#/components/schemas/Customer"
 ----
 
-==== RAML Example
+=== RAML Example
 
 ----
 types:
@@ -340,7 +334,7 @@ types:
           body: Customer
 ----
 
-=== Name
+== Name
 
 Use this extension to set the desired name of an element in DataGraph, such as defining specific names for elements in the unified schema. You can also use this extension to federate types from different APIs without changing the underlying APIs.
 
@@ -350,7 +344,7 @@ This extension applies to:
 * Any type
 * Object properties
 
-==== Structure
+=== Structure
 
 The target is not specified because it is implicit in the operation.
 
@@ -361,7 +355,7 @@ The target is not specified because it is implicit in the operation.
 | `datagraph.name` |String |The desired name for the element in DataGraph. If possible, use a pattern for valid names.
 |===
 
-==== OAS Example
+=== OAS Example
 
 ----
 components:
@@ -399,7 +393,7 @@ paths:
             	$ref: "#/components/schemas/Customer"
 ----
 
-==== RAML Example
+=== RAML Example
 
 ----
 types:

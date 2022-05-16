@@ -27,9 +27,6 @@ The `<group>`, `<asset>`, and `<version>` reference the API extensions that are 
 
 If you add an API source using the CLI, you cannot edit it or update its version directly in the UI. You must make these changes using the CLI. 
 
-//q: is the same in the other direction?  If you add an API using the UI can you update it later with the CLI?
-
-
 == See Also
 
 * xref:api-extensions.adoc[Anypoint DataGraph API Extension Reference]
