@@ -425,5 +425,5 @@ types:
 
 == See Also 
 
-* * xref:overview-cli-extensions.adoc[Using Anypoint Platform DataGraph CLI and API Extensions]
+* xref:overview-cli-extensions.adoc[Using Anypoint Platform DataGraph CLI and API Extensions]
 * xref:datagraph-cli.adoc[Anypoint CLI DataGraph Command Reference] 
