@@ -15,7 +15,7 @@ This extension applies to `ObjectType`.
 |===
 |Field |Type |Description
 |`entity` |Map |Marks an object type as an entity.
-|`entity.key` |String |Array, must not be empty. Each item must reference a field that is a key of the entity.
+|`entity.key` |String |An array that must not be empty. Each item must reference a field that is a key of the entity.
 |===
 
 === OAS Example
@@ -55,7 +55,7 @@ types:
 
 == Entity Reference
 
-This extension is used to generate a DataGraph _link_ from the properties of a type to another type. The link can be to a type that is not defined in the same API spec.
+This extension generates a DataGraph _link_ from the properties of one type to another type. The link can be to a type that is not defined in the same API spec.
 
 This extension applies to `ObjectType`.
 
@@ -64,10 +64,10 @@ This extension applies to `ObjectType`.
 [%header%autowidth.spread]
 |===
 |Field |Type |Description
-|`entity-reference` |Array of objects |A list of all the references.
-|`entity-reference.[n].name` |String |Name of the type being referenced. May or may not be part of the API.
-|`entity-reference.[n].fieldName` |String |Name of the new field that will be created for this type.
-|`entity-reference.[n].keyMapping` |Map |The keys of the map represent fields of this type, and the values represents the keys of the referenced type.
+|`entity-reference` |An array of objects |A list of all the references.
+|`entity-reference.[n].name` |String |The name of the type being referenced. May or may not be part of the API.
+|`entity-reference.[n].fieldName` |String |The name of the new field that will be created for this type.
+|`entity-reference.[n].keyMapping` |Map |The keys of the map represent the fields of this type, and the values represents the keys of the referenced type.
 |===
 
 === OAS Example
@@ -157,7 +157,7 @@ types:
 
 == Entity Provider
 
-This extension is used to mark that an endpoint returns instances of an entity by id. In DataGraph, this is the _default query method_.
+This extension marks that an endpoint returns instances of an entity by id. In DataGraph, this is the _default query method_.
 
 This extension applies to GET operations.
 
