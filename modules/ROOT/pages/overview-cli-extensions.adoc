@@ -1,10 +1,10 @@
 = Using Anypoint Platform DataGraph CLI and API Extensions
 
-You can use the Anypoint CLI DataGraph commands to add and edit API sources in DataGraph. To do so you must first add the appropriate DataGraph API extensions to the API source. 
+You can use the Anypoint CLI DataGraph commands to add and edit API sources in DataGraph. To do so, you must first add the appropriate DataGraph API extensions to the API source. 
 
 == Adding Extensions to Your Project
 
-You must add the extensions to your API-specification project as a dependency, and then publish the project to Exchange. After you publish your API-specification project, you can add the API to DataGraph using the CLI.
+You must add the extensions to your API-specification project as a dependency and then publish the project to Exchange. After you publish your API-specification project, you can add the API to DataGraph using the CLI.
 
 Use API Designer to add the extensions to your project. Follow the steps in xref:design-center::design-add-api-dependency.adoc#add-dependencies-to-an-api-specification-project[Add Dependencies to an API-Specification Project], choosing *Fragments* as the dependency type. 
 
@@ -12,18 +12,18 @@ API Designer adds the required dependencies to `exchange.json` and validates the
 
 == Maintaining RAML Compatibility
 
-To maintain compatibility in RAML specifications with tools that do not support API extensions, these extensions includes a “RAML companion” that provides a simple version of RAML annotations definition. To use DataGraph API extensions in RAML, add the following code to the main file of the API-project specification:
+To maintain compatibility in RAML specifications with tools that do not support API extensions, these extensions include a “RAML companion” that provides a simple version of RAML annotations definition. To use DataGraph API extensions in RAML, add the following code to the main file of the API-project specification:
 
 ----
 uses:
   dg: exchange_modules/<group>/<asset>/<version>/datagraph-api-extensions.raml 
 ----
 
-You can change the prefix `dg` if needed, but it must match the prefix you use the one use in the extensions.
+You can change the prefix `dg` if needed, but it must match the prefix used in the extensions.
 
 The `<group>`, `<asset>`, and `<version>` reference the API extensions that are published in Exchange.
 
-== Using the DataGraph CLI vs. the DataGraph UI
+== Using the DataGraph CLI versus the DataGraph UI
 
 If you add an API source using the CLI, you cannot edit it or update its version directly in the UI. You must make these changes using the CLI. 
 

@@ -1,11 +1,11 @@
 = Anypoint DataGraph API Extension Reference
 
-The following guide defines API extensions DataGraph. 
+This guide defines API extensions for DataGraph. 
 
 
 == Object Type Extensions 
 
-This extension is used to mark that an object type has a primary key, and thus it can be used as reference or extension.
+This extension marks that an object type has a primary key, and thus can be used as a reference or extension.
 
 This extension applies to `ObjectType`.
 
@@ -14,7 +14,7 @@ This extension applies to `ObjectType`.
 [%header%autowidth.spread]
 |===
 |Field |Type |Description
-|`entity` |Map |Marks an object type as entity.
+|`entity` |Map |Marks an object type as an entity.
 |`entity.key` |String |Array, must not be empty. Each item must reference a field that is a key of the entity.
 |===
 
@@ -157,7 +157,7 @@ types:
 
 == Entity Provider
 
-This extension is used to mark that an endpoint returns instances of an entity by id. In DataGraph this is the _default query method_.
+This extension is used to mark that an endpoint returns instances of an entity by id. In DataGraph, this is the _default query method_.
 
 This extension applies to GET operations.
 
@@ -263,7 +263,7 @@ The target is not specified because it is implicit in the operation.
 |===
 |Field |Type |Description
 | `datagraph` |Map |A container for DataGraph-specific annotations.
-| `datagraph.hide` |Boolean |If `true` the element is hidden in the unified schema. If `false` the element is not hidden, which provides the same result as not setting the annotation.
+| `datagraph.hide` |Boolean |If `true`, the element is hidden in the unified schema. If `false`, the element is not hidden, which provides the same result as not setting the annotation.
 |===
 
 === OAS Example
