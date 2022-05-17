@@ -53,7 +53,7 @@ types:
     	...
 ----
 
-== Entity Reference
+== Entity References 
 
 This extension generates a DataGraph _link_ from the properties of one type to another type. The link can be to a type that is not defined in the same API spec.
 
