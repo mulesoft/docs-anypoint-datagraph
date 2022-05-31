@@ -237,6 +237,55 @@ types:
           body: Customer
 ----
 
+== HTTP Method Overide
+
+Use this extenion to override an HTTP method. 
+
+This extension applies to operations. 
+
+=== Structure
+
+The target is not specified because it is implicit in the operation.
+
+[%header%autowidth.spread]
+|===
+|Field |Type |Description
+| `http-method-override` |Map |Marks an operation to be overridden.
+| `http-method-override.method` |String |The HTTP method that will be used to override the original operation.
+|===
+
+=== OAS Example
+
+----
+paths:
+  "/customers":
+    post:
+  	x-http-method-override:
+          method: get
+  	responses:
+    	'200':
+         content:
+            application/json:
+          	  schema: 
+                type: array
+                items: 
+                  $ref: "#/components/schemas/Customer"
+----
+
+=== RAML Example
+
+----
+/customers:
+  post:
+    (dg.http-method-override):
+      method: get
+    responses:
+      200:
+        body:
+          application/json:
+            type: Customer[]
+----
+
 == DataGraph-specific Extensions 
 
 The main annotation `datagraph` cannot have the same name for different domains. Because of this, the annotations for operations, type, and object properties use postfixes:
