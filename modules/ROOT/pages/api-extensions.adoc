@@ -2,7 +2,6 @@
 
 This guide defines API extensions for DataGraph. 
 
-
 == Object Type Extensions 
 
 This extension marks that an object type has a primary key, and thus can be used as a reference or extension.
