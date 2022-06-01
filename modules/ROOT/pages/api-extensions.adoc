@@ -236,9 +236,9 @@ types:
           body: Customer
 ----
 
-== HTTP Method Overide
+== HTTP Method Override
 
-Use this extenion to override an HTTP method. 
+Use this extension to treat a POST method as a GET method. This extension converts the POST method into a query operation instead of a mutation.
 
 This extension applies to operations. 
 
