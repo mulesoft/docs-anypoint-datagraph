@@ -36,34 +36,14 @@ Now consider that this organization also wants to provide a web application to a
 
 By using Anypoint DataGraph, the organization does not need to create a new API for every new business requirement. The enterprise architect can discover the existing order, shipment, and product APIs and add each API schema to Anypoint DataGraph. Developers can then request access to the unified schema and query the data that they need or update it from a single endpoint. 
 
-== Restrictions and Limitations
-Before using Anypoint DataGraph, review the following restrictions and limitations:
+== Anypoint DataGraph API Support
+Anypoint DataGraph supports:
 
-* Anypoint DataGraph supports:
-** REST APIs with RAML and OAS specifications
-** Up to 250 APIs per unified schema
-** Up to 16,000 fields per unified schema
-
-* Anypoint DataGraph limits the query service to:
-** A 30 second timeout per query
-** A maximum depth of 100 per query. For example, the following query has a depth of 6:
-+
-....
-ordersByOrderId {               #depth 0
-   orderItems {                 #depth 1
-      shipmentItems {           #depth 2
-         product {              #depth 3
-           model                #depth 4
-           price {              #depth 4
-             amount {           #depth 5
-               name             #depth 6
-               currencyValue    #depth 6
-             }
-           }
-         }
-       }
-     }
-....
+* REST APIs with RAML and OAS specifications
+* Up to 250 APIs per unified schema
+* Up to 16,000 fields per unified schema
+* A query depth of 100 nested levels
+* A 30 second timeout per query
 
 == Anypoint DataGraph Administration in API Manager
 
