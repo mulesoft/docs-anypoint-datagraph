@@ -163,7 +163,7 @@ If the API already has a keystore or truststore, you can remove either and add n
 [[update-an-api-version]]
 == Update an API Version
 
-After you've added an API schema to DataGraph, you can update the version of the API source any time you like. DataGraph supports only `stable` state API versions. 
+After you've added an API schema to DataGraph, you can update the version of the API source any time you like. DataGraph supports only `stable` state API versions. The update functionality updates only patch and minor versions of an API source.
 
 [NOTE]
 --
