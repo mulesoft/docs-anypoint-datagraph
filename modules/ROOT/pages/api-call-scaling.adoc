@@ -53,5 +53,5 @@ You must have the DataGraph xref:permissions.adoc[admin or operator permission].
 
 * xref:add-api-to-unified-schema.adoc[Add an API to the Unified Schema]
 * xref:usage-metrics.adoc[View Usage Metrics for DataGraph]
-* xref:index.adoc#restrictions-and-limitations[DataGraph Restrictions and Limitations]
+* xref:index.adoc#anypoint-datagraph-api-support[DataGraph API Support]
  
