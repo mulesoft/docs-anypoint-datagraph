@@ -1,8 +1,8 @@
-= Retrieving the Unified Schema and Source APIs
+= Retrieving the Unified Schema and Diagnostic Data
 
-You can download a copy of the unified schema from the query editor or by using a third-party API client. You can download source APIs from the *List of APIs added* page in DataGraph.  
+You can download a copy of the unified schema from the query editor or by using a third-party API client. You can download diagnostic data from the *List of APIs added* page in DataGraph.  
 
-The schema is downloaded as a `.graphl` file. Source APIs are downloaded as JSON files. 
+The schema is downloaded as a `.graphl` file. Diagnostic data is downloaded as JSON files. 
 
 == Download the Unified Schema from the Query Editor
 
@@ -31,12 +31,12 @@ curl https://<GRAPH_ENDPOINT>/schema \
 -H 'client_secret: <YOUR_CLIENT_SECRET>'
 ----
 
-== Download Source APIs
+== Download Diagnostic Data
 
-When you download source APIs, DataGraph downloads all API sources you've added to that environment. 
+When you download diagnostic data, DataGraph downloads diagnostic data for API sources you've added to that environment. 
 
 To download Source APIs, you need the xref:permissions.adoc[contributor or admin permission].
  
 
 . Navigate to the *List of APIs added* page.
-. In the right-hand corner of the API list, click *...* > *Download Source APIs*.
+. In the right-hand corner of the API list, click *...* > *Download Diagnostic Data*.
