@@ -1,0 +1,33 @@
+= Anypoint DataGraph CLI Reference
+ 
+Anypoint Platform provides a command-line interface (CLI) for DataGraph. The CLI supports both the interactive shell and standard CLI modes. 
+
+Use the DataGraph CLI to manage:
+
+* <<datagraph-api-sources>>
+* <<datagraph-load-balancers>>
+
+== Before You Get Started 
+
+* Review xref:overview-cli-extensions.adoc[Using the DataGraph CLI and API Extensions] before using the CLI to add API sources to DataGraph.
+* Review xref:3.x@anypoint-cli::index.adoc[Anypoint CLI prerequisites, installation, and authentication instructions]. 
+
+[[datagraph-api-sources]]
+== DataGraph API Sources
+
+include::anypoint-cli::partial$datagraph-source.adoc[tag=summary,leveloffset=+1]
+
+include::anypoint-cli::partial$datagraph-source.adoc[tag=commands,leveloffset=+1]
+
+[[datagraph-load-balancers]]
+== DataGraph Load Balancers
+
+include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=summary,leveloffset=+1]
+
+include::anypoint-cli::partial$datagraph-load-balancer.adoc[tag=commands,leveloffset=+1]
+
+
+== See Also
+
+* xref:overview-cli-extensions.adoc[Using the DataGraph CLI and API Extensions]
+* xref:api-extensions.adoc[Anypoint DataGraph API Extension Reference]

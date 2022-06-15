@@ -2,8 +2,6 @@
 
 Anypoint DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number of downstream API calls made for each of the environments in which you’ve deployed a unified schema. 
 
-Refer to the xref:index.adoc#restrictions-and-limitations[DataGraph Overview] for a full list of restrictions and limitations. 
-
 Usage metrics are separated by Production and Sandbox environments per business group. More specifically, the metrics in any given environment show:
 
 * API requests received for that environment

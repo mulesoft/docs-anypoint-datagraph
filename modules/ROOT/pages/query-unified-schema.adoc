@@ -5,7 +5,7 @@ The unified schema resolves into a single GraphQL endpoint. To run queries or mu
 == Before You Begin
 
 * You must have xref:permissions.adoc[the Consume, Contribute, or Admin permission]. 
-* Review the xref:index.adoc#restrictions-and-limitations[restrictions and limitations] for REST API calls and queries.
+* Review xref:index.adoc#anypoint-datagraph-api-support[Anypoint DataGraph API Support]
 
 == Request Access to Run a Query
 
