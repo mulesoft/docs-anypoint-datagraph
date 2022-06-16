@@ -1,8 +1,6 @@
-= DataGraph CLI Erros
+= DataGraph CLI Errors
 
-This following lists possible errors you might encounter when using the Datagraph CLI. 
-
-The errors are divided in two categories:
+When using the Datagraph CLI, you might encounter errors. The errors are divided in two categories:
 
 . Command errors: These are errors you can encounter when using incorrect arguments or options in commands.
 . Validation errors: These are errors you can encounter with validation when adding new API sources or when updating sources in the unified schema. 
@@ -128,6 +126,7 @@ Output:
 Cause:
 
 This error indicates that you requested an invalid number of API calls.
+
 * `datagraph scale`: The number of concurrent calls must be a number between 1 and 1200.
 
 === Unauthorized
@@ -159,6 +158,7 @@ Output:
 Cause:
 
 This error indicates that the API source you are trying to edit, delete, or update exists, but it is not in the working environment.
+
 * `datagraph sources update/promote`: The UUID sent is not in the working environment. Or if you are using the `--version` option, the major version is not compatible with the current version.
 
 == Validation Errors
