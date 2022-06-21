@@ -2,12 +2,12 @@
 
 When using the Datagraph CLI, you might encounter errors. The errors are divided in two categories:
 
-. Command errors: These are errors you can encounter when using incorrect arguments or options in commands.
-. Validation errors: These are errors you can encounter with validation when adding new API sources or when updating sources in the unified schema. 
+. Command errors: These errors occur when you use incorrect arguments or options in commands.
+. Validation errors: These errors occur during validation when you add new API sources or when you update sources in the unified schema. 
 
 == Command Errors
 
-DataGraph returns these errors when you don't correctly define a command. These errors can be caused by an incorrect option 
+DataGraph returns these errors when you incorrectly define a command. These errors can be caused by an incorrect option 
 parameter, an ID that cannot be found, or the lack of a required option.
 
 === Options are Required
@@ -26,7 +26,7 @@ Cause:
 This error indicates that at least one option is required to run the command.
 
 * `datagraph sources add`: Either the `--url` option or the `--discover-url` option is required for this command.
-* `datagraph sources update/promote`: Any available option is required. You must define an element to update or promote in the target source.
+* `datagraph sources update/promote`: Any available option is required. Define an element to update or promote in the target source.
 
 === Not Found
 
@@ -111,7 +111,7 @@ Cause:
 
 This error indicates that you must set the URL using either `--url` or `--discover-url`.
 
-* `datagraph sources add`: Since an URL is a required field in the `add` command, you must set one of the two options, `--url` or `--discover-url`.
+* `datagraph sources add`: Because an URL is a required field in the `add` command, you must set one of the two options, `--url` or `--discover-url`.
 
 === Invalid API Calls
 
@@ -163,7 +163,7 @@ This error indicates that the API source you are trying to edit, delete, or upda
 
 == Validation Errors
 
-Validation errors occur when you use the `datagraph validate asset` command before adding or updating an API source against the unified schema.
+DataGraph returns these errors when you use the `datagraph validate asset` command before adding or updating an API source against the unified schema.
 
 === Editing Errors
 
