@@ -1,0 +1,227 @@
+= DataGraph CLI Errors
+
+When using the Datagraph CLI, you might encounter errors. The errors are divided in two categories:
+
+. Command errors: These errors occur when you use incorrect arguments or options in commands.
+. Validation errors: These errors occur during validation when you add new API sources or when you update sources in the unified schema. 
+
+== Command Errors
+
+DataGraph returns these errors when you incorrectly define a command. These errors can be caused by an incorrect option 
+parameter, an ID that cannot be found, or the lack of a required option.
+
+=== Options are Required
+
+Output:
+----
+{
+  "error": {
+    "errorMessage": "Options are required"
+  }
+}
+----
+
+Cause:
+
+This error indicates that at least one option is required to run the command.
+
+* `datagraph sources add`: Either the `--url` option or the `--discover-url` option is required for this command.
+* `datagraph sources update/promote`: Any available option is required. Define an element to update or promote in the target source.
+
+=== Not Found
+
+Output:
+----
+{
+  "errorCode": "dg-xapi-proxy",
+  "errorMessage": "Not Found"
+}
+----
+
+Cause:
+
+This error indicates that DataGraph didn't find the asset.
+
+* `datagraph sources add`: The asset is not reachable either because the group ID, asset ID, and version ID does not correspond to a valid asset, or you cannot access the asset.
+* `datagraph sources update/promote`: The UUID you provided does not exist in the current environment or in the target environment to which you're attempting to promote the asset.
+
+=== Bad Request
+
+Output:
+----
+{
+  "error": {
+    "code": "400",
+    "message": "Bad Request"
+  }
+}
+----
+
+Cause:  
+
+This error indicates that some required parameters in the command are incorrectly formatted.
+
+* `datagraph sources update`: The provided source ID is not a valid UUID.
+* `datagraph sources promote`: The source ID or the target environment ID are not in a valid UUID format.
+
+=== API Already Exists
+
+Output:
+----
+{
+  "errorCode": "dg-federation-source-exists",
+  "errorMessage": "API already exists"
+}
+----
+
+Cause:
+
+This error indicates that the API you are trying to add already exists in the unified schema.
+
+* `datagraph sources add`: The asset ID and major version of the API source already exist in the unified schema. To make changes to the source, use the `datagraph sources update` command.
+
+=== No API Instances Found
+
+Output:
+----
+{
+  "errorCode": "dg-xapi-no-api-instances",
+  "errorMessage": "No API instances found"
+}
+----
+
+Cause:
+
+This error indicates the lack of URL to retrieve for an API instance.
+
+* `datagraph sources add/update/promote`: This errors appears when using the ``--discover-url` option. It occurs when the asset has no valid instances from which the URL can be retrieved that aren’t from a mocking service. In such cases, use the `--url` option instead.
+
+=== Must Define URL
+
+Output:
+----
+{
+  "error": {
+    "errorMessage": "Must define url or set --discover-url"
+  }
+}
+----
+
+Cause:
+
+This error indicates that you must set the URL using either `--url` or `--discover-url`.
+
+* `datagraph sources add`: Because an URL is a required field in the `add` command, you must set one of the two options, `--url` or `--discover-url`.
+
+=== Invalid API Calls
+
+Output:
+----
+{
+  "errorCode": "dg-xapi-invalid-api-calls",
+  "errorMessage": "Invalid Api Calls: 1500"
+}
+----
+
+Cause:
+
+This error indicates that you requested an invalid number of API calls.
+
+* `datagraph scale`: The number of concurrent calls must be a number between 1 and 1200.
+
+=== Unauthorized
+
+Output:
+----
+{
+  "error": {
+    "code": "401",
+    "message": "Unauthorized"
+  }
+}
+----
+
+Cause: 
+
+This error indicates that you lost the session in the CLI when using it in interactive mode. Exit and relaunch the CLI, and then log in again.
+
+=== API Not Found in Current Environment
+
+Output:
+----
+{
+  "errorCode": "dg-federation-source-not-in-env",
+  "errorMessage": "API not found in current environment"
+}
+----
+
+Cause:
+
+This error indicates that the API source you are trying to edit, delete, or update exists, but it is not in the working environment.
+
+* `datagraph sources update/promote`: The UUID sent is not in the working environment. Or, if you are using the `--version` option, the major version is not compatible with the current version.
+
+== Validation Errors
+
+DataGraph returns these errors when you use the `datagraph validate asset` command before adding or updating an API source against the unified schema.
+
+=== Editing Errors
+
+Editing errors are generated when the edits in the particular API source contain a semantic problem. These errors use the code property `dg-federation-customization-conflict` and have the following structure:
+
+----
+{
+  "code": "dg-federation-customization-conflict",
+  "detail": [
+    {
+      "code": "element-not-found-in-spec",
+      "editType": "set-primary-key",
+      "reason": "field addId was not found in the specification",
+      "element": "Address"
+    }
+  ],
+  "message": "Customization conflict found adding Customer API"
+}
+----
+
+* The `message` field contains a human-readable response of the validation and provides a summary of the error.
+* The `detail` field contains a list of all the conflicts found in the current asset:
+** The `code` field identifies the type of error.
+** The `editType` field identifies the customization that has the conflict.
+** The `reason` field contains a human-readable description of the issue.
+** the `element` field contains the problem.
+
+=== Conflict Errors
+
+Conflict errors occur when you try to add an API schema to the unified schema. These errors use the code property `dg-federation-udg-conflict` and have the following structure:
+
+----
+{
+  "code": "dg-federation-udg-conflict",
+  "detail": [
+    {
+      "element": "Customer",
+      "violations": [
+        {
+          "code": "incompatible-primary-key-set",
+          "keys": [
+            "customerId"
+          ],
+          "expectedKeys": [
+            "name"
+          ],
+          "message": "Primary key set have edges with different names"
+        }
+      ]
+    }
+  ],
+  "message": "Merge conflict found adding CLI - Customer OAS API"
+}
+----
+
+* The `message` field contains a human-readable response of the validation and provides a summary of the error.
+* The `detail` field contains a list of all conflicts found when trying to merge the API schema into the unified schema. 
+** The `element` field contains the location of the conflict.
+** The `violations` field lists the coflicts to fix. 
+*** The `code` field identifies the type of the error.
+*** The `message` field contains a human-readable description of the issue, and, depending on the type of error, it can contain additional properties with more details.
