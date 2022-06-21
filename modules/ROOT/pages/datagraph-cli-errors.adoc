@@ -78,7 +78,7 @@ Cause:
 
 This error indicates that the API you are trying to add already exists in the unified schema.
 
-* `datagraph sources add`: The asset ID and major version of the API source already exists in the unified schema. To make changes to the source, use the the `datagraph sources update` command.
+* `datagraph sources add`: The asset ID and major version of the API source already exist in the unified schema. To make changes to the source, use the `datagraph sources update` command.
 
 === No API Instances Found
 
@@ -159,7 +159,7 @@ Cause:
 
 This error indicates that the API source you are trying to edit, delete, or update exists, but it is not in the working environment.
 
-* `datagraph sources update/promote`: The UUID sent is not in the working environment. Or if you are using the `--version` option, the major version is not compatible with the current version.
+* `datagraph sources update/promote`: The UUID sent is not in the working environment. Or, if you are using the `--version` option, the major version is not compatible with the current version.
 
 == Validation Errors
 
@@ -191,7 +191,7 @@ Editing errors are generated when the edits in the particular API source contain
 ** The `reason` field contains a human-readable description of the issue.
 ** the `element` field contains the problem.
 
-=== Conflict errors
+=== Conflict Errors
 
 Conflict errors occur when you try to add an API schema to the unified schema. These errors use the code property `dg-federation-udg-conflict` and have the following structure:
 
