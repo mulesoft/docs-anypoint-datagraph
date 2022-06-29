@@ -57,6 +57,11 @@ You manage Anypoint DataGraph in API Manager. Typical management tasks include:
 
 * Using the xref:api-manager::datagraph-viewing-application-contracts.adoc[API Manager Client Applications] page to view and manage client application contracts.
 
+== The Anypoint DataGraph Best Practices Ruleset
+
+The DataGraph Best Practices Ruleset is a collection of governance rules you can add as a dependency to any API project you want to later use in Anypoint DataGraph. The ruleset is a collection of messages to help you ensure your API project adheres to DataGraph best practices. The ruleset is publicly available in Exchage. You add the ruleset as a dependency to API specifications in Design Center API Designer.
+
+For more information about adding and using rulesets in API Designer, see xref:api-governance/find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions].
 
 == Anypoint Platform Requirements and Licensing
 
