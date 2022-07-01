@@ -1,4 +1,4 @@
-= Adding API Schemas to the Unified Schema
+= Adding API Sources to the Unified Schema
 
 When you add an API, Anypoint DataGraph generates an API schema from that API’s specification, which you can then edit before adding it to the unified schema.
 
@@ -6,18 +6,29 @@ Note that some elements in your API specification, such as non-GET operations, a
 
 Adding an API to the unified schema comprises three tasks:
 
-. Add the API to Anypoint DataGraph.
-. Preview the generated API schema.
-. Edit the API schema and resolve any conflicts.
-
+. xref:add-the-api-to-anypoint-datagraph[Add the API to Anypoint DataGraph]
+. xref:preview-the-generated-api-schema[Preview the generated API schema]
+. xref:edit-the-api-schema-and-add-it-to-the-unified-schema[Edit the API schema and resolve any conflicts]
++
 You must resolve any conflicts between object types before adding the generated API schema to the unified schema. Refer to xref:resolve-conflicts.adoc[Resolve Conflicts] for more information.
+
+After you add an API, you can:
+
+* xref:change-the-authentication-method-for-an-api-added-to-the-unified-schema[Change its authentication method] 
+* xref:configure-mtls-for-an-api-added-to-the-unified-schema[Configure mTLS for the API]
+* xref:update-an-api-version[Update its version]
+
+[NOTE]
+--
+You can also use the xref:datagraph-cli.adoc[Anypoint CLI] to add and edit API sources in DataGraph. However, if you add an API source using the CLI, you cannot edit it or update its version directly in the UI. You must make these changes using the CLI.
+-- 
 
 == Before You Begin
 
 To add an API to the unified schema, ensure you have:
 
 * Created a REST API using either a RAML or OAS specification.
-* Published the API in Exchange in the same organization as your unified schema.
+* Published the API in Exchange in the same organization as your unified schema. DataGraph supports only `stable` state API versions. 
 * Initiated an instance of the API with an accessible URL.
 
 The API does not need to be a Mule application or be running on Mule runtime engine or in CloudHub.
@@ -152,7 +163,12 @@ If the API already has a keystore or truststore, you can remove either and add n
 [[update-an-api-version]]
 == Update an API Version
 
-After you've added an API schema to DataGraph, you can update the version of the API source any time you like. 
+After you've added an API schema to DataGraph, you can update the version of the API source any time you like. DataGraph supports only `stable` state API versions. The update functionality updates only patch and minor versions of an API source.
+
+[NOTE]
+--
+If you add an API source using the CLI, you cannot update its version directly in the UI. You must make these changes using the CLI.
+-- 
 
 When you choose a new version of an API, DataGraph lists any edits you've made to the current version that it can't automatically apply to the new version.
 

@@ -4,6 +4,11 @@ When adding a new API to the unified schema, you must edit the schema to make su
 
 You don’t have to perform edit functions before you add an API schema to the unified schema. You can make changes to an API schema even after you’ve added it to the unified schema. However, if Anypoint DataGraph raises any conflict errors, you must edit your schema to resolve those conflicts _before_ adding it to the unified schema.
 
+[NOTE]
+--
+If you add an API source using the CLI, you cannot edit it or update its version directly in the UI. You must make these changes using the CLI.
+--
+
 To edit an API schema, address the following tasks where applicable:
 
 * Resolve any conflicts between object types
