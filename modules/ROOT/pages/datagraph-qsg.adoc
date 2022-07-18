@@ -19,6 +19,11 @@ Before getting started, ensure you have:
 * Admin or Contribute permissions
 * The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan. If you haven't allocated the correct number of vCores to the environment in which you're attempting to add an API, Anypoint DataGraph raises an error message.
 
+[IMPORTANT]
+--
+If you use an Anypoint Virtual Private Cloud (Anypoint VPC), your browser needs access to the Anypoint VPC to run queries in DataGraph. Without access, you might receive a `failed to fetch` schema error. To prevent this, xref:set-dlb.adoc[set up a dedicated load balancer (DLB)]. Network and hosting options are described in xref:hosting-options.adoc[DataGraph Hosting Options and Networking]. 
+--
+
 == Download and Publish the Order and Product APIs
 
 To follow the quick-start example, download the RAML definitions for two example APIs provided by MuleSoft: https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/minor/2.0/console/summary/[the Order Systems API v2.0^] and https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/minor/2.0/console/summary/[the Product API v2.0^].
