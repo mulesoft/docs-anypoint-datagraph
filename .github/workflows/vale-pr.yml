@@ -11,7 +11,7 @@ jobs:
       uses: schmiddim/action-wget-unzip@master
       with:
         url: 'https://github.com/mulesoft/dev-docs-writing-style/releases/download/latest/Mulesoft.zip'
-        destination: ./github/dev-docs-writing-style/Mulesoft
+        destination: dev-docs-writing-style/Mulesoft
     - name: Vale
       uses: errata-ai/vale-action@reviewdog
       with:
