@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@master
     - name: Vale
-      uses: errata-ai/vale-action@master
+      uses: errata-ai/vale-action@v1
       with:
         # Optional
         styles: |
