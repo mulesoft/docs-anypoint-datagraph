@@ -3,9 +3,11 @@
 
 The following topics provide useful information for troubleshooting in DataGraph:
 
-* 
-* 
-* 
+* xref:troubleshooting-runtime-errors[Troubleshooting Runtime Errors]
+* xref:troubleshooting-schema-errors[Troubleshooting Schema Errors]
+* xref:troubleshooting-mtls-errors[Troubleshooting mTLS Errors]
+* xref:troubleshooting-access-errors[Troubleshooting Access Errors]
+* xref:troubleshooting-server-errors[Troubleshooting Server Errors]
 
 
 == Troubleshooting Runtime Errors
@@ -82,7 +84,7 @@ To troubleshoot this error, ensure that:
 . You xref:runtime-manager::to-request-vpc-connectivity.adoc[request connection] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
 . You check the `extensions` section of the error message for any details that may be useful in troubleshooting the error. 
 
-=== Potential Runtime Errors
+=== Other Runtime Errors
 
 * Can't prettify an invalid query 
 +
@@ -137,7 +139,7 @@ If you encounter mTLS errors, troubleshoot them as follows.
 This errors indicates that you uploaded a certificate file that is not in `.pem` format. Ensure the file is a valid `.pem` file and upload it again. 
 
 * Trying to validate an invalid keystore error
-
++
 DataGraph generates this error if the private key or password does not match the certificate. Ensure the private key and certificate match or confirm the password. 
 
 * Issue with TLS error 
