@@ -191,5 +191,5 @@ After you apply the changes, repeat Step 5 for any additional changes.
 * xref:api-call-scaling.adoc[API Call Scaling in Anypoint DataGraph]
 * xref:permissions.adoc[Permissions for Anypoint DataGraph]
 * xref:security.adoc[]
-* xref:schema-validation.adoc[Potential Errors When Generating an API Schema]
+* xref:troubleshoot-schemas-queries.adoc#potential-errors-when-generating-an-api-schema[]
 
