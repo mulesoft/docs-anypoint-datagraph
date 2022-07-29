@@ -57,7 +57,6 @@ You manage Anypoint DataGraph in API Manager. Typical management tasks include:
 
 * Using the xref:api-manager::datagraph-viewing-application-contracts.adoc[API Manager Client Applications] page to view and manage client application contracts.
 
-
 == Anypoint Platform Requirements and Licensing
 
 To use Anypoint DataGraph, ensure you meet the following requirements:
