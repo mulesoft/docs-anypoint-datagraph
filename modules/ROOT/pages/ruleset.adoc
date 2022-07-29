@@ -1,6 +1,6 @@
 = Anypoint DataGraph Best Practices Ruleset
 
-The DataGraph Best Practices Ruleset is a collection of governance rules you can add as a dependency to any API project you want to use in Anypoint DataGraph. The ruleset is a collection of messages to help you ensure your API project adheres to DataGraph best practices. The ruleset is publicly available in Exchange. You add the ruleset as a dependency to API specifications in Design Center API Designer. You can also validate an API against the ruleset, using the API Governance CLI.
+The DataGraph Best Practices Ruleset is a collection of governance rules you can add as a dependency to any API project you want to use in Anypoint DataGraph. The ruleset is a collection of messages that ensure your API project adheres to DataGraph best practices. The ruleset is publicly available in Exchange and you add the ruleset as a dependency to API specifications in Design Center API Designer. You can also validate an API against the ruleset, using the API Governance CLI.
 
 == Example Use
 
