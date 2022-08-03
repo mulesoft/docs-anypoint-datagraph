@@ -80,8 +80,8 @@ An exception while fetching data error occurs when the unified schema can't conn
 To troubleshoot this error, ensure that:
 
 . The underlying APIs are running.
-. The URL provided for each APIs is correct. Go to *List of APIs added* > Select an API > *API details*, and confirm the URL.
-. You xref:runtime-manager::to-request-vpc-connectivity.adoc[request connection] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
+. The URL provided for each API is correct. Go to *List of APIs added* > Select an API > *API details*, and confirm the URL.
+. You xref:runtime-manager::to-request-vpc-connectivity.adoc[must request connections] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
 . You check the `extensions` section of the error message for any details that may be useful in troubleshooting the error. 
 
 === Other Runtime Errors
@@ -106,17 +106,17 @@ Anypoint DataGraph does not translate the following parts of an API specificatio
 
 * Requests with a `Media type` value other than `application/json`
 * Responses with a `Media type` value other than `application/json`
-* Response payloads with any of the unsupported types `Schema`, `File`, `Tuple`, `Matrix`, `Nil`, or arrays of any of these types
-* `query params` and `headers` with types other than scalars or scalar array
+* Response payloads with any of the unsupported types `Schema`, `File`, `Tuple`, `Matrix`, `Nil`, or arrays of any of the types
+* `query params` and `headers` with types other than scalars or scalar arrays
 * Endpoints of required `params` of unsupported types
 * `union` types with members other than `objects` and `nils`
 * JSON schema keywords `if`, `then`, and `else`
 
-If your API specification is composed of only unsupported parts, Anypoint DataGraph does not generate an API schema and throws a *Validation failed* error.
+If your API specification is composed of only unsupported parts, Anypoint DataGraph does not generate an API schema and throws a `Validation failed` error.
 
 == Troubleshooting Errors When Adding, Updating, or Promoting APIs
 
-If you encounter errors when adding, updating, or promoting APIs, troubleshoot them as follows.
+If you encounter errors when adding, updating, or promoting APIs, troubleshoot them as follows:
 
 * Two users updated an environment at the same time error
 +
@@ -124,7 +124,7 @@ If two users attempt to update an environment at the same time, DataGraph genera
 
 * Issue with action performed while editing an API error
 +
-If you receive such an error, try adding the API without editing to see if the edit actions created the problem. 
+If you receive this error, try adding the API without editing to see if the edit actions created the problem. 
 
 * Not enough capacity to deploy error
 +
@@ -132,7 +132,7 @@ DataGraph generates this error if your environment does not have the capacity av
 
 == Troubleshooting mTLS Errors
 
-If you encounter mTLS errors, troubleshoot them as follows.
+If you encounter mTLS errors, troubleshoot them as follows:
 
 * Uploading a file that cannot be read error
 +
@@ -148,7 +148,7 @@ This error occurs when trying to configure mTLS for an API that you’ve added t
 
 == Troubleshooting Access Errors
 
-If you encounter errors when trying to access DataGraph, troubleshoot them as follows.
+If you encounter errors when trying to access DataGraph, troubleshoot them as follows:
 
 * Access request not approved yet error
 +
@@ -164,9 +164,9 @@ DataGraph generates this error if you attempt too many requests. In this case, w
 
 == Troubleshooting Server Errors
 
-If you encounter server errors, troubleshoot them as follows.
+If you encounter server errors, troubleshoot them as follows:
 
-* Server error when creating policies, contracts, tiers, and grant types: 
+* Server error when creating policies, contracts, tiers, and grant types
 +
 If you encounter a server error when creating policies, contracts, tiers, or grant types, wait a few minutes and try again, or check the status of API Manager.  
 
