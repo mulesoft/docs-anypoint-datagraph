@@ -1,14 +1,182 @@
-= Troubleshooting Schemas and Queries
+= Anypoint DataGraph Troubleshooting 
+:page-aliases: resolve-runtime-errors.adoc,schema-validation.adoc
 
-The following topic provide useful information for troubleshooting schemas and queries:
+The following topics provide useful information for troubleshooting in DataGraph:
 
-** xref:schema-validation.adoc[Potential Errors When Generating an API Schema] +
+* xref:troubleshooting-runtime-errors[Troubleshooting Runtime Errors]
+* xref:troubleshooting-schema-errors[Troubleshooting Schema Errors]
+* xref:troubleshooting-mtls-errors[Troubleshooting mTLS Errors]
+* xref:troubleshooting-access-errors[Troubleshooting Access Errors]
+* xref:troubleshooting-server-errors[Troubleshooting Server Errors]
+
+
+== Troubleshooting Runtime Errors
+
+If you encounter runtime errors when attempting to use the Anypoint DataGraph query editor, troubleshoot them as follows.
+
+=== Failed to Fetch Schema Error
+
+A failed to fetch schema error occurs when you navigate to the Anypoint DataGraph query editor and it displays the following:
+
+....
+{
+  "message": "Failed to fetch",
+  "stack": "TypeError: Failed to fetch"
+}
+....
+
+Anypoint DataGraph generates this error when it cannot load the unified schema, and it occurs for one of three reasons:
+
+. You’re unable to use Port 8082 on a shared load balancer.
++
+Solution: Create a dedicated load balancer (DLB) and xref:set-dlb.adoc[set its URL to configure Anypoint DataGraph to route requests through the DLB].
+
+. You've set a DLB using an invalid certficate. 
++
+Solution: Ensure that your DLB has a valid, CA-signed certificate, or the browser won't connect to Anypoint DataGraph. 
+
+. Your internet browser is unable to access Anypoint Virtual Private Cloud (VPC).
++
+Solution: Ensure that you can connect to Anypoint VPC from your internet browser. Refer to xref:hosting-options.adoc#anypoint-datagraph-architecture-and-networking[Anypoint DataGraph Architecture and Networking] for an overview of Anypoint DataGraph networking.
+
+=== Exception While Fetching Data Error
+
+After you run a query, Anypoint DataGraph displays an error similar to the following:
+
+....
+{
+  {
+    "errors": [
+        {
+            "message": "Exception while fetching data (/ordersById) : Error 429 executing request.",
+            "locations": [
+                {
+                    "line": 2,
+                    "column": 3
+                }
+            ],
+            "path": [
+                "ordersById"
+            ],
+            "extensions": {
+                "httpResponse": {
+                    "statusCode": 429,
+                    "xHeaders": {
+                      "x-ratelimit-limit": 10
+                      "x-ratelimit-remaining": 0 
+                      "x-ratelimit-reset": 41827 
+                      "x-xss-protection": "1; mode=block"
+                  },
+                  "contentType": "application/json",
+                  "body": {
+                    "error": "Quota has been exceeded" 
+                  }
+                },
+               "classification": "DataFetchingException"
+....
+
+An exception while fetching data error occurs when the unified schema can't connect to its underlying APIs.
+
+To troubleshoot this error, ensure that:
+
+. The underlying APIs are running.
+. The URL provided for each API is correct. Go to *List of APIs added* > Select an API > *API details*, and confirm the URL.
+. You xref:runtime-manager::to-request-vpc-connectivity.adoc[must request connections] for any of your APIs that run on standalone instances that aren’t connected to Anypoint VPC.
+. You check the `extensions` section of the error message for any details that may be useful in troubleshooting the error. 
+
+=== Other Runtime Errors
+
+* Can't prettify an invalid query 
++
+If you attempt to prettify an invalid query, DataGraph generates a syntax error. To resolve the issue, correct the syntax and then prettify the query. 
+
+* Invalid action error 
++
+If you perform an action in the DataGraph editor that creates an invalid schema, DataGraph generates an error. If you believe the action is valid, contact MuleSoft support.  
+
+== Troubleshooting Schema Errors
+
+If you encounter runtime errors when attempting to generate an API schema, troubleshoot them as follows.
+
+=== Potential Errors When Generating an API Schema
+
 When you add a new API to your unified schema, Anypoint DataGraph generates an API schema for it. However, not all features of an API specification are successfully generated into an API schema.
-** xref:resolve-runtime-errors.adoc[Troubleshoot Runtime Errors When Running Queries] +
-If you encounter runtime errors when attempting to use the Anypoint DataGraph query editor, you must take additional steps to resolve them.
-** xref:resolve-conflicts.adoc[Resolve Conflicts and Merge Inconsistencies] +
-You must resolve any merge conflicts or merge inconsistencies when adding object types to the unified schema.
-** xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs] +
-Anypoint DataGraph provides response logs that contain useful troubleshooting information about queries.
-** xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing] +
-Query tracing in Anypoint DataGraph helps you analyze query performance by tracing every call made to the source APIs of the unified schema for a given query.
+
+Anypoint DataGraph does not translate the following parts of an API specification into an API schema:
+
+* Requests with a `Media type` value other than `application/json`
+* Responses with a `Media type` value other than `application/json`
+* Response payloads with any of the unsupported types `Schema`, `File`, `Tuple`, `Matrix`, `Nil`, or arrays of any of the types
+* `query params` and `headers` with types other than scalars or scalar arrays
+* Endpoints of required `params` of unsupported types
+* `union` types with members other than `objects` and `nils`
+* JSON schema keywords `if`, `then`, and `else`
+
+If your API specification is composed of only unsupported parts, Anypoint DataGraph does not generate an API schema and throws a `Validation failed` error.
+
+== Troubleshooting Errors When Adding, Updating, or Promoting APIs
+
+If you encounter errors when adding, updating, or promoting APIs, troubleshoot them as follows:
+
+* Two users updated an environment at the same time error
++
+If two users attempt to update an environment at the same time, DataGraph generates an error for one of the users. If you receive the error, wait for any updates to complete and again.
+
+* Issue with action performed while editing an API error
++
+If you receive this error, try adding the API without editing to see if the edit actions created the problem. 
+
+* Not enough capacity to deploy error
++
+DataGraph generates this error if your environment does not have the capacity available to create the unified schema. If you receive this error, request more capacity from your admin, or ask your operator to redistribute capacity within the organization.
+
+== Troubleshooting mTLS Errors
+
+If you encounter mTLS errors, troubleshoot them as follows:
+
+* Uploading a file that cannot be read error
++
+This errors indicates that you uploaded a certificate file that is not in `.pem` format. Ensure the file is a valid `.pem` file and upload it again. 
+
+* Trying to validate an invalid keystore error
++
+DataGraph generates this error if the private key or password does not match the certificate. Ensure the private key and certificate match or confirm the password. 
+
+* Issue with TLS error 
++
+This error occurs when trying to configure mTLS for an API that you’ve added to the unified schema. To troubleshoot this issue, add the API without configuring mTLS to determine if there is a problem with your TLS files. 
+
+== Troubleshooting Access Errors
+
+If you encounter errors when trying to access DataGraph, troubleshoot them as follows:
+
+* Access request not approved yet error
++
+If you encounter this error, request access from your admin.
+
+* Unauthorized error
++
+If you encounter this error, request authorization from your admin.
+
+* Too many requests error
++
+DataGraph generates this error if you attempt too many requests. In this case, wait some time and try your request again. 
+
+== Troubleshooting Server Errors
+
+If you encounter server errors, troubleshoot them as follows:
+
+* Server error when creating policies, contracts, tiers, and grant types
++
+If you encounter a server error when creating policies, contracts, tiers, or grant types, wait a few minutes and try again, or check the status of API Manager.  
+
+* Server error when selecting asset
++
+If you encounter a server error when selecting an asset to create policies, wait a few minutes and try again, or check the status of Exchange.  
+
+
+== See Also
+
+* xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs] +
+* xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing] +
+* xref:resolve-conflicts.adoc[]
