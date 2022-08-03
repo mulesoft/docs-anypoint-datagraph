@@ -34,3 +34,4 @@
 ** xref:api-extensions.adoc[API Extensions for DataGraph]
 ** xref:datagraph-cli.adoc[DataGraph CLI Reference]
 ** xref:datagraph-cli-errors.adoc[DataGraph CLI Errors]
+* xref:ruleset.adoc[DataGraph Best Practices Ruleset]

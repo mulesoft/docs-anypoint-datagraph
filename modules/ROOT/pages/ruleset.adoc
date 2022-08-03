@@ -1,0 +1,41 @@
+= Anypoint DataGraph Best Practices Ruleset
+
+The DataGraph Best Practices Ruleset is a collection of governance rules you can add as a dependency to any API project you want to use in Anypoint DataGraph. The ruleset is a collection of messages that ensure your API project adheres to DataGraph best practices. The ruleset is publicly available in Exchange and you add the ruleset as a dependency to API specifications in Design Center API Designer. You can also validate an API against the ruleset, using the API Governance CLI.
+
+== Example Use
+
+Consider the following `example-api.raml`:
+
+----
+#%RAML 1.0
+
+title: DOCS - Order API
+
+types:
+  Order:
+    description: An Order
+    properties:
+      orderId:
+        description: The ID of the order
+        type: string
+    additionalProperties: false
+
+
+/orders/{orderId}:
+  get:
+    responses:
+      200:
+        body:
+          application/xml:
+            type: Order
+----
+
+When you apply the DataGraph best practices ruleset, you see the following warning message:
+
+----
+example-api.raml (16:3) ⚠️Warning: [Datagraph Best Practices] Only JSON payloads are supported at the moment in DataGraph. This is the preferred media type format.
+----
+
+This message indicates that `application/xml` in the GET command should be `application/json`.
+
+For more information about adding and using rulesets in API Designer, see xref:api-governance/find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions].
