@@ -234,7 +234,7 @@ Mutations are operations you use to add, update, and delete data objects. In Gra
 
 . Add the following example mutation:
 +
-[source]
+[source,copy]
 --
 mutation {
   createOrdersCustomerByCustomerId(
@@ -297,7 +297,7 @@ Now you can write a query to retrieve specific information about the order you c
 . When you’re ready, add the following example query:
 +
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b34") {
