@@ -38,4 +38,4 @@ example-api.raml (16:3) ⚠️Warning: [Datagraph Best Practices] Only JSON payl
 
 This message indicates that `application/xml` in the GET command should be `application/json`.
 
-For more information about adding and using rulesets in API Designer, see xref:api-governance/find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions].
+For more information about adding and using rulesets in API Designer, see xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions].
