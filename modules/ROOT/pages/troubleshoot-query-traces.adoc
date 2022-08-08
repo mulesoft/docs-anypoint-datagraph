@@ -6,11 +6,12 @@ Trace results provide the following information:
 
 image::query-trace-details.png[Detailed view of a query trace]
 
-<1> Time taken by Anypoint DataGraph to parse and validate the query
-<2> Total response time for the entire query
-<3> Errors identified during query execution
-<4> Lack of trace information, denoted by a fading line
-<5> Duration of requests to each source API in the query
+[calloutlist]
+. Time taken by Anypoint DataGraph to parse and validate the query @1
+. Total response time for the entire query
+. Errors identified during query execution
+. Lack of trace information, denoted by a fading line
+. Duration of requests to each source API in the query
 
 == Prerequisites
 
