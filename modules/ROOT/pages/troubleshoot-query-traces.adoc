@@ -7,7 +7,7 @@ Trace results provide the following information:
 image::query-trace-details.png[Detailed view of a query trace]
 
 [calloutlist]
-. Time taken by Anypoint DataGraph to parse and validate the query @1
+. Time taken by Anypoint DataGraph to parse and validate the query
 . Total response time for the entire query
 . Errors identified during query execution
 . Lack of trace information, denoted by a fading line
