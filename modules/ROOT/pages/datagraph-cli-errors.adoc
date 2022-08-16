@@ -222,6 +222,6 @@ Conflict errors occur when you try to add an API schema to the unified schema. T
 * The `message` field contains a human-readable response of the validation and provides a summary of the error.
 * The `detail` field contains a list of all conflicts found when trying to merge the API schema into the unified schema. 
 ** The `element` field contains the location of the conflict.
-** The `violations` field lists the coflicts to fix. 
+** The `violations` field lists the conflicts to fix. 
 *** The `code` field identifies the type of the error.
 *** The `message` field contains a human-readable description of the issue, and, depending on the type of error, it can contain additional properties with more details.

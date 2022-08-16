@@ -330,12 +330,14 @@ Now you can write a query to retrieve specific information about the order you c
 Notice that with this one query, you get results from two different APIs:
 +
 image::datagraph-qsg-two-apis.png[Two APIs are being queried from a single query]
-+
-<1> `shippingAddress`, `total`, and `status` information is returned from the Catalyst Order API
-<1> `product` details is returned as part of the `shipmentItems` information from the Catalyst Product API
+
+[calloutlist]
+. `shippingAddress`, `total`, and `status` information is returned from the Catalyst Order API
+. `product` details is returned as part of the `shipmentItems` information from the Catalyst Product API
 +
 This is the fundamental utility of Anypoint DataGraph: the ability to query multiple APIs in a single request to get only the information you want.
 
+[start=2]
 . To run the query without query tracing, click *Run*:
 +
 image::datagraph-qsg-query-result.png[Query editor displays query results]

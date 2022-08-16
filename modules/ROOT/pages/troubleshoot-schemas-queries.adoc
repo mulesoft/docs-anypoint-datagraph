@@ -31,7 +31,7 @@ Anypoint DataGraph generates this error when it cannot load the unified schema, 
 +
 Solution: Create a dedicated load balancer (DLB) and xref:set-dlb.adoc[set its URL to configure Anypoint DataGraph to route requests through the DLB].
 
-. You've set a DLB using an invalid certficate. 
+. You've set a DLB using an invalid certificate. 
 +
 Solution: Ensure that your DLB has a valid, CA-signed certificate, or the browser won't connect to Anypoint DataGraph. 
 
