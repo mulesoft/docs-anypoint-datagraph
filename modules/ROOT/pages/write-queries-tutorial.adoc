@@ -25,7 +25,7 @@ Consider `ordersByOrderId`: This query method returns data about the object type
 
 In GraphQL, you add the query method to start a query:
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId:String!)
@@ -37,7 +37,7 @@ Notice that the input parameter for the query method `orderID` is a non-nullable
 
 In this case, you need to add an order ID to the query:
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b3")
@@ -52,7 +52,7 @@ image::schema-explorer-fields.png[Available fields listed in the schema explorer
 
 As you write a query, you can add or remove any of these fields. The following query a uses some of the available fields:
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b3") {
@@ -74,7 +74,7 @@ Many of the fields returned by the OrderResponse object type, such as `billingAd
 
 The `billingAddress` object type returns the `PostalAddress` object type, which itself returns several additional fields. To query `billingAddress`, you must specify which fields to return from `PostalAddress`. For example:
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b3") {
@@ -137,7 +137,7 @@ You can use aliases to rename individual keys in the query response.
 
 For example, you can rename the total field to `totalPrice` and the status field to `orderStatus` in only your query response.
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b3") {
@@ -154,6 +154,7 @@ For example, you can rename the total field to `totalPrice` and the status field
 
 If you want to get the same fields for two or more query operations using different input parameters, you can provide an alias to the query operations. 
 
+[source,copy]
 ----
 {
   Order1: ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b3") {
@@ -201,7 +202,8 @@ Notice that the address field has data from the `AddressInput` input type:
 image::schema-explorer-mutation-fields2.png[Fields for AddressInput listed in the schema explorer]
 
 As you execute the mutation operation, you provide a value for each field in the input type:
- 
+
+[source,copy]
 ----
 mutation {
   createCustomer(input: {

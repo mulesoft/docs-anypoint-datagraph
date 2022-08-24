@@ -28,6 +28,7 @@ To register a persisted query, create a POST request that contains the following
 
 The following example shows how to register a persisted query using curl:
 
+[source,copy]
 ----
 curl --location --request POST 'https://<datagraph-endpoint>/graphql' \
 --header 'Content-Type: application/json' \
@@ -58,6 +59,7 @@ To request a persisted query, create a GET request that contains the following:
 
 The following example shows how to request a persisted query using curl:
 
+[source,copy]
 ----
 curl --location --request GET 'https://<datagraph-endpoint>/graphql?extensions=%7B%0A%20%20%22persistedQuery%22%3A%20%7B%0A%20%20%20%20%22version%22%3A%201%2C%0A%20%20%20%20%22sha256Hash%22%3A%20%22acf31818e50ac3e818ca4bdbc433d6ab73176f0b9d5f9d5ad17e200cdab6fba4%22%0A%20%20%7D%0A%7D'
 ----
@@ -141,6 +143,7 @@ To request a persisted query from a CDN, create a GET request that contains the 
 
 The following example shows how to request a persisted query from a CDN using curl:
 
+[source,copy]
 ----
 curl --location --request GET 'https://<cdn-endpoint>/graphql?extensions=%7B%0A%20%20%22persistedQuery%22%3A%20%7B%0A%20%20%20%20%22version%22%3A%201%2C%0A%20%20%20%20%22sha256Hash%22%3A%20%22acf31818e50ac3e818ca4bdbc433d6ab73176f0b9d5f9d5ad17e200cdab6fba4%22%0A%20%20%7D%0A%7D'
 ----

@@ -128,4 +128,4 @@ If the API already has a keystore or truststore, you can remove either and add n
 
 * xref:add-api-to-unified-schema.adoc[]
 * xref:promote-api.adoc[]
-* xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-aded-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]
+* xref:add-api-to-unified-schema.adoc#change-the-authentication-method-for-an-api-added-to-the-unified-schema[Change the Authentication Method for an API Added to the Unified Schema]

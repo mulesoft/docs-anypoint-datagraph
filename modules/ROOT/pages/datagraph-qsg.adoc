@@ -19,6 +19,11 @@ Before getting started, ensure you have:
 * Admin or Contribute permissions
 * The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan. If you haven't allocated the correct number of vCores to the environment in which you're attempting to add an API, Anypoint DataGraph raises an error message.
 
+[IMPORTANT]
+--
+If you use an Anypoint Virtual Private Cloud (Anypoint VPC), your browser needs access to the Anypoint VPC to run queries in DataGraph. Without access, you might receive a `failed to fetch` schema error. To prevent this, xref:set-dlb.adoc[set up a dedicated load balancer (DLB)]. Network and hosting options are described in xref:hosting-options.adoc[DataGraph Hosting Options and Networking]. 
+--
+
 == Download and Publish the Order and Product APIs
 
 To follow the quick-start example, download the RAML definitions for two example APIs provided by MuleSoft: https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/minor/2.0/console/summary/[the Order Systems API v2.0^] and https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/minor/2.0/console/summary/[the Product API v2.0^].
@@ -229,7 +234,7 @@ Mutations are operations you use to add, update, and delete data objects. In Gra
 
 . Add the following example mutation:
 +
-[source]
+[source,copy]
 --
 mutation {
   createOrdersCustomerByCustomerId(
@@ -292,7 +297,7 @@ Now you can write a query to retrieve specific information about the order you c
 . When you’re ready, add the following example query:
 +
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b34") {
@@ -325,12 +330,14 @@ Now you can write a query to retrieve specific information about the order you c
 Notice that with this one query, you get results from two different APIs:
 +
 image::datagraph-qsg-two-apis.png[Two APIs are being queried from a single query]
-+
-<1> `shippingAddress`, `total`, and `status` information is returned from the Catalyst Order API
-<1> `product` details is returned as part of the `shipmentItems` information from the Catalyst Product API
+
+[calloutlist]
+. `shippingAddress`, `total`, and `status` information is returned from the Catalyst Order API
+. `product` details is returned as part of the `shipmentItems` information from the Catalyst Product API
 +
 This is the fundamental utility of Anypoint DataGraph: the ability to query multiple APIs in a single request to get only the information you want.
 
+[start=2]
 . To run the query without query tracing, click *Run*:
 +
 image::datagraph-qsg-query-result.png[Query editor displays query results]

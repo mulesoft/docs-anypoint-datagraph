@@ -19,6 +19,7 @@ This extension applies to `ObjectType`.
 
 === OAS Example
 
+[source,copy]
 ----
 components:
   schemas:
@@ -37,6 +38,7 @@ components:
 
 === RAML Example
 
+[source,copy]
 ----
 types:
   Customer:
@@ -71,6 +73,7 @@ This extension applies to `ObjectType`.
 
 === OAS Example
 
+[source,copy]
 ----
 components:
   Schemas:
@@ -114,6 +117,7 @@ components:
 
 === RAML Example
 
+[source,copy]
 ----
 types:
   Order:
@@ -173,6 +177,7 @@ The target is not specified because it is implicit in the operation.
 
 === OAS Example
 
+[source,copy]
 ----
 Schemas:
     Customer:
@@ -209,6 +214,7 @@ paths:
 
 === RAML Example
 
+[source,copy]
 ----
 types:
   Customer:
@@ -255,6 +261,7 @@ The target is not specified because it is implicit in the operation.
 
 === OAS Example
 
+[source,copy]
 ----
 paths:
   "/customers":
@@ -273,6 +280,7 @@ paths:
 
 === RAML Example
 
+[source,copy]
 ----
 /customers:
   post:
@@ -316,6 +324,7 @@ The target is not specified because it is implicit in the operation.
 
 === OAS Example
 
+[source,copy]
 ----
 components:
   Schemas:
@@ -354,6 +363,7 @@ paths:
 
 === RAML Example
 
+[source,copy]
 ----
 types:
   Customer:
@@ -405,6 +415,7 @@ The target is not specified because it is implicit in the operation.
 
 === OAS Example
 
+[source,copy]
 ----
 components:
   Schemas:
@@ -443,6 +454,7 @@ paths:
 
 === RAML Example
 
+[source,copy]
 ----
 types:
   Customer:
