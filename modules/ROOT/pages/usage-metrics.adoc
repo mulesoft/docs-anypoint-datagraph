@@ -1,14 +1,16 @@
 = Viewing Usage Metrics for Anypoint Datagraph
 
-Anypoint DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number of downstream API calls made for each of the environments in which you’ve deployed a unified schema. 
+Anypoint Datagraph provides API request metrics, and you can view additional usage metrics for DataGraph in Anypoint Monitoring. 
+
+== View API Request Metrics
+
+DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number of downstream API calls made for each of the environments in which you’ve deployed a unified schema. 
 
 Usage metrics are separated by Production and Sandbox environments per business group. More specifically, the metrics in any given environment show:
 
 * API requests received for that environment
 * API requests received for other environments of that type
 * API requests received for all environments of that type
-
-== View API Request Metrics
 
 API request usage metrics are available in the Overview section of Anypoint DataGraph. 
 
@@ -23,9 +25,36 @@ image::datagraph-usage-metrics.png[DataGraph usage metrics are shown in the Over
 . To see metrics for a specific time period, set the calendar parameters. The metrics query runs automatically and updates the data.
 . To refresh the metrics for the current time period, click the refresh icon. 
 
+== View Usage Metrics with Anypoint Monitoring
+
+Anypoint Monitoring enables you to view usage metrics via built-in dashboards and custom dashboards. These metrics relate to calls made to your DataGraph application, not to calls made to the underlying APIs in your unified schema. 
+
+In Anypoint Monitoring, DataGraph is considered a "managed API". You select the environment and the name of your DataGraph application when you xref:monitoring::app-dashboards.adoc#view-a-built-in-dashboard[view built-in dashboards].
+
+Built-in dashboards require no configuration and include various pages to view different types of charts. For example, the overview page includes data related to:
+
+* Mule Messages
+* Average Response Time
+* Errors
+* Inbound - Total Requests by Response Type
+* Inbound - Average Response Time
+* Outbound - Total Requests by Response Type
+* Outbound - Average Response Time
+* JVM - CPU % Utilization
+* JVM - Heap Used
+* JVM - Thread Count 
+
+Custom dashboards require configuration and are useful for:
+
+* Correlating diverse metrics
+* Performing comparative analysis
+* Differentiating between regular trends and anomalies
+* Isolating issues quickly
+
+Custom dashboards collect the same metrics as built-in dashboards. 
 
 == Additional Resources
 
-* xref:add-api-to-unified-schema.adoc[Add an API Schema to the Unified Schema]
-* xref:query-unified-schema.adoc[Run Queries and Mutations] 
-* xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
+* https://docs.mulesoft.com/monitoring/dashboard-custom-config
+* https://docs.mulesoft.com/monitoring/create-custom-dashboard
+* https://docs.mulesoft.com/monitoring/app-dashboards
