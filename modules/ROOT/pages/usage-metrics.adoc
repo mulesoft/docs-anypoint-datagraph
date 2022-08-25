@@ -4,7 +4,7 @@ Anypoint Datagraph provides API request metrics, and you can view additional usa
 
 == View API Request Metrics
 
-DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number of downstream API calls made for each of the environments in which you’ve deployed a unified schema. 
+DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number calls made made to the unified schema in each environment. 
 
 Usage metrics are separated by Production and Sandbox environments per business group. More specifically, the metrics in any given environment show:
 
@@ -40,9 +40,6 @@ Built-in dashboards require no configuration and include various pages to view d
 * Inbound - Average Response Time
 * Outbound - Total Requests by Response Type
 * Outbound - Average Response Time
-* JVM - CPU % Utilization
-* JVM - Heap Used
-* JVM - Thread Count 
 
 Custom dashboards require configuration and are useful for:
 
