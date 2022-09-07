@@ -2,29 +2,44 @@
 
 Anypoint DataGraph supports the following Anypoint Platform hosting options and network configurations.
 
-== Anypoint Platform Control Plane Hosting Options
+== Anypoint Platform Control Plane and Runtime Plane Hosting Options
 
-Anypoint DataGraph is available for US and EU clouds control plane hosting.
+For control plane hosting, DataGraph is available for US and EU clouds.
+For runtime plane hosting, DataGraph is available for CloudHub and CloudHub 2.0.  
 
-== Anypoint Platform Runtime Plane Hosting Options
+DataGraph must connect to the destination URL you provide when adding an API to the unified schema. You don't need to make any extra configurations on your runtime plane if you meet any of the following scenarios:
 
-Anypoint DataGraph must connect to the destination URL you provide when adding an API to the unified schema. You don't need to make any extra configurations on your runtime plane if you meet any of the following scenarios:
-
-* Your API implementations run on CloudHub.
-* Your API implementations run on standalone instances and are connected to an Anypoint Virtual Private Cloud (Anypoint VPC).
-* Your API implementations run on any runtime plane hosting option and are public.
+* Your API implementations are deployed on CloudHub or CloudHub 2.0.
+* Your API implementations are deployed on standalone instances and are connected to an Anypoint Virtual Private Cloud (Anypoint VPC).
+* Your API implementations are deployed on any runtime plane hosting option and are public.
 
 If your API instances run on standalone instances, are not public, and are not connected to Anypoint VPC, you must first pair your standalone runtimes to Anypoint VPC. See xref:runtime-manager::to-request-vpc-connectivity.adoc[Request Anypoint VPC Connectivity to Your Network] for more information.
 
-== Anypoint DataGraph Architecture and Networking
+== DataGraph Architecture and Networking
 
-Anypoint DataGraph is a fully managed service that runs on Anypoint Platform within the default region of your business group.
+DataGraph is a fully managed service that runs on Anypoint Platform within the default region of your business group.
 
 image::datagraph-network-architecture.png[Networking diagram for Anypoint DataGraph and Anypoint Platform]
 
-Consumer requests from the public internet are routed to Anypoint DataGraph through shared or dedicated load balancers, depending on your CloudHub or Anypoint Virtual Private Cloud (Anypoint VPC) configuration. DataGraph sends requests to the underlying APIs that make up the unified schema. Similarly, when you make changes in the Anypoint DataGraph UI, those changes trigger updates of Anypoint DataGraph in the Runtime Plane.
+Consumer requests from the public internet are routed to DataGraph through shared or dedicated load balancers, depending on your CloudHub, CloudHub 2.0, or Anypoint Virtual Private Cloud (Anypoint VPC) configuration. DataGraph sends requests to the underlying APIs that make up the unified schema. Similarly, when you make changes in the DataGraph UI, those changes trigger updates of DataGraph in the runtime plane.
 
 If you’re unable to use port 8082 on a shared load balancer, you must xref:set-dlb.adoc[set a new URL for Anypoint DataGraph to use on a CloudHub dedicated load balancer (DLB)].
+
+== Managing DataGraph Deployment Targets
+
+You can deploy DataGraph in CloudHub or CloudHub 2.0. By default, DataGraph is deployed to CloudHub. 
+
+You manage deployment targets using the xref:?????.adoc[`datagraph target update` command] in the Anypoint CLI.  
+
+=== Scaling DataGraph APIs for CloudHub 2.0
+
+When setting CloudHub 2.0 as a deployment target, you specify the number of replicas and dedicated vcores for each DataGraph API. 
+
+xref:cloudhub-2::ch2-architecture.adoc#cloudhub-2-replicas[Replicas] are dedicated Mule instances that run your DataGraph API on CloudHub 2.0. Replicas are determined by vCore size. 
+
+You manage replicas and vCores using the xref:?????.adoc[`datagraph scale` command] in the Anypoint CLI.  
+
+For information on API call scaling, see xref:api-call-scaling.adoc[Scaling API Calls in Anypoint DataGraph], which determines the total number of API requests you can make to the unified schema on a yearly basis.
 
 == Additional Resources
 
