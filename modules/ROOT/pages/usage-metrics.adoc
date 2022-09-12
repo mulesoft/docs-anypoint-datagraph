@@ -33,7 +33,6 @@ In Anypoint Monitoring, DataGraph is considered a "managed API". You select the 
 
 Built-in dashboards require no configuration and include various pages to view different types of charts. For example, the overview page includes data related to:
 
-* Mule Messages
 * Average Response Time
 * Errors
 * Inbound - Total Requests by Response Type
