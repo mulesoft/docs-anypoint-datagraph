@@ -1,6 +1,9 @@
 =  Scaling API Calls in Anypoint DataGraph
 
 Anypoint DataGraph provides you the option to configure the number of API calls permitted for a unified schema. Increasing or decreasing API calls enables you to process higher workloads and optimize your consumption when needed.
+
+[NOTE]
+This functionality is available only for DataGraph applications deployed to CloudHub. For applications deployed to CloudHub 2.0, see the  xref:?????.adoc[`datagraph scale` command] in the Anypoint CLI
  
 == How API Call Scaling Works in DataGraph
 
