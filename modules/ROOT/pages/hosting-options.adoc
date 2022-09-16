@@ -36,9 +36,9 @@ You manage deployment targets using the xref:?????.adoc[`datagraph target update
 
 Functionality for scaling APIs depends on your deployment target.  
 
-* CloudHub 2.0: When setting CloudHub 2.0 as a deployment target, you specify the number of replicas and dedicated vcores for each DataGraph API. xref:cloudhub-2::ch2-architecture.adoc#cloudhub-2-replicas[Replicas] are dedicated Mule instances that run your DataGraph API on CloudHub 2.0. Replicas are determined by vCore size. 
+* CloudHub 2.0: When setting CloudHub 2.0 as a deployment target, you specify the number of replicas and machine size for each DataGraph API. xref:cloudhub-2::ch2-architecture.adoc#cloudhub-2-replicas[Replicas] are dedicated Mule instances that run your DataGraph API on CloudHub 2.0. Replicas are determined machine size. 
 +
-You manage replicas and vCores using the xref:?????.adoc[`datagraph scale` command] in the Anypoint CLI. 
+You manage replicas and machine size using the xref:?????.adoc[`datagraph scale` command] in the Anypoint CLI. 
 
 * CloudHub: DataGraph applications are deployed to CloudHub by default. You can scale APIs using the `datagraph scale` command or the xref:api-call-scaling.adoc[DataGraph UI]. 
 
