@@ -8,9 +8,9 @@ DataGraph enables you to track metrics so you’re always aware of your usage re
 
 Usage metrics are separated by Production and Sandbox environments per business group. More specifically, the metrics in any given environment show:
 
-* API requests received for that environment
-* API requests received for other environments of that type
-* API requests received for all environments of that type
+* GraphQL API requests received for that environment
+* GraphQL API requests received for other environments of that type
+* GraphQL API requests received for all environments of that type
 
 API request usage metrics are available in the Overview section of Anypoint DataGraph. 
 
@@ -27,18 +27,17 @@ image::datagraph-usage-metrics.png[DataGraph usage metrics are shown in the Over
 
 == View Usage Metrics with Anypoint Monitoring
 
-Anypoint Monitoring enables you to view usage metrics via built-in dashboards and custom dashboards. These metrics relate to calls made to your DataGraph application, not to calls made to the underlying APIs in your unified schema. 
+Anypoint Monitoring enables you to view usage metrics via built-in dashboards and custom dashboards. These metrics relate to calls made to your DataGraph application, not to calls made to APIs federated in your unified schema. 
 
 In Anypoint Monitoring, DataGraph is considered a "managed API". You select the environment and the name of your DataGraph application when you xref:monitoring::app-dashboards.adoc#view-a-built-in-dashboard[view built-in dashboards].
 
 Built-in dashboards require no configuration and include various pages to view different types of charts. For example, the overview page includes data related to:
 
+* Request volume
+* Failed requests
+* Total 4xx errors
+* Total 5xx errors
 * Average response time
-* Errors
-* Inbound: Total requests by response type
-* Inbound: Average response time
-* Outbound: Total requests by response type
-* Outbound: Average response time
 
 Custom dashboards require configuration and are useful for:
 
