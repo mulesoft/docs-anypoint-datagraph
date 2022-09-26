@@ -66,6 +66,10 @@ The following example shows how to set up a custom dashboard to track request vo
 . Click *Apply changes*.
 . Open the time-picker, choose a timeframe, and click *Confirm*.
 
+The following example shows a graph tracking requests over the previous hour:
+
+image::datagraph-custom-graph.png[A custom Monitoring graph showing request volume by client_id]
+
 
 == Additional Resources
 
