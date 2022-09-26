@@ -52,8 +52,8 @@ Custom dashboards collect the same metrics as built-in dashboards. They require 
 
 The following example shows how to set up a custom dashboard to track request volume by client_id.
 
-. From Anypoint Monitoring, and select *Custom dashboards*.
-. Click *+New Dashboard*, add then select the graph. 
+. From Anypoint Monitoring, select *Custom dashboards*.
+. Click *+New Dashboard*, add then select the graph option. 
 . On the new graph, click the configure menu (the vertical ellipses), and then click *Configure*.
 . Switch the *Advanced Mode* toggle to activate advanced mode.
 . Edit the query as follows:
@@ -64,7 +64,7 @@ The following example shows how to set up a custom dashboard to track request vo
 .. From the *Group by* drop-down list, select `tag(client_id)`.
 .. In the *Alias by* field, add `$tag_client_id`.
 . Click *Apply changes*.
-. Open the timepicker, choose a timeframe, and click *Confirm*.
+. Open the time-picker, choose a timeframe, and click *Confirm*.
 
 
 == Additional Resources
