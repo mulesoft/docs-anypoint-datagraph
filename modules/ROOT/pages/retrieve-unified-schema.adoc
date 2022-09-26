@@ -23,8 +23,9 @@ In the API client of your choice, run a GET request with the following informati
 * The graph endpoint of the unified schema appended with `/schema`
 * Your `client_id` and `client_secret` headers
 
-For example:
+For example, the complete command looks like:
 
+[source,copy]
 ----
 curl https://<GRAPH_ENDPOINT>/schema \
 -H 'client_id: <YOUR_CLIENT_ID>' \

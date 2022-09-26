@@ -44,7 +44,7 @@ In this example, the default query method is `ordersById`, and its primary key i
 
 === Default Query Method with Composite Keys
 
-In the following example using composite keys, the default query method is `productDetail` and its composite keys are `productId` and `productSku`. Both retrieve the `Product` type and use `productId` and `productSku` to retrieve specific information based on the `string` fields. Note that the data type of the default query method’s input arguments must be the same as the data type of each primary key. In this example, both are of data type `string!`.
+In the following example using composite keys, the default query method is `productDetail` and its composite keys are `productId` and `productSku`. Both retrieve the `Product` type and use `productId` and `productSku` to retrieve specific information based on the `string` fields. Note that the data type of the default query method’s input arguments must be the same as the data type of each primary key. In this example, both are of data type `string!`:
 
 [source]
 --
