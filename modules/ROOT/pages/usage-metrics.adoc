@@ -4,7 +4,7 @@ Anypoint Datagraph provides API request metrics, and you can view additional usa
 
 == View API Request Metrics
 
-DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number calls made made to the unified schema in each environment. 
+DataGraph enables you to track metrics so you’re always aware of your usage relative to the limits specified for your business groups. Use these metrics to track the total number calls made to the unified schema in each environment. 
 
 Usage metrics are separated by Production and Sandbox environments per business group. More specifically, the metrics in any given environment show:
 
