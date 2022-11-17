@@ -46,10 +46,22 @@ Gather the name of your DLB and the app name for Anypoint DataGraph.
 . Connect to the Anypoint CLI using your Anypoint Platform username and password.
 . If you did not previously set the environment, do so with the following command:
 +
+* Using Anypoint CLI v3.x:
++
 `use environment <environment name>`
++
+* Using Anypoint CLI v4.x:
++
+`conf environment <environment name>`
 . Get the name of the DLB:
 +
+* Using Anypoint CLI v3.x:
++
 `cloudhub load-balancer describe <dlb name>`
++
+* Using Anypoint CLI v4.x:
++
+`cloudhub:load-balancer:describe <dlb name>`
 +
 The expected output resembles:
 +
@@ -57,7 +69,13 @@ The expected output resembles:
 +
 . Get the CloudHub domain for the Anypoint DataGraph app name:
 +
+* Using Anypoint CLI v3.x:
++
 `datagraph load-balancer-config describe`
++
+* Using Anypoint CLI v4.x:
++
+`datagraph:load-balancer-config:describe`
 +
 The expected value resembles:
 +
@@ -90,34 +108,67 @@ After you add the mapping rule, you configure the DLB for use with Anypoint Data
 
 . Check the DLB URL for Anypoint DataGraph:
 +
+* Using Anypoint CLI v3.x:
++
 [source,copy]
 --
 datagraph load-balancer-config describe
 --
 +
+* Using Anypoint CLI v4.x:
++
+[source,copy]
+--
+datagraph:load-balancer-config:describe
+--
 By default, no value is returned for `dlbUrl` if you haven’t previously configured a DLB for that Anypoint DataGraph environment.
 
 . Add the new DLB URL:
+* Using Anypoint CLI v3.x:
 +
 [source,copy]
 --
 datagraph load-balancer-config add <url>
 --
 +
+* Using Anypoint CLI v4.x:
++
+[source,copy]
+--
+datagraph:load-balancer-config:add <url>
+--
++
 Replace `<url>` with a valid URL that includes the DLB name and DataGraph app name (gathered in Steps 3 and 4 of the gathering details task) and the mapping rule *Input Path*, for example:
++
+* Using Anypoint CLI v3.x:
 +
 [source,copy]
 --
 datagraph load-balancer-config add examplelb.lb.anypointdns.net/datagraph/graphql
 --
 +
+* Using Anypoint CLI v4.x:
++
+[source,copy]
+--
+datagraph:load-balancer-config:add examplelb.lb.anypointdns.net/datagraph/graphql
+--
++
 Refer to xref:example-mapping-rules-for-a-dlb-url[Example Mapping Rules for a DLB URL] if needed.
  
 . Validate that the value was updated:
+* Using Anypoint CLI v3.x:
 +
 [source,copy]
 --
 datagraph load-balancer-config describe
+--
++
+* Using Anypoint CLI v4.x:
++
+[source,copy]
+--
+datagraph:load-balancer-config:describe
 --
 +
 The CLI returns details that include the application name for the Anypoint DataGraph load balancer and the full domain name for the DLB.
@@ -128,11 +179,18 @@ After you add this change, Anypoint DataGraph re-deploys, and you must wait for 
 
 You can remove the DLB configuration using the following command:
 
+* Using Anypoint CLI v3.x:
++
 [source,copy]
 --
 datagraph load-balancer-config remove
 --
-
+* Using Anypoint CLI v4.x:
++
+[source,copy]
+--
+datagraph:load-balancer-config:remove
+--
 When you remove the configuration, Anypoint DataGraph redeploys.
 
 == Additional Resources
