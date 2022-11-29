@@ -1,6 +1,6 @@
 = Removing APIs from the Unified Schema
 
-You can remove APIs from the unified schema as needed. For example, remove an API to add a new version, or remove an API if the underlying REST API no longer exists.
+You can remove APIs from the unified schema as needed. For example, remove an API to add a new version, or remove an API if the underlying API no longer exists.
 
 However, be aware that when you remove an API from the unified schema, you break:
 

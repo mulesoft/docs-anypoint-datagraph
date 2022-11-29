@@ -25,11 +25,11 @@ You can also use the xref:datagraph-cli.adoc[Anypoint CLI] to add and edit API s
 
 == Before You Begin
 
-To add an API to the unified schema, ensure you have:
+To add an API to the unified schema, confirm the following:
 
-* Created a REST API using either a RAML or OAS specification.
-* Published the API in Exchange in the same organization as your unified schema. DataGraph supports only `stable` state API versions. 
-* Initiated an instance of the API with an accessible URL.
+* Your API is a REST API created using either a RAML or OAS specification, or is a GraphQL API.
+* You have Published the API in Exchange in the same organization as your unified schema. DataGraph supports only `stable` state API versions. 
+* You have initiated an instance of the API with an accessible URL.
 
 The API does not need to be a Mule application or be running on Mule runtime engine or in CloudHub.
 
