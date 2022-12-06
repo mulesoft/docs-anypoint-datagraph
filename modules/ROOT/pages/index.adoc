@@ -6,6 +6,10 @@ Anypoint DataGraph enables you to unify all the data within your application net
 * Explore your application network from a single UI
 * Discover, reuse, and serve information from your application network without writing new code
 
+++++
+include::_partials/datagraph-overview-video.html[]
+++++
+
 == How Anypoint DataGraph Works
 
 Every time you add a new API to your application network, Anypoint Platform stores it as a graph of metadata. Anypoint DataGraph enables you to connect those graphs into one _unified schema_ that runs as a single SaaS GraphQL endpoint and contains and links all of the fields defined within all of your APIs. As a result, you can query across the underlying APIs without needing to understand all of the relationships or specific capabilities that exist within them.
