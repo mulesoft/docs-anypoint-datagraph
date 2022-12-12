@@ -42,8 +42,57 @@ DataGraph supports the following API types:
 
 * REST APIs with RAML and OAS specifications
 * GraphQL APIs
+* Apollo GraphQL APIs
 
-Additionally, DataGraph supports:
+=== GraphQL Feature Support
+
+Anypoint DataGraph supports the following GraphQL features:
+
+[%header%autowidth.spread]
+|===
+|Feature |Supported
+|Queries |Yes
+|Mutations |Yes
+|Subscriptions |No
+|Types |Yes
+|Extend types |Yes
+|Input types |Yes
+|Enums |Yes
+|Interfaces |Yes
+|Scalars |Yes
+|`@skip` |Yes
+|`@include` |Yes
+|`@deprecated` |Yes
+|Custom directives |No
+|===
+
+=== Apollo GraphQL Directive Support
+
+Anypoint DataGraph supports the following Apollo GraphQL directives:
+
+[%header%autowidth.spread]
+|===
+|Feature |Supported
+|`@key` |Yes
+|multiple `@key` a| 
+No
+
+Only the first `@key` is used and any others are ignored.
+|`@provides` |Yes
+|`@external` |Yes
+|`@requires` |Yes
+|`@shareable` |Yes
+|`@override` a|
+Yes
+
+The `from` argument of the required directive is not considered. Any value annotated with `@override` can be used in the response without any particular precedence.
+|`@inaccesible` |Yes
+|===
+ 
+
+== About DataGraph Unified Schema and Query Complexity
+
+DataGraph supports the following:
 
 * Up to 250 APIs per unified schema
 * Up to 16,000 fields per unified schema
