@@ -41,9 +41,63 @@ Now consider that this organization also wants to provide a web application to a
 By using Anypoint DataGraph, the organization does not need to create a new API for every new business requirement. The enterprise architect can discover the existing order, shipment, and product APIs and add each API schema to Anypoint DataGraph. Developers can then request access to the unified schema and query the data that they need or update it from a single endpoint. 
 
 == Anypoint DataGraph API Support
-Anypoint DataGraph supports:
+
+DataGraph supports the following API types:
 
 * REST APIs with RAML and OAS specifications
+* GraphQL APIs
+* Apollo GraphQL APIs
+
+=== GraphQL Feature Support
+
+Anypoint DataGraph supports the following GraphQL features:
+
+[%header%autowidth.spread]
+|===
+|Feature |Supported
+|Queries |Yes
+|Mutations |Yes
+|Subscriptions |No
+|Types |Yes
+|Extend types |Yes
+|Input types |Yes
+|Enums |Yes
+|Interfaces |Yes
+|Scalars |Yes
+|`@skip` |Yes
+|`@include` |Yes
+|`@deprecated` |Yes
+|Custom directives |No
+|===
+
+=== Apollo GraphQL Directive Support
+
+Anypoint DataGraph supports the following Apollo GraphQL directives:
+
+[%header%autowidth.spread]
+|===
+|Feature |Supported
+|`@key` |Yes
+|multiple `@key` a| 
+No
+
+Only the first `@key` is used and any others are ignored.
+|`@provides` |Yes
+|`@external` |Yes
+|`@requires` |Yes
+|`@shareable` |Yes
+|`@override` a|
+Yes
+
+The `from` argument of the required directive is not considered. Any value annotated with `@override` can be used in the response without any particular precedence.
+|`@inaccesible` |Yes
+|===
+ 
+
+== About DataGraph Unified Schema and Query Complexity
+
+DataGraph supports the following:
+
 * Up to 250 APIs per unified schema
 * Up to 16,000 fields per unified schema
 * A query depth of 100 nested levels
@@ -72,7 +126,7 @@ To use Anypoint DataGraph, ensure you meet the following requirements:
 +
 [NOTE]
 --
-The API calls associated with your Anypoint DataGraph license refer to calls made by Anypoint DataGraph to downstream REST APIs.
+The API calls associated with your Anypoint DataGraph license refer to calls made by Anypoint DataGraph to downstream APIs.
 --
 
 * Your plan must allocate the correct number of vCores for your business group or organization using Anypoint DataGraph. If you haven't allocated the correct number of vCores to the environment in which you're attempting to add an API, Anypoint DataGraph raises an error message. Reapply the same changes after allocating the correct number of vCores.
