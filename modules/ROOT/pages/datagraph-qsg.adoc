@@ -19,6 +19,11 @@ Before getting started, ensure you have:
 * Admin or Contribute permissions
 * The correct number of vCores allocated to your business group or organization using Anypoint DataGraph, as specified in your plan. If you haven't allocated the correct number of vCores to the environment in which you're attempting to add an API, Anypoint DataGraph raises an error message.
 
+[IMPORTANT]
+--
+If you use an Anypoint Virtual Private Cloud (Anypoint VPC), your browser must have access to the Anypoint VPC to run queries in DataGraph. Without access, you might receive a `failed to fetch` schema error. To prevent this, xref:set-dlb.adoc[set up a dedicated load balancer (DLB)]. Network and hosting options are described in xref:hosting-options.adoc[DataGraph Hosting Options and Networking]. 
+--
+
 == Download and Publish the Order and Product APIs
 
 To follow the quick-start example, download the RAML definitions for two example APIs provided by MuleSoft: https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-order-system-api/minor/2.0/console/summary/[the Order Systems API v2.0^] and https://anypoint.mulesoft.com/exchange/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/minor/2.0/console/summary/[the Product API v2.0^].
@@ -35,16 +40,17 @@ link:https://www.mulesoft.com/exchange["Take me to Exchange^", role="button-prim
 . In the *Product API | RAML Definition*, click *Download* > *RAML* for asset version 2.0.2
 . xref:design-center::design-publish.adoc#procedure[Publish the RAML specification to Exchange] using your business group ID and an asset name.
 +
-The quick-start example uses the API names *Catalyst Product API* and *Catalyst Order API*.
+The quick-start example uses the API project names *Catalyst Product API* and *Catalyst Order API*.
 . Repeat these steps for the *Order Systems API | RAML Definition* for asset version 2.0.3.
 
 == Add the Catalyst Product API to Anypoint DataGraph
-After publishing the example APIs in Exchange, first add the Catalyst Product API to Anypoint DataGraph.
+
+After publishing the example APIs in Exchange, add the Catalyst Product API to Anypoint DataGraph:
 
 . From Anypoint Platform > Anypoint DataGraph, select the appropriate environment from the *Unified Data Graph* dropdown list, and click *+Add API*.
-. On the *Select API* page, select the Catalyst Product API.
+. On the *Add API* page, select the Catalyst Product API.
 . Click *Next: Configure URL*.
-. On the *Configure URL* page, select the API version and asset version, and then select *Confirm Selection*.
+. On the *Configure URL* page, select the API version and asset version, and then click *Confirm Selection*.
 . Select *Add a new URL*.
 . In the *Add URL* field, add the following API URL:
 `+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/68ef9520-24e9-4cf2-b2f5-620025690913/catalyst-retail-product-api/2.0.2/m/+`
@@ -110,7 +116,9 @@ When adding an API, all nested types are hidden from the unified schema. This gi
 +
 image::datagraph-qsg-add-api-status.png[Status indicator shows adding API schema to unified schema,75%,75%]
 +
-As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. When the status changes to “Up to date”, indicating that the unified schema has been updated with your changes, proceed to the next step.
+As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view the changes you just made. 
+
+. Click *Proceed to unified schema*.
 
 == Add the Catalyst Order API to Anypoint DataGraph
 
@@ -133,16 +141,14 @@ Anypoint DataGraph generated the name `EnumType0` because this enum type was unn
 . Switch the *Desired state* to *Visible*.
 . In the *Type settings* pane, click *Rename Type*.
 . Rename the type to `OrderStatus`, and click *Confirm*.
-+
-image::datagraph-qsg-rename-type-field.png[Renaming enum type 0 to status in the rename type window,60%,60%]
 
 The new name is reflected in the type list.
 
 == Link Object Types in the Catalyst Order API Schema
 
-You can also edit the unified schema to link your newly added API object types to existing,  related types to join fields, resulting in a more enriched query result.
+You can also edit the unified schema to link your newly added API object types to existing, related types to join fields, which results in a more enriched query result.
 
-For example, as a result of you adding the Catalyst Product API to it, the unified schema now has product description information that came from the *ProductResponse* object type. The Catalyst Order API schema also has product information as part of the *OrderItemSummary* object type. You can link these object types to return results from both in one query.
+For example, as a result of adding the Catalyst Product API, the unified schema now has product description information that came from the *ProductResponse* object type. The Catalyst Order API schema also has product information as part of the *OrderItemSummary* object type. You can link these object types to return results from both in one query.
 
 . In the Catalyst Order API schema navigation, select the *OrderItemSummary* object type.
 . If the OrderItemSummary object type and its fields are hidden, use the *Hidden/Visible* toggle to switch its *Desired state* value to *Visible*:
@@ -193,7 +199,7 @@ image::datagraph-qsg-merge-preview-result.png[Merge preview results for order su
 The results show that you’re performing a local merge between the OrderSummary and OrderResponse object types. After the merge, the OrderSummary object type is renamed to OrderResponse in the Catalyst Order API schema, and you query the OrderResponse type in the unified schema.
 
 . Click *Confirm merge*.
-. Click *Next: Add to unified schema*.
+. Click *Apply Changes*.
 
 As Anypoint DataGraph updates the unified schema, you can navigate through the schema to view changes as you make them. When the unified schema status changes to “Up to date”, request access to run queries and mutations.
 
@@ -207,11 +213,11 @@ After you add the two API schema’s to the unified schema, you’re ready to re
 image::datagraph-qsg-request-query-access.png[Create a new application is selected in requesting access to run an operation window,70%,70%]
 
 . Click *Next*.
-. In the *Create a new application* window, complete the fields:
+. In the *Create a new application* window, complete the fields, then click *Next*:
 +
 image::datagraph-qsg-create-query-application.png[Creating a query application in the request access window,70%,70%]
 
-. Click *Next*.
+. Click *Create & Request Access*.
 
 == Explore the Unified Schema 
 
@@ -229,7 +235,7 @@ Mutations are operations you use to add, update, and delete data objects. In Gra
 
 . Add the following example mutation:
 +
-[source]
+[source,copy]
 --
 mutation {
   createOrdersCustomerByCustomerId(
@@ -292,7 +298,7 @@ Now you can write a query to retrieve specific information about the order you c
 . When you’re ready, add the following example query:
 +
 
-[source]
+[source,copy]
 --
 {
   ordersByOrderId(orderId: "51c0ba3a-7e64-11e7-bb31-be2e44b06b34") {
@@ -325,12 +331,14 @@ Now you can write a query to retrieve specific information about the order you c
 Notice that with this one query, you get results from two different APIs:
 +
 image::datagraph-qsg-two-apis.png[Two APIs are being queried from a single query]
-+
-<1> `shippingAddress`, `total`, and `status` information is returned from the Catalyst Order API
-<1> `product` details is returned as part of the `shipmentItems` information from the Catalyst Product API
+
+[calloutlist]
+. `shippingAddress`, `total`, and `status` information is returned from the Catalyst Order API
+. `product` details is returned as part of the `shipmentItems` information from the Catalyst Product API
 +
 This is the fundamental utility of Anypoint DataGraph: the ability to query multiple APIs in a single request to get only the information you want.
 
+[start=2]
 . To run the query without query tracing, click *Run*:
 +
 image::datagraph-qsg-query-result.png[Query editor displays query results]

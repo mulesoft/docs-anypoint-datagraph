@@ -64,7 +64,7 @@ brand: String
 --
 |===
 
-Both `Order` and `Product` are different object types, each with differnt fields, that can be represented as follows:
+Both `Order` and `Product` are different object types, each with different fields, that can be represented as follows:
 
 [source]
 --

@@ -170,8 +170,9 @@ Those grant types properties are reflected in the UI when configuring access for
 
 image::confirm-credentials.png[Requesting access using an external client provider]
 
-<1> Both *Resource Owner Grant* and *Implicit Grant* are marked as required in the UI.
-<1> Both *Client Credentials Grant* and *Authorization Code Grant* are mutually exclusive in the UI.
+[calloutlist]
+. Both *Resource Owner Grant* and *Implicit Grant* are marked as required in the UI.
+. Both *Client Credentials Grant* and *Authorization Code Grant* are mutually exclusive in the UI.
 
 == Additional Resources
 
