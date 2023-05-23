@@ -1,5 +1,6 @@
 .xref:index.adoc[Anypoint DataGraph]
 * xref:index.adoc[]
+* xref:datagraph-release-notes.adoc[Release Notes]
 * xref:datagraph-getting-started.adoc[]
   ** xref:datagraph-qsg.adoc[]
   ** xref:datagraph-terms.adoc[]
