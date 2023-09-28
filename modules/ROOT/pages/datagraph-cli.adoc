@@ -32,15 +32,15 @@ include::3.x@anypoint-cli::partial$datagraph-load-balancer.adoc[tag=commands,lev
 DataGraph returns these errors when you incorrectly define a command. These errors can be caused by an incorrect option 
 parameter, an ID that cannot be found, or the lack of a required option.
 
-* xref:options-are-required[Options are Required]
-* xref:not-found[Not Found]
-* xref:bad-request[Bad Request]
-* xref:api=already-exists[API Already Exists]
-* xref:no-api-instances-found[No API Instances Found]
-* xref:must-define-url[Must Define URL]
-* xref:invalid-api-calls[Invalid API Calls]
-* xref:unauthorized[Unauthorized]
-* xref:api-not-found-in-current-evironment[API Not Found in Current Environment]
+* <<options-are-required, Options are Required>>
+* <<not-found, Not Found>>
+* <<bad-request, Bad Request>>
+* <<api-already-exists, API Already Exists>>
+* <<no-api-instances-found, No API Instances Found>>
+* <<must-define-url, Must Define URL>>
+* <<invalid-api-calls, Invalid API Calls>>
+* <<unauthorized, Unauthorized>>
+* <<api-not-found-in-current-environment, API Not Found in Current Environment>>
 
 === Options are Required
 
