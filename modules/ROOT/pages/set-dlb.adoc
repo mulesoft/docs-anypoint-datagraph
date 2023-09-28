@@ -30,7 +30,7 @@ For each index, the appropriate DLB URL is:
 
 * You must have the xref:permissions.adoc[Admin or Operator permission] for the environment in which you want to specify a DLB URL.
 * You must be able to xref:anypoint-cli::index.adoc#authentication[authenticate to] and run commands from the Anypoint CLI.
-* You must be familiar with xref:runtime-manager::lb-mapping-rules[creating DLB mapping rules].
+* You must be familiar with xref:runtime-manager::lb-mapping-rules.adoc[creating DLB mapping rules].
 * You must xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc#create-and-configure-a-dedicated-load-balancer[create and configure a DLB].
 
 To complete this task, you:
