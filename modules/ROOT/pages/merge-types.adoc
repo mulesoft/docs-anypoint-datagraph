@@ -104,7 +104,7 @@ country:
 
 == Merge Two Types When Only One Is Collaboration Enabled
 
-You can also merge two types when only one of the types has collaboration enabled. In this case, the merge causes your current type (the type you are configuring to merge) to act as a _reference_ to the target type (the type you are merging with). Note that for the merge to happen, the target type must have collaboration enabled, and both types must define one primary key or use <<merging-types-that-use-composite-keys, composite keys>>.
+You can also merge two types when only one of the types has collaboration enabled. In this case, the merge causes your current type (the type you are configuring to merge) to act as a _reference_ to the target type (the type you are merging with). Note that for the merge to happen, the target type must have collaboration enabled, and both types must define one primary key or use <<merge-types-that-use-composite-keys, composite keys>>.
 
 After the merge is complete, the reference is declared and you can retrieve the fields only from your target type. If your current type has any other fields besides its primary keys, those fields become hidden and cannot be queried.
 
