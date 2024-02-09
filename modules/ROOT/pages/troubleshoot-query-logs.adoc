@@ -4,10 +4,10 @@ Anypoint DataGraph provides response logs that contain useful query troubleshoot
 
 Response logs contain information about only Anypoint DataGraph queries. Anypoint DataGraph stores up to 100 MB  or up to 30 days of log data, whichever limit is reached first.
 
-[NOTE]
---
-If you have a Titanium subscription, the xref:monitoring::performance-and-impact#titanium-subscription-limits.adoc[Titanium limits for logs apply].
---
+include::reuse::partial$billing/pricing.adoc[tag=featureAdvLimits]
+
+For more information, see xref:monitoring::performance-and-impact#titanium-subscription-limits.adoc[limits in Anypoint Monitoring].
+
 
 == Log Levels for Anypoint DataGraph Response Logs
 
