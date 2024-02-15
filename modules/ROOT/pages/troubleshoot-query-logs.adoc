@@ -6,7 +6,7 @@ Response logs contain information about only Anypoint DataGraph queries. Anypoin
 
 include::reuse::partial$billing/pricing.adoc[tag=featureAdvLimits]
 
-For more information, see xref:monitoring::performance-and-impact#titanium-subscription-limits.adoc[limits in Anypoint Monitoring].
+For more information on log limits, see xref:monitoring::performance-and-impact#titanium-subscription-limits.adoc[limits in Anypoint Monitoring].
 
 
 == Log Levels for Anypoint DataGraph Response Logs
