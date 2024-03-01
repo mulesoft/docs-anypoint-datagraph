@@ -358,7 +358,9 @@ image::datagraph-qsg-response-logs.png[Query response logs page]
 +
 Log levels for Anypoint DataGraph include DEBUG, INFO, WARN, and ERROR.
 +
-If you have a Titanium subscription, you can view these same logs in Anypoint Monitoring, or use advanced search to find logs for a specific date, time, and priority.
+You can view these same logs in Anypoint Monitoring 
+include::reuse::partial$billing/pricing.adoc[tag=availabilityParenthetical]
+, or use advanced search to find logs for a specific date, time, and priority.
 
 . Click *View History* to access this same query (or others) later.
 . To copy the query and the automatically generated endpoint, from the actions menu (*...*​), click *Copy & Share Endpoint*. 
