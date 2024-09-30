@@ -63,7 +63,7 @@ To promote an API:
 +
 [NOTE]
 --
-If you're promoting an API that already exists on the target environment, DataGraph checks if the API on the target environment has an existing keystore or truststore. If a keystore or truststore exist on the target environment, you can keep either, remove either, or remove either and add new ones. You cannot automatically send the keystore and truststore from the the source environment to the target environment. To use the keystore and truststore from the source environment in the target environment, you must remove and re-add them during the promotion process.
+If you're promoting an API that already exists on the target environment, DataGraph checks if the API on the target environment has an existing keystore or truststore. If a keystore or truststore exist on the target environment, you can keep either, remove either, or remove either and add new ones. You cannot automatically send the keystore and truststore from the source environment to the target environment. To use the keystore and truststore from the source environment in the target environment, you must remove and re-add them during the promotion process.
 --
 +
 Select *Configure Keystore* and provide the following:
