@@ -45,5 +45,5 @@ If you merge object types in the unified schema, and then hide either of the con
 
 == Additional Resources
 
-* xref:schema-validation.adoc[Potential Errors When Generating an API Schema]
+* xref:troubleshoot-schemas-queries.adoc[Potential Errors When Generating an API Schema]
 * xref:edit-schema.adoc[Edit Your API Schema for Addition to the Unified Schema]
