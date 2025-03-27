@@ -18,10 +18,7 @@ After you add an API, you can:
 * xref:configure-mtls-for-an-api-added-to-the-unified-schema[Configure mTLS for the API]
 * xref:update-an-api-version[Update its version]
 
-[NOTE]
---
-You can also use the xref:datagraph-cli.adoc[Anypoint CLI] to add and edit API sources in DataGraph. However, if you add an API source using the CLI, you cannot edit it or update its version directly in the UI. You must make these changes using the CLI.
--- 
+NOTE: You can also use the xref:datagraph-cli.adoc[Anypoint CLI] to add and edit API sources in DataGraph. However, if you add an API source using the CLI, you cannot edit it or update its version directly in the UI. You must make these changes using the CLI.
 
 == Before You Begin
 
