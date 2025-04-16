@@ -67,13 +67,13 @@ productSku: String
 +
 The following image shows a query method that uses two mandatory arguments.
 +
-image::composite-keys-default-query-method.png[A default query method that uses composite keys]
+image::composite-keys-default-query-method.png["Query method configuration interface with composite key selection"]
 . Click *Next*.
 . Depending on your query method, select one or two primary keys. 
 +
 The following image shows composite keys since the query method uses two mandatory arguments.
 +
-image::composite-keys.png[Two primary keys are selected]
+image::composite-keys.png["Primary key configuration interface with multiple key selection"]
 
 == Disable Collaboration for an Object Type
 

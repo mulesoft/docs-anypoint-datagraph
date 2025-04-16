@@ -17,7 +17,7 @@ In GraphQL, query methods serve as the entry points to retrieve the data you wan
 
 For example, the Catalyst Order API schema, used in the xref:datagraph-qsg.adoc[DataGraph quick start guide], has two query methods associated with it: `ordersCustomerByCustomerId` and `ordersByOrderId`:
 
-image::schema-explorer-query-method.png[Two query methods listed in the schema explorer]
+image::schema-explorer-query-method.png["Schema explorer interface displaying available query operation methods"]
 
 Consider `ordersByOrderId`: This query method returns data about the object type `OrderResponse` and requires an argument for `orderID` in the form of a string:
 
@@ -48,7 +48,7 @@ In this case, you need to add an order ID to the query:
 
 Fields represent a type’s dataset that is returned in a query response, and you can choose whatever fields you need when writing a query. For example, as previously mentioned, the `ordersByOrderID` query method returns the `OrderResponse` object type, which returns the following fields:
 
-image::schema-explorer-fields.png[Available fields listed in the schema explorer]
+image::schema-explorer-fields.png["Schema explorer showing field definitions and data types"]
 
 As you write a query, you can add or remove any of these fields. The following query a uses some of the available fields:
 
@@ -189,17 +189,17 @@ To simplify the schema, inputs to mutations are handled by _input types_, which 
 
 For example, the schema shown in the following example has six mutation operations associated with it: 
 
-image::schema-explorer-mutation-method.png[Six mutation operations listed in the schema explorer]
+image::schema-explorer-mutation-method.png["Schema explorer interface displaying available mutation operation methods"]
 
 Consider `createCustomer`: This mutation takes the `CustomerInput` object as an input and creates a new object of type `Customer`. 
 
 So in this case, the input type `CustomerInput` has the following fields:
 
-image::schema-explorer-mutation-fields.png[Fields for CustomerInput listed in the schema explorer]
+image::schema-explorer-mutation-fields.png["Schema explorer showing CustomerInput type field definitions"]
 
 Notice that the address field has data from the `AddressInput` input type:
 
-image::schema-explorer-mutation-fields2.png[Fields for AddressInput listed in the schema explorer]
+image::schema-explorer-mutation-fields2.png["Schema explorer displaying AddressInput type field definitions"]
 
 As you execute the mutation operation, you provide a value for each field in the input type:
 

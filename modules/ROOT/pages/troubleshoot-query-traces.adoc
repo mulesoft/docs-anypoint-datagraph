@@ -4,7 +4,7 @@ Query tracing in Anypoint DataGraph helps you analyze query performance by traci
 
 Trace results provide the following information:
 
-image::query-trace-details.png[Detailed view of a query trace]
+image::query-trace-details.png["Query trace interface showing execution steps and timing information"]
 
 [calloutlist]
 . Time taken by Anypoint DataGraph to parse and validate the query
@@ -27,7 +27,7 @@ Query trace results are provided as soon as you run an operation.
 +
 The trace query panel opens and displays results:
 +
-image::datagraph-qsg-query-traces.png[Query traces enabled on a query]
+image::datagraph-qsg-query-traces.png["Query execution trace view with enabled monitoring options"]
 +
 You can collapse and expand the query trace panel as needed.
 

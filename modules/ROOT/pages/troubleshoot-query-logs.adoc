@@ -37,7 +37,7 @@ To view response logs in Anypoint DataGraph:
 +
 Response logs for that query are displayed:
 +
-image::datagraph-qsg-response-logs.png[Query response logs page]
+image::datagraph-qsg-response-logs.png["Query response logs interface displaying request details and timestamps"]
 
 == Search Response Logs
 
@@ -62,7 +62,7 @@ To search existing logs:
 
 . Enter a value in the search box, or click Advanced to search for logs for a specified time, day, date range, and message priority.
 +
-image::search-logs.png[Search fields for query response logs ]
+image::search-logs.png["Search interface with filterable fields for query response logs"]
 . Click *Apply*.
 
 == Additional Resources

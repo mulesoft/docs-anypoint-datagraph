@@ -29,13 +29,13 @@ Anypoint DataGraph creates this field in your current type and links it to the t
 +
 The new field returns the type you're linking to, so it's safe to hide the foreign key unless it has outstanding queries.
 +
-image::link-object-type.png[Link configurations detailing linked target type results]
+image::link-object-type.png["Link configuration interface showing type relationship mappings"]
 
 . Click *Save changes*.
 
 If you scroll up to the fields pane, an icon shows the fields are now linked:
 
-image::linked-type-icon.png[Linked object indicated by link icon]
+image::linked-type-icon.png["Interface element showing linked type relationship indicators"]
 
 == Remove a Link Between Object Types
 

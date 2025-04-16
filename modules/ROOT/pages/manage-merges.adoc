@@ -17,7 +17,7 @@ To merge object types:
 +
 The following example merges the current type, called *OrderSummary*, with a target object type called *OrderResponse*:
 +
-image::merge-selection.png[Selecting the target type order response to merge with the order summary type]
+image::merge-selection.png["Type merge configuration interface with order type selection"]
 +
 The target type does not need to have the same name.
 
@@ -32,13 +32,13 @@ If you make this selection, you are taken to the *Enable collaboration* pane, wh
 +
 In the following example, the preview shows the target *OrderResponse* object type in the unified schema, including the new fields added after the *OrderSummary* object type is merged with *OrderResponse*:
 +
-image::merge-preview.png[Merge preview results for order summary and order response merge,60%,60%]
+image::merge-preview.png["Preview interface showing merged type structure"]
 
 . To finish, click *Confirm merge*:
 
 After you apply your changes, the resulting object type in the unified schema indicates the merge, as shown:
 
-image::merged-type-results.png[Merge preview results indicator,60%,60%]
+image::merged-type-results.png["Interface showing successful type merge confirmation"]
 
 == Undo Merges Between Object Types
 
@@ -60,7 +60,7 @@ To undo a merge:
 == Split a local merge
 Split local merges to resolve conflicts, manage element visibility, rename fields, or perform other edits on your local API schema.
 
-If you have object types that are merged locally and merged with a type in the unified schema, you’ll first need to undo the merge with the unified schema.
+If you have object types that are merged locally and merged with a type in the unified schema, you'll first need to undo the merge with the unified schema.
 
 To split a merge:
 
