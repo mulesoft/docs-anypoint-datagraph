@@ -32,11 +32,11 @@ To follow the quick-start example, download the RAML definitions for two example
 
 . Log into Anypoint platform.
 +
-link:https://anypoint.mulesoft.com/login["Take me to Anypoint Platform^", role="button-primary"]
+link:https://anypoint.mulesoft.com/login/["Take me to Anypoint Platform^", role="button-primary"]
 +
 . In Exchange, click *Provided by MuleSoft*.
 +
-link:https://www.mulesoft.com/exchange["Take me to Exchange^", role="button-primary"]
+link:https://www.mulesoft.com/exchange/["Take me to Exchange^", role="button-primary"]
 +
 . Search for *product api raml definition* and select it from the list of results.
 . In the *Product API | RAML Definition*, click *Download* > *RAML* for asset version 2.0.2
