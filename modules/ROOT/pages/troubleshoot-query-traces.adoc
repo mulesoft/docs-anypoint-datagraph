@@ -35,3 +35,7 @@ You can collapse and expand the query trace panel as needed.
 
 * xref:troubleshoot-query-logs.adoc[Troubleshoot Queries with Response Logs]
 * xref:query-unified-schema.adoc[Run Queries and Mutations]
+
+== See Also
+
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]

@@ -180,3 +180,4 @@ If you encounter a server error when selecting an asset to create policies, wait
 * xref:troubleshoot-query-logs.adoc[Troubleshoot Queries With Response Logs] +
 * xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing] +
 * xref:resolve-conflicts.adoc[]
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]

@@ -69,3 +69,7 @@ image::search-logs.png[Search fields for query response logs ]
 
 * xref:troubleshoot-query-traces.adoc[Troubleshoot Query Performance with Query Tracing]
 * xref:query-unified-schema.adoc[Run Queries and Mutations]
+
+== See Also
+
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
