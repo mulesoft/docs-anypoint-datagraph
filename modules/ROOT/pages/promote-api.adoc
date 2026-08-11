@@ -1,6 +1,6 @@
 = Promoting API Schemas
 
-As you develop and configure an API schema, you can promote it to the next environment toward production and add it to that environment's unified schema. Note that you’re promoting the schema configurations only, not the actual underlying source REST APIs.
+As you develop and configure an API schema, you can promote it to the next environment toward production and add it to that environment's unified schema. Note that you’re promoting the schema configurations only, not the actual underlying source APIs.
 
 Promotion enables you to configure an API schema in one environment without repeating that configuration in subsequent environments. Use promotion to move your schema configurations from development to staging and from staging to production.
 
