@@ -12,6 +12,8 @@ Usage metrics are separated by Production and Sandbox environments per business 
 * GraphQL API requests received for other environments of that type
 * GraphQL API requests received for all environments of that type
 
+NOTE: These metrics are specific to Anypoint DataGraph and reflect GraphQL API requests to the unified schema only. They do not represent general Mule application traffic or VPC-level network metrics. Cross-environment aggregation here is a DataGraph-specific feature and is not available for general application or VPC traffic in Anypoint Monitoring.
+
 API request usage metrics are available in the Overview section of Anypoint DataGraph. 
 
 To view usage metrics, you need the xref:permissions.adoc[Admin permission]. 
